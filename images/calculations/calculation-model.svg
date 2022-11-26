@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="350.81476"
+   height="175.64781"
+   viewBox="0 0 92.819738 46.473486"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   sodipodi:docname="calculation-model.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="1.915"
+     inkscape:cx="221.14883"
+     inkscape:cy="101.30548"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-9.553629,-26.156752)">
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g34570"
+       id="use34576"
+       transform="translate(53.883812,-19.204744)"
+       width="100%"
+       height="100%" />
+    <g
+       id="g34560"
+       transform="translate(-0.4144907,29.557346)">
+      <rect
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583"
+         id="rect846"
+         width="35.646214"
+         height="11.329416"
+         x="13.125545"
+         y="13.263707" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.9389px;line-height:1.25;font-family:Candara;-inkscape-font-specification:'Candara Bold';stroke-width:0.264583"
+         x="16.113865"
+         y="20.019651"
+         id="text4854"><tspan
+           sodipodi:role="line"
+           id="tspan4852"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Candara;-inkscape-font-specification:'Candara Bold';stroke-width:0.264583"
+           x="16.113865"
+           y="20.019651">Calculations</tspan></text>
+    </g>
+    <g
+       id="g34565">
+      <rect
+         style="fill:#ececec;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583"
+         id="use17778"
+         width="35.646214"
+         height="11.329416"
+         x="12.711054"
+         y="28.599869" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.9389px;line-height:1.25;font-family:Candara;-inkscape-font-specification:'Candara Bold';stroke-width:0.264583"
+         x="24.748798"
+         y="35.283466"
+         id="text4854-1"><tspan
+           sodipodi:role="line"
+           id="tspan4852-9"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Candara;-inkscape-font-specification:'Candara Bold';stroke-width:0.264583"
+           x="24.748798"
+           y="35.283466">Input</tspan></text>
+    </g>
+    <g
+       id="g34570"
+       transform="translate(0,6.2173628)">
+      <rect
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583"
+         id="use34340"
+         width="35.646214"
+         height="11.329416"
+         x="12.711054"
+         y="50.824875" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.9389px;line-height:1.25;font-family:Candara;-inkscape-font-specification:'Candara Bold';stroke-width:0.264583"
+         x="22.924444"
+         y="57.544647"
+         id="text4854-5"><tspan
+           sodipodi:role="line"
+           id="tspan4852-0"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Candara;-inkscape-font-specification:'Candara Bold';stroke-width:0.264583"
+           x="22.924444"
+           y="57.544647">Output</tspan></text>
+    </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g34560"
+       id="use34572"
+       transform="translate(47.666448,4.707232)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g34565"
+       id="use34574"
+       transform="translate(41.58725,28.442369)"
+       width="100%"
+       height="100%" />
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.465;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect34619"
+       width="41.172756"
+       height="46.008484"
+       x="9.786129"
+       y="26.389252" />
+  </g>
+</svg>

@@ -1,0 +1,592 @@
+# Solutions {.unnumbered}
+
+## 06-functions
+
+### form001 - Results computer company {-#sol-form001}
+
+-   gross profit = revenues - costs
+-   margin realized = gross profit / costs. Format as percentage with no decimals.
+-   For the determination of the result, you should use the IF function. Because you had to test 2 conditions, a second IF must be embedded within the first IF. An alternative is to use the AND function inside the IF function.
+    -   `=IF(D4>Target_Profit;IF(E4>Target_Margin;"good";"bad");"bad")`
+    -   `=IF(AND(D4>Target_Profit;E4>Target_Margin);"good";"bad")`
+
+### form002 - Lookup article details {-#sol-form002}
+
+Search result Name `=VLOOKUP(artnr;searchtable;2;FALSE)`
+
+Search result Price `=VLOOKUP(artnr;searchtable;3;FALSE)`
+
+### form003 - Calculating with dates {-#sol-form003}
+
+Format of dates: `ddd dd/m/yyyy`
+
+Output formulas:
+
+-   pension date `=DATE(YEAR(date_of_birth)+ pension_age;MONTH(date_of_birth);DAY(date_of_birth))`.
+-   current date `=TODAY()`.
+-   number of days until pension `=pension_date - current_date` or `=pension_date - TODAY()`.
+
+### form004 - Determining commission {-#sol-form004}
+
+Formula commission `=IF(Sales < Sales_Target;Commission_Low*Sales;Commission_High*Sales)`
+
+### form005 - Birth dates {-#sol-form005}
+
+Formula Days too early. Two conditions should be checked. First, check if the baby has been born by testing if there is a birthday value. And if so, test if the birthday is before the expected day. Two possible solutions:
+
+-   `=IF(Birthday><>"",IF(Birthday<Expected,Expected-Birthday,""),"")`
+-   `=IF(AND(Birthday<>"",Birthday<Expected),Expected-Birthday,"")`
+
+The latest version has a slight preference because it is easier to read and understand.
+
+Formula Days too late similar like before. A possible solution:
+
+-   `=IF(AND(Birthday<>"";Birthday>Expected);Birthday-Expected;"")`
+
+Formula on time similar like before. A possible solution:
+
+-   `=IF(AND(Birthday<>"";Birthday=Expected);"yes";"")`
+
+Formula overdue similar like before. A possible solution:
+
+-   `=IF(AND(Birthday="";Expected<Report_date);"yes";"")`
+
+The cells in the columns days too early and days too late have a custom number format: `# "days"`.
+
+### form006 - VAT return {-#sol-form006}
+
+![](exercises/images/form006-solution.png)
+
+Formulas calculation:
+
+-   VAT to be paid: `=VAT_percentage * Sales`
+-   Prepaid VAT: `=VAT_paid_by_purchasing`
+-   VAT initially to be paid: `=VAT_to_be_paid - Prepaid_VAT`
+-   Reduction RSE: `=IF(VAT_initially_to_be_paid<0, 0, IF(VAT_initially_to_be_paid>upper_threshold , 0, IF(VAT_initially_to_be_paid<=lower_threshold, VAT_initially_to_be_paid, 2.5*(upper_threshold-VAT_initially_to_be_paid))))`
+-   Payable: `=ABS(VAT_initially_to_be_paid - Reduction_RSE)`
+-   Final text: `=IF(Payable<0,"To receive","To pay")`
+
+### form007 - Ticket price {-#sol-form007}
+
+Ticket price `=IF(Age > 12,Price_Adults,Price_Children)`
+
+### form008 - Property tax {-#sol-form008}
+
+Amount owner `=IF(owner="yes",rate_owner * value_property,0)`
+
+Amount user `=IFuser="yes",rate_user * value_property,0)`
+
+Total due`=Amount_Owner + Amount_User`
+
+### form009 - Savings deposit {-#sol-form009}
+
+![](exercises/images/form009-solution.png)
+
+Calculation after 1 year
+
+Interest `=Amount*Interest_rate`
+
+Amount `=Amount+Interest`.
+
+### form010 - Joule's law {-#sol-form010}
+
+![](exercises/images/form010-solution.png)
+
+heat (Q) `=0.24*current^2*resistance*time`.
+
+### form011 - Investment bond {-#sol-form011}
+
+Formula: `=PV(3.5%,5,,300000)`
+
+The result of this formula is negative because it represents money that you need to pay, so an expense. To get a positive answer you can put a minus for the formula or insert a negative value for the present value (-300000).
+
+### form012 - Multiplication table {-#sol-form012}
+
+Formula: `=B$1*$A2`
+
+### form013 - Price olive oil {-#sol-form013}
+
+|quantity_limit|20|cans_total|25|
+|price_high|$ 45|price_total|$ 1100|
+|price_low|$ 40| | |
+
+Formula price_total: `=IF(cans_total<=quantity_limit, cans_total*price_high,quantity_limit*price_high+(cans_total-quantity_limit)*price_low)`
+
+
+## 07-tables
+
+### list001 - Selecting {-#sol-list001}
+
+Select the cell mark and then [tab Data > Filter (group Sort & Filter)]{.uicontrol}. Click on the arrow and choose [Number Filters > Custom Filter > is less than or equal to]{.uicontrol} and enter the number 3. Check the option [Or]{.uicontrol} and choose [equals]{.uicontrol} and left the number box blank. Click [OK]{.uicontrol}.
+
+### list002 - Consolidating examination results {-#sol-list002}
+
+Select the upper-left cell of the output area and choose **tab Data > Consolidate (group Data Tools)]{.uicontrol}. In the dialog box specify:
+
+-   Function `Max`.
+-   Add the tables with the data for the examination and the re-examination as references.
+-   Check [Use labels in left column]{.uicontrol}.
+
+### list003 - Consolidating sales data {-#sol-list003}
+
+Select the upper-left cell of the output area and choose **tab Data > Consolidate (group Data Tools)]{.uicontrol}. Specify in the dialog box:
+
+-   Function `Sum`.
+-   Add the tables with the data of the branches North and South as references.
+-   Check [Use labels in top row]{.uicontrol} and [Use labels in left column]{.uicontrol}.
+
+### list004 - Filtering overview cars {-#sol-list004}
+
+Select a cell in the table and then **tab Data > Filter (group Sort & Filter)]{.uicontrol}.
+
+-   Select at [Cylinders]{.varname} the value 6.
+-   Select at [Fuel]{.varname} the values Super and Ordinary.
+-   Choose at [Top Speed]{.varname} for [Number Filters > Greater than or equal to]{.uicontrol} and enter 180.
+
+
+## 08-arrays
+
+### matr001 - Array addition {-#sol-matr001}
+
+Select the area for the result, enter =, select the first matrix, enter +, select the second matrix, and press **Ctrl-Shift-Enter**.
+
+### matr002 - Failures per district {-#sol-matr002}
+
+Select the cell for the total of North and enter the formula `=SUM(($B$2:$B$11=B16)*($C$2:$E$11))` and press **Ctrl-Shift-Enter**. Then copy this formula down.
+
+### matr003 - Random integers {-#sol-matr003}
+
+1.  Formula in B7: `=RANDARRAY(B1,B2,B3,B4,TRUE)`
+2.  Formula in B6: `=AVERAGE(B7#)`
+
+### matr004 - Random dates and times {-#sol-matr004}
+
+1.  Formula in B5: `=RANDARRAY(B3,1,B1,B2,TRUE)`
+2.  Formula in E5: `=RANDARRAY(E3,1,E1,E2,FALSE)`
+
+### matr005 - Sorting columns {-#sol-matr005}
+
+Formula in J1: `=SORT(C1:F7,1,-1,TRUE)`
+
+### matr006 - Sequence of Roman numbers {-#sol-matr006}
+
+Formula in A1: `=SEQUENCE(10,10)`
+
+Formula for Roman numbers: `=ROMAN(SEQUENCE(10,10))`
+
+## 09-charts
+
+### graf001 - Third-degree chart {-#sol-graf001}
+
+Create first a table with two columns for the X and Y values. The X-value range is from -1 to +2 with an increment of 0.1. The Y-values must be calculated using the formula `= (X -0,5)^3`.
+
+Create a scatter chart and format it.
+
+### graf002 - Travel bookings {-#sol-graf002}
+
+The totals must be calculated using the `SUM` function.
+
+Select the travel data including the name but without the year numbers. This is because Excel interprets these dates as numbers. Create the chart as follows.
+
+-   Chart type: Stacked column
+-   Choose [tab Design (Chart Tools) > Switch Row/Column (group Data)]{.uicontrol}
+-   Choose [tab Design (Chart Tools) > Select Data (group Data)]{.uicontrol}. In the dialog box click [Edit]{.uicontrol} under Horizontal (Category) Axis Labels. Select the area with the year numbers as Axis label range and click [OK]{.uicontrol} (2x).
+-   If desired, you can make some columns wider by reducing the gap as follows: [select a column > Right mouse click > Format Data Series]{.uicontrol} and reduce the Gap Width.
+
+### graf003 - Sales figures {-#sol-graf003}
+
+Calculate in a new column the difference with the formula `= (actual - estimated) / estimated`. Format the values as percentages with 0 decimals.
+
+Create the chart as follows:
+
+-   Start with chart type Çlustered Column. You get for each quarter two columns side by side, the left one for estimated and the right one for actual.
+-   Then [select column actual > right click > Change Series Chart Type > Line with markers > OK]{.uicontrol}.
+-   Make adjustments for chart title, location legend, gap width, scale vertical axis.
+
+### graf004 - Age structure {-#sol-graf004}
+
+Create the chart as follows:
+
+-   Select the whole table and start with creating chart type Line with markers.
+-   To get the year numbers on the category axis [choose tab Design > Switch Row/Column (group Data)]{.uicontrol}.
+-   For the indication of the data source [choose tab Layout > Text Box (group Insert)]{.uicontrol}, draw the box, and enter the text.
+-   Format the values on the vertical axis as percentages without decimals.
+
+### graf005 - Relationship production time - cost {-#sol-graf005}
+
+Create the chart as follows:
+
+-   Start creating a scatter chart.
+-   Layout adjustments: scaling axis, legend, horizontal gridlines.
+-   Add a linear trendline in the chart and display the equation.
+
+### graf006 - Counting agarics {-#sol-graf006}
+
+Create the chart as follows:
+
+-   Start creating a radar chart.
+-   Layout adjustments: title, size, legend (removing).
+
+
+## 11-scenarios
+
+### scen001 - Profit margin - Sales price {-#sol-scen001}
+
+Formulas for the table:
+
+-   Margin `=Profit margin * Purchasing price`
+-   Selling price excl `=Purchasing price + Marge`
+-   VAT `=BTW percentage * Selling price excl`
+-   Selling price incl `=Selling price excl + VAT`
+
+Tip: For the calculation of the margin and the VAT It is recommended that you round the numbers to 2 decimal places with a rounding function.
+
+Create the scenarios with [tab Data > What-If Analysis (group Data Tools) > Scenario Manager]{.uicontrol}.
+
+-   Changing cells: Profit margin
+-   Scenario summary result cells: Selling prices (incl. VAT).
+
+Tip: To get names instead of cell addresses in the summary report you should give names to the cells before using the scenario manager.
+
+### scen002 - Budget sports club {-#sol-scen002}
+
+Create the scenarios with [tab Data > What-If Analysis (group Data Tools) > Scenario Manager]{.uicontrol}.
+
+-   Changing cells: Subscriptions, Canteen, Materials and Miscellaneous
+-   Scenario summary result cells: Profit
+
+Tip: To get names instead of cell addresses in the summary report you should give names to the cells before using the scenario manager.
+
+### scen003 - Scenarios business profit {-#sol-scen003}
+
+Create the scenarios with [tab Data > What-If Analysis (group Data Tools) > Scenario Manager]{.uicontrol}.
+
+-   Changing cells: Wages, Material costs
+-   Scenario summary result cells: Operating profit
+
+Tip: To get names instead of cell addresses in the summary report you should give names to the cells before using the scenario manager.
+
+### scen004 - Gainings automation company {-#sol-scen004}
+
+The values for 2011 and 2011 should be calculated with formulas referencing to the cells with the percentages.
+
+Create the scenarios with [tab Data > What-If Analysis (group Data Tools) > Scenario Manager]{.uicontrol}.
+
+-   Changing cells: Growth, Inflation, Interest, and Tax
+-   Scenario summary result cells: Profit 2011 and Profit 2012 (after Tax).
+
+Tip: To get names instead of cell addresses in the summary report you should give names to the cells before using the scenario manager.
+
+
+## 12-datatables
+
+### tabl001 - Repayment Loan {-#sol-tabl001}
+
+1.  Formula in B4: `=-PMT(B2/12,B3,B1)`
+2.  In B7 is a reference to this formula: `=B4`. Column input cell: `B3`
+3.  In A7 is a reference to this formula: `=B4`. Column input cell: `B3`. Row input cell: `B2`
+
+### tabl002 - Sales forecast {-#sol-tabl002}
+
+1.  Formula in B3: `=B1*(1+B2)`
+2.  In B5 is a reference to this formula: `=B3`. Column input cell: `B2`
+
+## 13-pivots
+
+### pivo001 - Salary averages {-#sol-pivo001}
+
+Select any cell in the table and choose [tab Insert > Pivot Table (group Tables) > Accept the range > select Existing worksheet > Specify a cell as starting location > OK]{.uicontrol}.
+
+Drag the fields as follows:
+
+|Report Filter|Column Labels|Row Labels|Values|
+|-------------|-------------|----------|------|
+| |Division|Department|Salary|
+
+Select a number in the pivot table and choose [tab Options > Field Settings (group Active Field)]{.uicontrol}.
+
+Change the type of calculation in Average and [Number Format]{.uicontrol} in Accounting.
+
+Change the layout of the report in Show in Outline Form.
+
+### pivo002 - Salary totals {-#sol-pivo002}
+
+Select any cell in the table and choose [tab Insert > Pivot Table (group Tables) > Accept the range > select Existing worksheet > Specify a cell as starting location > OK]{.uicontrol}.
+
+Drag the fields as follows:
+
+|Report Filter|Column Labels|Row Labels|Values|
+|-------------|-------------|----------|------|
+|Department|Division|Function|Salary|
+
+Select a number in the pivot table and choose [tab Options > Field Settings (group Active Field)]{.uicontrol}.
+
+Change [Number Format]{.uicontrol} in Accounting with 0 decimals.
+
+Change the layout of the report in Show in Outline Form.
+
+### pivo003 - Turnover, travel expenses and commission {-#sol-pivo003}
+
+Select any cell in the table and choose [tab Insert > Pivot Table (group Tables) > Accept the range > select Existing worksheet > Specify a cell as starting location > OK]{.uicontrol}.
+
+Drag the fields as follows:
+
+|Report Filter|Column Labels|Row Labels|Values|
+|-------------|-------------|----------|------|
+|Region|Month|Salesman|Sales Expenses Commission|
+
+Drag the field Values from Column Labels to Row Labels under Salesman.
+
+Select a number in the pivot table and choose [tab Options > Field Settings (group Active Field)]{.uicontrol}.
+
+Change [Number Format]{.uicontrol} in Accounting with 0 decimals.
+
+Change the layout of the report in Show in Outline Form.
+
+### pivo004 - Average rating {-#sol-pivo004}
+
+Select any cell in the table and choose [tab Insert > Pivot Table (group Tables) > Accept the range > select Existing worksheet > Specify a cell as starting location > OK]{.uicontrol}.
+
+Drag the fields as follows:
+
+|Report Filter|Column Labels|Row Labels|Values|
+|-------------|-------------|----------|------|
+| |gender|class|it|
+
+Select a number in the pivot table and choose [tab Options > Field Settings (group Active Field)]{.uicontrol}.
+
+Change the type of calculation in Average.
+
+### pivo005 - Frequency distribution figures {-#sol-pivo005}
+
+Select any cell in the table and choose [tab Insert > Pivot Table (group Tables) > Accept the range > select Existing worksheet > Specify a cell as starting location > OK]{.uicontrol}.
+
+Drag the fields as follows:
+
+|Report Filter|Column Labels|Row Labels|Values|
+|-------------|-------------|----------|------|
+| | |Mark|Mark|
+
+Select a number in the pivot table and choose [tab Options > Field Settings (group Active Field)]{.uicontrol}.
+
+Change the type of calculation in Count.
+
+Change the layout of the report in Show in Outline Form.
+
+### pivo006 - Clothing sales by region {-#sol-pivo006}
+
+Select any cell in the table and choose [tab Insert > Pivot Table (group Tables) > Accept the range > select Existing worksheet > Specify a cell as starting location > OK]{.uicontrol}.
+
+Drag the fields as follows:
+
+|Report Filter|Column Labels|Row Labels|Values|
+|-------------|-------------|----------|------|
+| |Region|Year Type|Sales|
+
+Select a number in the pivot table and choose [tab Options > Field Settings (group Active Field)]{.uicontrol}.
+
+Change [Number Format]{.uicontrol} in Accounting with 0 decimals.
+
+Choose [tab Option > Options (group PivotTable) > tab Display]{.uicontrol} and uncheck [Display field captions and filter drop downs]{.uicontrol}.
+
+### pivo007 - Shop opening hours {-#sol-pivo007}
+
+Select any cell in the table and choose [tab Insert > Pivot Table (group Tables) > Accept the range > select Existing worksheet > Specify a cell as starting location > OK]{.uicontrol}.
+
+Drag the fields as follows:
+
+|Report Filter|Column Labels|Row Labels|Values|
+|-------------|-------------|----------|------|
+| |yes/no|age gender|yes/no|
+
+Select a number in the pivot table and choose [tab Design > Report Layout (group Layout) > Show in Tabular Form]{.uicontrol}.
+
+### pivo008 - Own home and average home value {-#sol-pivo008}
+
+Select any cell in the table and choose [tab Insert > Pivot Table (group Tables) > Accept the range > select Existing worksheet > Specify a cell as starting location > OK]{.uicontrol}.
+
+Drag the fields as follows:
+
+|Report Filter|Column Labels|Row Labels|Values|
+|-------------|-------------|----------|------|
+|own house| |years study|own house value|
+
+Select a number in the pivot table and choose [tab Options > Field Settings (group Active Field)]{.uicontrol}.
+
+Change type of calculation in Average and [Number Format]{.uicontrol} in Accounting with 0 decimals.
+
+Choose [tab Design > Report Layout (group Layout) > Show in Outline Form]{.uicontrol}.
+
+### pivo009 - Transport research {-#sol-pivo009}
+
+Create first the extra column and calculate the values with the formula `=IF(cell address distance>15;"yes";"no")`
+
+![](exercises/images/pivo009-dataplus.png)
+
+Select any cell in the table and choose [tab Insert > Pivot Table (group Tables) > Accept the range > select Existing worksheet > Specify a cell as starting location > OK]{.uicontrol}.
+
+Drag the fields as follows:
+
+|Report Filter|Column Labels|Row Labels|Values|
+|-------------|-------------|----------|------|
+|resident car distance>15| | |time car|
+
+Select a number in the pivot table and choose [tab Options > Field Settings (group Active Field)]{.uicontrol}.
+
+Change the type of calculation in [Average]{.uicontrol}.
+
+![](exercises/images/pivo009-report.png)
+
+### pivo010 - Coffee yield per region {-#sol-pivo010}
+
+Select any cell in the table and choose [tab Insert > Pivot Table (group Tables) > Accept the range > select Existing worksheet > Specify a cell as starting location > OK]{.uicontrol}.
+
+Drag the fields as follows:
+
+|Report Filter|Column Labels|Row Labels|Values|
+|-------------|-------------|----------|------|
+|Region|Product|Month|Yield|
+
+Select a number in the pivot table and choose [tab Options > Field Settings (group Active Field)]{.uicontrol}.
+
+Change [Number Format]{.uicontrol} in Accounting with 0 decimals.
+
+### pivo011 - Fuel consumption cars {-#sol-pivo011}
+
+Select any cell in the table and choose [tab Insert > Pivot Table (group Tables) > Accept the range > select Existing worksheet > Specify a cell as starting location > OK]{.uicontrol}.
+
+Drag the fields as follows:
+
+|Report Filter|Column Labels|Row Labels|Values|
+|-------------|-------------|----------|------|
+| |Fuel|Brand|Consumption Consumption|
+
+Select in the pivot table a number in a column “Sum of Consumption” and choose [tab Options > Field Settings]{.uicontrol} and change the type of calculation in [Max]{.uicontrol} and the name in Max of Consumption.
+
+Select in the pivot table a number in a column “Sum of Consumption2” and choose [tab Options > Field Settings]{.uicontrol} and change the type of calculation in [Min]{.uicontrol} and the name in Min of Consumption.
+
+Drag the field Values from Column Labels to Row Labels under the field Brand.
+
+Choose [tab Design > Grand Totals (group Layout) > Off for Rows and Columns]{.uicontrol}.
+
+Change the text “Row labels” in “Brand” and the text “Column Labels” in “Fuel”.
+
+### pivo012 - Hobby club {-#sol-pivo012}
+
+1.  Create a pivot table with [Column Labels]{.uicontrol} gender, [Row Labels]{.uicontrol} domicile, and [Values]{.uicontrol} name (Count). Report Layout: Outline form and without field captions.
+2.  Create a pivot table with [Column Labels]{.uicontrol} gender, [Row Labels]{.uicontrol} hobby, and [Values]{.uicontrol} name (Count). Choose [tab Options > Field Settings (group Active Field) > tab Show Values As > % of Grand Total]{.uicontrol}. Number format in [Percentage with 0 decimals]{.uicontrol}. Report Layout: Outline form without field captions.
+3.  Create a pivot table with [Column Labels]{.uicontrol} gender, [Row Labels]{.uicontrol} 2010, and [Values]{.uicontrol} 2010 (Count). Select a number under Row Labels and choose [tab Options > Group Field (group Group)]{.uicontrol} and start the grouping with 20, end with 49 with increments of 10. Report Layout: Outline form without field captions.
+
+
+## 14-goalseek
+
+### goal001 - Freelancer {-#sol-goal001}
+
+Create two input cells: commission percentage and total sales. Calculate in another cell the commission amount with the formula `= commission_percentage * total_sales`.
+
+Choose [tab Data > What-If Analysis (group Data Tools) > Goal Seek]{.uicontrol}.
+
+The cell to set is the cell with the commission amount., to value 5000, by changing the cell with the total sales.
+
+### goal002 - Loan payment {-#sol-goal002}
+
+Create the model as shown in the figure. Formule in resultaatcel: `=PMT(annual_interest_rate /12,number_monthly_payments,borrowed_amount,0,1)`.
+
+Because the payments are monthly you must specify the interest rate also per month. Hence the annual interest rate has to be divided by 12. The third argument is 0 after the final payment the loan has to be repaid. The fourth argument is 1 because the payment is made at the beginning of each month.
+
+Choose [tab Data > What-If Analysis (group Data Tools) > Goal Seek]{.uicontrol}.
+
+The cell to set is the result cell, to value -750, by changing the cell with the borrowed amount.
+
+### goal003 - Break-even point {-#sol-goal003}
+
+Create a table with different values for Q in the first column. Start with the value 0 with increments for example of 0.2 and finish with the value 16. So 0 0.2 0.4 0.6 ... Put formulas in the second column for calculating the values of TC and in the third column for calculating the values of TR.
+
+In order to make estimates for the break-even points, you need a chart. Create a scatter chart and format the chart as shown.
+
+A break-even point is the intersection of the two lines in the chart. As you can see in the chart there are two intersections, one for a Q-value between 0 and 1 and another one between 11 and 12.
+
+Create a second table for the determination of the two break-even points. To find the intersection you need to calculate the difference of TC and TR because this difference is 0 for the intersection. Use as starting value 0 for the first point and 11 for the second point.
+
+Choose [tab Data > What-If Analysis (group Data Tools) > Goal Seek]{.uicontrol}.
+
+The cell to set is the cell with the result of TR-TC, to value 0, by changing the cell with the value for Q.
+
+You need to perform Goal Seek twice, first for the calculation of point 1 and a second time for the calculation of point 2. The result is
+
+![](exercises/images/goal003-breakeven.png)
+
+### goal004 - Savings amount {-#sol-goal004}
+
+Create a table as shown. Enter the years ​​in the first column. For year 2010, the cell for interest remains empty and for the value, you enter the formula: `= Deposit`.
+
+Calculate for the year 2011 the interest with the formula `= Interest_per_year (abs. address) * Value_2010 (relative address)` and the value with the formule `= Value_2010 (rel. address) + Interest_2011 (rel. address)`. For the other years, you copy the two formulas for the year 2011 down.
+
+Choose [tab Data > What-If Analysis (group Data Tools) > Goal Seek]{.uicontrol}.
+
+The cell to set is the cell with the value for 2020, to 2500, by changing the cell with the Deposit.
+
+
+## 15-solver
+
+
+## 16-macro
+
+### macr001 - Background color {-#sol-macr001}
+
+Choose [tab Developer > Record Macro (group Code)]{.uicontrol}. Give the macro a name and a description and click [OK]{.uicontrol}.
+
+Right-click on a cell and choose [Format Cells > tab Fill > select a gray color > OK]{.uicontrol}.
+
+Choose [tab Developer > Stop Recording (group Code)]{.uicontrol}.
+
+### macr002 - Percentage formatting {-#sol-macr002}
+
+Choose [tab Developer > Record Macro (group Code)]{.uicontrol}. Give the macro a name and a description and click [OK]{.uicontrol}.
+
+Right click on a cell and choose [Format Cells > tab Number > Percentage with 1 decimal > tab Alignment > Horizontal: Center > OK]{.uicontrol}.
+
+Choose [tab Developer > Stop Recording (group Code)]{.uicontrol}.
+
+### macr003 - Formatting cell A1 {-#sol-macr003}
+
+Choose [tab Developer > Record Macro (group Code)]{.uicontrol}. Give the macro a name and a description and click [OK]{.uicontrol}.
+
+Right click on row 1 and choose [Row Height > 18 > OK]{.uicontrol}.
+
+Right click on column 1 and choose [Column Width > 3 > OK]{.uicontrol}.
+
+Select cell A1 [Font > Tahoma > Font Size > 14 > Bold > Font Color > Blue]{.uicontrol}.
+
+Choose [tab Developer > Stop Recording (group Code)]{.uicontrol}.
+
+### macr004 - Printing gridlines {-#sol-macr004}
+
+Choose [tab Developer > Record Macro (group Code)]{.uicontrol}. Give the macro a name and a description and click [OK]{.uicontrol}.
+
+Choose [tab Page Layout > Page Setup > tab Sheet > check Print Gridlines > OK]{.uicontrol}.
+
+Choose [tab Developer > Stop Recording (group Code)]{.uicontrol}.
+
+
+## 17-measurements
+
+### meas001 - Height and Weight {-#sol-meas001}
+
+The independent variable (x) is Height and the dependent variable (y) is Weight. Determine the slope of the line with the function `SLOPE()` and the interception with the y-axis with the function `INTERCEPT()`.
+
+### meas002 - Study time and exam grade {-#sol-meas002}
+
+The independent variable (x) is study time and the dependent variable (y) is marked. Determine the slope of the line with the function `SLOPE()` and the interception with the y-axis with the function `INTERCEPT()`.
+
+### meas003 - Shrinkage and temperature {-#sol-meas003}
+
+The independent variable (x) is the temperature and the dependent variable (y) is the shrink percentage. Determine the slope of the line with the function `SLOPE()` and the interception with the y-axis with the function `INTERCEPT()`.
+
+Formula for shrink percentage at 65 oC is `= 0.0796*65 - 3.546`
+
+### meas004 - Resistance and temperature {-#sol-meas004}
+
+The independent variable (x) is the temperature and the dependent variable (y) is the resistance. Determine the slope of the line with the function `SLOPE()` and the interception with the y-axis with the function `INTERCEPT()`.
+
+Formula for resistance at 400 oC is `= 0.0786*400 + 21.214`

@@ -1,0 +1,59 @@
+# Preface {.unnumbered}
+
+This textbook is intended as a thorough introduction to Microsoft Excel and has been developed especially for students in higher education and users of Microsoft Excel.
+
+This textbook is different from other Excel textbooks in several ways.
+
++ It is free and online, making it accessible to a wide audience.
+
++ Topics are developed to perform a specific task and master a specific task, no more and no less. This has resulted in concrete stepwise tasks without additional information that may cause only distraction. In the chapters, these tasks are clearly indicated by their titles beginning with [Task:]{.term}, so that it is clear that something has to be done.
+
++ The textbook contains interactive elements that students can use in self-directed learning. This requires a browser with Javascript. 
+
++ At the end of most chapters is a series of exercises. The title of an assignment always starts with a unique code and then a short description.
+
++ The content of the tasks and exercises is mainly determined by competences and skills that higher education requires. Many of the problems have come from experiences of students in the professional practice during internships and graduation.
+
+## Organization textbook {.unnumbered}
+
+Content of the chapters.
+
++ @sec-intro: Introduction to spreadsheets and Excel. If you are already used to working with Excel, you can skip this chapter.
+
++ @sec-worksheets: Use of worksheets.
+
++ @sec-data: Input data and the difference between content and formatting.
+
++ @sec-formatting: Format of worksheet and cells, as well as conditional formatting.
+
++ @sec-calculations: Formulas, absolute and relative addressing, copying and naming and setting up a calculation model.
+
++ @sec-functions: Built-in functions.
+
++ @sec-tables: Tables and operations.
+
++ @sec-arrays: Array formulas and dynamic matrices.
+
++ @sec-charts: Creating charts.
+
++ @sec-charttype: Chart types.
+
++ @sec-scenarios: Scenarios.
+
++ @sec-datatables: Data tables.
+
++ @sec-pivots: Pivot tables, pivot charts, slicers and timelines.
+
++ @sec-goalseek: Goal Seek
+
++ @sec-solver: Solver.
+
++ @sec-macros: Macro's
+
++ @sec-measurements: Processing measurement results, linear relations.
+
+## Software {.unnumbered}
+
+This textbook works with **Excel 365**, a product that is constantly evolving, with new features appearing with each new version. A key feature is the introduction of dynamic matrices and functions in the July 2020 release. This has made Excel 365 different from other Excel versions, including the 2016 and 2019 versions. Dynamic matrices are not compatible with all other Excel versions.
+
+Does this mean you can't use this textbook with Excel 2016 and later? No, only the matrix chapter is not suitable, but all other chapters give no problems. This also largely applies to the older Excel versions 2010 and 2007.

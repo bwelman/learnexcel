@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="297mm"
+   viewBox="0 0 210 297"
+   width="210mm"
+   version="1.1"
+   id="svg24"
+   sodipodi:docname="cover-excel.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs28" />
+  <sodipodi:namedview
+     id="namedview26"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="397.33138"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg24" />
+  <g
+     fill="#1e6c41"
+     id="g16">
+    <text
+       font-family="'Arial Rounded MT Bold'"
+       font-size="25.4px"
+       stroke-width="0.264583"
+       word-spacing="0.627062"
+       x="11.870058"
+       xml:space="preserve"
+       y="75.895699"
+       id="text4"><tspan
+         fill="#1e6c41"
+         font-family="'Arial Rounded MT Bold'"
+         font-size="25.4px"
+         stroke-width="0.264583"
+         x="11.870058"
+         y="75.895699"
+         id="tspan2">LEARN  EXCEL</tspan></text>
+    <text
+       font-family="sans-serif"
+       font-size="12.7"
+       stroke-width=".264583"
+       word-spacing="0"
+       x="65.03965"
+       y="279.57498"
+       id="text12"><tspan
+         fill="#1e6c41"
+         font-size="12.7"
+         stroke-width=".264583"
+         x="65.03965"
+         y="279.57498"
+         id="tspan10">Ben Welman</tspan></text>
+    <path
+       d="m.427507 135h210v120h-210z"
+       fill-rule="evenodd"
+       id="path14" />
+  </g>
+  <rect
+     fill="none"
+     height="81.471069"
+     rx=".892969"
+     width="103.88319"
+     x="19.971046"
+     y="161.48686"
+     id="rect18" />
+  <path
+     d="m104.26889 44.255993h29.25267v15.026711h-29.25267zm35.25 0h29.25267v14.995461h-29.25267zm-35.25-21.78125h29.25267v15.745461h-29.25267zm35.25 0h29.25267v15.745461h-29.25267zm-35.25-21.749999h29.25267v15.745461h-29.25267zm35.25 0h29.25267v15.745461h-29.25267zm-35.25-21.75h29.25267v15.745461h-29.25267zm35.25 0h29.25267v15.745461h-29.25267zm-35.25-21.75h29.25267v15.745461h-29.25267zm35.25 0h29.25267v15.745461h-29.25267zm-36.26889-17.974743v5.96875h78.28125v126.78125h-78.28125v6h77.78125c3.60618 0 6.53125-2.92507 6.53125-6.53125v-125.6875c0-3.606183-2.92507-6.53125-6.53125-6.53125z"
+     fill="#fff"
+     transform="matrix(.51919954 0 0 .51919954 12.180345 190.48134)"
+     id="path20" />
+  <path
+     d="m68.691979 150-54.191458 9.63764v70.57869l54.158998 9.78367zm-17.328288 29.04274-7.755537 15.94916 7.966467 16.04649-7.203905-.42184-4.737691-11.7469-4.640339 11.21149-6.343979-.35697 7.447279-14.73227-7.074098-14.89454 6.863167-.3245 3.991338 10.8545 4.802604-11.27636z"
+     fill="#fff"
+     id="path22" />
+</svg>

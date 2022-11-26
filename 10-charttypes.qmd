@@ -1,0 +1,421 @@
+# Chart Types {#sec-charttype}
+::: {.callout-note appearance="simple" icon="false"}
++ Chart types.
++ Line chart vs Scatter chart.
+:::
+
+Charts are used to visualize data and to compare numbers easily. Excel has a wide variety of chart types. Which type can best be used in which situation is not discussed here.
+
+Despite a large number of chart types, there are essentially only a limited number of basic types.
+
+![Basic chart types.](images/charttypes/charttype-basic.png){#fig-charttype-basic}
+
+All these basic types have many variants so you can get confused quickly at first. It is important to choose a good chart type for visualizing the data. Ask yourself questions like:
+
++ What should the chart tell?
++ What facts are being compared?
+
+## Column Chart {#sec-charttype-column}
+
+If time units like years, quarters, months, weeks, and days are part of the data, then column charts are the most suitable type. Don't use too many data points. Five to six values are maximum. When you have more than 6 values on the horizontal axis then it is better to choose a line chart.
+
+
+@fig-column-data shows the market shares for some supermarket chains for the years 2012-2016 in the Netherlands (source: Distrifood).
+
+![Market shares for some supermarket chains in 2012-2016.](images/charttypes/column-data.png){#fig-column-data}
+
+This data should be displayed in a column chart as shown in @fig-column-result.
+
+![Column chart of market shares for some supermarket chains.](images/charttypes/column-result.png){#fig-column-result}
+
+::: {#prp-charttype-column}
+[File]{.smallcaps}: `Chart_Column.xlsx`
+
+1. Open the file.
+
+2. Select any cell in the data area.
+
+3. Choose [Insert > Insert Column or Bar Chart (group Charts) > Clustered Column]{.uicontrol}.
+
+4. Change titles:
+
+   + Chart title: `Market shares supermarket chains`
+   + Vertical axis title: `Market share (%)`
+
+5. Choose [Insert > Text Box (group Text)]{.uicontrol}.
+
+6. Draw a rectangle with the mouse in the bottom right corner and then type the text `Source: Distrifood`.
+
+7. Select text, [right mouse click > Font > tab Font > Size 9 > OK]{.uicontrol}.
+
+:::
+
+## Bar Chart {#sec-charttype-bar}
+
+Bar charts are widely used to make clear differences in ranking. The importance (priority) of certain matters at the same moment can be expressed.
+
+The results are usually sorted from highest to lowest, so the highest result is displayed as the first bar.
+
+Figure shows the percentage of smokers by age group in 2009 (source: CBS).
+
+![Percentage smokers in 2009.](images/charttypes/bar-data.png){#fig-bar-data}
+
+The data should be displayed in a bar chart as shown in @fig-bar-result.
+
+![Bar chart percentage smokers in 2009.](images/charttypes/bar-result.png){#fig-bar-result}
+
+::: {#prp-charttype-bar}
+[File]{.smallcaps}: `Chart_Bar.xlsx`
+
+1. Open the file.
+
+2. Sort the table on the percentage of smokers from largest to smallest.
+
+![Percentage smokers in 2009, sorted from highest to lowest.](images/charttypes/bar-data-sorted.png){#fig-bar-data-sorted}
+
+3. Select any cell in the data area.
+
+4. Choose [tab Insert > Insert Column or bar Chart (group Charts) > Clustered Bar]{.uicontrol}.
+
+The bar chart appears in the worksheet. The longest bar is at the bottom. This is Excel's default procedure. This order must be changed, together with changing the title.
+
+![Default bar chart with the longest bar at the bottom.](images/charttypes/bar-default.png){#fig-bar-default}
+
+5. Select vertical as, [right-click > Format Axis]{.uicontrol}. The task panel ***Format Axis*** is displayed.
+
+6. [Axis Options > select Categories in reverse order]{.uicontrol}.
+
+![Task panel Format Axis.](images/charttypes/bar-axis-options.png){#fig-bar-axis-options}
+
+7. Change chart title in `Percentage Smokers in 2009`.
+
+:::
+
+## Pie Chart {#sec-charttype-pie}
+
+Pie charts are mainly used for displaying the percentage distribution of data within a group, such as election results. Too much information can make a pie chart cluttered. To keep it clear you should have at most 6 or 7 sectors in a pie chart.
+
+150 pupils have been asked what their favorite pet is. @tbl-survey-pet displays the results.
+
+
+|Pet    |Frequency|
+|-------|---------|
+|Cats   |70|
+|Dogs   |38|
+|Birds  |22|
+|Fish   |13|
+|Others |7|
+
+:  Favorite pet survey results. {#tbl-survey-pet}
+
+
+The data should be displayed in a pie chart, as shown in figure.
+
+![Pie chart favorite pet.](images/charttypes/pie-result.png){#fig-pie-result}
+
+::: {#prp-charttype-pie}
+[File]{.smallcaps}: `Chart_Pie.xlsx`
+
+1. Open the file.
+
+2. Select any cell in the data area.
+
+3. Choose [Insert > Insert Pie or Doughnut Chart (group Charts) > Pie]{.uicontrol}.
+
+4. Add data labels, position [Outside End]{.uicontrol}.
+
+5. Select the data labels, right-click and select [Format Data Labels]{.uicontrol}. The task panel Format Data Labels is displayed.
+
+6. In the task panel, select [Category Name]{.uicontrol} and [Percentage]{.uicontrol} and deselect [Value]{.uicontrol}.
+
+![Formatting label options.](images/charttypes/pie-label-options.png){#fig-pie-label-options}
+
+7. Remove the legend.
+
+8. Change chart title in `Favorite pet of 150 pupils`.
+
+::: callout-note
+By choosing to add data labels as [Data Call Out]{.uicontrol} instead of [Outside End]{.uicontrol}, you get immediately the category names and percentages. Try it.
+:::
+
+:::
+
+## Line Chart {#sec-charttype-line}
+
+You use a line chart to visualize a trend in data over intervals of time. For line charts, the time unit is plotted along the horizontal axis, the category axis. The measured variable is plotted along the vertical axis. A line can be drawn between the points on the graph to visualize a trend in data over intervals of time.
+
+In @fig-line-data, you can find annual temperature data (^o^C) for Amsterdam Airport Schiphol (source: [https://en.tutiempo.net/climate/ws-62400.html](https://en.tutiempo.net/climate/ws-62400.html)).
+
++ T = Average annual temperature
++ Tmax = Annual average maximum temperature
++ Tmin = Average annual minimum temperature
+
+![Average annual temperature Amsterdam, airport Schiphol.](images/charttypes/line-data.png){#fig-line-data}
+
+The data is to be displayed in a line chart, as shown in @fig-line-result.
+
+![Line chart with average annual temperature for Schiphol.](images/charttypes/line-result.png){#fig-line-result}
+
+::: {#prp-charttype-line}
+[File]{.smallcaps}: `Chart_Line.xlsx`
+
+1. Open the file.
+
+2. Select any cell in the data area.
+
+3. Choose [Insert > Recommended Chart (group Charts) > Line]{.uicontrol}.
+
+4. Change titles:
+
+   + Chart title: `Annual Temperatures Amsterdam Schiphol Airport`
+   + Vertical axis title: `Temperature (C)`.
+
+5. Select the chart and change the style through [Chart Design > Chart Styles]{.uicontrol}. Choose a style you like.
+:::
+
+## Scatter (XY) Chart {#sec-charttype-scatter}
+
+A scatter chart (XY diagram) is very suitable if you want to analyze and show the relationship between two numeric variables. It also allows you to determine a trend line. In the chart, the values of two numeric variables are plotted against each other. Each pair makes a point in the chart.
+
+To investigate whether there is a relationship between body length and weight, the data is measured for 10 students. The measurement data is shown in @fig-scatter-data.
+
+![Investigation body length - weight.](images/charttypes/scatter-data.png){#fig-scatter-data}
+
+The data should be displayed in a scatter chart, as shown in @fig-scatter-result).
+
+![Scatter chart length - weight.](images/charttypes/scatter-result.png){#fig-scatter-result}
+
+::: {#prp-charttype-scatter}
+[File]{.smallcaps}: `Chart_Scatter.xlsx`
+
+1. Open the file.
+
+2. Select any cell in the data area.
+
+3. Choose [Insert > Insert Scatter (XY) or Bubble Chart (group Charts) > Scatter]{.uicontrol}.
+
+4. Change titles:
+
+   + Chart title: `Relation body length - weight`
+   + Horizontal axis title: `Length (cm)`
+   + Vertical axis title:  `Weight (kg)`
+
+5. Change the scale of the horizontal axis so that it runs from 160 to 190, with increments of 5.
+
+6. Change the scale of the vertical axis so that it runs from 40 to 80, with increments of 5.
+
+`r hide("Hint scaling axis")`
+[Select axis > Right click > Format Axis > Axis Options]{.uicontrol}
+`r unhide()`
+
+:::
+
+## Line or Scatter Chart? {#sec-charttype-line-scatter}
+
+Line charts and scatter charts look quite similar, especially when a scatter chart is displayed with connecting lines. However, there are important differences in the way how the data is plotted along the horizontal axis (x-axis) and the vertical axis (y-axis). So mistakes can be made easily and it's important to make the right choice.
+
+::: {#exm-charttypes-line-scatter}
+**Annual sales data**
+
+In @fig-line-scatter, the annual sales data of a company are plotted with a line chart and a scatter chart.
+
+![sales per year. At the left in a line chart, and at the right in a scatter chart.](images/charttypes/line-scatter.png){#fig-line-scatter}
+
+The difference in scaling can cause incorrect conclusions. In the line chart, it looks like a strong growth in the first years and a stagnation in more recent years. This is not the case. The real growth can be seen in the scatter chart.
+:::
+
+**Line chart**
+
++ vertical: *value axis*
++ horizontal: *category axis*
+
+ The horizontal axis has evenly spaced categories of data (text or dates). A date axis displays dates in chronological order.
+
+A line chart is good for displaying the change of a variable over time. Examples: sales, turnover, profit, price, etc., by day, week, month, quarter, year. The time unit is always along the horizontal axis and the value of the measured variable along the vertical axis.
+
+**Scatter chart**
+
++ vertical: *value axis*
++ horizontal: *value axis*
+
+The horizontal axis can display numeric values or date values. And you can change the scaling options of both axes. The chart displays points at the intersection of the x value and the y value.
+
+A scatter chart is used to examine the relationship between two variables. If one variable becomes larger or smaller, what happens then with the other variable, does it become larger or smaller? The data values are displayed as separate points on the chart.
+
+Although you can connect the points with lines, it is not a good idea, because it suggests that the changes are proceeding according to these lines. It is better to show a relationship via a trendline. This is a line that reflects the relationship between the two variables best. The measured points can be on this trend line, but usually, they are distributed around (above or below) the trend line.
+
+Scatter charts are widely used in science and technology. In management reports, you also can find scatter charts, for example, whether there is a correlation between price increases and sales.
+
+## Doughnut Chart {#sec-charttype-doughnut}
+
+A doughnut chart is an extension of the pie chart. This diagram can contain one or more rings and each ring represents a data series. A doughnut chart can be used if you want to show the percentage distribution of multiple data series.
+
+In @fig-doughnut-data, the quarterly sales of a company are shown for the years 2008 and 2009.
+
+![Sales by quarter.](images/charttypes/doughnut-data.png){#fig-doughnut-data}
+
+These data should be displayed in a doughnut chart, as shown in @fig-doughnut-result.
+
+![Doughnut chart sales by quarter.](images/charttypes/doughnut-result.png){#fig-doughnut-result}
+
+::: {#prp-charttype-doughnut}
+[File]{.smallcaps}: `Chart_Doughnut.xlsx`
+
+1. Open the file.
+
+2. Select any cell in the data area.
+
+3. Choose [Insert > Insert Pie or Doughnut Chart (group Charts) > Doughnut]{.uicontrol}.
+
+There are still some adjustments to be made. Some of the formatting in this example will be done by applying a predefined chart style.
+
+4. Change the chart title in `Sales 2008-2009 by quarter`.
+
+5. Select the chart and change the style through [Chart Design > Chart Styles]{.uicontrol}. Choose a style you like.
+
+:::
+
+## Area Chart {#sec-charttype-area}
+
+Area charts are based on line charts. The area between axis and line are commonly emphasized with colors or hatchings. As with a line chart, the size of a variable is plotted against time. In a stacked area chart multiple data series are placed one above the other, so the sum of the data can be seen. With an area chart can you make trends visible.
+
+A company sells three products: A, B, and C. In @fig-area-data the sales quantity during the first half-year is shown.
+
+![Sales quantities by month.](images/charttypes/area-data.png){#fig-area-data}
+
+The data is to be displayed in a stacked area chart, as shown in @fig-area-result.
+
+![Stacked area chart for sales quantities by month.](images/charttypes/area-result.png){#fig-area-result}
+
+::: {#prp-charttype-area}
+[File]{.smallcaps}: `Chart_Area.xlsx`
+
+1.  Open the file.
+
+2.  Select any cell in the data area.
+
+3.  Choose [Insert > Recommended Charts (group Charts) > Stacked Area > OK]{.uicontrol}.
+
+4.  Change the chart title in `Number of items sold`.
+
+5.  Select legend, then right-click and [Format legend]{.uicontrol}. Change the position of the legend from [Bottom]{.uicontrol} to [Right]{.uicontrol}.
+
+`r hide("Hint legend")`
+[Select legend > Right click > Format Legend > Legend Options]{.uicontrol}
+`r unhide()`
+
+:::
+
+## Bubble Chart {#sec-charttype-bubble}
+
+A bubble chart can be used if you want to display the relationship between three numeric variables.
+
+A bubble chart is an extension of a scatter chart. In a scatter chart two numeric variables (X and Y) are plotted against each other. At a bubble chart, a third variable (Z) is used. The point in the scatter chart is now replaced by a bubble (or circle). The center of the bubble is determined by the variable X and Y and the size (radius) of the bubble by the variable Z. Other characteristics of the bubble, like the color, can also be used to make additional differences. These differences are based on qualitative, non-numeric values.
+
+@fig-bubble-data shows how the market share is related to turnover and the number of products.
+
+![Market shares.](images/charttypes/bubble-data.png){#fig-bubble-data}
+
+The data is to be displayed in a bubble area chart, as shown in @fig-bubble-result.
+
+![Bubble chart for market shares.](images/charttypes/bubble-result.png){#fig-bubble-result}
+
+::: {#prp-charttype-bubble}
+[File]{.smallcaps}: `Chart_Bubble.xlsx`
+
+1. Open the file.
+
+2. Give the values for turnover and market share a proper format.
+
+::: {.callout-note}
+A good layout of the source data ensures that you also get a good format in the chart.
+:::
+
+3. Select any cell in the data area.
+
+4. Choose [Insert > Insert Scatter (XY) or Bubble Chart (group Charts) > 3-D Bubble]{.uicontrol}.
+
+5. Make the following changes:
+
+   + Chart title: `Market shares`
+   + Horizontal axis title: `Number of products`
+   + Vertical axis title: `Turnover`
+   + Scaling vertical axis: 0 to 70000 (set minimum on fixed 0 and maximum on fixed 70000)
+   + Color bubbles: orange/golden
+   + Data labels: position centered, display percentage of market share
+
+The added data labels are not the ones you want. By default, the Y value (in this case, the revenue) is displayed. This must be changed to the bubble size, which in this case is determined by the market share. 
+
+6. Select at [Label Contains]{.uicontrol} only [Bubble Size]{.uicontrol}.  
+   ![](images/charttypes/bubble-labels.png)
+
+:::
+
+## Radar Chart {#sec-charttype-radar}
+
+In a radar chart, multiple data series (categories) are plotted along separate axes starting from a point in the middle, the origin. The diagram looks like a spider web and is therefore called a spider chart or star chart. The angles between these axes are equal. The data points on the axes are usually connected with a line.
+
+In @fig-radar-data, you see the scores of a self-evaluation, according to a 5-point Likert scale.
+
+![Self-evaluation on a 1-5 scale.](images/charttypes/radar-data.png){#fig-radar-data}
+
+The data should be displayed in a radar chart, as shown in @fig-radar-result.
+
+![Radar chart self-evaluation.](images/charttypes/radar-result.png){#fig-radar-result}
+
+::: {#prp-charttype-radar}
+[File]{.smallcaps}: `Chart_Radar.xlsx`
+
+1. Open the file.
+
+2. Select any cell in the data area.
+
+3. Choose [Insert > Insert Surface or Radar Chart (group Charts) > Radar]{.uicontrol}.
+
+4. Change the chart title in `Self-evaluation`.
+
+:::
+
+## Pareto chart {#sec-charttype-pareto}
+
+A Pareto chart is a combination of a column chart and a line chart. For the column chart, the values are sorted from largest to smallest. The line chart is on top of the columns and shows the cumulative percentage. The column chart uses the normal Y-axis on the left. For the line chart, there is a second Y-axis on the right with values from 0% to 100%.
+
+A Pareto diagram is often used in quality control to identify the most important factors.
+
+@fig-pareto-data shows the main causes of death in the Netherlands in 2009 (source: CBS).
+
+![Causes of death in 2009 in the Netherlands.](images/charttypes/pareto-data.png){#fig-pareto-data}
+
+The data should be displayed in a Pareto chart, as shown in @fig-pareto-result.
+
+![Pareto chart of death causes in 2009.](images/charttypes/pareto-result.png){#fig-pareto-result}
+
+::: {#prp-charttype-pareto}
+**Bestand**: [Grafiek_pareto.xlsx`
+
+1. Open the file.
+
+2. Select any cell in the data area.
+
+3. Choose [Insert > recommanded charts > tab All Charts > Histogram > Pareto]{.uicontrol}.
+
+4. Change chart title and add data labels.
+
+:::
+
+## Translation chart type names {#charttype-translations}
+
+|NL|EN|DE|
+|--|--|--|
+|Bellendiagram|Bubble chart|Blasendiagramm|
+|Cirkeldiagram|Pie chart|Kreisdiagramm|
+|Kolomdiagram|Column chart|Säulendiagramm|
+|Lijndiagram|Line chart|Liniendiagramm|
+|Ringdiagram|Doughnut chart|Ringdiagramm|
+|Radardiagram|Radar chart|Netzdiagramm|
+|Spreidingsdiagram|Scatter (XY) chart|Punktdiagramm|
+|Staafdiagram|Bar chart|Balkendiagramm|
+|Vlakdiagram|Area chart|Flächendiagramm|
+|Watervaldiagram|Waterfall chart|Wasserfalldiagramm|
+
+:  Dutch, English, and German names of some chart types. {#tbl-charttype-translations}

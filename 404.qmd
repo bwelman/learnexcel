@@ -1,0 +1,5 @@
+# Page not found
+
+The requested page cannot be found (maybe it has been moved or renamed).
+
+You can try using *Search* to find the new location of the page, or use the table of contents.

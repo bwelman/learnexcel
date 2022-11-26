@@ -1,0 +1,620 @@
+# Charts {#sec-charts}
+
+::: {.callout-note appearance="simple" icon="false"}
++ Parts of a chart.
++ Creating charts
++ Adjustments of chart parts.
++ Location and size of a chart.
++ Formatting a chart.
+:::
+
+Charts are an important tool in analyzing data. Charts can display the information bright and clear and their power should not be underestimated. Trends and patterns can be displayed in graphs and abnormalities or fluctuations can be seen easily.
+
+Excel offers a wide range of chart types and choosing the right chart type is important. When installing Excel, the Grouped Column chart type is defined as the default chart type, but this setting can be changed. 
+
+To easily create a chart in Excel the data should be well organized in the worksheet. The most convenient way to do this is with a table form.
+
+There are two locations for a chart:
+
++ as an object in a worksheet. The chart is then called an embedded chart. The advantage of this location is that you can see and print the chart together with the data in the worksheet.
++ a special worksheet for a chart called a **chart sheet**.
+
+It is possible to change the location of the chart afterward.
+
+## Chart elements {#sec-charts-elements}
+
+A graph consists of many elements. These are not always created by default in Excel. They can always be added afterward. Also moving and deleting most of the elements is possible.
+
+![Elements of a chart.](images/charts/chart-elements.png){#fig-chart-elements}
+
+The most important parts of a chart are:
+
+Chart area (1)
+: This is the entire chart including all elements.
+
+Plot area (2)
+: The rectangular area bounded by the axes, including all data series. In the figure, the area with the light-colored background.
+
+Data series (3)
+: A data series is a row or column in your worksheet with numbers. These are plotted in the chart. In the example chart are two data series: the blue-colored and the brown colored. The data series have names, here 2009 and 2010, and these names form the legend.
+
+Data point (4)
+: A separate value (bar, column, point, ...) in the chart. Each column in the chart shown is a data point and there are in total 8 data points.
+
+Category axis (5)
+: This is the horizontal axis or X-axis. The text (labels) along this axis comes from cells in the worksheet. In the example chart, you see four categories Q1, Q2, Q3 and Q4.
+
+Horizontal axis title (6)
+: This title identifies the type of data along the horizontal axis. In case it is not clear that “Q1, Q2, Q3, Q4” represents quarters, you can add a title that explains this.
+
+Value axis (7)
+: This is the vertical axis or Y-axis and this axis usually contains numbers.
+
+Vertical axis title (8)
+: This title is important for identifying the units along the axis.
+
+Chart title (9)
+: A short text that indicates what the chart is about. This title mostly appears in a larger font and near the top of the chart.
+
+Legend (10)
+: A box that identifies the patterns or colors that are assigned to the data series or categories.
+
+Gridlines (11)
+: Horizontal or vertical lines in the drawing area.
+
+Data labels (12)
+: A number of a data point that provides the actual value for the data point.
+
+## Creating a Recommended Chart {#sec-charts-create}
+
+Excel offers many kinds of different charts. Choosing the most appropriate chart can be difficult. Excel can help you with the [Recommended Charts]{.uicontrol} command, which produces a list of charts that Excel recommends for your data. To use this feature you should always select the data first.
+
+::: {#prp-charts-create}
+[File]{.smallcaps}: `Bakery.xlsx`
+
+![Sales bakery per year by quarter.](images/charts/bakery-data.png){#fig-bakery-data}
+
+1. Open the file.
+
+2. Select any cell in the data area A1:D5.
+
+::: callout-note
+If the data area is a contiguous area, such as A1: D5 is here, then if you select any cell in this area Excel automatically recognizes it as the entire data area for a chart. If it's not a contiguous area you must select the whole data area.
+:::
+
+3. Choose [Insert > Recommended Charts (group Charts)]{.uicontrol}.
+
+The dialog box Insert Chart is displayed. On the left side, you can scroll through the list of charts that Excel recommends for your data. And when you click on a chart, you will see a preview of the chart on the right with your data.
+
+![Recommended charts. In the left column is a frame around the selected chart type.](images/charts/chart-recommended.png){#fig-chart-recommended}
+
+4. Choose [Clustered Column > OK]{.uicontrol}.
+
+The chart is embedded in the worksheet and the tabs [Chart Design]{.uicontrol} and [Format]{.uicontrol} are added to the ribbon. These are only visible when the chart is selected.
+
+There is a frame around the chart because the chart is selected. And in the upper-right corner you can see three buttons for adding or changing:
+
++ ![](images/common/button-chart-elements.png) Chart Elements
++ ![](images/common/button-chart-styles.png) Chart Styles
++ ![](images/common/button-chart-filters.png) Chart Filters
+
+:::
+
+::: {.callout-note}
+An alternative method (often slightly faster) to insert a recommended chart is as follows: 
+
+1. Select the data, including the headings.
+2. Click the [Quick Analysis]{.uicontrol} button ![](images/common/button-quick-analysis.png) at the bottom right corner of the selected range.
+3. Click [Charts]{.uicontrol} and select the chart you want.
+:::
+
+## Chart Operations {#sec-charts-operations}
+
+You can perform several operations with the individual elements of a chart. The possibilities depend on the chart item. For an element that contains text, you can change the size, font, color, etc. Before an operation can be carried out, you first must select this element. Then the operation can be chosen from the menu or the right-click shortcut menu.
+
+**Selecting a chart element**
+
+Most of the time this is very easy. But sometimes it is not, especially when the elements are located close to each other.
+
+After selecting the chart you have the following options to select a chart element:
+
++ Click on the chart element.
++ Through the menu [ tab Format > arrow Chart Elements (group Current Selection)]{.uicontrol}.
+
+![Current selection on the ribbon (tab Format). With the arrow you can select the desired chart part.](images/charts/chart-elements-currentselection.png){#fig-chart-elements-currentselection}
+
+::: {.callout-note}
+1. In the [Current Selection]{.uicontrol} you can always see which element is selected. In @fig-chart-elements-currentselection) the [Chart Area]{.uicontrol} is selected.
+
+2. When a part is selected, the part is marked in the chart with sizing handles.  
+   ![](images/charts/chart-elements-sizinghandles.png)
+:::
+
+**Moving element**
+
+Select the element. Hover the mouse pointer over the edge (not on a sizing handle) and drag the element to the desired location.
+
+**Changing dimensions**
+
+If a resizable element has been selected, the element will be surrounded by sizing handles. Drag a handle to change height or width.
+
+**Formatting element**
+
+Select the element. Choose [tab Format > Format Selection (group Current Selection)]{.uicontrol}. A task panel is displayed on the right side with options for formatting the element.
+
+The task panel can also be accessed through right mouse click on the element and then [Format ...]{.uicontrol}.
+
+**Apply chart style**
+
+Excel includes many predefined formats, called styles. You can apply a style through button ![](images/common/button-chart-styles.png).
+
+**Deleting chart**
+
+Both an embedded chart and a chart sheet can be removed easily.
+
+Choose one from the following options:
+
++ Embedded chart: select the chart and press the key [Delete]{.uicontrol}.
+
++ Chart Sheet: right-click on the tab of the chart sheet and choose from the shortcut menu [Delete]{.uicontrol}.
+
+
+## Switch Rows-Columns {#sec-charts-switch-dataranges}
+
+The source data of a chart can be both a data series per column or per row. The choice of data series can be changed easily.
+
+In the bakery's sales data, see @fig-bakery-data, the annual data are in columns and the quarterly data in rows. You can compare the years in a chart, where each year is a data series, as shown in @fig-chart-recommended. But you can also compare the quarters, then each quarter is a data series. When creating the chart, Excel tries to guess whether the columns or the rows make up the data series. The choice is not always the one you want and you can easily change it. 
+
+::: {#prp-charts-switch-dataranges}
+[File]{.smallcaps}: `Bakery_Chart.xlsx`
+
+1. Open the file.
+
+2. Select the chart by clicking within the chart area.
+
+A double border around the chart appears and the mouse cursor has been changed to a cross with arrows ![](images/common/mouse-pointer-drag.png).
+
+3. Choose [Chart Design > Switch Row/Column (group Data)]{.uicontrol}.
+
+![Sales bakery, now with quarters (rows) as data series.](images/charts/bakery-column-quarters.png){#fig-bakery-column-quarters}
+
+:::
+
+## Changing chart location {#sec-charts-move}
+
+You can create a chart on the same worksheet as the data. This is an **embedded chart**. You can also display add a chart to a separate sheet that only contains a chart, a **chart sheet**. An embedded chart on a worksheet can be moved by dragging it to another place, but you can also move it to a chart sheet. Both methods are practiced in this task.
+
+::: {#prp-charts-move}
+[File]{.smallcaps}: `Bakery_Chart.xlsx`
+
+1. Open the file.
+
+2. Select the chart by clicking within the chart area.
+
+A double border around the chart appears and the mouse cursor has been changed to a cross with arrows ![](images/common/mouse-pointer-drag.png).
+
+3. Press the left mouse button and drag the chart to the desired place.
+
+::: callout-note
+If you hold down the [Alt]{.uicontrol} key while dragging the chart will snap to the gridlines of the worksheet.
+:::
+
+4. Click outside the chart in the worksheet to deselect.
+
+5. Select the chart again and choose [Chart Design > Move Chart (group Location)]{.uicontrol}.
+
+![Dialog box Move Chart.](images/charts/chart-move-window.png){#fig-chart-move-window}
+
+6. Select [New sheet]{.uicontrol}, give the new sheet a name and click [OK]{.uicontrol}. 
+
+
+You can also turn a chart on a chart sheet into an embedded chart on a worksheet. 
+
+7. Select the chart in the chart sheet.
+
+8. Choose [Chart Design > Move Chart (group Location)]{.uicontrol}.
+
+9. Select [Object in]{.uicontrol}, and choose the worksheet on which the chart should be embedded, and then click [OK]{.uicontrol}.
+
+The worksheet with the embedded chart is displayed and the chart sheet has been deleted.
+
+:::
+
+## Resizing charts {#sec-charts-dimensions}
+
+The size of a chart can be changed by dragging the sizing handles to the size you want. Depending on the object, the sizing handles may be different shapes. They may appear as small circles, squares, or, as is the case with a chart, as a group of small dots. Once an object is selected it is outlined by a rectangular frame and you find the sizing handles in every corner and in the middle of each side. By using the sizing handles on the corner you can drag in any direction. With the sizing handles in the middle, you can only drag horizontally or vertically. You can drag the chart larger or smaller. It is also possible to specify the exact dimensions of a chart.
+
+::: {#prp-charts-dimensions}
+[File]{.smallcaps}: `Bakery_Chart.xlsx`
+
+1. Open the file.
+
+2. Select the chart by clicking within the chart area.
+
+3. Hover the mouse pointer over one of the corner points until it changes into a double-headed arrow ![](images/common/sizing-handle-diagonal.png).
+
+4. Click the left mouse button and drag it into the desired direction.
+
+::: callout-note
+If you hold down the [Alt]{.uicontrol} key while dragging the chart will snap to the gridlines of the worksheet.
+:::
+
+For Exact dimensions:
+
+5. Select the chart.
+
+6. Choose [Format > Height / Width (group Size)]{.uicontrol}.
+
+![Height and width of a chart.](images/charts/chart-dimensions.png){#fig-chart-dimensions}
+
+7. Specify the desired dimensions.
+
+8. Click outside the chart in the worksheet to deselect.
+
+:::
+
+## Chart Title {#sec-charts-title}
+
+When you create a chart, the title appears by default above the chart. You can simply select the text and type the title you want. You can also hide the title or change its location.
+
+::: {#prp-charts-title}
+[File]{.smallcaps}: `Bakery_Chart.xlsx`
+
+1. Open the file.
+
+2. Select the chart.
+
+3. Choose [Chart Design > Add Chart Element (group Chart Layouts) > Chart Title]{.uicontrol}.
+
+![Options chart title.](images/charts/chart-title-options.png){#fig-chart-title-options}
+
+4. Choose [Above Chart]{.uicontrol}.
+
+5. Double-click the title text `Chart Title]{.uicontrol} and replace it with your own text for example [Sales Bakery`.
+
+::: callout-note
+-  Selecting `None` removes the chart title.
+
+-  You can move the chart title using the well-known drag method.
+
+-  You can format the title by selecting it, then right-click and choose [Format Chart Title]{.uicontrol}.
+:::
+
+:::
+
+::: {#prp-charts-title2}
+**Faster method**
+
+1. Select the chart.
+
+2. Click the Charts Element button ![](images/common/button-chart-elements.png) next to the chart and you'll see a list of chart elements.
+
+3. Check [Chart Title]{.uicontrol} and the title is immediately added to the chart.
+
+![Selecting and deselecting chart elements .](images/charts/chart-elements-title.png){#fig-chart-elements-title}
+
+::: callout-note
+- When an arrow is visible next to the chart element, this gives access to a drop-down menu with further options.
+
+- The elements present in the graph are checked. By removing the check mark you remove the element from the chart. 
+:::
+
+:::
+
+If possible, this faster methode will be used in the following tasks.
+
+## Legend {#sec-charts-legend}
+
+A legend is a box that identifies the patterns or colors from the data series in a chart. By default, if applicable, the legend will be shown at the right. The legend can also be removed or dragged to another place.
+
+::: {#prp-charts-legend}
+[File]{.smallcaps}: `Bakery_Chart.xlsx`
+
+The button ![](images/common/button-chart-elements.png) [Chart elements]{.uicontrol} gives you accessto the following legend options:
+
++ Right
++ Top
++ Left
++ Bottom
++ None (by deselecting)
+
+And just like the chart title, you can drag a legend and format it.
+
+Experiment with the possibilities.
+
+:::
+
+## Axis Titles {#sec-charts-axis-titles}
+
+Axis titles are titles along the horizontal and vertical axis and help you to understand what the data is about.
+
+::: {#prp-charts-axis-titles}
+[File]{.smallcaps}: `Bakery_Chart.xlsx`
+
+The button ![](images/common/button-chart-elements.png) [Chart elements]{.uicontrol} gives you accessto the following options for Axis Titles:
+
++ Primary Horizontal
++ Primary Vertical
+
+1. Add titles for both axis.
+
+2. Change the horizontal title in `Time`.
+
+3. Change the vertical title in `sales (x 1000)`.
+
+:::
+
+## Data Labels {#sec-charts-data-labels}
+
+Data labels are numbers at the data points that show the actual values for the data points.
+
+::: {#prp-charts-data-labels}
+[File]{.smallcaps}: `Bakery_Chart.xlsx`
+
+For data labels you have the following options:
+
+![Optionss for data labels.](images/charts/datalabels-options.png){#fig-datalabels-options}
+
+Experiment with these options. In @fig-bakery-datalabels) you see the display for the choice [Outside End]{.uicontrol}.
+
+![Data labels on the outside of the columns display the sales for that quarter.](images/charts/bakery-datalabels.png){#fig-bakery-datalabels}
+
+:::
+
+## Gridlines {#sec-charts-gridlines}
+
+Gridlines are horizontal and vertical lines extending from the axes across the plot area of the chart. Gridlines make the data in a chart easier to read. You can show gridlines for the major or minor intervals on the axes.
+
+::: {#prp-charts-gridlines}
+[File]{.smallcaps}: `Bakery_Chart.xlsx`
+
+For gridlines you have the following options:
+
+![Options for grid lines.](images/charts/gridline-options.png){#fig-gridline-options}
+
+Hover the mouse over the options. With each option you immediately see the result in the graph.
+
+:::
+
+## Plot Area {#sec-charts-plotarea}
+
+The plot area in a chart refers to a rectangular area of the chart that graphically displays the data being charted. The plot area is the area bounded by the axes, It includes the axes but not the titles. You can format the plot area for example with a colored background and border.
+
+::: {#prp-charts-plotarea}
+[File]{.smallcaps}: `Bakery_Chart.xlsx`
+
+1. Open the file.
+
+2. Select the plot area, right-click and choose [Format Plot Area]{.uicontrol}. The task panel [Format Plot Area]{.uicontrol} is displayed.
+
+3. Open option [Fill]{.uicontrol} and select [Solid fill]{.uicontrol} with a light grey color.
+
+4. Open option [Border]{.uicontrol} and select [Solid line]{.uicontrol} with a black color.
+
+![Plot area with a background and border.](images/charts/bakery-plotarea.png){#fig-bakery-plotarea}
+
+:::
+
+## Adding and Removing Data Series {#sec-charts-data-source}
+
+It often happens that a new data series has to be added to an existing chart or that an already existing data series has to be removed. How you can do that depends on whether the data to be added or removed is directly related to the existing data set. You can easily see this by selecting a chart, the corresponding source data will then be marked in the worksheet with colored boxes.
+
+New series joins the highlighted area
+: The data range can be expanded by dragging.
+: A series at the beginning or the end of the highlighted area can be deleted by dragging.
+
+New series does not join the highlighted area
+: The dialog box ***Select data source*** must be used. 
+
+Both techniques will be used in this section.
+
+::: {#prp-charts-data-source1}
+[File]{.smallcaps}: `Bakery_Chart.xlsx`
+
+**Add new 2011 data series by dragging** 
+
+1. Open the file.
+
+2. Add the new data for year 2011 in the area E1:E5 as shown in @fig-bakery-data-2011).
+
+![Bakery turnover data supplemented for year 2011.](images/charts/bakery-data-2011.png){#fig-bakery-data-2011}
+
+3. Select the chart. The source data is selected on the worksheet showing the sizing handles.
+
+![Marked data source of chart.](images/charts/bakery-data-marked.png){#fig-bakery-data-marked}
+
+4. Drag the lower-right sizing handle to include the new data.
+
+![Bakery sales, extended with 2011 data .](images/charts/bakery-chart-2008-2011.png){#fig-bakery-chart-2008-2011}
+
+:::
+
+::: {#prp-charts-data-source2}
+**Delete 2008 dataset by dragging**
+
+1. Select the chart.
+
+The source data is selected on the worksheet showing the sizing handles.
+
+![Marked data source 2008-2011.](images/charts/bakery-data2011-marked.png){#fig-bakery-data2011-marked}
+
+2. Drag the lower-left sizing handle to exclude the data for 2008.
+
+![Chart with data series 2009-2011.](images/charts/bakery-chart-2009-2011.png){#fig-bakery-chart-2009-2011}
+:::
+
+::: {#prp-charts-data-source3}
+**Add series 2008 and delete series 2011 via dialog box** 
+
+1. Right-click on the chart and choose [Select Data...]{.uicontrol}.
+
+::: callout-note
+An alternative is [tab Chart Design > Select Data (group Data)]{.uicontrol}.
+:::
+
+![Select Data Source.](images/charts/bakery-select-datasource.png){#fig-bakery-select-datasource}
+
+2. Click button [Add]{.uicontrol}.
+
+![Dialog box for adding a new series.](images/charts/chart-edit-series.png){#fig-chart-edit-series}
+
++ [Series name]{.uicontrol}: The cell that contains the name of the data series.
++ [Series values]{.uicontrol}: The cell range that contains the data values
+
+3. Put the cursor in the box [Series name]{.uicontrol} and then select in the worksheet cell B1.
+
+4. Select the contents of the box [Series values]{.uicontrol} and then select in the worksheet range B2:B5.
+
+5. Click [OK]{.uicontrol}.
+
+In the chart and dialog box Select Data Source the data series 2008 is added. However, this data set is added at the end, making the order not logical.
+
+![Dialog box data source. Here you can change the order of the data series.](images/charts/bakery-datasource-moveup.png){#fig-bakery-datasource-moveup}
+
+6. Select in the dialog box series [2008]{.uicontrol} and then click 3 times on the arrow [Move Up]{.uicontrol} to ensure that the data series 2008 is the first series.
+
+7. Select in the dialog box Select Data Source series [2011]{.uicontrol} and click on the button [Remove]{.uicontrol}.
+
+The data series 2011 is removed. The initial situation containing the data series 2008-2010 is restored.
+
+:::
+
+## Task: Changing Chart Type {#sec-charts-type-change}
+
+The chart type can be changed easily. In this task the column chart will be changed in a line chart.
+
+::: {#prp-charts-type-change}
+[File]{.smallcaps}: `Bakery_Chart.xlsx`
+
+1. Open the file.
+
+2. Select the chart.
+
+3. Choose [Chart Design > Change Chart Type (group Type)]{.uicontrol}.
+
+![Change chart type.](images/charts/chart-type-change.png){#fig-chart-type-change}
+
+4. Choose type [Line with Markers]{.uicontrol}. Then click [OK]{.uicontrol}.
+
+![Line chart with markers.](images/charts/bakery-line.png){#fig-bakery-line}
+
+:::
+
+## Case Share prices {#sec-charts-case}
+
+[File]{.smallcaps}: `Stocks.xlsx`
+
+You can see the average monthly share prices of four companies for the months of January through March in @fig-case-data):
+
+![Average monthly share prices.](images/charts/case-data.png){#fig-case-data}
+
+Create a line chart from these data.
+
+At a later stage, the entries for April are published:
+
+![Average prices April.](images/charts/case-data-april.png){#fig-case-data-april}
+
+This data should be added at a later moment to the chart.
+
+The final result should look like this
+
+![Chart with average monthly share prices.](images/charts/case-chart.png){#fig-case-chart}
+
+`r hide("Hint")`
+
++ Chart type is a line chart (line with markers)
++ When you create a chart Excel takes the rows as data series instead of the columns. Change this situation by switching rows/columns.
++ Add chart title. Format the text of the title in Palatino, 14 pt, bold.
++ Add a vertical axis title.
++ Scale the vertical axis so that the primary unit is10.
++ Add a legend under the horizontal axis and stretch the legend so that all texts are in a row.
++ Add horizontal dotted gridlines
++ Chart dimensions: width = 4" and height = 4"
+`r unhide()`
+
+## Exercises {#sec-charts-exercises}
+
+::: {#exr-graf001}
+**Third-degree chart (graf001)**
+
+Create the following chart. Make the layout as similar as possible.
+
+![](images/charts/graf001-chart.png)
+
+`r hide("Hint")`
+First, create two columns in a worksheet with values for X and calculated values for Y. Create a scatter chart and apply the formatting.
+`r unhide()`
+:::
+
+::: {#exr-graf002}
+**Travel bookings (graf002)**
+
+The following table lists the data of travel bookings in the years 2008-2010.
+
+![](images/charts/graf002-data.png)
+
+Put the data in a worksheet and use formulas for the totals. After that create the following chart.
+
+![](images/charts/graf002-chart.png)
+
+[File]{.smallcaps}: `Graf002.xlsx`
+:::
+
+::: {#exr-graf003}
+**Sales figures (graf003)**
+
+In the following table, you see the estimated and actual sales figures per quarter for 2010, as well as the difference between actual and estimated. The average percentage of the differences is also determined.
+
+![](images/charts/graf003-data.png)
+
+Put the data in a worksheet and use formulas for the differences and the average. After that create the following chart.
+
+![](images/charts/graf003-chart.png)
+
+[File]{.smallcaps}: `Graf003.xlsx`
+:::
+
+::: {#exr-graf004}
+**Age structure (graf004)**
+
+In the following table, the percentages of the Dutch population age structure for the years 1950-2010 are listed, divided into nine age classes (source: CBS).
+
+![](images/charts/graf004-data.png)
+
+Create from this data, the next chart.
+
+![](images/charts/graf004-chart.png)
+
+[File]{.smallcaps}: `Graf004.xlsx`
+:::
+
+::: {#exr-graf005}
+**Relationship production time - cost (graf005)**
+
+A toy manufacturing company suspects that the price of the toys largely depends on the production time. To investigate this, the production time of the toys is measured. The results and the associated cost are listed in the following figure.
+
+![](images/charts/graf005-data.png)
+
+1.  Create a chart in which the cost is plotted against the production time (the independent variable).
+2.  Add a linear trend line to the chart. Also, add the equation of the trend line to the chart.
+
+[File]{.smallcaps}:[Graf005.xlsx`
+
+`r hide("Answer")`
+![](images/charts/graf005-chart.png)
+`r unhide()`
+:::
+
+::: {#exr-graf006}
+**Counting agarics (graf006)**
+
+In a given area the number of agarics is counted annually. In the following table, you can see the number of agarics per hectare for some years.
+
+![](images/charts/graf006-data.png)
+
+Create from this data, the next chart.
+
+![](images/charts/graf006-chart.png)
+
+[File]{.smallcaps}: `Graf006.xlsx`
+:::

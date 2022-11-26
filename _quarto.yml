@@ -1,0 +1,66 @@
+project:
+  type: book
+  pre-render: R/generate-zip.R
+
+book:
+  title: "Learn Microsoft Excel"
+  author: "Ben Welman"
+  date: today
+  date-format: long
+  google-analytics: "G-XT9J2D3HRQ"
+  site-url: https://learnexcel.netlify.app/
+
+  description: "A task-oriented textbook."
+  chapters:
+    - index.qmd
+    - preface.qmd
+    - 01-intro.qmd
+    - 02-worksheets.qmd
+    - 03-data.qmd
+    - 04-formatting.qmd
+    - 05-calculations.qmd
+    - 06-functions.qmd
+    - 07-tables.qmd
+    - 08-arrays.qmd
+    - 09-charts.qmd
+    - 10-charttypes.qmd
+    - 11-scenarios.qmd
+    - 12-datatables.qmd
+    - 13-pivots.qmd
+    - 14-goalseek.qmd
+    - 15-solver.qmd
+    - 16-macro.qmd
+    - 17-measurements.qmd
+
+execute:
+  freeze: auto
+
+lang: en
+
+language:
+  en:
+    crossref-prp-title: "Task"
+  nl:
+    crossref-prp-title: "Taak"
+
+format:
+  html:
+    include-after-body: include/webex.js
+    css: include/webex.css
+    theme:
+      - cosmo
+      - include/textbook.scss
+    cover-image: images/cover-excel.svg
+    fig-width: 6
+    fig-asp: 0.618
+    code-fold: false
+    link-external-newwindow: true
+    callout-appearance: simple
+
+
+knitr:
+  opts_chunk:
+    echo: false
+    warning: false
+    message: false
+    cache: false

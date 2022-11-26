@@ -1,0 +1,54 @@
+\usepackage[english, dutch]{babel}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{mdframed}
+
+\definecolor{swB}{HTML}{569BBD}
+\definecolor{swLB}{HTML}{D9E9F7}
+\definecolor{swR}{HTML}{F53D3D}
+\definecolor{swLR}{HTML}{F3CED4}
+\definecolor{swLG}{HTML}{F8F8F8}
+
+\mdfdefinestyle{block2}{%
+topline=true, bottomline=true, leftline=false, rightline=false, backgroundcolor=swLG, frametitlerule=true
+}
+
+\newenvironment{intro}
+{
+  \begin{mdframed}[style=block2, linecolor=swB, backgroundcolor=swLB, frametitlebackgroundcolor=swB, frametitle=DOELSTELLINGEN]
+}
+{\end{mdframed}}
+
+\newenvironment{practice}
+{
+  \begin{mdframed}[style=block2, linecolor=swB, backgroundcolor=swLG, frametitlebackgroundcolor=swLB, frametitle=PRAKTIJK]
+}
+{\end{mdframed}}
+
+\newenvironment{warning}
+{
+  \begin{mdframed}[style=block2, linecolor=swR, backgroundcolor=swLG, frametitlebackgroundcolor=swLR, frametitle=ATTENTIE]
+}
+{\end{mdframed}}
+
+\newenvironment{info}
+{
+  \begin{mdframed}[style=block2, linecolor=swB, backgroundcolor=swLG, frametitlebackgroundcolor=swLB, frametitle=INFO]
+}
+{\end{mdframed}}
+
+\newenvironment{demo}
+{
+  \begin{mdframed}[style=block2, linecolor=swB, backgroundcolor=swLG, frametitlebackgroundcolor=swLB, frametitle=VOORBEELD]
+}
+{\end{mdframed}}
+
+\newenvironment{test}[1]
+{
+  \begin{mdframed}[style=block2, linecolor=swB, backgroundcolor=swLG, frametitlebackgroundcolor=swLB, frametitle=#1]
+}
+{\end{mdframed}}
+
+
+

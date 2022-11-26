@@ -1,0 +1,91 @@
+/*-- scss:defaults --*/
+
+$appColor: #1E6C41;    /* App color Excel, hsl(147,57,27) , rgb(30,108,65) */
+$appLColor: #1E6C411A; /* App color 10% */
+$tbGray:   #7E7E7E;    /* Gray            , hsl(0,0,49)    , rgb(126,126,126)  */
+$tbLGray:  #7E7E7E1A;  /* Light Gray , 10% Gray */
+
+$body-bg: #FFFAF0; /* Floral white */
+$primary: $appColor;
+
+$toc-color: $appColor;
+
+$sidebar-fg: $appColor;
+
+
+/*-- scss:rules --*/
+
+/* All textbooks */
+
+/* Headings */
+
+.header-section-number {
+  padding-right: .2em;
+  color: $appColor;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $appColor;
+}
+
+h2 {                        /* horizontal lines above and below section title */
+  border-bottom: 2px solid;
+  border-top: 2px solid;
+}
+
+div.sidebar-item-container .active, div.sidebar-item-container .show > .nav-link, div.sidebar-item-container .sidebar-link > code {
+  font-weight: bolder; /* actieve keuze in  navigatiestructuur aan de linkerkant */
+}
+
+nav-link active {
+	font-weight: bolder; /* active link in sidebar */
+}
+
+.sidebar nav[role="doc-toc"] > ul li a {
+  color: $appColor;   /* color TOC items */
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  font-weight: bolder;
+}
+
+.sidebar-item .chapter-number {
+	color: $appColor;
+}
+
+.figure-caption {
+	font-size: .9em;
+}
+
+/* proposion is used for tasks */
+
+.proposition {
+  padding: 0.5em;
+  margin: 10px 0 10px 0;      /* top right bottom left */
+  background-color: $tbLGray;
+  border: 1px solid $tbGray;
+  border-radius: 5px;
+}
+
+.example {
+  padding: 0.5em;
+  margin: 10px 0 10px 0;      /* top right bottom left */
+  border: 1px solid $tbGray;
+  border-radius: 5px;
+}
+
+/* MS Office specific */
+
+.uicontrol {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.varname {
+  font-family: "Source Code Pro", "monospace", "Courier New";
+  font-size: 85%;
+}
