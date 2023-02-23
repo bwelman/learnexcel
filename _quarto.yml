@@ -9,7 +9,8 @@ book:
   date-format: long
   google-analytics: "G-XT9J2D3HRQ"
   site-url: https://learnexcel.netlify.app/
-
+  repo-url: https://github.com/bwelman/learnexcel
+  repo-actions: [issue]
   description: "A task-oriented textbook."
   chapters:
     - index.qmd
