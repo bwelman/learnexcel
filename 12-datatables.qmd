@@ -1,6 +1,11 @@
 # Data Tables {#sec-datatables}
 
-::: {.callout-note appearance="simple" icon="false"}
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
 + Layout and operation of a data table with one input variable.
 + Layout and operation of a data table with 2 input variables.
 :::
@@ -202,11 +207,14 @@ A loan of $10,000 must be repaid in some monthly periods at an annual interest o
 2.  Create a data table with an overview of the monthly repayments for redemption periods of 12, 18, 24, 30, ..., 72 months.
 3.  Create a new data table with an overview of the monthly repayments for redemption periods of 12, 18, 24, 30, ..., 72 months, and annual interest rates of 3%, 3½%, 4%, 4½% ... 6%.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![Data table monthly repayments for different redemption periods](images/datatables/tabl001-result1.png)
 
 ![Data table monthly repayments for different redemption periods and interest rates](images/datatables/tabl001-result2.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-tabl002}
@@ -219,9 +227,12 @@ In a worksheet the forecast of the sales in 2014, based on the sales in 2013 and
 1.  Make the above model in a new worksheet and create a formula for the forecast of the sales in 2014.
 2.  Create a data table with an overview of the sales forecast with growth rates of 1%, 2%, ... 10%.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 
 ![Data table sales forecast](images/datatables/tabl002-result.png)
 `r unhide()`
+:::
+
 :::
 

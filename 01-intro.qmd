@@ -1,6 +1,8 @@
 # Starting with Excel {#sec-intro}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
+**OBJECTIVES**
+
 -   What spreadsheets are.
 -   Starting and closing Excel.
 -   The layout of the Excel program window.

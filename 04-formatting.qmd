@@ -1,6 +1,11 @@
 # Formatting worksheet and data {#sec-formatting}
 
-::: {.callout-note appearance="simple" icon="false"}
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
 -   The importance of selecting first and then formatting.
 -   Column width and row height adjustment.
 -   Formatting numbers and text.
@@ -181,8 +186,6 @@ At the top, you can see the actual formatting of the selected cell. For example 
 
 When the desired formatting is not on the list then you can click on [More Number Formats...]{.uicontrol}. The dialog box Format Cells appear with the [tab Number]{.uicontrol} selected. Here you can define your custom format.
 
-## Formatting numbers {#sec-formatting-numberformat-task}
-
 In the following example, you see a part of a worksheet containing many uses of number format. All formatting has been applied with the predefined styles and / or the command buttons for number formatting.
 
 ![Example formatting numbers.](images/formatting/number-format-example.png){#fig-number-format-example}
@@ -194,7 +197,15 @@ In the following example, you see a part of a worksheet containing many uses of 
 
 2.  Format the worksheet as shown in the figure. Use of the opportunities available through the [group Number (tab Home)]{.uicontrol}.
 
-`r hide("Hint")` + Column A, numbers formatted as text. + Column B, accounting number format. + Column C, numbers formatted first with the thousands separator and then decreased the number of decimals to 0. + Column D, numbers entered with the percent symbol and then adjust the number of decimals. + Column E, dates entered, applied the short date format for the first two, and the long date format for the last two. `r unhide()`
+::: {.content-visible when-format="html:js"}
+`r hide("Hint")`
+-   Column A, numbers formatted as text.
+-   Column B, accounting number format.
+-   Column C, numbers formatted first with the thousands separator and then decreased the number of decimals to 0.
+-   Column D, numbers entered with the percent symbol and then adjust the number of decimals.
+-   Column E, dates entered, applied the short date format for the first two, and the long date format for the last two.
+`r unhide()`
+:::
 
 :::
 
@@ -304,7 +315,7 @@ In a spreadsheet, the realized turnover and the turnover to be achieved of the s
 
 4.  Click on [New Rule...]{.uicontrol}. The dialog box New Formatting Rule appears.
 
-5.  Select [Format only cells that contain\*\*, then specify Cell Value less than =B2 and choose a red fill color as [Format]{.uicontrol}.
+5.  Select [Format only cells that contain]{.uicontrol}, then specify Cell Value less than `=B2` and choose a red fill color as [Format]{.uicontrol}.
 
 ![Dialog box New Formatting Rule.](images/formatting/format-conditional-rules-new.png){#fig-format-conditional-rules-new}
 

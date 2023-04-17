@@ -1,6 +1,11 @@
 # PivotTables {#sec-pivots}
 
-::: {.callout-note appearance="simple" icon="false"}
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
 + Features of a pivot table.
 + Creating pivot tables.
 + Source data from a pivot table.
@@ -155,11 +160,13 @@ Now try to answer the following question using pivot tables:
 
 Which three products generate the most sales?
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 Use [product]{.varname} as row variabele. There is no column variable in this case. In the pivot table report, sort revenue from highest to lowest.
 
 ![](images/pivots/supermarket-products.png)
 `r unhide()`
+:::
 
 :::
 
@@ -257,7 +264,7 @@ First, a PivotTable with the sales per salesman per product category is created.
 
 ![Adding Invoice Date automatically creates the Quarters and Years fields.](images/pivots/invoices-pivot-datefields.png){#fig-invoices-pivot-datefields}
 
-In the PivotTable,  @fig-invoices-sales-grouped), the sales are now grouped per year. This also shows that Brown started as a seller in 2011 and not in 2010, which could be a possible explanation for the lower amounts.
+In the PivotTable,  @fig-invoices-sales-grouped, the sales are now grouped per year. This also shows that Brown started as a seller in 2011 and not in 2010, which could be a possible explanation for the lower amounts.
 
 ![Sales per seller per productcategory, grouped by year.](images/pivots/invoices-sales-grouped.png){#fig-invoices-sales-grouped}
 
@@ -293,29 +300,37 @@ To easily compare values you can also choose for displaying percentages (of row 
 
 Use the PivotTable possibilities to answer the following questions. There are multiple ways to find the answers.
 
-```{r salesman, echo=FALSE}
-seller <- c("Anderson","Brown", "Gonzalez", "Hernandez", "Johnson", "King", "Lewis", "Miller", "Phillips", "Smith", "Williams")
-names(seller)[9] = "answer"
-month <- c("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec")
-names(month)[1] = "answer"
-```
+1. Which seller sold the most in December 2010?
 
-1. Which seller sold the most in December 2010?  
-   Seller `r mcq(seller)`
+::: {.content-visible when-format="html:js"}
+Seller `r mcq(c("Anderson","Brown", "Gonzalez", "Hernandez", "Johnson", "King", "Lewis", "Miller", answer="Phillips", "Smith", "Williams"))`
+:::
 
 2. In which month of which year were software sales the highest?
-   Year `r mcq(c(2010, answer=2011))`, Month `r mcq(month)`
 
-3. View hardware and software sales percentages by region. What is the percentage for software in the South region?  
-   Rounded to whole number: `r fitb(answer = c(46,47), num=TRUE)`
+::: {.content-visible when-format="html:js"}
+Year `r mcq(c(2010, answer=2011))` Month `r mcq(c(answer="jan", "feb", "mat", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"))`
+:::
+
+3. View hardware and software sales percentages by region. What is the percentage for software in the South region?
+
+::: {.content-visible when-format="html:js"}
+Rounded to whole number: `r fitb(answer = c(46, 47), num=TRUE)`
+:::
 
 4. What quarter of what year were Anderson's sales lowest?
-   Year `r mcq(c(2010, answer=2011))`, Quarter `r mcq(c(1, 2, answer = 3, 4))`
+
+::: {.content-visible when-format="html:js"}
+Year `r mcq(c(2010, answer=2011))` Quarter `r mcq(c(1, 2, answer=3, 4))`
+:::
 
 5. Check out Brown's sales in Q2 2011. Do you notice something special?
+
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 Only turnover in the month of June. Nothing in April and May.
 `r unhide()`
+:::
 
 ## Filtering {#sec-pivots-filters}
 
@@ -500,9 +515,12 @@ Create one pivot table with which you get an overview of the total sales, expens
 
 [File]{.smallcaps}: `Pivo003.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/pivots/pivo003-report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo004}
@@ -516,9 +534,12 @@ Determine using a pivot table the average mark by class and by gender.
 
 [File]{.smallcaps}: `Pivo004.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/pivots/pivo004-report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo005}
@@ -532,9 +553,12 @@ Create a frequency distribution of the grades using a pivot table.
 
 [File]{.smallcaps}: `Pivo005.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/pivots/pivo005-report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo006}
@@ -548,9 +572,12 @@ Enter and format the data in a worksheet. Determine using a pivot table the tota
 
 [File]{.smallcaps}: `Pivo006.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/pivots/pivo006-report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo007}
@@ -564,9 +591,12 @@ Enter the data in a worksheet. Determine using a pivot table the number of suppo
 
 [File]{.smallcaps}: `Pivo007.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/pivots/pivo007-report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo008}
@@ -580,9 +610,12 @@ Enter the data in a worksheet. Determine using a pivot table the number of peopl
 
 [File]{.smallcaps}: `Pivo008.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/pivots/pivo008-report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo009}
@@ -596,6 +629,7 @@ Enter the data in a worksheet. Determine using a pivot table the average travel 
 
 [File]{.smallcaps}: `Pivo009.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 Create an extra column to determine if the distance to the center is more than 15 km.
 `r unhide()`
@@ -605,6 +639,8 @@ Create an extra column to determine if the distance to the center is more than 1
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-pivo010}
 **Coffee yield per region (pivo010)**
 
@@ -612,9 +648,12 @@ A worksheet contains the yields of some types of coffee per month and per area. 
 
 [File]{.smallcaps}: `Coffee.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/pivots/pivo010-report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo011}
@@ -624,9 +663,11 @@ Determine using a pivot table the minimum and maximum fuel consumption per car b
 
 [File]{.smallcaps}: `Car.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/pivots/pivo011-report.png)
 `r unhide()`
+:::
 
 **Hobby club (pivo012)**
 
@@ -636,23 +677,26 @@ In a worksheet, you can find in the last two columns the number of visited club 
 2.  The percentage of members by hobby and by gender.
 3.  An overview of the presence in 2010 by gender, with the number of visited club meetings divided into three groups as shown in the following figure:
 
-    ![](images/pivots/pivo012-meetings-count.png)
+![](images/pivots/pivo012-meetings-count.png)
 :::
 
 ::: {#exr-pivo012}
 [File]{.smallcaps}: `Pivo012.xls`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 1.  The number of members by domicile and by gender
 
-    ![](images/pivots/pivo012-members-count.png)
+![](images/pivots/pivo012-members-count.png)
 
 2.  The percentage of members by hobby and by gender
 
-    ![](images/pivots/pivo012-members-percent.png)
+![](images/pivots/pivo012-members-percent.png)
 
 3.  Presence in 2010 by gender
 
-    ![](images/pivots/pivo012-meetings-count.png)
+![](images/pivots/pivo012-meetings-count.png)
 `r unhide()`
+:::
+
 :::

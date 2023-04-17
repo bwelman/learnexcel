@@ -1,6 +1,11 @@
 # Charts {#sec-charts}
 
-::: {.callout-note appearance="simple" icon="false"}
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
 + Parts of a chart.
 + Creating charts
 + Adjustments of chart parts.
@@ -504,7 +509,7 @@ The chart type can be changed easily. In this task the column chart will be chan
 
 [File]{.smallcaps}: `Stocks.xlsx`
 
-You can see the average monthly share prices of four companies for the months of January through March in @fig-case-data):
+You can see the average monthly share prices of four companies for the months of January through March in @fig-case-data:
 
 ![Average monthly share prices.](images/charts/case-data.png){#fig-case-data}
 
@@ -520,6 +525,7 @@ The final result should look like this
 
 ![Chart with average monthly share prices.](images/charts/case-chart.png){#fig-case-chart}
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 
 + Chart type is a line chart (line with markers)
@@ -531,6 +537,7 @@ The final result should look like this
 + Add horizontal dotted gridlines
 + Chart dimensions: width = 4" and height = 4"
 `r unhide()`
+:::
 
 ## Exercises {#sec-charts-exercises}
 
@@ -541,9 +548,12 @@ Create the following chart. Make the layout as similar as possible.
 
 ![](images/charts/graf001-chart.png)
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 First, create two columns in a worksheet with values for X and calculated values for Y. Create a scatter chart and apply the formatting.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-graf002}
@@ -598,11 +608,14 @@ A toy manufacturing company suspects that the price of the toys largely depends 
 1.  Create a chart in which the cost is plotted against the production time (the independent variable).
 2.  Add a linear trend line to the chart. Also, add the equation of the trend line to the chart.
 
-[File]{.smallcaps}:[Graf005.xlsx`
+[File]{.smallcaps}:`Graf005.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/charts/graf005-chart.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-graf006}

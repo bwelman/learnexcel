@@ -1,6 +1,8 @@
 # The worksheet {#sec-worksheets}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
+**OBJECTIVES**
+
 + Layout and use of the worksheet.
 + Activating a worksheet.
 + Adding, deleting, moving and copying a worksheet.

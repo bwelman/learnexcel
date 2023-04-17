@@ -1,9 +1,14 @@
 # Goal Seek {#sec-goalseek}
 
-::: {.callout-note appearance="simple" icon="false"}
-+ Goal Seeking Method.
-+ Application field for Goal Seeking.
-+ Tips using Goal Seek. 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
+-   Goal Seeking Method.
+-   Application field for Goal Seeking.
+-   Tips using Goal Seek. 
 :::
 
 A formula is made up of one or more variables. Usually you want to know what the result of the formula is for certain values of the variables. Sometimes the reverse also occurs. For a certain outcome you want to know which values the variables should have.
@@ -53,11 +58,13 @@ In this simple example, you can easily calculate the answer by hand. However, Go
 
 ![Values for Goalseek.](images/goalseek/stadiumcoffee-goalseek.png){#fig-stadiumcoffee-goalseek}
 
+::: {.content-visible when-format="html:js"}
 `r hide("Explanation")`
 + [Set cell]{.uicontrol}: The cell with the month result, B18.
 + [To value]{.uicontrol}: Zero for break-even.
 + [By changing cell]{.uicontrol}: The cell with the number of cups of coffee to be sold, B16.
 `r unhide()`
+:::
 
 4. Click [OK]{.uicontrol}.
 
@@ -87,9 +94,12 @@ Suppose you want to work as a freelancer and you have the intention to do this o
 1.  Create a model in a worksheet in which you can enter the total sales and the percentage of commission. Calculate the commission.
 2.  Determine through Goal Seek the total sales that must be made to get a commission of $5000.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 Total sales $ 64,102.56
 `r unhide()`
+:::
+
 :::
 
 ::: {exr-goal002}
@@ -106,9 +116,12 @@ Using the PMT function you can calculate the periodic payment of a loan based on
 Because payment is a cash outflow, the outcome is seen as a negative number.
 :::
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 Borrowed amount $ 7280.
 `r unhide()`
+:::
+
 :::
 
 ::: {exr-goal003}
@@ -116,7 +129,7 @@ Borrowed amount $ 7280.
 
 An entrepreneur has to deal with costs and revenues that depend on the production quantity Q. The relationship between the total cost (TC), the total revenues (TR) and the production quantity Q is as follows:
 
-$\text{TK} = Q^2 + 8Q + 15$ and $\text{TO} = -5Q^2 + 80Q$
+$\mathrm{TC = Q^2 + 8Q + 15}$ and $\mathrm{TR = -5Q^2 + 80Q}$
 
 In the following chart, TC and TR are plotted as a function of Q.
 
@@ -125,11 +138,14 @@ In the following chart, TC and TR are plotted as a function of Q.
 1.  Draw this chart.
 2.  Determine the break-even point. This is the amount of Q for which the costs and the revenues are equal. The chart shows that there are two of these points. Determine both solutions using Goal Seek and give the answers in 4 decimal places.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 Solution 1: Q=0,2120 and TC=TR=16,74
 
 Solution 2: Q=11,7879 and TC=TR=248,26
 `r unhide()`
+:::
+
 :::
 
 ::: {exr-goal004}
@@ -142,7 +158,10 @@ On 1 January 2010, an amount of $ 1000 is deposited into a savings account. The 
 1.  Create the model in a worksheet.
 2.  Determine with Goal Seek how much the deposit should be at the beginning to get $ 2500 on the savings account after 10 years.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 Deposit $ 1915,29.
 `r unhide()`
+:::
+
 :::

@@ -1,6 +1,11 @@
 # Solver {#sec-solver}
 
-::: {.callout-note appearance="simple" icon="false"}
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
 -   Activate Solver add-in.
 -   Application field for Solver.
 -   Setting up a calculation model.
@@ -74,14 +79,14 @@ How many short and long jackets do you need to produce weekly to get maximum pro
 
 Determine the decision variables. These are variables you have determine a value that gives the optimal result. In the Excel model, these are the variable cells. In this example, there are two decision variables which are conveniently referred with a letter:
 
--   $S$ = number of short jackets per week
--   $L$ = number of long jackets per week
+-   $\mathrm{S}$ = number of short jackets per week
+-   $\mathrm{L}$ = number of long jackets per week
 
 ### Objective function {#sec-solver-case-objective}
 
-You must establish a formula with the optimal value as an outcome. The decision variables are included in this formula. In this example, the objective function is the profit per week and this depends on the number of produced short jackets ($S$) and long jackets ($L$):
+You must establish a formula with the optimal value as an outcome. The decision variables are included in this formula. In this example, the objective function is the profit per week and this depends on the number of produced short jackets ($\mathrm{S}$) and long jackets ($\mathrm{L}$):
 
-$Profit = 90 \times S + 144 \times L$ (This should be maximized.)
+$\mathrm{Profit = 90 \times S + 144 \times L}$ (This should be maximized.)
 
 ::: callout-note
 In more complex models, it is sometimes difficult to formulate the problem so that one goal function is obtained. It may happen that the decision variables are not directly in the objective function. In such case, the objective function contains variables whose values depend on the decision variables.
@@ -97,11 +102,11 @@ Besides, there are often general restrictions that have to do with the data type
 
 This leads to the formulation of the following restrictions:
 
--   Restriction cutting time per week: $1 \times S + 2 \times L \le 32$
--   Restriction sewing time per week: $3 \times S + 4 \times L \le 84$
--   Restriction market demand long jackets: $L \le 12$
--   Restrictions positive values: $S \ge 0$ and $L \ge 0$
--   Restrictions integer values: $S = integer$ and $L = integer$
+-   Restriction cutting time per week: $\mathrm{1 \times S + 2 \times L \le 32}$
+-   Restriction sewing time per week: $\mathrm{3 \times S + 4 \times L \le 84}$
+-   Restriction market demand long jackets: $\mathrm{L \le 12}$
+-   Restrictions positive values: $\mathrm{S \ge 0}$ and $\mathrm{L \ge 0}$
+-   Restrictions integer values: $\mathrm{S = integer}$ and $\mathrm{L = integer}$
 
 ### Model in Excel {#sec-solver-case-model}
 
@@ -290,6 +295,7 @@ A well-known bonbon manufacturer wants to offer an assortment box with 2 types o
 
 5.  Enter the model in the Solver and then determine the optimal number of each bonbon type for the box.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 1.  Two decision variables: number of cherry bonbons per box (= C) and number of hazelnut bonbons per box (= H).
 2.  Objective function is the maximum profit on a box (= P): `P = 0,28*C + 0,20*H`
@@ -304,6 +310,8 @@ A well-known bonbon manufacturer wants to offer an assortment box with 2 types o
 
 Optimal content box: number of cherry chocolates = 10, number of hazelnut chocolates = 40. The profit per box is $10.80 and all constraints are met.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv002}
@@ -324,6 +332,7 @@ All new build branches can be ready for the next financial year. The possible lo
 
 5.  Enter the model in the Solver and then determine the optimal number of branches of each type and the expected total sales..
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 1.  Four decision variables: Number branches type A (= A), type B (= B), type C (= C) and type D (= D).
 2.  Objective function is the total sales (= S): `S = 24*A + 20*B + 11*C + 5*D`
@@ -334,6 +343,8 @@ All new build branches can be ready for the next financial year. The possible lo
 
 Optimal number of branches type A = 0, type B = 4, type C = 1, type D = 0. The total sales is 91 million dollar.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv003}
@@ -357,6 +368,7 @@ Calculate the optimal production numbers and the maximum profit per week with th
 
 5.  Enter the model in the Solver and then determine the optimal number of each model and the maximum weekly profit.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 1.  Three decision variables: Number model Runner per week (= R), number model Lady T per week (= T), and number model Super A per week (= A).
 2.  Objective function is the maximum profit per week (= P): `P = 6*R + 5*T + 4*A`
@@ -373,6 +385,8 @@ Optimal number Runner = 111, Lady T = 400 and Super A = 142. The profit per week
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-solv004}
 **Production of aluminum ladders (solv004)**
 
@@ -384,9 +398,12 @@ The total available production capacity is 80 for sewing, 100 for assembling, an
 
 Use the Solver to determine how many ladders of each type should be produced for a maximum profit.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 Number type 1 = 0, type 2 = 4 and type 3 = 10. Profit = $1080.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv005}
@@ -396,9 +413,12 @@ There are two types of dog food for sale: ordinary and special. A bag of ordinar
 
 Determine the quantity of both bags to be bought with minimum costs.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 Number bags ordinary = 14, special= 4. Costs = $168.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv006}
@@ -412,9 +432,12 @@ A magazine has published the minimum day requirements (MDR) in milligrams per an
 
 How many kilos of each type should the farmer provide every day to get the costs as low as possible and still meet the minimum daily requirements?
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 Per day: type 1 = 7.500 kg, type 2 = 1.397 kg and type 3 = 1.426 kg. Costs = $68.37.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv007}
@@ -422,9 +445,12 @@ Per day: type 1 = 7.500 kg, type 2 = 1.397 kg and type 3 = 1.426 kg. Costs = $68
 
 A nutritionist recommends a patient the following minimum day requirements for vitamin B and C: 400 units vitamin B and 800 units vitamin C. The local pharmacy can provide two different vitamin brands: Y and Z. A vitamin pill of brand Y contains 75 units vitamin B and 100 units vitamin C and costs $0.10. A vitamin pill of brand Z contains 50 units vitamin B and 200 units vitamin C and costs $0.08. How much vitamin pills of each branch must be consumed every day at the lowest possible cost?
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 Per day: branch Y = 4 pills and branch Z = 2 pills. Costs = $0.56.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv008}
@@ -445,9 +471,12 @@ Create the cheapest transport planning using Solver.
 
 [File]{.smallcaps}: `Solv008.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/solver/solv008-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv009}
@@ -455,11 +484,20 @@ Create the cheapest transport planning using Solver.
 
 Solve the following system of equations using the Solver.
 
-![](images/solver/solv009-data.png)
+\begin{align*}
+  6,1x_1 + 4,5x_2 + 5,7x_4 + 7,5x_5 &= 5,7\\
+  2,4x_1 + 5,5x_2 - 5,7x_3 + 4,7x_4 + 5,6x_5 &= 5,6\\
+  2,4x_1 - 5,0x_2 - 4,6x_3 + 3,6x_4 + 9,7x_5 &= 9,7\\
+  4,3x_1 - 5,3x_2 + 3,4x_3 - 8,4x_4 - 5,6x_5 &= -5,6\\
+  1,1x_1 - 3,0x_2 + 2,4x_3 - 13x_4 + 3,5x_5 &= 3,5
+\end{align*}
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/solver/solv009-result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv010}
@@ -483,6 +521,7 @@ The annual yield of each type of loan is listed in the following table.
 
 Determine, using the Solver, how much money (in multiples of € 1000,-) in each of the four types of loans should be invested so that the yield is as high as possible.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 
 |Loan type|Amount|
@@ -494,4 +533,6 @@ Determine, using the Solver, how much money (in multiples of € 1000,-) in each
 
 Total yield of 422 K€. Rounding on euro cents can cause small differences.
 `r unhide()`
+:::
+
 :::

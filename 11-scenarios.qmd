@@ -1,6 +1,11 @@
 # Scenarios {#sec-scenarios}
 
-::: {.callout-note appearance="simple" icon="false"}
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
 + What is a scenario.
 + Create a scenario. 
 :::
@@ -158,9 +163,12 @@ Create a summary report for these three scenarios using the Scenario Manager.
 
 [File]{.smallcaps}: `Scen003.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/scenarios/scen003-report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-scen004}
@@ -185,7 +193,10 @@ Create a summary report for these three scenarios using the Scenario Manager.
 
 [File]{.smallcaps}: `Scen004.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/scenarios/scen004-report.png)
 `r unhide()`
+:::
+
 :::

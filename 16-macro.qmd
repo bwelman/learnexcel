@@ -1,12 +1,17 @@
 # Macros {#sec-macros}
 
-::: {.callout-note appearance="simple" icon="false"}
-+ Explanation of macros and their use.
-+ Activating Developer tab.
-+ Recording a macro with the macro recorder.
-+ Modify a macro.
-+ Create command button.
-+ Security settings. 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
+-   Explanation of macros and their use.
+-   Activating Developer tab.
+-   Recording a macro with the macro recorder.
+-   Modify a macro.
+-   Create command button.
+-   Security settings. 
 :::
 
 You can automate a task that you have to perform regularly in Microsoft Excel with a macro. A macro consists of a series of commands and functions that are executed in succession by a single command or the press of a button.
@@ -282,6 +287,7 @@ Macros can be deleted by [Developer tab > Macros (group Code) > Select macro > D
 
 Record a macro that gives the active cell a gray background color.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 An example of a solution.
 
@@ -302,11 +308,14 @@ End Sub
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-macr002}
 **Percentage formatting (macr002)**
 
 Record a macro with the name PercentageFormat that is formatting a numeric value as a percentage with 1 decimal and also centers the content in the cell.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 An example of a solution.
 
@@ -324,6 +333,8 @@ End Sub
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-macr003}
 **Formatting cell A1 (macr003)**
 
@@ -333,6 +344,7 @@ Record a macro that performs the following:
 -   Width of column 1 is 3
 -   Font of text in cell A1 is Tahoma 14, bold, blue color
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 An example of a solution.
 
@@ -357,6 +369,8 @@ End Sub
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-macr004}
 **Printing gridlines (macr004)**
 
@@ -366,6 +380,7 @@ Create a macro that ensures that the grid lines will be printed at printing.
 You can find this property at the [tab Page Layout > Page Setup > tab Sheet]{.uicontrol}.
 :::
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 An example of a solution.
 
@@ -380,4 +395,6 @@ Sub Print_Gridlines()
 End Sub
 ```
 `r unhide()`
+:::
+
 :::

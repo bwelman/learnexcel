@@ -1,9 +1,14 @@
 # Measurements {#sec-measurements}
 
-::: {.callout-note appearance="simple" icon="false"}
-+ Explanation of linear relations.
-+ Add a linear trendline to a scatter chart.
-+ Worksheet functions SLOPE and INTERCEPT.
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
+-   Explanation of linear relations.
+-   Add a linear trendline to a scatter chart.
+-   Worksheet functions SLOPE and INTERCEPT.
 :::
 
 Researchers often want to have an answer to the question of whether the value of a variable depends on the value of another variable. To find out this, they carry out measurements. When performing these measurements, the value of one variable is changed (the independent variable) and the value of another variable (the dependent variable) is measured.
@@ -59,20 +64,22 @@ In a timber factory, a large number of similar items are manufactured, which mai
 
 4. Add a linear trend line.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 You can add a trendline in the following ways.
 
 + Select the points in the chart, then right click and choose [Add Trendline]{.uicontrol}. 
 + Select the chart area and Click the button ![](images/common/button-chart-elements.png) next to the chart and choose [Trendline > Linear]{.uicontrol}. 
 `r unhide()`
+:::
 
 5. Select trend line, [Right click > Format Trendline]{.uicontrol}.
 
-6. In the ***Format Trendline*** task pane, select [Display equation on chart] {.uicontrol}. 
+6. In the ***Format Trendline*** task pane, select [Display equation on chart]{.uicontrol}. 
 
 ![Trendline options.](images/measurements/trendline-options.png){#fig-trendline-options}
 
-7. Make the following adjustments (see the example in @fig-prodtime-chart-xy: 
+7. Make the following adjustments (see the example in @fig-prodtime-chart-xy): 
 
    + Add chart title and axis titles.
    + Adjust the scaling of the axes.
@@ -85,7 +92,7 @@ You can add a trendline in the following ways.
 
 From the equation of the trend line you can now determine the relationship between the two variables:
 
-$\text{Productiontime} = 2,955 \times \text{Weight} + 41,99$
+$\mathrm{Productiontime = 2,955 \times Weight + 41,99}$
 
 **Worksheet functions**
 
@@ -115,11 +122,12 @@ Imagine a linear relationship and determine the equation where the weight is a f
 
 [File]{.smallcaps}: `Meas001.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-```
 Weight = 1.65*Height - 153.3
-```
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-meas002}
@@ -133,11 +141,12 @@ Imagine a linear relationship and determine the equation where the mark is a fun
 
 [File]{.smallcaps}: `Meas002.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-```
 Mark = 0.2038*Study time + 3.3637
-```
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-meas003}
@@ -152,12 +161,14 @@ A manufacturer of synthetic fibers examines whether the shrinking of the fibers 
 
 [File]{.smallcaps}: `Meas003.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-```
 Shrink percentage= 0.0796*Temp - 3.546
+
 At a temperature of 65°C the predicted shrinkage percentage is 1.6%.
-```
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-meas004}
@@ -172,10 +183,12 @@ The resistance of a metal block depends on the temperature among other things. I
 
 [File]{.smallcaps}: `Meas004.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-```
 Resistance = 0.0786*Temp + 21.214
+
 At a temperature of 400°C the predicted resistance is 52.6 Ohm.
-```
 `r unhide()`
+:::
+
 :::

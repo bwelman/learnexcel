@@ -1,6 +1,11 @@
 # Array Formulas {#sec-arrays}
 
-::: {.callout-note appearance="simple" icon="false"}
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
 + Introduction of matrices.
 + Creating array formulas.
 + Create frequency distribution of data with function iNTERVAL.
@@ -120,9 +125,11 @@ This calculation can also be done with array formulas. It is good practice to le
 
 ![Multiplication of a row vector with a constant.](images/arrays/example-dim1.png){#fig-example-dim1}
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 Formula in G1: `=A1:C1*E1`
 `r unhide()`
+:::
 
 :::
 
@@ -131,13 +138,15 @@ Formula in G1: `=A1:C1*E1`
 
 @fig-example-dim2 shows how a 4x3 array is multiplied by a column of numbers. The result is again a 4x3 array.
 
-Make this example yourself. You can use the practicefile [Array2.xlsx` for this. 
+Make this example yourself. You can use the practicefile `Array2.xlsx` for this. 
 
 ![Multiplication 2-dimensional array with a column vector.](images/arrays/example-dim2.png){#fig-example-dim2}
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 Formule in G1 wordt `A1:C4*E1:E4`
 `r unhide()`
+:::
 
 :::
 
@@ -164,9 +173,11 @@ Figure figuur @fig-example-shares shows a stock portfolio with prices. In order 
 
 You can also make the formula in C6 suitable for copying to D6. What do you have to change in the formula for that?
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 By making the first column in the formula in C6 absolute, so `=SUM($B$2:$B$5*C2:C5)`.
 `r unhide()`
+:::
 
 :::
 
@@ -177,6 +188,7 @@ In this exercise, the weighted average of four tests must be calculated for each
 
 ![Weighted averages of marks obtained for four tests.](images/arrays/example-marks.png){#fig-example-marks}
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 1. You get a weighted average for Jan by multiplying each test grade of Jan by the weighting factor for that test and then dividing the sum of these four results by the sum of the four test factors. 
 
@@ -188,13 +200,14 @@ Formula F3: `=SUM(B3:E3*$B$1:$E$1)/SOM($B$1:$E$1)`
 
 Then copy formula to F4 and F5.
 `r unhide()`
+:::
 
 :::
 
 ::: {#prp-arrays-weighted-average2}
 [File]{.smallcaps}: `Array5.xlsx`
 
-@fig-example-studentlength)shows the gender and height (cm) of a number of students. The average height for male and female students is calculated in the cells C11 and C12,.
+@fig-example-studentlength)shows the gender and height (cm) of a number of students. The average height for male and female students is calculated in the cells C11 and C12.
 
 ![Average height by gender.](images/arrays/example-studentlength.png){#fig-example-studentlength}
 
@@ -206,9 +219,11 @@ The array formula is a bit trickier here because you only need to select the len
 
 3. Now create a formula for cell C12 by adjusting the formula for the female students.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Solution")`
 Formula C12: `=AVERAGE(IF(B2:B9="f",C2:C9))`.
 `r unhide()`
+:::
 
 :::
  
@@ -325,7 +340,7 @@ Sorts the column values from a range/array.
 + `array`: the array to sort.
 + `sort_index`: a number indicating the row or column to sort by (default=1)
 + `sort_order`: 1= the sort order, 1=ascending, -1=descending (default=1)
-+ `by_col`: logical value for the sort direction,TRUE=sort columns, FALSE=sort rows (default=FALSE)
++ `by_col`: logical value for the sort direction, TRUE=sort columns, FALSE=sort rows (default=FALSE)
 
 ::: {#exm-array-sort}
 [File]{.smallcaps}: `Dynarray.xlsx`
@@ -468,7 +483,7 @@ When referring to a column name in an Excel table, put the column name in square
 
 2. Convert the data range to a table with [tab Insert > Table]{.uicontrol} and specify [tblPersonnel]{.varname} as the name of the table.
 
-3. Save the file with name [Personneltable.xlsx` so that the original file is not modified.
+3. Save the file with name `Personneltable.xlsx` so that the original file is not modified.
 
 4. In a cell outside the data area, e.g. in cell K4, enter the following formula `=UNIQUE(tblPersonnel[Department])`.
 
@@ -581,6 +596,7 @@ The public utility of a city keeps a list for recording per district the reporte
 
 Enter the array formulas in the cells C16, C17, C18 en C19 to calculate the total number of failures per district.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 1.  The formula {(B2:B11)=B16} provides a matrix column of 10 rows. If the value in a cell from the range B2:B11 is equal to the value in cell B16 (= North) then the value in the array is TRUE (=1) otherwise FALSE (=0).
 
@@ -592,6 +608,7 @@ Enter the array formulas in the cells C16, C17, C18 en C19 to calculate the tota
 
 3.  Calculating the sum of all these values gives you the total number of failures for the district North.
 `r unhide()`
+:::
 
 :::
 
@@ -644,9 +661,11 @@ In a new worksheet, create an array with the numbers 1 to 100 as in the followin
 
 Then change the formula so that you get Roman numbers.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 Function `ROMAN` converts Arabic numbers to Roman numbers, as text.
 `r unhide()`
+:::
 
 ![](images/arrays/matr006-data-r.png)
 

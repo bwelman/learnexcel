@@ -1,6 +1,11 @@
 # Tables {#sec-tables}
 
-::: {.callout-note appearance="simple" icon="false"}
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
 + Characteristics of tables (lists).
 + Form button.
 + Merge (consolidate) data.
@@ -423,7 +428,7 @@ This opens the Insert Slicer dialog and displays the column headings (fields) fo
 
 3. Select the fields [Department]{.varname} and [Division]{.varname} and click [OK]{.uicontrol}.
 
-Two slicers are now inserted. When the slicers overlap, move them so that they are next to each other, see @fig-personnel-slicers). Both slicers show all unique values for that field. 
+Two slicers are now inserted. When the slicers overlap, move them so that they are next to each other, see @fig-personnel-slicers. Both slicers show all unique values for that field. 
 
 ![Twee slicers voor de velden Afdeling en Divisie.](images/tables/personnel-slicers.png){#fig-personnel-slicers}
 
@@ -514,9 +519,12 @@ Now apply a filter so that only the rows are displayed for students who have no 
 
 [File]{.smallcaps}: `List001.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/tables/list001-solution.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-list002}
@@ -556,7 +564,10 @@ Make a list of all the cars with the corresponding data that meet these conditio
 
 [File]{.smallcaps}: `Car.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 ![](images/tables/list004-solution.png)
 `r unhide()`
+:::
+
 :::

@@ -1,6 +1,11 @@
 # Formulas and Functions {#sec-functions}
 
-::: {.callout-note appearance="simple" icon="false"}
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
 -   Types of functions and the syntax of a function.
 -   Entering a function manually, and with the Wizard.
 -   Nesting of functions.
@@ -160,7 +165,9 @@ The statistical category contains a variety of functions for statistical analysi
 The argument is always the area B1:B8. You can of course type this in the function arguments dialog box, but it is more convenient to place the cursor in the box for the first argument and then select the area B1:B8 in the worksheet with the mouse.
 :::
 
+::: {.content-visible when-format="html:js"}
 `r hide("Result")` ![](images/functions/example-statistical-result.png) `r unhide()`
+:::
 
 :::
 
@@ -191,6 +198,7 @@ With the function `NETWORKDAYS` you can determine the number of full working day
 
 7.  Calculate in B10 the time difference with a formula.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")` You have to subtract the start time from the end time. `r unhide()`
 
 `r hide("Result")`
@@ -198,6 +206,7 @@ With the function `NETWORKDAYS` you can determine the number of full working day
 ![](images/functions/example-datetime-result.png)
 
 `r unhide()`
+:::
 
 :::
 
@@ -388,7 +397,9 @@ By specifying the entire column B as range, new rows with data can be added to t
 
 4.  Select cell E2 and drag the fill handle down to E5.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Result")` ![](images/functions/example-countif-result.png) `r unhide()`
+:::
 
 :::
 
@@ -411,7 +422,9 @@ The `SUMIF` function can be used to add numbers under certain conditions. The sp
 
 5.  Format the numbers in H2:H5 as currencies.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Resultaat")` ![](images/functions/example-sumif-result.png) `r unhide()`
+:::
 
 ::: callout-note
 An addition in this example is easier to create with pivots.
@@ -598,11 +611,16 @@ Create this model in a worksheet and use formulas to calculate the output result
 
 [File]{.smallcaps}: `Form003.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 1.  Used functions: `DATE`, `YEAR`, `MONTH`, `DAY`, `TODAY`.
+
 2.  A date layout like Wed 01/3/1967 can be get through the number format of the cell. Choose [tab Home > Category Custom (group Number)]{.uicontrol}, or right-click on the cell and choose [Format cells]{.uicontrol}. In the box [Type]{.uicontrol}, you can enter the desired format. The format used in the example is ddd dd/m/yyyy. Try also other formats like dddd dd/mmm/yy to figure out how the formatting works.
+
 3.  A date in Excel is in reality just a number, with which you can make calculations. In order to determine the time difference between two dates, you can subtract these two dates.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-form004}
@@ -628,6 +646,7 @@ Create this model in a worksheet. Also, make a similar layout.
 
 [File]{.smallcaps}: `Form005.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 1.  In the last four columns, the answer depends on one or more conditions, so you need to use the function IF.
 2.  In the case of two conditions, you can embed a second IF function within the first IF function. An alternative is to use the AND function within the IF function.
@@ -635,6 +654,8 @@ Create this model in a worksheet. Also, make a similar layout.
 4.  A date in Excel is in reality just a number, with which you can perform calculations. So you can determine whether a date is smaller, larger, or the same as another date.
 5.  If no date is known, then the appropriate field is empty. You can check in Excel if a field is empty.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-form006}
@@ -681,9 +702,12 @@ An amount of $ 20,000 will be put for a year in a savings deposit at an interest
 
 [File]{.smallcaps}: `Form009.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 Interest = $ 550.00 and Amount = $ 20,550.00
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-form010}
@@ -706,9 +730,12 @@ Create a model in a worksheet in which current, the resistance, and the time can
 
 A government bond with a maturity of 5 years annually pays a 3.5% interest rate. Suppose you want to have $300,000 over 5 years, how much do you need to invest in this bond? Use Excels function for present value (PV) to calculate the answer.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 $ 252,592
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-form012}
@@ -720,9 +747,12 @@ First, create the following table:
 
 Then enter in cell B2 a formula that you can copy down and to the right to the rest of the table so that the value inside each cell in the table is the multiplication of number before the row and the number above the column.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 You will need a combination of absolute and relative addressing in your formula.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-form013}

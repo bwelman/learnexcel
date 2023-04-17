@@ -1,5 +1,11 @@
 # Chart Types {#sec-charttype}
-::: {.callout-note appearance="simple" icon="false"}
+
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
 + Chart types.
 + Line chart vs Scatter chart.
 :::
@@ -181,7 +187,7 @@ To investigate whether there is a relationship between body length and weight, t
 
 ![Investigation body length - weight.](images/charttypes/scatter-data.png){#fig-scatter-data}
 
-The data should be displayed in a scatter chart, as shown in @fig-scatter-result).
+The data should be displayed in a scatter chart, as shown in @fig-scatter-result.
 
 ![Scatter chart length - weight.](images/charttypes/scatter-result.png){#fig-scatter-result}
 
@@ -204,9 +210,11 @@ The data should be displayed in a scatter chart, as shown in @fig-scatter-result
 
 6. Change the scale of the vertical axis so that it runs from 40 to 80, with increments of 5.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint scaling axis")`
 [Select axis > Right click > Format Axis > Axis Options]{.uicontrol}
 `r unhide()`
+:::
 
 :::
 
@@ -300,9 +308,11 @@ The data is to be displayed in a stacked area chart, as shown in @fig-area-resul
 
 5.  Select legend, then right-click and [Format legend]{.uicontrol}. Change the position of the legend from [Bottom]{.uicontrol} to [Right]{.uicontrol}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint legend")`
 [Select legend > Right click > Format Legend > Legend Options]{.uicontrol}
 `r unhide()`
+:::
 
 :::
 
@@ -391,7 +401,7 @@ The data should be displayed in a Pareto chart, as shown in @fig-pareto-result.
 ![Pareto chart of death causes in 2009.](images/charttypes/pareto-result.png){#fig-pareto-result}
 
 ::: {#prp-charttype-pareto}
-**Bestand**: [Grafiek_pareto.xlsx`
+**Bestand**: `Chart_Pareto.xlsx`
 
 1. Open the file.
 

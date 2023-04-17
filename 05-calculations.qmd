@@ -1,6 +1,11 @@
 # Modeling Calculations {#sec-calculations}
 
-::: {.callout-note appearance="simple" icon="false"}
+```{r, file = "R/webex.R", include = FALSE}
+```
+
+::: callout
+**OBJECTIVES**
+
 -   Create formulas.
 -   Setting up a calculation model.
 -   Copy formulas and absolute and relative cell addresses.
@@ -285,7 +290,7 @@ Rules for naming:
 
 -   Names should begin with a letter or with the underscore symbol (-), digits are allowed after that. It is not allowed to start a name with a digit.
 
--   Names cannot contain spaces. To simulate a space you can use the underscore symbol, for example, \[Sales_2010\](.varname}.
+-   Names cannot contain spaces. To simulate a space you can use the underscore symbol, for example, [Sales_2010]{.varname}.
 
 -   Most symbols (comma, colon, exclamation point, etc.) can not be used.
 
@@ -406,7 +411,9 @@ A shop at the international airport sells articles both tax-free and with 21% VA
 
 ![Price table](images/calculations/example-prices.png){#fig-example-prices}
 
-`r hide("Hint")` 1. The dollar exchange rate and the VAT percentage are input variables for the calculation and should be placed at the top of the worksheet, separated from the price table. An explanatory text is in the cells before.
+::: {.content-visible when-format="html:js"}
+`r hide("Hint")`
+1. The dollar exchange rate and the VAT percentage are input variables for the calculation and should be placed at the top of the worksheet, separated from the price table. An explanatory text is in the cells before.
 
 2.  A pattern is in the article numbers. You only need to type in the first two numbers, select these numbers and then drag down.
 
@@ -416,4 +423,7 @@ A shop at the international airport sells articles both tax-free and with 21% VA
 
 5.  To calculate the amount of VAT the euro price should be multiplied by the VAT rate. And for the price incl. VAT the amount of VAT must be added to the exclusive price. Again, you just have to enter the correct formulas in the first cells (D6 and E6) and then copy it down. Use an absolute address for the VAT rate.
 
-6.  Finally, all euro amounts should be formatted as currencies. `r unhide()`
+6.  Finally, all euro amounts should be formatted as currencies.
+`r unhide()`
+:::
+

@@ -1,6 +1,8 @@
 # Data entry and editing {#sec-data}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
+**OBJECTIVES**
+
 + Entering data.
 + Language dependent number separators.
 + The difference between content and formatting of a cell.
