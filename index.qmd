@@ -1,6 +1,6 @@
 # Welcome {.unnumbered}
 
-This the online version of the textbook **Learn Excel**. This task-oriented textbook is developed especially for students in higher education.The textbook contains many exercises.
+This the free online version of the textbook **Learn Excel**. This task-oriented textbook is developed especially for students in higher education.The textbook contains many exercises.
 
 There are interactive sections in the textbook to help you better understand the content. This interactive content only works if you access this material through a web browser that supports javascript.
 

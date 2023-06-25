@@ -5,7 +5,7 @@ project:
 book:
   title: "Learn Microsoft Excel"
   author: "Ben Welman"
-  date: last-modified
+  date: today
   date-format: long
   google-analytics: "G-XT9J2D3HRQ"
   site-url: https://learnexcel.netlify.app/
@@ -57,7 +57,10 @@ format:
     code-fold: false
     link-external-newwindow: true
     callout-appearance: simple
-
+    author-meta: "Ben Welman"
+    description-meta: "With this task oriented textbook you learn to work with Excel."
+    keywords: ["Excel", "Power Query", "calculations", "functions", "tables", "charts", "arrays", "scenario", "pivot tables", "goalseek", "solver", "macros"
+    ]
 
 knitr:
   opts_chunk:
