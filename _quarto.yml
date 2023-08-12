@@ -59,8 +59,7 @@ format:
     callout-appearance: simple
     author-meta: "Ben Welman"
     description-meta: "With this task oriented textbook you learn to work with Excel."
-    keywords: ["Excel", "Power Query", "calculations", "functions", "tables", "charts", "arrays", "scenario", "pivot tables", "goalseek", "solver", "macros"
-    ]
+    # keywords: ["Excel", "Power Query", "calculations", "functions", "tables", "charts", "arrays", "scenario", "pivot tables", "goalseek", "solver", "macros"]
 
 knitr:
   opts_chunk:
