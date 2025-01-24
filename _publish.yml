@@ -1,4 +1,4 @@
 - source: project
   netlify:
     - id: f17c5796-ec24-48b9-94db-51a5dc119d48
-      url: 'https://learnexcel.netlify.app'
+      url: https://learnexcel.netlify.app
