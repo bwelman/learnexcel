@@ -6,568 +6,560 @@
 ::: callout
 **OBJECTIVES**
 
-+ Characteristics of tables (lists).
-+ Form button.
-+ Merge (consolidate) data.
-+ Convert a data range to a table.
-+ Sort and filtering of tables.
-+ Calculated columns in a table.
-+ Column totals for a table. 
+-   Characteristics of tables (lists).
+-   Form button.
+-   Merge (consolidate) data.
+-   Convert a data range to a table.
+-   Sort and filter tables.
+-   Calculated columns in a table.
+-   Column totals for a table.
 :::
 
-Much information in Excel is kept in tables with data, a kind of database in a worksheet. Although Excel is not a real database program such as MS Access, Excel can be used for simple databases. These simple databases consist of one table such as address lists, phone lists, etc. The name database is usually reserved for external files from specific database programs. A table with data in Excel was formerly called a list.
+Much of the information in Excel is stored in data tables, which function as a sort of database within a worksheet. While Excel isn't a dedicated database program like MS Access, it can handle simple databases. These databases typically consist of a single table, such as address or phone lists. The term "database" is generally reserved for external files from specialized database applications. In Excel, a data table was previously referred to as a "list."
 
-Working with well structured tables is a common activity, especially at data analysis. A structured Excel table is also a very good basis for creating pivot tables.
+Working with well-structured tables is common, especially in data analysis. A structured Excel table also provides an excellent foundation for creating pivot tables.
 
-## Characteristics of tables {#sec-tables-over}
+## Characteristics of Tables {#sec-tables-over}
 
 A table is an organized set of data.
 
-|customnr|name    |date      |price|discount|
-|--------|--------|----------|-----|--------|
-|A104    |Anderson|2010-10-02|400  |0 %|
-|K102    |King    |2010-11-03|395  |5 %|
-|S501    |Smith   |2010-12-04|375  |8%|
+| customnr | name     |    date    | price | discount |
+|:---------|:---------|:----------:|:-----:|:--------:|
+| A104     | Anderson | 2010-10-02 |  400  |   0 %    |
+| K102     | King     | 2010-11-03 |  395  |   5 %    |
+| S501     | Smith    | 2010-12-04 |  375  |    8%    |
 
-:  Example of a table. {#tbl-tables-exampletable}
+: Example of a table. {#tbl-tables-exampletable}
 
+A table or database in Excel is composed of rows and columns. These rows are often called **records**, and the columns are called **fields**. The column contains a specific type of data. The first row of a table contains column headers that describe the information in each column. Column headers are also known as field names. The field names in @tbl-tables-exampletable are: [customnr]{.varname}, [name]{.varname}, [date]{.varname}, [price]{.varname}, and [discount]{.varname}.
 
-A table or database in Excel is a table consisting of rows and columns. These **rows** are often called **records** and the **columns** are called **fields**. The type of the collected data is in the columns. In the first row of a table, you find column headers that indicate the kind of information in the column. The column headers are also called **field names**. The field names in @tbl-tables-exampletable are: [customnr]{.varname}, [name]{.varname}, [date]{.varname}, [price]{.varname} and [discount]{.varname}.
+For effective data analysis, it's crucial that the data is well-structured within the worksheet. A structured table has the following characteristics:
 
-To analyze data, it is important that the data is well-structured in the worksheet. A structured table has the following characteristics:
+-   Each column contains the same type of data.
 
-+ The cells in each column contains the same type of data.
+-   Each row contains the individual data for a single entity or item.
 
-+ The cells in each row contain the individual data of the object.
+-   The first row of the table contains unique field names. These names are usually formatted differently (e.g., larger font size, bold, italic) from the rest of the table.
 
-+ The first row of the table contains the unique names of the fields. These names are usually formatted differently (larger font size, bold, italic, ... ) than the rest of the table.
+-   The table should not contain any blank rows. A row can have empty cells, but not all cells in a row can be empty.
 
-+ There should be no blank rows in the table. A row can contain empty cells, but not all cells in a row can be empty.
+-   The table should not contain any blank columns. A column can have empty cells, but not all cells in a column can be empty.
 
-+ There should be no blank columns in the table. A column can contain empty cells, but not all cells in a column can be empty.
+A table can be located anywhere in the worksheet; it doesn't have to start in the first row.
 
-A table can start everywhere in the worksheet. It's not necessary that the first row of the table must be the first row of the worksheet.
+In Excel, a table is a rectangular range of cells used to store data. While a table looks similar to a regular Excel range, it offers features that distinguish it.
 
-In Excel, a table is a rectangular range of cells where data is stored. Although a table looks much like a regular Excel range, it offers a number of features that differentiate it from a range.
+You can create and maintain a table by simply entering data into the cells. However, for better structure, it's recommended to use a form for data entry. You don't need to enter all your data before converting a range to a table; you can add new rows and columns later. Large datasets often originate from external files (text/csv files, web queries, databases).
 
-A table can be created and maintained by just typing the data in the cells. In order to ensure a good structure, it is recommended to use a form for data entry. It’s not necessary that you first enter all your data before converting the range to a table. Once you have the table, you can always add new rows and columns. Large lists of data usually come from data from external files (text/csv files, web queries, databases).
+In Excel, you can't create an empty table and then populate it with data. Instead, you must first create a range that includes at least some of the data and then convert that range into a table. Converting a data range to a table changes its appearance and enables built-in features for filtering, sorting, and adding a total row with various aggregation functions.
 
-In Excel, you cannot create a table from scratch and then fill that table with data. Instead, you must first create a range that includes at least some of the data you want in your table and then converting that range to a table. When a range of data is transferred to a table, the appearance changes, but also built-in features are available for filtering, sorting, and the ability to add a total row with several functions for totalization.
+By default, Excel tables automatically expand and fill formulas down to the last row. For example:
 
-By default, an Excel table will expand automatically, and fill formulas down to the last row. Examples:
+-   If you add new data in the row directly below the last row of the table, or in the column immediately to its right, the table will automatically expand to include the new data.
 
-+ You can add new data in the row immediately below the last row of the table, or in the column to its immediate right. The table will expand automatically to include the new data.
-
-+ When you enter a formula in de first cell of a new blank column, then after pressing Enter that formula fills down to all the remaining rows.
+-   When you enter a formula in the first cell of a new blank column and press Enter, the formula automatically fills down to all the remaining rows in that column.
 
 ## Form Button {#sec-tables-formbutton}
 
-An important task in working with tables is the correct entry of the data. Excel has a built-in form for this task. The command button for creating such a form is however not standard on the ribbon. In the following steps, you see instructions on how to add the button [Form]{.uicontrol} to the [Quick Access Toolbar]{.uicontrol}. This is a one-time action.
+Accurate data entry is essential when working with tables. Excel provides a built-in form for this purpose. However, the command button for this form isn't on the ribbon by default. The following steps explain how to add the [Form]{.uicontrol} button to the [Quick Access Toolbar]{.uicontrol}. This is a one-time setup.
 
 ::: {#prp-tables-formbutton}
-
-1.  Click on the [Customize Quick Access Toolbar arrow]{.uicontrol} at the end of the Quick Access Toolbar.
+1.  Click the [Customize Quick Access Toolbar arrow]{.uicontrol} at the end of the Quick Access Toolbar.
 
 ![Customize Quick Access Toolbar.](images/common/qat-customize.png){#fig-qat-customize}
 
-2.  Choose [More Commands ...]{.uicontrol}.
+2.  Select [More Commands ...]{.uicontrol}.
 
-3.  Click on the arrow for [Choose commands from]{.uicontrol} and choose [Commands Not in the Ribbon]{.uicontrol}.
+3.  In the [Choose commands from]{.uicontrol} dropdown menu, select [Commands Not in the Ribbon]{.uicontrol}.
 
 ![Dialog box Quick Access Toolbar Commands.](images/common/qat-customize-commands.png){#fig-qat-customize-commands}
 
-4.  Browse the alphabetic list with commands and select [Form...**
+4.  Scroll through the alphabetical list of commands and select [Form...]{.uicontrol}.
 
-![Options for Excel > opdracht formulier.](images/common/qat-customize-form.png){#fig-qat-customize-form}
+![Options for Excel \> opdracht formulier.](images/common/qat-customize-form.png){#fig-qat-customize-form}
 
-5.  Click on the button [Add]{.uicontrol} and then [OK]{.uicontrol}.
+5.  Click [Add]{.uicontrol} and then click [OK]{.uicontrol}.
 
-In the [Quick Access Toolbar]{.uicontrol}, you can see the button [Form]{.uicontrol} now.
+The [Form]{.uicontrol} button is now visible on the [Quick Access Toolbar]{.uicontrol}.
 
 ![Button Form on Quick Access Toolbar.](images/common/qat-formbutton.png){#fig-qat-formbutton}
-
 :::
 
 ## Data Entry Form {#sec-tables-data-entry-form}
 
-To perform this task it is necessary that the button [Form]{.uicontrol} on the [Quick Access Toolbar]{.uicontrol} is available,  see @fig-qat-formbutton. When this button is not visible you must enable it first through @prp-tables-formbutton.
+To complete this task, the [Form]{.uicontrol} button must be available on the [Quick Access Toolbar]{.uicontrol} (see @fig-qat-formbutton). If the button is not visible, follow the steps in @prp-tables-formbutton to enable it.
 
-The easiest and best way to add records to a table is by using a data entry form. Excel automatically creates such form for you if you provide the field names of the columns and type in the first record. In the following figure, you see an example of a purchase list. The data of the first article have already been entered, including the necessary formulas in F2, G2, and H2.
+Using a data entry form is the easiest and most effective way to add records to a table. Excel can automatically generate a form if you provide the column field names and enter the first record. The following figure shows an example of a purchase list. The data for the first item, including the formulas in cells F2, G2, and H2, has already been entered.
 
 ![Purchase list with first record.](images/tables/purchase-record1.png){#fig-purchase-record1}
 
-::: {#prp-tables-data-entry-form}
+:::: {#prp-tables-data-entry-form}
 [File]{.smallcaps}: `Purchases.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Enter the following formulas:
+2.  Enter the following formulas:
 
-   + F2: formula `=D2*E2`
-   + G2: formula `=21%*F2`
-   + H2: formula `=F2+G2`
+    -   F2: `=D2*E2`
+    -   G2: `=21%*F2`
+    -   H2: `=F2+G2`
 
-3. Select any cell in the list.
+3.  Select any cell within the list.
 
-4. Click on the button [Form]{.uicontrol} in Quick Access Toolbar.
+4.  Click on the [Form]{.uicontrol} button on Quick Access Toolbar.
 
-The data form appears. On the left side are the 8 field names. Besides 5 field names are entry boxes. Here you can enter or change the data. The field names [total excl.]{.varname}, [vat]{.varname}, and [total incl.]{.varname} don't have boxes but values. This is because those values are calculated through formulas.
+The data form appears, displaying the eight field names on the left. Entry boxes are provided for five of the field names, allowing you to enter or modify data. The fields [total excl.]{.varname}, [vat]{.varname}, and [total incl.]{.varname} display values because they are calculated using formulas.
 
 ![Form purchases.](images/tables/purchase-form.png){#fig-purchase-form}
 
-5. Click the button [New]{.uicontrol} and add two new records, see the example in @fig-purchase-result). End your last record entry with [Close]{.uicontrol}.
+5.  Click [New]{.uicontrol} and add two new records (see the example in @fig-purchase-result). Click [Close]{.uicontrol} after entering the last record.
 
 ![Purchase list with 3 records.](images/tables/purchase-result.png){#fig-purchase-result}
 
-::: {.callout-warning}
-Use the [Tab key]{.uicontrol} or the mouse to navigate to the next field. When using the [Enter key]{.uicontrol} you go to the next record and when there is no record you get an empty form for adding a new record.
+::: callout-note
+Use the [Tab key]{.uicontrol} or the mouse to navigate between fields. Pressing the [Enter key]{.uicontrol} moves you to the next record, or creates an empty form for adding a new record if there are no more records.
 :::
+::::
 
-:::
+## Searching Data with a Form {#sec-tables-search-form}
 
-## Searching data with a form {#sec-tables-search-form}
-
-A data form is very useful to search for a range/table for records that meet specific conditions. You will learn this in the following task. At the end of this task, you will find examples of how criteria can be applied.
+A data form is also useful for searching a range or table for records that meet specific criteria. The following task demonstrates this. Examples of how to apply criteria are provided at the end of the task.
 
 ::: {#prp-tables-search-form}
 [File]{.smallcaps}: `Personnel.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Select any cell in the data area.
+2.  Select any cell in the data area.
 
-3. Click on the button [Form]{.uicontrol}. The data form appears.
+3.  Click the [Form]{.uicontrol} button. The data form appears.
 
 ![Form personnel.](images/tables/personnel-form.png){#fig-personnel-form}
 
-4. Click [Criteria]{.uicontrol}. The form is cleared and can be used to fill in the search criteria.
+4.  Click [Criteria]{.uicontrol}. The form clears and is ready for you to enter search criteria.
 
-5. Search for department `Accounting` and division `Printers` (see @fig-personnel-form-search).
+5.  Search for the "Accounting" department and the "Printers" division (see @fig-personnel-form-search).
 
 ![Form personnel with search criteria.](images/tables/personnel-form-search.png){#fig-personnel-form-search}
 
-6. Click [Find Next]{.uicontrol}. The data of the first person who meets the criteria is shown.
+6.  Click [Find Next]{.uicontrol}. The data of the first person matching the criteria is displayed.
 
-7. Browse using the buttons [Find Next]{.uicontrol} and [Find Prev]{.uicontrol} through the list. There are a total of 5 people matching your criteria.
-
+7.  Use the [Find Next]{.uicontrol} and [Find Prev]{.uicontrol} buttons to browse through the list. There are five people who meet the criteria.
 :::
 
-#### Examples of search criteria {#sec-tables-searchexamples}
+#### Examples of Search Criteria {#sec-tables-searchexamples}
 
-In the @tbl-tables-searchexamples are some examples of search criteria. Try this out and verify that the found records match the criteria. It is also possible to combine multiple criteria. Always first make the criteria list empty before you start with a new exercise.
+@tbl-tables-searchexamples provides examples of search criteria. Try these examples to confirm that the found records match the criteria. You can also combine multiple criteria. Remember to clear the criteria list before starting a new exercise.
 
+| Field | Value | Explanation |
+|:------------------|:------------------|:---------------------------------|
+| Last name | Ja | Searches for people whose last name starts with “Ja”. |
+| Last name | \*os | Searches for people with "os" in their last name. |
+| Salary | \>70000 | Searches for people with a salary greater than 70000 |
+| Start date | \<1/1/1990 | Searches for people with a start date before 1/1/1990 |
 
-|Field     |Value     |Explanation                                          |
-|----------|----------|-----------------------------------------------------|
-|Last name |Ja        |Searches for people whose last name starts with “Ja”.|
-|Last name |*os       |Searches for people with "os" in the last name.      |
-|Salary    |>70000    |Searches for people with a salary greater than 70000 |
-|Start date|<1/1/1990 |Searches for people with a start date before 1/1/1990|
-
-:  Examples of search criteria. {#tbl-tables-searchexamples}
-
+: Examples of search criteria. {#tbl-tables-searchexamples}
 
 ## Consolidating ranges {#sec-tables-consolidate}
 
-Similar data in different ranges can be summarized (consolidated) into a new range. In practice, the separate ranges are often in separate worksheets and the merged range is placed in a new worksheet.
+You can summarize (consolidate) similar data from different ranges into a new range. In practice, the source ranges are often in separate worksheets, and the consolidated range is placed in a new worksheet.
 
-When you consolidate the source data, you apply a summary function (`SUM`, `AVERAGE`, `COUNT`, ...) to create the summary data. To consolidate ranges, the columns must have a heading, a label.
+When you consolidate source data, you apply a summary function (`SUM`, `AVERAGE`, `COUNT`, etc.) to create the summary data. The columns must have a heading or label to consolidate ranges.
 
-::: {#prp-tables-consolidate}
+:::: {#prp-tables-consolidate}
 [File]{.smallcaps}: `Consolidation.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Select cell [A1]{.uicontrol} in the worksheet [Total]{.uicontrol}.
+2.  Select cell [A1]{.uicontrol} in the "Total" worksheet.
 
-The lists to summarize are in the worksheets [PRA]{.varname} and [PRB]{.varname}. The consolidated data will be put in the worksheet [Total]{.varname}.
+The lists to be summarized are in the "PRA" and "PRB" worksheets. The consolidated data will be placed in the "Total" worksheet.
 
-3. Choose [Data > Consolidate (group Data Tools)]{.uicontrol}.
+3.  Go to [Data \> Consolidate (Data Tools group)]{.uicontrol}.
 
 ![Dialog box consolidate.](images/tables/consolidate-dialogbox.png){#fig-consolidate-dialogbox}
 
-4. Check that the function `SUM` is selected. If not, select this function.
+4.  Ensure that the `SUM` function is selected. If not, select it.
 
-5. Put the cursor in the box [Reference]{.uicontrol}.
+5.  Click in the [Reference]{.uicontrol} box.
 
-6. Select [worksheet PRA > range A1:B7 > Add]{.uicontrol} and click [Add]{.uicontrol}.
+6.  Select [worksheet PRA \> range A1:B7 \> Add]{.uicontrol} and click [Add]{.uicontrol}.
 
-7. Select [worksheet PRB > range A1:B7 > Add]{.uicontrol} and click [Add]{.uicontrol}.
+7.  Select [worksheet PRB \> range A1:B7 \> Add]{.uicontrol} and click [Add]{.uicontrol}.
 
-8. Check Use labels in [Top row]{.uicontrol} and [Left column]{.uicontrol}.
+8.  Check the [Top row]{.uicontrol} and [Left column]{.uicontrol} boxes under "Use labels in."
 
 ![Dialog box consolidate.](images/tables/consolidate-references.png){#fig-consolidate-references}
 
-9. Click [OK]{.uicontrol}.
+9.  Click [OK]{.uicontrol}.
 
 ![Result after consolidation.](images/tables/consolidate-result.png){#fig-consolidate-result}
 
-::: {.callout-warning}
-The aggregation is static. When the source data change, the consolidation results will not, then you should perform a new consolidation. Using pivot tables is often a better choice to summarize data.
+::: callout-warning
+Consolidation is static. If the source data changes, the consolidation results will not update automatically. You'll need to perform a new consolidation. Using pivot tables is often a better approach for summarizing data.
 :::
-
-:::
+::::
 
 ## Convert Range to Table {#sec-tables-create}
 
-By converting a range or list to a real Excel table, you can then use the extra possibilities that tables have.
+Converting a range or list to an Excel table unlocks the additional features and capabilities of tables.
 
-::: {#prp-tables-create}
+:::: {#prp-tables-create}
 [File]{.smallcaps}: `Candyboxes.xlsx`
 
-1. Open the file and select a cell within the data range.
+1.  Open the file and select any cell within the data range.
 
-2. [tab Insert > Table]{.uicontrol}
+2.  Go to [tab Insert \> Table]{.uicontrol}
 
-The ***Create Table*** dialog box appears. If you previously selected a cell with data, the address of the range to be converted is already filled in. If not, or if it is incorrect, you still need to select the correct range of data, including the headers.
+The Create Table dialog box appears. If you previously selected a cell with data, the range to be converted is automatically filled in. If not, or if the range is incorrect, select the correct data range, including the headers.
 
 ![Dialogbox Create Table.](images/tables/candybox-table-create.png){#fig-candybox-table-create}
 
-::: {.callout-note}
-+ If your range has labels that you want to use as column headers, check the option My table has headers. When there no labels, then uncheck this option. Excel adds automatically headers to each column with generic names: Column1, Column2, …
+::: callout-note
+-   If your range includes labels that you want to use as column headers, check "My table has headers." If there are no labels, uncheck this option. Excel will automatically add headers with generic names: Column1, Column2, etc.
 
-+ It is strongly recommended to always provide your own clear headers.
+-   It's strongly recommended that you provide your own descriptive headers.
 :::
 
-3. Click [OK]{.uicontrol}.
+3.  Click [OK]{.uicontrol}.
 
-![GThe data is now in an Excel table.](images/tables/candybox-table.png){#fig-candybox-table}
+![The data in an Excel table.](images/tables/candybox-table.png){#fig-candybox-table}
+::::
 
-:::
+After converting a range to a table, you'll notice the following changes:
 
-After a range has been converted to a table, the following changes are visible:
+-   A table format (style) is applied. You can change this to a different format if desired.
 
-+ A table format (style) has been applied. You can change this to a different format if you wish.
+-   Each column header now has dropdown arrows for filtering and sorting.
 
-+ Each column header now contains selection arrows for filtering and sorting.
-
-+ A tab [Table design]{.uicontrol} has been added. It only appears when a cell in the table is selected.
+-   A [Table Design]{.uicontrol} tab is added to the ribbon. This tab is only visible when a cell within the table is selected.
 
 ### Table Design {#sec-tables-design}
 
-With [Table design]{.uicontrol} you can control various things for the table. 
+The [Table Design]{.uicontrol} tab allows you to manage various table settings.
 
 ![Table design on the ribbon. What you see may depend on the screen width.](images/common/ribbon-table-design.png){#fig-ribbon-table-design}
 
-Each table is automatically provided with a **Table name**. The default names are Table1, Table2, table3, ... It is recommended to change the default name to a meaningful name that reflects what data the table contains. This name is also used in references to the table and operations with the table.
+Each table is automatically assigned a Table Name. The default names are Table1, Table2, Table3, etc. It's best practice to change the default name to a meaningful name that reflects the table's data. This name is used when referencing the table and in table operations.
 
 You can change the name in the [Table name]{.uicontrol} box.
 
-## Table operations {#sec-tables-operations}
+## Table Operations {#sec-tables-operations}
 
-### Selecting rows/columns in a table {#sec-tables-select-rc}
+### Selecting Rows/Columns in a Table {#sec-tables-select-rc}
 
-Right‐click a cell in the row or column you want to select. Then choose [Select]{.uicontrol} and then choose one of the possibilities:
+1.  Right-click a cell in the row or column you want to select.
 
-+ Table Column Data
-+ Entire Table Column
-+ Table Row
+2.  Choose [Select]{.uicontrol}, and then select one of the following options:
 
-### Inserting a table row/column {#sec-tables-insert-rc}
+    -   Table Column Data
+    -   Entire Table Column
+    -   Table Row
 
-Right-click a cell, choose [Insert]{.uicontrol} and then one of the options:
+### Inserting a Table Row/Column {#sec-tables-insert-rc}
 
-+ Table Columns to the Left
-+ Table Rows Above
+1.  Right-click a cell.
 
-When you select a cell in the last row or last column, you also have the options
+2.  Choose [Insert]{.uicontrol} and then select one of the options:
 
-+ Table Column to the Right
-+ Table Row Below
+    -   Table Columns to the Left
+    -   Table Rows Above
 
-At the last cell, at the bottom right, you have both possibilities.
+If you select a cell in the last row or last column, you'll also have the options:
 
-Fast way to add a new row: Select the bottom-right cell and press the [Tab]{.uicontrol} key.
+-   Table Column to the Right
+-   Table Row Below
 
-### Deleting a table row/column {#sec-tables-delete-rc}
+If you select the last cell (bottom right), you'll have both options.
 
-Right-click a cell in the row/column you want to delete, choose [Delete]{.uicontrol} and then one of the options:
+A quick way to add a new row is to select the bottom-right cell and press the [Tab]{.uicontrol} key.
 
-+ Table Columns
-+ Table Rows
+### Deleting a Table Row/Column {#sec-tables-delete-rc}
 
-### Convert a table to a range {#sec-tables-convert}
+1.  Right-click a cell in the row or column you want to delete.
 
-Select a cell inside the table. Choose [tab Design (Table Tools) > Convert to Range (group Tools)]{.uicontrol} and confirm the operation.
+2.  Choose [Delete]{.uicontrol}, and then select one of the options:
 
-### Apply a table style {#sec-tables-style}
+    -   Table Columns
+    -   Table Rows
 
-Select a cell inside the table. Choose [tab Design]{.uicontrol}. Select a style from the Table Styles gallery.
+### Convert a Table to a Range {#sec-tables-convert}
 
-## Sort a table {#sec-tables-sort}
+1.  Select any cell inside the table.
 
-Sorting is a common action associated with lists. If a cell in a column is selected, clicking the sort button will sort the whole table. It will be sorted in ascending or descending order according to the values in that column.
+2.  Go to [tab Design (Table Tools) \> Convert to Range ( Tools group)]{.uicontrol} and confirm the operation.
 
-::: {.callout-warning}
-Restoring the table in the original order is only possible using the [Undo]{.uicontrol} button on the [Quick Access Toolbar]{.uicontrol}. An alternative is before starting to create a temporary new column with sequential numbering. By sorting this column afterward, you are back to the original state.
+### Apply a Table Style {#sec-tables-style}
+
+1.  Select any cell inside the table.
+
+2.  Go to [tab Design]{.uicontrol}.
+
+3.  Choose a style from the Table Styles gallery.
+
+## Sort a Table {#sec-tables-sort}
+
+Sorting is a common operation with lists. If you select a cell in a column and click the sort button, the entire table will be sorted. It can be sorted in ascending or descending order based on the values in that column.
+
+::: callout-warning
+The only way to restore the table to its original order is by using the [Undo]{.uicontrol} button on the [Quick Access Toolbar]{.uicontrol}. Alternatively, before sorting, you can insert a temporary column with sequential numbers. Sorting by this column later will return the table to its original state.
 :::
 
 ::: {#prp-tables-sort}
 [File]{.smallcaps}: `Personnel.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Convert the data range to a table (see @sec-tables-create.
+2.  Convert the data range to a table (see @sec-tables-create).
 
-3. Click on the arrow beside the field name [Department]{.varname} and select [![](images/common/icon-sort-az.png) Sort A to Z]{.uicontrol}.
+3.  Click the arrow next to the [Department]{.varname} field name and select [![](images/common/icon-sort-az.png) Sort A to Z]{.uicontrol}.
 
 The table is sorted in ascending order of the column Department.
 
-4. Click on the arrow beside the field name [Division]{.varname} and select [![](images/common/icon-sort-za.png) Sort Z to A]{.uicontrol} .
+4.  Click on the arrow next to the [Division]{.varname} field name and select [![](images/common/icon-sort-za.png) Sort Z to A]{.uicontrol} .
 
 The table is sorted in descending order of the column Division.
 
 You can sort a table on multiple levels, based on the values in different columns. One of the columns will be the first level where you sort on. After that, you can add new levels of sorting. Another column provides the second level of sorting, etc.
 
-5. Select any cell in the table and click [Home > Sort & Filter (group Editing) > Custom Sort ...]{.uicontrol}.
+5.  Select any cell in the table and go to [Home \> Sort & Filter (Editing group) \> Custom Sort ...]{.uicontrol}.
 
-The dialog box ***Sort*** is displayed where you can specify the sort conditions.
+The ***Sort*** dialog box appears, where you can specify the sort conditions.
 
-6. Choose Sort by [Division]{.varname}.
+6.  Choose to sort by [Division]{.varname}.
 
-7. Click on [Add Level]{.uicontrol} and choose to sort on [Department]{.varname} next.
+7.  Click [Add Level]{.uicontrol} and then choose to sort on [Department]{.varname}.
 
 ![Dialog box sort with two levels.](images/tables/personnel-sort-multiple.png){#fig-personnel-sort-multiple}
 
-8. Click [OK]{.uicontrol}.
+8.  Click [OK]{.uicontrol}.
 
-First, the values in the column [Division]{.varname} are sorted in ascending order, then on the values in the column [Department]{.varname}.
-
+First, the values in the column [Division]{.varname} are sorted in ascending order, and then the values in the [Department]{.varname} column are sorted..
 :::
 
-## Filter a table {#sec-tables-filter}
+## Filter a Table {#sec-tables-filter}
 
-When filtering a table only those records that meet certain conditions are displayed. The other records are hidden.
+When you filter a table, only the records that meet specific conditions are displayed. The other records are hidden.
 
 ::: {#prp-tables-filter}
 [File]{.smallcaps}: `Personnel.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Convert the data range to a table if it isn't already (see @sec-tables-create).
+2.  If it isn't already, convert the data range to a table (see @sec-tables-create).
 
-3. Click on the arrow beside the field name [Division]{.varname} and only select `Copiers`, then [OK]{.uicontrol}.
+3.  Click the arrow next to the [Division]{.varname} field name, select only "Copiers," and then click [OK]{.uicontrol}.
 
-Only the records for the Copiers division are now displayed. The arrow at the column header Division is changed in the filter symbol ![](images/common/icon-filter.png)
+Only the records for the Copiers division are now displayed. The arrow in the Division column header changes to the filter symbol ![](images/common/icon-filter.png)
 
-4. Now refine your selection by filtering on the Accounting department.
+4.  Now, refine your selection by filtering for the Accounting department.
 
-In the status bar at the bottom is displayed how many records are found.
+The status bar at the bottom displays the number of records found.
 
-5.  lear the filter with [Data > Clear (group Sort & Filter)]{.uicontrol}.
-
+5.  Clear the filter by going to [Data \> Clear (Sort & Filter group)]{.uicontrol}.
 :::
 
-### Number filter {#sec-tables-filter-number}
+### Number Filter {#sec-tables-filter-number}
 
-When the contents of a field are numbers, specific filter actions can be performed. Such filters fall under the category [Number filters]{.uicontrol}. The following example will be used to determine the top 10 salaries.
+When a field contains numbers, you can use specific filter actions. These filters are in the [Number Filters]{.uicontrol} category. The following example demonstrates how to find the top 10 salaries.
 
-::: {#prp-tables-filter-number}
+:::: {#prp-tables-filter-number}
+1.  Click the arrow next to the [Salary]{.varname} field name and select [Number Filters \> Top 10...]{.uicontrol}.
 
-1. Click on the arrow beside the field name [Salary]{.varname} and choose [Number Filters > Top 10...]{.uicontrol}.
+![Dialog box for top 10 autofilter.](images/tables/filter-top10.png){#fig-filter-top10}
 
-![Dialog box top 10 autofilter.](images/tables/filter-top10.png){#fig-filter-top10}
-
-::: {.callout-note}
-Instead of `10` you can also choose another number. And [Top]{.uicontrol} can be changed to [Bottom]{.uicontrol}. 
+::: callout-note
+You can change `10` to a different number. You can also change [Top]{.uicontrol} to [Bottom]{.uicontrol}.
 :::
 
-2.  Click [OK]{.uicontrol}. The 10 records with the highest salary are displayed now.
+2.  Click [OK]{.uicontrol}. The 10 records with the highest salaries are now displayed.
 
-3. Clear the filter with [Data > Clear (group Sort & Filter)]{.uicontrol}.
+3.  Clear the filter by going to [Data \> Clear (Sort & Filter group)]{.uicontrol}.
+::::
 
-:::
+### Custom Filter {#sec-tables-filter-custom}
 
-### Custom filter {#sec-tables-filter-custom}
-
-If you want to use filters on the number fields other than the default filters, you will need to use a custom filter. The following example will be used to show the records of all people with a salary from \$ 20,000 to \$ 25,000.
+For number field filters other than the default filters, use a custom filter. The following example shows how to display records for people with salaries from \$20,000 to \$25,000.
 
 ::: {#prp-tables-filter-custom}
+1.  Click the arrow next to the [Salary]{.varname} field name and select [Number Filters \> Custom Filter...]{.uicontrol}.
 
-1. Click on the arrow beside the field name [Salary]{.varname} and choose [Number Filters > Custom Filter...]{.uicontrol}.
+The ***Custom AutoFilter*** dialog box allows you to specify filter conditions.
 
-In te dialog box ***Custom AutoFilter*** you can specify the filter conditions.
+2.  Create the two salary conditions as shown in @fig-personnel-filter-custom.
 
-2. Create the two conditions for the salary as shown in @fig-personnel-filter-custom.
+![Dialog box for custom autofilter with two conditions.](images/tables/personnel-filter-custom.png){#fig-personnel-filter-custom}
 
-![Dialog box custom autofilter with two conditions.](images/tables/personnel-filter-custom.png){#fig-personnel-filter-custom}
+3.  Click [OK]{.uicontrol}. 10 records are found.
 
-3. Click [OK]{.uicontrol}. 10 records are found.
-
-4. Clear the filter with [Data > Clear (group Sort & Filter)]{.uicontrol}.
-
+4.  Clear the filter by going to [Data \> Clear (Sort & Filter group)]{.uicontrol}.
 :::
 
-### Date filter {#sec-tables-filter-date}
+### Date Filter {#sec-tables-filter-date}
 
-When the contents of a field are dates, specific filter actions for dates can be performed. Such filters fall under the category [Date filters]{.uicontrol}. The following example will be used to determine the records with a start date in September.
+When a field contains dates, you can use specific filter actions for dates. These filters are in the [Date Filters]{.uicontrol} category. The following example shows how to find records with a start date in September.
 
 ::: {#prp-tables-filter-date}
+1.  Click the arrow next to the [Start date]{.varname} field name and select [Date Filters \> All Dates in the Period \> September]{.uicontrol}.\
+    \
+    11 records are found.
 
-1. Click on the arrow beside the field name [Start date]{.varname} and choose [Date Filters > All Dates in the Period > September]{.uicontrol}.
-
-11 records are found.
-
-2.Clear the filter with [Data > Clear (group Sort & Filter)]{.uicontrol}.
-
+2.  Clear the filter by going to [Data \> Clear (Sort & Filter group)]{.uicontrol}.
 :::
 
 ### Slicers {#sec-tables-slicers}
 
-A slicer is an object in Excel with which you can also filter your data. It shows all possible values from a selected column and each value is displayed as a button in the slicer. Working with a slicer is faster than previous filter possibilities and you immediately see what is being filtered. 
+A slicer is an Excel object that you can use to filter data. It displays all the unique values from a selected column, with each value as a button. Slicers are faster to use than traditional filters, and they provide immediate visual feedback on what is being filtered.
 
-A slicer can be used with both tables and pivot tables (see @sec-pivots-slicers). It looks like that the slicer floats above the spreadsheet, so it is always visible and ready for use. 
+Slicers can be used with both tables and pivot tables (see @sec-pivots-slicers). They appear to float above the spreadsheet, making them readily accessible.
 
-::: {#prp-tables-slicers}
+:::: {#prp-tables-slicers}
+1.  Select any cell in the table.
 
-1. Select any cell in the table.
+2.  Go to [tab Table Design \> Insert Slicer (Tools group)]{.uicontrol}.
 
-2. Choose [tab Table Design > Insert Slicer (group Tools)]{.uicontrol}.
+The Insert Slicer dialog box opens and displays the column headings (fields) for which you can insert a slicer. You can select one or more fields.
 
-This opens the Insert Slicer dialog and displays the column headings (fields) for which you can insert a slicer. You can select one or more fields.
+3.  Select the [Department]{.varname} and [Division]{.varname} fields and click [OK]{.uicontrol}.
 
-3. Select the fields [Department]{.varname} and [Division]{.varname} and click [OK]{.uicontrol}.
+Two slicers are inserted. If they overlap, move them so that they are next to each other, as shown in @fig-personnel-slicers. Both slicers display all the unique values for their respective fields.
 
-Two slicers are now inserted. When the slicers overlap, move them so that they are next to each other, see @fig-personnel-slicers. Both slicers show all unique values for that field. 
+![Two slicers for the Department and Division fields.](images/tables/personnel-slicers.png){#fig-personnel-slicers}
 
-![Twee slicers voor de velden Afdeling en Divisie.](images/tables/personnel-slicers.png){#fig-personnel-slicers}
+4.  In the [Department]{.varname} slicer, click the [Marketing]{.varname} button. Only the data for Marketing is now displayed.
 
-4. Click in the slicer [Department]{.varname} on button [Marketing]{.varname}. Only the data for Marketing is now displayed. 
+5.  Clear the filter by clicking the [Clear Filter]{.uicontrol} button (the button with the "x") in the top right corner of the [Department]{.varname} slicer.
 
-5. Cancel the filtering by clicking the [Clear filter]{.uicontrol} button (the one with the cross) in the top right corner of the slicer [Department]{.varname}.
+6.  In the top right corner of the [Department]{.varname} slicer, click the [Multi-Select]{.uicontrol} button. Now, filter for both [Administration]{.varname} and [Marketing]{.varname}.
 
-6. Click in the top right corner of the slicer [Department]{.varname} on the button [Multiple selection]{.uicontrol}, Filter now on [Administration]{.varname} and [Marketing]{.varname}.
+![Multiple selection applied in the Department slicer.](images/tables/personnel-slicer-multiple.png){#fig-personnel-slicer-multiple}
 
-
-![Multiple selection applied in slicer Department.](images/tables/personnel-slicer-multiple.png){#fig-personnel-slicer-multiple}
-
-::: {.callout-note}
-The buttons act like switches. Clicking a button successively toggles the filtering for that value on and off.
+::: callout-note
+The buttons act like toggles. Clicking a button repeatedly turns the filtering for that value on and off.
 :::
 
-7. Select now [Printers]{.varname} in the slicer [Division]{.varname}.
+7.  Now, select [Printers]{.varname} in the [Division]{.varname} slicer.
 
-8. Experiment with the slicers. Optionally, add a third slicer for column [Function]{.varname}. Finish by clearing all filters.
-
-:::
+8.  Experiment with the slicers. You can optionally add a third slicer for the [Function]{.varname} column. When you're finished, clear all filters.
+::::
 
 ## Calculated Column {#sec-tables-calculated-column}
 
-When you enter a formula into an empty table column, then that formula will automatically expand to the rest of the column. You don't need a Fill or Copy command. Such a column is called a calculated column. And when you change a formula, then this change is automatically expanded to the rest of the calculated column.
+When you enter a formula into an empty table column, that formula automatically extends to the rest of the column. You don't need to use Fill or Copy. This type of column is called a calculated column. If you change a formula, the change automatically applies to the entire calculated column.
 
-The easiest way to create a new calculated column is to start typing in the column immediately to the right of the table. The table will automatically extend.
+The easiest way to create a new calculated column is to start typing in the column immediately to the right of the table. The table will automatically expand to include the new column.
 
-::: {#prp-tables-calculated-column}
+:::: {#prp-tables-calculated-column}
 [File]{.smallcaps}: `Personnel.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Convert the data range to a table if it isn't already (see @sec-tables-create).
+2.  If it isn't already, convert the data range to a table (see @sec-tables-create).
 
-3. Select cell I2 and enter the formula `=ROUND([@Salary],0)`. A new table column with the calculated values is created.
+3.  Select cell I2 and enter the formula `=ROUND([@Salary],0)`. A new table column with the calculated values is created.
 
-::: {.callout-note}
-References like `[@Salary]` are called **structured references**, which is unique to Excel tables. The structured reference format is what allows the table to use the same formula for each row.
+::: callout-note
+References like `[@Salary]` are called **structured references**, which are unique to Excel tables. Structured references allow the table to use the same formula for each row.
 :::
 
-4. Change the column header in `Rounded Salary`.
+4.  Change the column header to `Rounded Salary`.
 
-5. Select a numeric cell in the new column, [Right-click > Select > Table Column Data]{.uicontrol}.
+5.  Select a numeric cell in the new column, then [Right-click \> Select \> Table Column Data]{.uicontrol}.
 
-6. Change the cell format in `Accounting, 0 decimals`.
+6.  Change the cell format to `Accounting, 0 decimals`.
 
-7. Select cell J2 and enter the formula  
-   `=YEAR(NOW())-YEAR([@[Start date]])`.
+7.  Select cell J2 and enter the formula\
+    `=YEAR(NOW())-YEAR([@[Start date]])`.
 
-8. Change the column header in `Age`.
-
-:::
+8.  Change the column header in `Age`.
+::::
 
 ## Task: Total Row {#sec-tables-totalrow}
 
-You can summarize numeric data in a table with a subtotal that appears at the bottom of the table. Although the word subtotal implies that you are summing the numeric values in a column, Excel uses the term more broadly. That is, a subtotal can be not only a numeric sum, but also an average, a maximum or minimum, a standard deviation or a variance, or a count of the values in the field. The calculation is based on the visible cells in the table's column.
+You can summarize numeric data in a table using a subtotal that appears at the bottom of the table. Although the term "subtotal" suggests summing numeric values, Excel uses it more broadly. A subtotal can be a sum, average, maximum, minimum, standard deviation, variance, or count of the values in a field. The calculation is based on the visible cells in the table's column.
 
 ::: {#prp-tables-totalrow}
 [File]{.smallcaps}: `Personnel.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Convert the data range to a table if it isn't already (see @sec-tables-create).
+2.  If it isn't already, convert the data range to a table (see @sec-tables-create).
 
-3. Choose [tab Table Design > Check Total Row (group Table Style Options)]{.uicontrol}
+3.  Go to [Table Design tab\> Check the Total Row box (Table Style Options group)]{.uicontrol}
 
-A row [Total]{.uicontrol} is inserted at the bottom of the table and a `SUBTOTAL` function is added below the last column. In this case, the function is meaningless because the last column is a date column.
+A "Total" row is inserted at the bottom of the table, and a `SUBTOTAL` function is added below the last column. In this case, the function is irrelevant because the last column is a date column.
 
-4. Select in row [Total]{.uicontrol} the cell below column [Start date]{.varname}, the selector ![](images/tables/subtotal-selector.png) and choose `None`.
+4.  In the "Total" row, select the cell below the [Start date]{.varname} column, click the dropdown arrow ![](images/tables/subtotal-selector.png) and choose "None".
 
-5. Select in row [Total]{.uicontrol} the cell below column [Salary]{.varname}, the selector ![](images/tables/subtotal-selector.png) and choose `SUM`.
+5.  In the "Total" row, select the cell below the [Salary]{.varname} column, click the dropdown arrow ![](images/tables/subtotal-selector.png) and choose "Sum".
 
 The total salary is \$ 4,874,037.39.
-
 :::
 
 ## Exercises {#sec-tables-exercises}
 
-::: {#exr-list001}
-**Selecting (list001)**
-
-The following table lists the marks of some students.
-
-![](images/tables/list001-data.png)
-
-Now apply a filter so that only the rows are displayed for students who have no rating or a mark 3 or lower. For this exercise, the table is kept small. For your solution, you should take much larger tables into account.
+:::: {#exr-list001}
+**Filtering (list001)**
 
 [File]{.smallcaps}: `List001.xlsx`
 
+The following table lists the grades of some students.
+
+![](images/tables/list001-data.png)
+
+Apply a filter to display only the rows for students with no grade or a grade of 3 or lower. This exercise uses a small table. Your solution should work for much larger tables.
+
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
+
 ![](images/tables/list001-solution.png)
+
 `r unhide()`
 :::
-
-:::
+::::
 
 ::: {#exr-list002}
-**Consolidating examination results (list002)**
+**Consolidating Examination Results (list002)**
 
-The following table shows the results of a group of students for an examination and a re-examination. Furthermore, you see the final result, obtained through consolidating the data. This final result is the highest rating.
+[File]{.smallcaps}: `List002.xlsx`
+
+The following table shows the results of a group of students for an examination and a re-examination. It also shows the final result, which is the highest grade.
 
 ![](images/tables/list002-data.png)
 
-Enter the data for the examination and re-examination in a worksheet. Determine the final result through consolidation.
-
-[File]{.smallcaps}: `List002.xlsx`
+Enter the examination and re-examination data in a worksheet. Determine the final result using consolidation.
 :::
 
 ::: {#exr-list003}
-**Consolidating sales data (list003)**
+**Consolidating Sales Data (list003)**
 
-The following table lists the sales numbers of bread types in the North and South branches of a store. Furthermore, you see the total sales numbers obtained by consolidation.
+[File]{.smallcaps}: `List003.xlsx`
+
+The following table lists the sales numbers of bread types in the North and South branches of a store. It also shows the total sales numbers obtained by consolidation.
 
 ![](images/tables/list003-data.png)
 
-Enter the data for the two branches in a worksheet. Determine the totals through consolidation.
-
-[File]{.smallcaps}: `List003.xlsx`
+Enter the data for the two branches in a worksheet. Determine the totals using consolidation.
 :::
 
-::: {#exr-list004}
-**Filtering overview cars (list004)**
+:::: {#exr-list004}
+**Filtering Car Data (list004)**
+
+[File]{.smallcaps}: `Car.xlsx`
 
 In a worksheet, you can find some data of cars. A customer is interested in cars that meet the following conditions:
 
 -   6 cylinders
--   top speed of at least 180 km/hour
--   petrol (ordinary or super) as fuel
+-   Top speed of at least 180 km/hour
+-   Petrol (regular or premium) fuel type
 
-Make a list of all the cars with the corresponding data that meet these conditions.
-
-[File]{.smallcaps}: `Car.xlsx`
+Create a list of all cars with their data that meet these conditions.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
+
 ![](images/tables/list004-solution.png)
+
 `r unhide()`
 :::
-
-:::
+::::

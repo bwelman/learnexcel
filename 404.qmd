@@ -1,5 +1,5 @@
-# Page not found
+# Page Not Found
 
-The requested page cannot be found (maybe it has been moved or renamed).
+Sorry, the page you’re looking for doesn’t exist or has been moved or renamed.
 
-You can try using *Search* to find the new location of the page, or use the table of contents.
+Try going back to the *home page,* use the *table of contents*, or use *Search* to find what you need.

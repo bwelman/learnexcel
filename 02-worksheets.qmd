@@ -1,184 +1,175 @@
-# The worksheet {#sec-worksheets}
+# The Worksheet {#sec-worksheets}
 
 ::: callout
 **OBJECTIVES**
 
-+ Layout and use of the worksheet.
-+ Activating a worksheet.
-+ Adding, deleting, moving and copying a worksheet.
-+ Renaming a worksheet and changing it.
-+ Select with the mouse.
-+ The important difference between the contents and the format of a cell.
-+ Printing and print settings. 
+-   Worksheet layout and usage.
+-   Activating a worksheet.
+-   Adding, deleting, moving and copying a worksheet.
+-   Renaming and modifying a worksheet.
+-   Selecting with the mouse.
+-   The important difference between the contents and format of a cell.
+-   Printing and print settings.
 :::
 
-A workbook can have one or more worksheets. Each worksheet has a [tab]{.uicontrol} that is displayed at the bottom of the workbook window. The tab contains the name of the worksheet. In the worksheet, you can enter the data and formulas. The main topics in this chapter are how and where to enter this data in the worksheet and how it is displayed.
+A workbook can contain one or more worksheets. Each worksheet has a tab at the bottom of the workbook window. In the worksheet, you can enter data and formulas. This chapter covers how and where to enter data in the worksheet, and how it is displayed.
 
-## What is a worksheet? {#sec-ws-over}
+## What is a Worksheet? {#sec-ws-over}
 
-A brief explanation of the design and use of the worksheet.
+An overview of worksheet design and usage.
 
 A worksheet contains rows and columns. The intersection of a row and a column is a cell. You can store data and formulas in the cell.
 
 ![Worksheet with rows, columns and cells.](images/worksheets/worksheet-layout.png){#fig-worksheet-layout}
 
+Rows are numbered 1, 2, 3, and so on, while columns are labeled A, B, C, and so on. After Z, columns are labeled AA, AB, and so on. After ZZ, the labeling continues with AAA, AAB, etc. A worksheet can contain 16,384 columns and 1,048,576 rows. This results in over 17 billion cells.
 
-The rows are noted by numbers 1, 2, 3, ... The columns are noted by letters A, B, C, ... And after the letter Z it's it starts again with AA, AB, ... And after ZZ a third letter is added and it's going on with AAA, AAB, etc. A worksheet can contain 16,384 columns and 1,048,576 rows. This provides more than 17 billion cells.
+Each cell is identified by a specific row and column. The combination of the column letter and row number is called a **cell address** or **cell reference**. The first cell in the upper left corner is A1. Cell addresses can be used in formulas to refer to cell content.
 
-Each cell corresponds to a particular row and a particular column. The combination of the column letter and the row number is called a cell address or cell reference. The address of the first cell in the upper left corner is [A1]{.uicontrol}. The cell address can be used in formulas to make references to the content of the cell.
+A cell is selected by clicking it with the mouse. This cell becomes the **active cell**, and it is highlighted with a border.![Outline active cell.](images/worksheets/worksheet-activecell.png)
 
-A cell is selected by clicking on it with the mouse. Then it becomes the active cell and the cell is surrounded by a border.![Outline active cell.](images/worksheets/worksheet-activecell.png)
+A worksheet always has an active cell. You can activate a different cell by clicking it, or by using the arrow keys on the keyboard to move the active cell. When you start typing, data is entered into the active cell. Press the Enter key to complete data entry. By default, the active cell moves down one cell.
 
-There is always an active cell in the worksheet. You can activate another cell by clicking on it, or you can move the active cell with the arrow keys on the keyboard. When you start typing, then the data is entered in the active cell. You can end the data entry with the [Enter key]{.uicontrol}. By default, the active cell is moved 1 cell downwards.
-
-::: {.callout-note}
-The direction of the movement of the active cell after pressing the Enter key can be changed in the [Excel Options]{.uicontrol}. The choices are: down, up, right, and left.
+::: callout-note
+You can change this direction in [Excel Options]{.uicontrol}: down, up, right, and left.
 :::
 
 The content of a cell can be:
 
-+ text
-+ numbers
-+ formulas
+-   text
+-   numbers
+-   formulas
 
-References to other cells are allowed in the formulas. All the formulas are recalculated if the content of these referenced cells is changed. This makes a spreadsheet very powerful.
+References to other cells are allowed in the formulas. Formulas are automatically recalculated when the content of referenced cells changes. This makes a spreadsheet very powerful.
 
-## Activating worksheet {#sec-ws-activate}
+## Activating Worksheet {#sec-ws-activate}
 
-A workbook can have multiple worksheets, all identified by a tab at the bottom left of the window. A worksheet must be activated before you can use it. When there is only one worksheet, then this sheet is automatically activated. When there are more worksheets, then you can activate a sheet by clicking on the tab of the worksheet. The tab of the active worksheet has a white background.
+A workbook can contain multiple worksheets, each with its own tab at the bottom left of the window. You must activate a worksheet before you can use it. If there's only one worksheet, it's activated automatically. To activate a different worksheet, click its tab. The active worksheet's tab appears with a white background.
 
 ::: {#prp-ws-activate}
 [File]{.smallcaps}: `Consolidation.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Click alternately on one of the tabs of the worksheets. The worksheet becomes visible and the tab gets a white background color.
-
+2.  Click on different worksheet tabs to select them. The selected worksheet appears, and its tab turns white.
 :::
 
-## Add a new worksheet {#sec-ws-new}
+## Add a New Worksheet {#sec-ws-new}
 
 ::: {#prp-ws-new}
+1.  Open a new blank workbook.
 
-1. Start with a new blank workbook.
+2.  Click on the [New sheet]{.uicontrol} button ![Button for a new worksheet.](images/worksheets/worksheet-new-button.png).
 
-2. Click on the button [New sheet]{.uicontrol} ![Button for a new worksheet.](images/worksheets/worksheet-new-button.png).
-
-A new worksheet is added at the end and active. The new worksheet is automatically named Sheet followed by a number. Of course, you can change this name (see @sec-ws-rename).
-
+A new worksheet is added to the end of the workbook and becomes the active sheet. The new worksheet is automatically named "Sheet" followed by a number. You can rename it later (see @sec-ws-rename).
 :::
 
-## Deleting a worksheet {#sec-ws-delete}
+## Deleting Worksheet {#sec-ws-delete}
 
-It is a good practice to keep worksheets with content only and remove empty ones. Each worksheet can be removed except the last one, because each workbook must have at least one worksheet. If a worksheet contains data or is empty by removing all content, then Excel will ask for a confirmation for deleting it. In the other case, the worksheet will be removed immediately.
+It's good practice to keep only worksheets with content and delete empty ones. You can delete any worksheet except the last one, as a workbook must contain at least one worksheet. If a worksheet contains data, or if you've emptied it by removing all content, Excel will ask you to confirm the deletion. Otherwise, the worksheet will be deleted immediately.
 
 ::: {#prp-ws-delete}
+1.  Right-click the worksheet's tab, and then select [Delete]{.uicontrol}.
 
-1. Right-click on the tab name of the worksheet and then choose [Delete]{.uicontrol}.
+You'll encounter one of two scenarios:
 
-There are now two possibilities:
+-   The worksheet is deleted immediately. If this happens, no further action is needed.
+-   A dialog box will appear, asking you to confirm the deletion.
 
-+ The worksheet will be removed immediately. In that case, there is no next step.
-+  A dialog box appears, asking for a confirmation of the delete action.
-
-2. Click [Delete]{.uicontrol}.
-
+2.  Click [Delete]{.uicontrol}.
 :::
 
-## Renaming worksheet {#sec-ws-rename}
+## Renaming Worksheet {#sec-ws-rename}
 
-It is recommended to give meaningful names to worksheets instead of the generated default names like Sheet1, Sheet2, Sheet3, ...
+It's recommended to give worksheets descriptive names instead of the default names like Sheet1, Sheet2, Sheet3, etc.
 
 ::: {#prp-ws-rename}
+1.  Rename a worksheet using one of these methods:
 
-1. Rename a worksheet in one of the following ways:
+    -   Right-click the worksheet's tab, and then select [Rename]{.uicontrol}.
+    -   Double-click the worksheet's tab.
 
-   + Right-click on the tab name of the worksheet and then choose [Rename]{.uicontrol}.
-   + Double click on the tab name of the worksheet.
-
-2. Type the new name, closing with [Enter]{.uicontrol}.
-
+2.  Type the new name, and then press [Enter]{.uicontrol}.
 :::
 
-## Copying worksheet {#sec-ws-copy}
+## Copying Worksheet {#sec-ws-copy}
 
 ::: {#prp-ws-copy}
+1.  Right-click the worksheet's tab and select [Move or Copy ..]{.uicontrol}.
 
-1.  Right-click on the tab name of the worksheet and then choose [Move or Copy ..]{.uicontrol}.
+![Move or Copy dialog box.](images/worksheets/worksheet-move-dialogbox.png){#fig-worksheet-move-dialogbox}
 
-![Dialog box Move or Copy worksheet.](images/worksheets/worksheet-move-dialogbox.png){#fig-worksheet-move-dialogbox}
+2.  You can perform one or more of the following actions:
 
-2.  You can perform one or more of the following possibilities:
-
-   - *To book* - Default, this is the same workbook. By clicking on the drop-down arrow at the end, you can choose another open workbook or a new workbook. In the latter case, a new workbook is created.
-   - *Before sheet* - Choose the location in the destination workbook.
-   - *Create a copy* - When this choice is selected, then a copy of the worksheet is created. If not checked the worksheet is moved to the new location
-
+-   *To book* - This option defaults to the current workbook. Use the drop-down arrow to select a different open workbook. Selecting "new workbook" will create a new workbook.
+-   *Before sheet* - Choose the destination workbook location.
+-   *Create a copy* - Select this option to create a copy of the worksheet. If you leave it unchecked, the worksheet will be moved to the new location.
 :::
 
-## Mouse selections {#sec-ws-mouseselections}
+## Mouse Selections {#sec-ws-mouseselections}
 
-Commonly, you want to perform one command on several cells. For example, if you want to centralize the text in some cells, or change the font of these cells. Therefore you must get a good routine selecting multiple cells at the same time. In @tbl-mouse-selections you can see the most common selections.
+Often, you'll want to apply a command to multiple cells at once. For example, you might want to center the text in several cells or change their font. Therefore, it's important to become proficient at selecting multiple cells. @tbl-mouse-selections shows the most common selections.
 
-|desired selection|method                                                      |
-|-----------------|------------------------------------------------------------|
-|single cell|Click on the cell.|
-|range of cells|Click the first cell in the range and then drag it to the last cell.|
-|single column|Click on the column letter.|
-|adjacent columns|Click on the first column letter and drag it to the last column letter.|
-|single row|Click on the row number.|
-|adjacent rows|Click on the first row number and drag it to the last row number.|
-|all cells in worksheet|Click on the button, above row number 1, and left from column A, or Shortcut CTRL-A|
+| Desired selection | Method |
+|:----------------------|:------------------------------------------------|
+| single cell | Click the cell. |
+| range of cells | Click the first cell in the range, and then drag it to the last cell. |
+| single column | Click the column letter. |
+| adjacent columns | Click the first column letter and drag it to the last column letter. |
+| single row | Click the row number. |
+| adjacent rows | Click the first row number and drag it to the last row number. |
+| all cells in worksheet | Click the button above row 1 and to the left of column A, or use the shortcut CTRL-A |
 
-:  Most common mouse selections. {#tbl-mouse-selections}
+: Common mouse selection methodss. {#tbl-mouse-selections}
 
-When selecting, you can also use the [Shift key]{.uicontrol} or the [CTRL key**, with the following effects:
+You can also use the [Shift key]{.uicontrol} or the [CTRL key]{.uicontrol} to modify selections:
 
-[SHIFT]{.uicontrol}
-: Using the SHIFT key you can select an adjacent area.
-: + For a rectangular area, click on one of the corner cells, hold down the [SHIFT key]{.uicontrol} and click on the cell in the diagonally opposite corner.
-: + For adjacent columns, select the first column, hold down the [SHIFT key]{.uicontrol} while selecting the last column.
-: + For adjacent rows, select the first row, hold down the [SHIFT key]{.uicontrol} while you select the last row.
+**SHIFT key**
 
-[CTRL]{.uicontrol}
-: Using the CTRL key, you can select non-adjacent areas. Select the first cell, area, row or column, hold down [CTRL]{.uicontrol} key while you select the other cells, areas, rows, and columns.
+The Shift key allows you to select a contiguous range.
 
+-   To select a rectangular range, click one corner cell, hold down the Shift key, and then click the diagonally opposite corner cell.
+-   To select adjacent columns, select the first column, hold down the Shift key, and then select the last column.
+-   To select adjacent rows, select the first row, hold down the Shift key, and then select the last row.
 
-::: {.callout-note}
-1. Selections are only possible when the mouse pointer has the shape for making selections (thick plus sign) ![Mouse selection shape](images/common/mouse-pointer-cross.png).
+**CTRL key**
 
-2. A selected area is highlighted in color except for the cell where you started the selection. This cell is the active cell and has a white background.
+The Ctrl key allows you to select non-contiguous ranges. Select the first cell, range, row, or column, hold down the Ctrl key, and then select the other cells, ranges, rows, or columns.
 
-3. Dragging from bottom to top and from right to left is easier than doing it in the reverse direction.
+::: callout-note
+1.  You can only make selections when the mouse pointer is a thick plus sign ![Mouse selection shape](images/common/mouse-pointer-cross.png).
+
+2.  The selected area is highlighted, except for the first cell you clicked. This cell remains the active cell and has a white background.
+
+3.  Dragging from bottom to top or right to left is generally easier than the reverse.
 :::
 
 **Indicating areas**
 
-You can use cell addresses for indicating adjacent areas. A few examples:
+You can use cell addresses to specify adjacent ranges. A few examples:
 
-+ `A2: C7` is a rectangular area of cells of A2 through C7. You always start with the cell address of the upper left corner, followed by a colon and then the address of the bottom right corner.
-+ `B:E` are columns B through E.
-+ `3:9` are rows 3 through 9.
+-   `A2:C7` represents the rectangular range of cells from A2 to C7. Always start with the cell address of the upper-left corner, followed by a colon, and then the address of the bottom-right corner.
+-   `B:E` represents columns B through E.
+-   `3:9` represents rows 3 through 9.
 
-## Cell: content and format {#sec-ws-cell}
+## Cell: Content and Format {#sec-ws-cell}
 
-A cell has a content and a format. It is very important to keep this difference in mind! A poor understanding of this is often the source of errors.
+A cell has content and a format. It's crucial to understand the difference between these, as confusion often leads to errors.
 
 ::: {#exm-ws-cell}
 **Content - Format**
 
-In the cells `A1:A10` the same number `40299` is always entered. So these cells have the same content. Yet they still look different and that's because the formatting of these cells is different.
+Cells `A1:A10` all contain the number `40299`. Therefore, these cells have the same content but appear different due to different formatting.
 
-![Example of cells with the same content and different formatting.](images/worksheets/worksheet-cell-formats.png){#fig-worksheet-cell-formats}
-
+![Cells with identical content and different formatting.](images/worksheets/worksheet-cell-formats.png){#fig-worksheet-cell-formats}
 :::
 
 Looking at the figure it is difficult to see what the format and what the content is. Content and formatting are two different things.
 
-::: {.callout-warning}
+::: callout-important
 Make sure that you don't type the formatting when entering data in a cell.
 
-For example, if you type `40.299 hours` in cell `A9`, then it is considered as text and not as a number. And because it is a text you cannot calculate with the content.
+For example, if you type `40.299 hours` in cell A9, then it is considered as text and not as a number. And because it is a text you cannot calculate with the content.
 
 It is possible to only enter the number and then format the cell so that it has the appearance as shown. The content of the cell is then a number with which you can make calculations.
 
@@ -193,7 +184,7 @@ Most worksheets with calculation models will be printed. When printing, you have
 
 It is recommended that before you print, you should first take a look at the print preview on the screen. From there you can then change several settings before the actual printing.
 
-For making a print choose [File > Print]{.uicontrol}.
+For making a print choose [File \> Print]{.uicontrol}.
 
 From here you can select what printer to use and what worksheets to print. By default, only the selected worksheet will be printed. But you can also choose to print multiple worksheets and even the entire workbook.
 
@@ -208,113 +199,109 @@ To judge if a print will look good, it is recommended to look at the print previ
 
 1.  Open the file.
 
-2.  Kies [File > Print]{.uicontrol}.
+2.  Choose [File \> Print]{.uicontrol}.
 
 A preview of the print and possibilities to change settings are displayed.
 
 ![Print Preview.](images/common/print-preview.png){#fig-print-preview}
 
-+ If you want to see the margins, then click on the button [Show Margins]{.uicontrol} at the bottom right corner of the window.
+-   If you want to see the margins, then click on the button [Show Margins]{.uicontrol} at the bottom right corner of the window.
 
-+ By clicking on [Page Setup]{.uicontrol} you get a dialog box with tabs with a lot of print options.
-
+-   By clicking on [Page Setup]{.uicontrol} you get a dialog box with tabs with a lot of print options.
 :::
 
 ### Page Setup {#sec-ws-page-layout}
 
-By clicking on [Page Setup]{.uicontrol} you get a dialog box with four tabs each with a lot of print options. The most common options are discussed in this section.
+The [Page Setup]{.uicontrol} dialog box contains four tabs with various print options. The most common options are discussed here.
 
 #### Page {#sec-ws-pagesetup-page .unnumbered}
 
 ![Settings for the page.](images/worksheets/worksheet-pagesetup-page.png){#fig-worksheet-pagesetup-page}
 
-The page orientation is important: Portrait of Landscape.
+Page orientation (Portrait or Landscape) is important.
 
-Very useful are the choices in the area under Scaling. Through [Adjust to]{.uiconrol} you can manually customize the number of pages. It is also possible to let Excel do this automatically through [Fit to]{.uicontrol} by specifying how many pages the printout should have.
+The Scaling options are very useful. [Adjust to]{.uiconrol} allows manual customization of the number of pages. [Fit to]{.uicontrol} lets Excel automatically scale the printout to a specified number of pages.
 
 #### Margins {#sec-ws-pagesetup-margins .unnumbered}
 
 ![Settings for the page margins.](images/worksheets/worksheet-pagesetup-margins.png){#fig-worksheet-pagesetup-margins}
 
-Here you can set the dimensions for the top-, bottom-, left- and right margin. Furthermore, the distance to the edge of the header and footer can be specified. These distances should be less than the corresponding margins otherwise the headers and footers overlap with the regular print.
+Here, you can set the top, bottom, left, and right margins, as well as the header and footer distances from the page edges. These distances should be less than the corresponding margins to avoid overlap.
 
 #### Header/Footer {#sec-ws-pagesetup-headerfooter .unnumbered}
 
 ![Settings for header and footer.](images/worksheets/worksheet-pagesetup-headerfooter.png){#fig-worksheet-pagesetup-headerfooter}
 
-By clicking the arrow at the end of the header and footer boxes you can select from a set of predefined texts. Here you have also the choice `(none)` if you don't want a header or footer. If you want to design your custom header or footer, then click the button for the custom text. You'll get a dialog box where you can type text and format it.
+Clicking the arrow in the header and footer boxes lets you select from predefined texts or choose `(none)` to omit them. To create a custom header or footer, click the custom text button to open a dialog box for typing and formatting text.
 
 ![Content and format of header and footer.](images/worksheets/worksheet-pagesetup-headerfooter-content.png){#fig-worksheet-pagesetup-headerfooter-content}
-Headers and footers have three sections each (left, center, and right). In each section, you can enter your text. You can also enter predefined content through the available buttons, such as:
+
+Headers and footers have left, center, and right sections. You can enter text in each section and use the available buttons to insert predefined content, such as:
 
 -   Page Number
 -   Number of Pages
 -   Date and Time
--   File Path, File Name, and the Sheet Name
+-   File Path, File Name, and Sheet Name
 
 #### Sheet {#sec-ws-pagesetup-sheet .unnumbered}
 
 ![Settings for the sheet.](images/worksheets/worksheet-pagesetup-sheet.png){#fig-worksheet-pagesetup-sheet}
 
-Often there are titles in the first row(s) or column(s) of a worksheet. And if the worksheet is bigger than one page, you can indicate how that row( s) and / or column(s ) should appear on each page.
+Worksheets often have titles in the first row(s) or column(s). If the worksheet spans multiple pages, you can specify how these rows and/or columns should appear on each page.
 
-An interesting option is that you can indicate that the grid lines of the worksheet should be printed.
+An interesting option is to print the worksheet's gridlines.
 
-::: {.callout-note}
-The settings of the page setup are also accessible through the menu [Page Layout > group Page Setup]{.uicontrol}.
+::: callout-note
+Page Setup options are also accessible via [Page Layout \> group Page Setup]{.uicontrol}.
 :::
 
 ### Page Breaks {#sec-ws-page-ends}
 
-There may be only a certain number of rows and columns that could be printed on one sheet. Excel automatically adds horizontal and vertical page breaks to divide the sheet into appropriate pages. Where these page breaks depend on many factors such as paper size, margins, row heights, column widths, font, .. You can also determine yourself where pages should be started by insert, move or delete page breaks.
+Only a limited number of rows and columns fit on a printed page. Excel automatically inserts horizontal and vertical page breaks based on factors like paper size, margins, row heights, column widths, and font. You can also manually insert, move, or delete page breaks.
 
 #### Page Preview {#sec-ws-page-preview .unnumbered}
 
-Although you can work with page breaks in [Normal]{.uicontrol} view, the best way is to use the [Page Break Preview]{.uicontrol}. In this view, you can see how choices that you can make (such as page orientation and changes of formatting) affect the automatic page breaks. For example, you can see how a change of row height or column width affects the placement of the automatic page breaks.
+While you can work with page breaks in [Normal]{.uicontrol} view, [Page Break Preview]{.uicontrol} is recommended. This view shows how page orientation and formatting changes affect automatic page breaks. For example, you can see how changing row height or column width alters the placement of breaks.
 
-Choose [View > Page Break Preview (group Workbook Views)]{.uicontrol}.
+Choose [View \> Page Break Preview (group Workbook Views)]{.uicontrol}.
 
-In this view, you can also see the order of the pages. Standard the order is first downwards and then sideways. This order can be changed using [Page Setup]{.uicontrol}.
+This view also displays the page order, which defaults to down, then across. You can change this order in [Page Setup]{.uicontrol}.
 
-To move page breaks, you can drag them with the mouse to the new location.
+To move page breaks, drag them to a new location with the mouse.
 
-To switch back to the [Normal]{.uicontrol} view, choose [View > Normal (group Workbook Views)]{.uicontrol}.
+To return to [Normal]{.uicontrol} view, choose [View \> Normal (Workbook Views group)]{.uicontrol}.
 
 #### Inserting Page breaks {#sec-ws-page-break-insert .unnumbered}
 
-Page breaks can also be applied manually. To do this, follow these steps.
+To insert page breaks manually:
 
-+ **Horizontal page break**: Select the row that has to start on a new page.
+-   **Horizontal page break**: Select the row where the new page should begin.
+-   **Vertical page break**: Select the column where the new page should begin.
 
-+ **Vertical page break**: Select the column that has to start on a new page.
-
-
-Then choose [Page Layout > Breaks (group Page Setup) > Insert Page Break]{.uicontrol}.
+Then choose [Page Layout \> Breaks (Page Setup group) \> Insert Page Break]{.uicontrol}.
 
 #### Deleting Page breaks {#sec-ws-page-break-delete .unnumbered}
 
-The automatically generated page breaks cannot be removed. Only the manually applied page breaks can be removed. To do this, follow these steps.
+You cannot remove automatically generated page breaks. You can only remove manually inserted breaks. To do this:
 
-+ **Horizontal page break**: Select the row below the page break.
+-   **Horizontal page break**: Select the row below the page break.
+-   **Vertical page break**: Select the column to the right of the page break.
 
-+ **Vertical page break**: Select the column at the right from the page break.
+Then, choose [Page Layout \> Breaks (Page Setup group) \> Remove Page Break]{.uicontrol}.
 
+## Shortcuts cell movement {#sec-ws-cell-movements}
 
-Then choose [Page Layout > Breaks (group Page Setup) > Remove Page Break]{.uicontrol}.
+| Shortcut | Active cell becomes |
+|:---------------------|:-------------------------------------------------|
+| Arrow Up | One cell up |
+| Arrow Right | One cell right |
+| Arrow Down | One cell down |
+| Arrow Left | One cell left |
+| CTRL arrow right | Rightmost cell in the current data region, or the last cell in the row |
+| CTRL arrow left | Leftmost cell in the current data region, or the first cell in the row |
+| CTRL arrow up | Topmost cell in the current data region, or the first cell in the column |
+| CTRL arrow down | Bottommost cell in the current data region, or the last cell in the column |
+| Home | First cell in the row |
+| CTRL Home | First cell in sheet (A1) |
 
-## Shortcuts cell movements {#sec-ws-cell-movements}
-
-|Shortcut        |Active cell becomes                                          |
-|----------------|-------------------------------------------------------------|
-|Arrow Up        |one cell up|
-|Arrow Right     |one cell right|
-|Arrow Down      |one cell down|
-|Arrow Left      |one cell left|
-|CTRL arrow right|right-most cell of the current data region, otherwise the last cell in the row|
-|CTRL arrow left |left-most cell of the current data region, otherwise the first cell in the row|
-|CTRL arrow up   |top-most cell of the current data region, otherwise the first cell in the column|
-|CTRL arrow down |bottom-most cell of the current data region, otherwise the last cell in the column|
-|Home            |first cell in the row|
-|CTRL Home       |first cell in sheet, A1|
-
-:  Shortcuts for cell movements. {#tbl-shortcuts-cell-movements}
+: Keyboard shortcuts for cell movement. {#tbl-shortcuts-cell-movements}

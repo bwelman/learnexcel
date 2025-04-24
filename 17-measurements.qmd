@@ -6,189 +6,193 @@
 ::: callout
 **OBJECTIVES**
 
--   Explanation of linear relations.
--   Add a linear trendline to a scatter chart.
--   Worksheet functions SLOPE and INTERCEPT.
+-   Explain of linear relations.
+-   Add a linear trendline to a scatter plot.
+-   Use of the SLOPE and INTERCEPT worksheet functions.
 :::
 
-Researchers often want to have an answer to the question of whether the value of a variable depends on the value of another variable. To find out this, they carry out measurements. When performing these measurements, the value of one variable is changed (the independent variable) and the value of another variable (the dependent variable) is measured.
+Researchers often want to know whether the value of one variable depends on another. To determine this, they conduct measurements. During these measurements, one variable is changed (**independent variable**), while another variable is measured (**dependent variable**).
 
-These measurements provide a series of readings that can be plotted in a chart. The course of the chart gives often a first impression of whether there is a relationship between the two variables and, if so, what kind of relationship: linear, exponential, logarithmic, ...
+These measurements produce a series of data points that can be plotted on a chart. The shape of the chart often provides an initial indication of whether a relationship exists between the variables—and if so, what kind: linear, exponential, logarithmic, etc.
 
-A relationship between variables is represented by a mathematical function and indicated by an equation. When the relationship is linear, the chart is a straight line.
+A relationship between variables is represented by a mathematical function and described by an equation. If the relationship is linear, the chart will display a straight line.
 
-When plotting the measurement results, there will mostly be no line that fits all points. Using statistical methods, applications like Excel can determine the best fitting line. Such a line is called a **regression line**. The calculation method for finding the best line is known as the [least-squares method]{.term}. The backgrounds of this method and the statistical techniques are not treated. If you want to know more you have to study the literature.
+When plotting measurement results, there usually isn't a single line that fits all data points perfectly. Using statistical methods, applications like Excel can determine the best-fitting line, known as a regression line. The method used to calculate this line is called the [least-squares method]{.term}. The underlying statistical techniques are beyond the scope of this chapter. If you're interested in learning more, consult additional literature.
 
-## Linear relationship {#sec-meas-linear}
+## Linear Relationship {#sec-meas-linear}
 
-If there is a linear relationship between two variables $x$ and $y$ then the relation between these two variables can be represented by the equation
+If there is a linear relationship between two variables $x$ and $y$, it can be expressed by the equation:
 
-$y = ax + b$ 
+$y = ax + b$
 
-+ $y$ is the dependent variable
-+ $x$ is the independent variable
-+ $a$ is the slope, a constant
-+ $b$ is the intercept, a constant
+-   $y$: the dependent variable
+-   $x$: the independent variable
+-   $a$: the slope (a constant)
+-   $b$: the intercept (a constant)
 
 ::: {#exm-meas-linear}
 $y = 2x + 3$
 
-The graph of $y=2x+3$ is a straight line. The slope of the line, $a$, is 2, and the intercept (intersection with the y-axis), $b$, is 3.
+The graph of $y=2x+3$ is a straight line. The slope of the line, $a$, is 2, and the intercept (where the line crosses the y-axis), $b$, is 3.
 
 ![Straight line in a linear relationship](images/measurements/chart-linear.png){#fig-chart-linear}
-
 :::
 
+With measurement results, you can use Excel to
 
-With measurement results you can use Excel to
+-   plot the data points.
+-   draw a trendline (best-fitting line).
+-   display the trendline equation.
+-   calculate the slope and intercept using Excel functions.
 
--   draw a chart of the points.
--   draw a trend line (the best fitting line).
--   determine the equation of the trendline.
--   determine the slope and intercept with Excel functions.
+## Linear Trendline {#sec-meas-trendline-linear}
 
-## Linear trend line {#sec-meas-trendline-linear}
+This section explains how to add a linear trendline.
 
-Explanation of how to add a linear trend line.
+At a timber factory, large numbers of similar items are produced, primarily differing in size and weight. To investigate whether production time depends on item weight, several measurements are taken. A linear relationship is assumed.
 
-In a timber factory, a large number of similar items are manufactured, which mainly show differences in their dimensions and weight. To investigate whether the production time of these items depends on their weight, several measurements are performed. A linear relationship is assumed.
-
-::: {#prp-meas-trendline-linear}
+:::: {#prp-meas-trendline-linear}
 [File]{.smallcaps}: `Prodtime_Weight.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Select the area with the measurements, A2:B11.
+2.  Select the range A2:B11, which contains the measurements.
 
-3. Choose [tab Insert > Recommended Charts (group Charts) > Scatter > OK]{.uicontrol}.
+3.  Go to [Insert tab\> Recommended Charts (Charts group) \> Scatter \> OK]{.uicontrol}.
 
-4. Add a linear trend line.
+4.  Add a linear trendline.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
-You can add a trendline in the following ways.
 
-+ Select the points in the chart, then right click and choose [Add Trendline]{.uicontrol}. 
-+ Select the chart area and Click the button ![](images/common/button-chart-elements.png) next to the chart and choose [Trendline > Linear]{.uicontrol}. 
+You can add a trendline in the following ways:
+
+-   Click the data points in the chart, right-click, and choose [Add Trendline]{.uicontrol}.
+-   Select the chart area, click the button ![](images/common/button-chart-elements.png) next to it, and choose [Trendline \> Linear]{.uicontrol}.
+
 `r unhide()`
 :::
 
-5. Select trend line, [Right click > Format Trendline]{.uicontrol}.
+5.  Select the trendline and [Right-click \> Format Trendline]{.uicontrol}.
 
-6. In the ***Format Trendline*** task pane, select [Display equation on chart]{.uicontrol}. 
+6.  In the ***Format Trendline*** pane, check [Display equation on chart]{.uicontrol}.
 
 ![Trendline options.](images/measurements/trendline-options.png){#fig-trendline-options}
 
-7. Make the following adjustments (see the example in @fig-prodtime-chart-xy): 
+7.  Make the following adjustments (see the example in @fig-prodtime-chart-xy):
 
-   + Add chart title and axis titles.
-   + Adjust the scaling of the axes.
-   + No decimals in the numbers along the axes.
-   + Make the trendline a solid red line.
-   + Drag the equation to a more visible place. 
+    -   Add a chart title and axis titles.
+    -   Adjust the axes scales.
+    -   Remove decimal places from axis labels.
+    -   Set the trendline color to solid red.
+    -   Move the equation to a visible location.
 
+![Scatter plot of the measurements with linear trendline.](images/measurements/prodtime-chart-xy.png){#fig-prodtime-chart-xy}
 
-![Scatter diagram of the measurements with a linear trendline.](images/measurements/prodtime-chart-xy.png){#fig-prodtime-chart-xy}
+From the trendline equation, you can determine the relationship between the variables:
 
-From the equation of the trend line you can now determine the relationship between the two variables:
-
-$\mathrm{Productiontime = 2,955 \times Weight + 41,99}$
+$Productiontime = 2,955 \times Weight + 41,99$
 
 **Worksheet functions**
 
-The slope of the trendline and the interception with the y-axis can be determined with the functions `SLOPE` and `INTERCEPT` from the category Statistical.
+You can use Excel's statistical functions `SLOPE` and `INTERCEPT` to find the slope and y-intercept of the trendline.
 
-8. Select an empty cell on the worksheet and insert function `SLOPE`. Specify here
+8.  In an empty cell, insert the `SLOPE` function with the following arguments:
 
-   + [Known_ys]{.uicontrol}: B2:B11
-   + [Known_xs]{.uicontrol}: A2:A11
+    -   [Known_ys]{.uicontrol}: B2:B11
+    -   [Known_xs]{.uicontrol}: A2:A11
 
-9. Determine the same way in another cell the value of `INTERCEPT`.
+9.  In another cell, use the `INTERCEPT` function with the same ranges.
 
-The value of the slope is 2.95503212 and the value of intersection is 41.99036403. This provides the data for the trendline equation.
-:::
-
+The slope is 2.95503212 and the intercept is 41.99036403, which correspond to the trendline equation.
+::::
 
 ## Exercises {#sec-measurements-exercises}
 
-::: {#exr-meas001}
+:::: {#exr-meas001}
 **Height and Weight (meas001)**
-
-The height and weight of some school children are listed in the following figure.
-
-![Results height and weight](images/measurements/meas001-data.png)
-
-Imagine a linear relationship and determine the equation where the weight is a function from the height.
 
 [File]{.smallcaps}: `Meas001.xlsx`
 
+The height and weight of several schoolchildren are shown below.
+
+![Height and weight results.](images/measurements/meas001-data.png)
+
+Assume a linear relationship and determine the equation where weight is a function of height.
+
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-Weight = 1.65*Height - 153.3
+
+Weight = 1.65\*Height - 153.3
+
 `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-meas002}
-**Study time and exam grade (meas002)**
-
-The study time and marks of some students is listed in the following figure.
-
-![Results study time and marks](images/measurements/meas002-data.png)
-
-Imagine a linear relationship and determine the equation where the mark is a function from the study time.
+:::: {#exr-meas002}
+**Study Time and Exam Grade (meas002)**
 
 [File]{.smallcaps}: `Meas002.xlsx`
 
+The study time and exam scores of several students are shown below.
+
+![Study time and exam scores.](images/measurements/meas002-data.png)
+
+Assume a linear relationship and determine the equation where score is a function of study time.
+
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-Mark = 0.2038*Study time + 3.3637
+
+Mark = 0.2038\*Study time + 3.3637
+
 `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-meas003}
-**Shrinkage and temperature (meas003)**
-
-A manufacturer of synthetic fibers examines whether the shrinking of the fibers is related to the temperature at which they are washed. There are 8 experiments in which the fibers are washed at different temperatures. The measured shrinkage is listed below as a percentage of the original length.
-
-![Results shrink percentage and temperature of washing](images/measurements/meas003-data.png)
-
-1.  Imagine a linear relationship and determine the equation where the shrink percentage is a function from the temperature.
-2.  Predict the shrinkage at a temperature of 65^o^C.
+:::: {#exr-meas003}
+**Shrinkage and Temperature (meas003)**
 
 [File]{.smallcaps}: `Meas003.xlsx`
 
+A synthetic fiber manufacturer investigates whether fiber shrinkage relates to the washing temperature. Eight experiments are conducted at different temperatures. Shrinkage is expressed as a percentage of the original length.
+
+![Shrinkage percentage vs washing temperature.](images/measurements/meas003-data.png)
+
+1.  Assume a linear relationship and determine the equation where shrinkage percentage is a function of temperature.
+
+2.  Predict the shrinkage at a temperature of 65^o^C.
+
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-Shrink percentage= 0.0796*Temp - 3.546
 
-At a temperature of 65°C the predicted shrinkage percentage is 1.6%.
+Shrinkage = 0.0796\*Temp - 3.546
+
+At 65°C,  the predicted shrinkage is 1.6%.
+
 `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-meas004}
-**Resistance and temperature (meas004)**
-
-The resistance of a metal block depends on the temperature among other things. In the following figure, you see the resistance at some temperatures.
-
-![Resultaten weerstand en temperatuur](images/measurements/meas004-data.png)
-
-1.  Imagine a linear relationship and determine the equation where the resistance is a function from the temperature.
-2.  Predict the resistance at a temperature of 400^o^C.
+:::: {#exr-meas004}
+**Resistance and Temperature (meas004)**
 
 [File]{.smallcaps}: `Meas004.xlsx`
 
+The resistance of a metal block is influenced by temperature. The figure below shows resistance at various temperatures.
+
+![Resistance at various temperatures.](images/measurements/meas004-data.png)
+
+1.  Assume a linear relationship and determine the equation where resistance is a function of temperature.
+
+2.  Predict the resistance at a temperature of 400^o^C.
+
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-Resistance = 0.0786*Temp + 21.214
 
-At a temperature of 400°C the predicted resistance is 52.6 Ohm.
+Resistance = 0.0786\*Temp + 21.214
+
+At 400^o^C, the predicted resistance is 52.6 Ohms.
+
 `r unhide()`
 :::
-
-:::
+::::

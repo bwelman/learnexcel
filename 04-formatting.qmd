@@ -1,4 +1,4 @@
-# Formatting worksheet and data {#sec-formatting}
+# Formatting Worksheet and Data {#sec-formatting}
 
 ```{r, file = "R/webex.R", include = FALSE}
 ```
@@ -6,368 +6,369 @@
 ::: callout
 **OBJECTIVES**
 
--   The importance of selecting first and then formatting.
--   Column width and row height adjustment.
+-   The importance of selecting fbefore formatting.
+-   Adjusting column width and row height.
 -   Formatting numbers and text.
 -   Predefined formatting styles.
--   Copy the formatting of a cell.
+-   Copying cell formatting.
 -   Conditional formatting.
 :::
 
-Excel offers many opportunities for the appearance of a worksheet and data in cells. This can make a worksheet more readable and presentable.
+Excel provides many options to change the appearance of a worksheet and the data in its cells, enhancing readability and presentation.
 
-You can apply a format (for example the font type) to the entire worksheet, or individual cells or areas of cells. The process is usually the same, but it depends on what is selected.
+You can apply formatting (e.g. font type) to the entire worksheet, individual cells, or cell ranges. The process is generally the same but depends on the selection.
 
 ::: callout-important
-First select, then execute the format command.
+Always select first, then apply the format.
 :::
 
-You can select the entire worksheet through the button to the left of the first column and above the first row: ![Button for selection of all cells of the worksheet.](images/common/worksheet-select.png)
+To select the entire worksheet, click the button to the left of the first column and above the first row: ![Button for selection of all cells of the worksheet.](images/common/worksheet-select.png)
 
 ## Column Width {#sec-formatting-column-width}
 
-A column could be too small to display the entire contents of a cell. If the content of the cell is a text, you will see only that part of the text that fits into the cell. If the content of the cell is a number, you will see "hashes": `####`.
+A column might be too narrow to display the entire cell content. If the content is text, you'll only see the portion that fits. If it's a number, you'll see hash marks: `####`.
 
-In a worksheet, you can specify the column width from 0 (zero) to 255. This value represents the number of characters that can be displayed in a cell that is formatted with the default font. The default width of columns in Excel is 8.43. Eight characters with the default font fit then in a column. If the width of a column is 0, then the column is hidden.
+Column width can be set from 0 to 255, representing the number of characters that fit in a cell with the default font. The default column width is 8.43, or about eight characters in the default font. A width of 0 hides the column.
 
-There are several ways to adjust the width of a column.
+You can adjust column width in several ways:
 
--   Double-click the right edge of the column heading. The width of the column is now automatically set to the longest text in the column.
+-   Double-click the right edge of the column header. The column width automatically adjusts to the longest text in the column.
 
--   Place the mouse pointer over the right edge of the column header, press the left mouse button, and drag the right edge of the column to the left or to the right until the column has the desired width. While dragging Excel displays the current width of the column in a small information screen.
+-   Drag the column edge: Position the mouse pointer over the right edge of the column header, press and hold the left mouse button, and drag the edge to the desired width. Excel displays the current width in a small tooltip while dragging.
 
-    ![Adjusting column width through dragging](images/formatting/columnwidth-drag.png)
+    ![Adjusting column width through dragging](images/formatting/columnwidth-drag.png){#fig-columnwidth-drag}
 
--   Right-click the column header and select [Column Width]{.uicontrol} from the shortcut menu. In the dialog box, you can enter the desired width of the column, after that click [OK]{.uicontrol}.
+-   Use the Column Width dialog box: Right-click the column header and select [Column Width]{.uicontrol} from the context menu. Enter the desired width and click [OK]{.uicontrol}.
 
-    ![Specifying column width](images/formatting/columnwidth-set.png)
+    ![Specifying column width](images/formatting/columnwidth-set.png){#fig-columnwidth-set}
 
--   Select a cell in the column of which the width must be adjusted. Then choose [Home \> Format (group Cells) \> Column Width...]{.uicontrol}. You'll get the same dialog as before.
+-   Use the Home tab: Select a cell in the column you want to adjust Then, choose [Home \> Format (group Cells) \> Column Width...]{.uicontrol}. This opens the same dialog box.
 
 ::: callout-note
-1.  You can adjust the width of multiple columns simultaneously. First, select these columns using the [SHIFT-key]{.uicontrol} or [CTRL-key]{.uicontrol} .
+1.  To adjust multiple columns simultaneously, select them using the [SHIFT-key]{.uicontrol} or [CTRL-key]{.uicontrol}.
 
-2.  You can change the width of all columns in the worksheet through [Home \> Format (group Cells) \> Default Width..]{.uicontrol}.
+2.  To change the width of all columns in the worksheet, use [Home \> Format (Cells group) \> Default Width..]{.uicontrol}.
 :::
 
 ## Row Height {#sec-formatting-row-height}
 
-Normally, row heights will change automatically to accommodate the size of the data in the row. But for formatting purposes, it is sometimes necessary to adjust the height of a row. You can specify the height of a row from 0 (zero) to 409. This value represents the height in points (1 point is about 0.035 cm). The default height of rows is 12.75 points (about 0.4 cm). When the row height is 0, the row will be hidden.
+Row height usually adjusts automatically to fit the data. However, you might need to adjust it for formatting purposes. Row height can range from 0 to 409, measured in points (1 point is about 0.035 cm). The default row height is 12.75 points (about 0.4 cm). A row height of 0 hides the row.
 
-There are several ways to adjust the height of rows.
+You can adjust row height in several ways:
 
--   Double-click the boundary below the row heading. The height of the row will auto-fit the contents of the row.
+-   Double-click the bottom edge of the row header. The row height automatically adjusts to fit the content.
 
--   Place the mouse pointer over the right edge of the row heading, press the left mouse button and drag the border of the column up or down until the row has the desired height. While dragging, Excel displays the current height of the row in a small information screen.
+-   Drag the row edge: Position the mouse pointer over the bottom edge of the row header, press and hold the left mouse button, and drag the edge to the desired height. Excel displays the current height in a tooltip while dragging.
 
-    ![Adjusting row height through dragging](images/formatting/rowheight-drag.png)
+    ![Adjusting row height through dragging](images/formatting/rowheight-drag.png){#fig-rowheight-drag}
 
--   Right-click the row heading and select [Row Height...]{.uicontrol} from the shortcut menu. In the dialog box, you can enter the desired height of the row, after that click [OK]{.uicontrol}.
+-   Use the Row Height dialog box: Right-click the row header and select [Row Height...]{.uicontrol} from the context menu. Enter the desired height and click [OK]{.uicontrol}.
 
-    ![Specifying row height](images/formatting/rowheight-set.png)
+    ![Specifying row height](images/formatting/rowheight-set.png){#fig-rowheight-set}
 
--   Select a cell in the column whose width must be adjusted. Then choose [Home \> Format (group Cells) \> Row Height...]{.uicontrol}. You'll get the same dialog as before.
+-   Use the Home tab: Select a cell in the row you want to adjust. Then, choose [Home \> Format (Cells group) \> Row Height...]{.uicontrol}. This opens the same dialog box.
 
 ::: callout-note
-You can adjust the height of multiple rows simultaneously. First, select these rows using the [SHIFT-key]{.uicontrol} or [CTRL-key]{.uicontrol} .
+To adjust the height of multiple rows at once, select them using the [SHIFT-key]{.uicontrol} or [CTRL-key]{.uicontrol} .
 :::
 
 ## Font {#sec-formatting-font-group}
 
-The [group Font (tab Home)]{.uicontrol} has several commands that allows changing the appearance of text in cells. To apply these changes, you must first select the cell(s) and then use the command button. The options in this group are:
+The [Font group (Home tab)]{.uicontrol} provides commands to change the appearance of text in cells. To apply these changes, first select the cell(s) and then use the command button. The options in this group are:
 
--   ![](images/formatting/font.png): Font, choice list through the down arrow.
+-   ![](images/formatting/font.png): A dropdown list to choose the font.
 
--   ![](images/formatting/font-size.png): Font size, choice list through the down arrow.
+-   ![](images/formatting/font-size.png): A dropdown list to choose the font size.
 
--   ![](images/formatting/font-size-adjust.png): Increase / Decrease Font size, always in steps of 2 points.
+-   ![](images/formatting/font-size-adjust.png): Increases or decreases the font size in 2-point increments.
 
--   ![](images/formatting/font-style.png): Style, successively: bold, italic, underlined. The specific underscore can be determined using the down arrow.
+-   ![](images/formatting/font-style.png): Toggles Bold, Italic, or Underline. The underline style can be specified using the dropdown arrow.
 
--   ![](images/formatting/font-color.png): Font color, the color can be chosen through the down arrow.
+-   ![](images/formatting/font-color.png): A dropdown palette to choose the font color.
 
--   ![](images/formatting/font-fillcolor.png): Fill color, the color can be chosen through the down arrow.
+-   ![](images/formatting/font-fillcolor.png): A dropdown palette to choose the cell background color.
 
 ## Cell Borders {#sec-formatting-cell-border}
 
-Borders are often used to hold a group of cells visual together. Under an addition, there is often a line and below the line - the total. Borders are used especially for layout purposes.
+Borders are often used to visually group cells, such as placing a line above a total. Borders enhance the layout of a worksheet.
 
-To create borders around a cell or group of cells, proceed as follows:
+To add borders to cells:
 
-1.  Select the cell or the group of cells.
+1.  Select the cell(s).
 
-2.  Choose [Home \> Border down arrow (group Font)]{.uicontrol}.![Button cell borders](images/formatting/cell-border-button.png)
+2.  Choose [Home \> Borders dropdown arrow (Font group)]{.uicontrol}.![Button cell borders](images/formatting/cell-border-button.png)
 
-3.  Choose the desired style from the list Borders.
+3.  Choose the desired border style from the list.
 
 ![List with border styles.](images/formatting/cell-border-list.png){#fig-cell-border-list}
 
-If the desired border style is not displayed in the list, then click on [More Borders...]{.uicontrol}. Excel displays the dialog box Format Cells with the [tab Border]{.uicontrol} selected.
+If the desired border style isn't in the list, click [More Borders...]{.uicontrol}. This opens the Format Cells dialog box with the [Border tab]{.uicontrol} selected.
 
 ## Cell Alignment {#sec-formatting-cell-alignment}
 
-How to align the content in cells, horizontally, vertically, and even rotated.
+Cell alignment controls how content is positioned within a cell, both horizontally and vertically. By default, content is bottom-aligned vertically. Text is left-aligned, numbers are right-aligned, and logical values (TRUE or FALSE) are center-aligned horizontally. You can change these defaults, as shown in @fig-cell-alignment-example.
 
-A cell has a vertical and horizontal alignment. By default, the vertical alignment is the bottom alignment for all cells. The default horizontal alignment is left-align for text, right-align for numbers and center-align for logical values (TRUE or FALSE ). You can change all these alignments as you can see in @fig-cell-alignment-example.
+![Alignment examples.](images/formatting/cell-alignment-example.png){#fig-cell-alignment-example}
 
-![Examples of alignments.](images/formatting/cell-alignment-example.png){#fig-cell-alignment-example}
-
-To apply a particular alignment, first select the cell(s) and then click one of the buttons in the group [Home \> group Alignment]{.uicontrol}.
+To apply specific alignment, first select the cell(s) and then click an alignment button in the [Home \> Alignment group]{.uicontrol}.
 
 ![Group alignment on the ribbon.](images/formatting/ribbon-group-alignment.png){#fig-ribbon-group-alignment}
 
-The buttons don't need an explanation. When you hover the mouse over a button you get some explanation.
+The buttons are self-explanatory; tooltips appear when you hover over them.
 
-In the example, the following options are used.
+The example uses these options:
 
 Vertical alignment
 
-:   The options are top, middle, bottom. Applied in the cells A1:A3.
+:   Options are top, middle, and bottom (cells A1:A3).
 
 Horizontal alignment
 
-:   The options are left, center, right. Applied in the cells A5:A7.
+:   Options are left, center, and right (cells A5:A7).
 
 Indentation
 
-:   The options are increase indent, decrease indent. Applied in the cells A10:A12.
+:   Options are increase indent and decrease indent (cells A10:A12).
 
 Orientation
 
-:   With this button, you get some predefined options. Applied in the cells D13:F13 and in B14.
+:   Predefined rotation options (cells D13:F13 and B14).
 
 Wrap Text
 
-:   The text appears on multiple lines in the cell. For this, the row height will be made larger. A long text will take less horizontal space. Applied in D3:F3.
+:   Displays text on multiple lines within a cell, increasing row height and reducing horizontal space (cells D3:F3).
 
 ::: callout-note
-If all wrapped text is not visible, the reason could be that the row is set to a specific height. To allow the row to adjust automatically and show all wrapped text, choose [Home \> Format (group Cells) \> AutoFit Row Height]{.uicontrol}.
+If all wrapped text isn't visible, the row might be set to a specific height. To allow the row to adjust automatically, choose [Home \> Format (group Cells) \> AutoFit Row Height]{.uicontrol}.
 :::
 
 Merge & Center
 
-:   Joins the cells into one larger cell and centers the content in the new cell. This is often used to create labels that span multiple rows or columns. You can join cells both horizontally and vertically. Applied in B14:B16.
+:   Combines selected cells into a single larger cell and centers the content. Often used for titles that span multiple rows or columns. Cells can be merged horizontally and vertically (cells B14:B16).
 
 ## Formatting Numbers {#sec-formatting-numbers}
 
-Numbers can be displayed in different ways, with or without decimal places, with a currency symbol, with various separators for date or time, etc. And if the predefined formatting options are not enough, you define your custom format.
+Numbers can be displayed in various formats, including with or without decimal places, currency symbols, and date or time separators. You can also create custom formats.
 
-When entering some numbers, Excel puts them in the correct format automatically.
+Excel automatically formats some numbers as you enter them:
 
--   If you enter `19%` in a cell, then Excel will recognize the percent symbol and displayed the number right-aligned as 19%. The content of the cell will be 0.19 and not 19.
+-   Typing 19% displays the number as 19% (right-aligned), but the cell content is 0.19.
 
--   If you enter `€123,45` in a cell, then Excel recognizes it as a currency. The content of the cell will be 123,45 and this content will be displayed right aligned as € 123,45.
+-   Typing €123,45 displays it as € 123,45 (right-aligned), and the cell content is 123,45.
 
--   If you enter `1/2` in a cell, then Excel thinks that it is a date and displayed it as 2-Jan.
+-   Typing 1/2 displays it as a date (e.g., 2-Jan).
 
 ::: callout-note
-Excel stores dates and times as serial numbers starting with 1 January 1900 as number 1. Number 2 is then 2 January 1900, etc. And if you enter 1/2 in a cell, then the current year will automatically be added, for example, 1/2/2013 and then the real content of the cell will be 41276.
+Excel stores dates and times as serial numbers, starting with January 1, 1900, as 1. So, 1/2 becomes a date, and the cell content is a serial number representing that date (e.g., 41276).
 :::
 
-To quickly assign a format to a number, use of the command buttons in the [Number group (tab Home)]{.uicontrol}.
+To quickly format numbers, use the commands in the [Number group (Home tab)]{.uicontrol}.
 
-![Group Number on the ribbon.](images/formatting/ribbon-group-number.png){#fig-ribbon-group-number}
+![Number group on the ribbon.](images/formatting/ribbon-group-number.png){#fig-ribbon-group-number}
 
-In the middle you find command buttons for some frequently used formatting styles:
+Common formatting buttons include:
 
--   ![](images/formatting/number-format-accounting.png): Accounting style. The down arrow gives some currency symbols.
+-   ![](images/formatting/number-format-accounting.png): Accounting Number Format, adds a currency symbol (dropdown arrow for options).
 
--   ![](images/formatting/number-format-percent.png): Percent style.
+-   ![](images/formatting/number-format-percent.png): Percent style, formats as a percentage
 
--   ![](images/formatting/number-format-thousands.png): Comma style (thousands separator)
+-   ![](images/formatting/number-format-thousands.png): Comma style, adds a thousands separator.
 
--   ![](images/formatting/number-format-decimal-increase.png): Increase decimals.
+-   ![](images/formatting/number-format-decimal-increase.png): Increase Decimal, adds decimal places.
 
--   ![](images/formatting/number-format-decimal-decrease.png): Decrease decimals.
+-   ![](images/formatting/number-format-decimal-decrease.png): Decrease Decimal, removes decimal places.
 
-At the top, you can see the actual formatting of the selected cell. For example General and beside a down arrow for a choice list with predefined styles. In the figure, you can see this list for a cell with content 0.19. And in this list, you can choose another format.
+The current cell format is displayed at the top (e.g., "General"), with a dropdown arrow for predefined styles.
 
 ![List with styles for formatting numbers.](images/formatting/number-format-list.png){#fig-number-format-list}
 
-When the desired formatting is not on the list then you can click on [More Number Formats...]{.uicontrol}. The dialog box Format Cells appear with the [tab Number]{.uicontrol} selected. Here you can define your custom format.
+For more control, click [More Number Formats...]{.uicontrol} to open the Format Cells dialog box with the Number tab selected, where you can define custom formats.
 
-In the following example, you see a part of a worksheet containing many uses of number format. All formatting has been applied with the predefined styles and / or the command buttons for number formatting.
+This example shows various number formatting options:
 
 ![Example formatting numbers.](images/formatting/number-format-example.png){#fig-number-format-example}
 
-::: {#prp-formatting-numberformat-task}
+:::: {#prp-formatting-numberformat-task}
 [File]{.smallcaps}: `Numberformat.xlsx`
 
 1.  Open the file.
 
-2.  Format the worksheet as shown in the figure. Use of the opportunities available through the [group Number (tab Home)]{.uicontrol}.
+2.  Format the worksheet as shown, using the [Number group (Home tab)]{.uicontrol} options.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
--   Column A, numbers formatted as text.
--   Column B, accounting number format.
--   Column C, numbers formatted first with the thousands separator and then decreased the number of decimals to 0.
--   Column D, numbers entered with the percent symbol and then adjust the number of decimals.
--   Column E, dates entered, applied the short date format for the first two, and the long date format for the last two.
+
+\- Column A: Numbers formatted as text.
+
+\- Column B: Accounting number format.
+
+\- Column C: Numbers with thousands separator and 0 decimal places.
+
+\- Column D: Numbers entered with percent sign, adjusted decimal places.
+
+\- Column E: Dates, short date format for the first two, long date format for the last two.
+
 `r unhide()`
 :::
+::::
 
-:::
+## Copying and clearing Formats {#sec-formatting-cell-copy}
 
-## Copying and clearing format {#sec-formatting-cell-copy}
-
-The format and content of a cell are stored separately. Therefore, you can separately copy or delete the content and format.
+Cell format and content are stored separately, allowing you to copy or delete them independently.
 
 #### Copying format {.unnumbered}
 
-The fastest way to copy the format of a cell to another cell is to use the button [Format painter]{.uicontrol}.
+The fastest way to copy a cell's format is using the [Format Painter]{.uicontrol} button.
 
-The method is as follows:
+To use it:
 
-1.  Select the cell with the format you want to copy.
-2.  Choose [Home \> ![](images/formatting/format-painter.png) (group Clipboard)]{.uicontrol}. The mouse shape changes in a brush (![](images/formatting/mouse-pointer-formatpainter.png)).
-3.  Select the cell(s) you want to transfer the format to.
+1.  Select the cell with the desired format.
+2.  Choose [Home \> ![](images/formatting/format-painter.png) (Clipboard group)]{.uicontrol}. The mouse pointer changes to a brush (![](images/formatting/mouse-pointer-formatpainter.png)).
+3.  Select the destination cell(s).
 4.  Release the mouse button.
 
 ::: callout-note
-When you double click on the button [Format painter]{.uicontrol} then you can perform multiple format transfers. To cancel format copying you can click again on the button [Format painter]{.uicontrol} or press the [Esc]{.uicontrol} key
+Double-clicking the [Format painter]{.uicontrol} button allows you to apply the format to multiple cells. Press Esc or click the [Format painter]{.uicontrol} button again to cancel.
 :::
 
-#### Removing format {.unnumbered}
+#### Clearing Formats {.unnumbered}
 
-The format of cells can be removed as follows:
+To remove cell formatting:
 
-1.  Select the cell(s) which format you want to remove.
+1.  Select the cell(s).
 
 2.  Choose [Home \> Clear (group Editing) \> Clear Formats]{.uicontrol}.
 
 ![Clear formats on the ribbon.](images/formatting/format-clear.png){#fig-format-clear}
 
 ::: callout-note
-1.  This way you can clear the format, the content, or both.
+1.  You can clear the format, content, or both.
 
-2.  With the [DELETE]{.uicontrol} key you only clear the content of the cell. The format of the cell (font type, colors, alignment, number format, etc.) will not be changed and is still present in the empty cell.
+2.  The [DELETE]{.uicontrol} key only clears the cell's content, not its formatting.
 :::
 
 ## Table Styles {#sec-formatting-table-style}
 
-To practice the formatting of a list with one of the predefined styles.
-
-Excel has several predefined styles for formatting a list (table) quickly and easily.
+To practice formatting a list using predefined styles:
 
 ::: {#prp-formatting-table-style}
 [File]{.smallcaps}: `Personnel.xlsx`
 
 1.  Open the file.
 
-2.  Select any cell in the data area.
+2.  Select any cell within the data area.
 
-3.  Choose [Home \> Format as Table (group Styles)]{.uicontrol}.
+3.  Choose [Home \> Format as Table (Styles group)]{.uicontrol}.
 
-4.  Choose a style from the examples shown, for example, [Table Style Medium 4]{.uicontrol}.
+4.  Select a style, e.g. [Table Style Medium 4]{.uicontrol}.
 
 ![Dialog box Format As Table.](images/formatting/tablestyle-dialogbox.png){#fig-tablestyle-dialogbox}
 
 5.  Click [OK]{.uicontrol}.
 
 ![Result table formatting.](images/formatting/tablestyle-result.png){#fig-tablestyle-result}
-
 :::
 
 ## Conditional Format {#sec-formatting-conditional}
 
-The format of a cell can depend on certain conditions. For example, the background of the cell can be made red when the value in the cell is less than 6. This is called a conditional format. The formatting is applied if the condition(s) are met. If not, the "ordinary" format will be applied.
+Conditional formatting applies formatting to cells based on specific conditions. For example, you can highlight cells with values less than 6 in red. The formatting is applied when the condition(s) are met; otherwise, the "regular" format is used.
 
-To apply conditional formatting, you can use any combination of the following formatting options: number format, font, border, and background.
+Conditional formatting can use number formats, fonts, borders, and background colors.
 
-In the condition test, the numerical value in the cell(s) will be compared with a different value. You can also compare the numerical value with a range of other values ​to determine whether there is a deviation from the average or, for example, belongs to the top three. There is no limit to the number of conditions.
+Conditions can compare cell values to a fixed value, a range of values, or other criteria like deviation from the average or the top/bottom values. You can apply multiple conditions.
 
-### Format with 1 condition {#sec-formatting-conditional-1-task}
+### Formatting with One Condition {#sec-formatting-conditional-1-task}
 
-A teacher has the marks of his students in a spreadsheet and wants to provide all failures (marks less than 6) of a light red background.
+A teacher wants to highlight failing grades (less than 6) in light red.
 
 ::: {#prp-formatting-conditional-1-task}
 [File]{.smallcaps}: `Marks.xlsx`
 
 1.  Open the file.
 
-2.  Select all marks.
+2.  Select all the grades.
 
-3.  Choose [Home \> Conditional Formatting (group Styles) \> Highlight Cells Rules \> Less Than...]{.uicontrol} and enter in the dialog box the desired condition and format.
+3.  Choose [Home \> Conditional Formatting (group Styles) \> Highlight Cells Rules \> Less Than...]{.uicontrol} and enter the condition and format.
 
 ![Conditional Formatting dialog box for cells with a value less than a certain value.](images/formatting/format-conditional-less.png){#fig-format-conditional-less}
 
-4.  Click [OK]{.uicontrol}. All failures have a light red background color now.
+4.  Click [OK]{.uicontrol}.
 
-Test the conditional format by changing the values in some cells from insufficient to sufficient and vice versa. The background color has to change now.
+Failing grades are now highlighted in light red.
 
+Test the formatting by changing some grades; the background color should update accordingly.
 :::
 
-### Format with 2 conditions {#sec-formatting-conditional-2-task}
+### Formatting with Two Conditions {#sec-formatting-conditional-2-task}
 
-In a spreadsheet, the realized turnover and the turnover to be achieved of the salesmen are tracked. Some of them have not met their target. The task is to apply the background for the turnover with one of the following colors: green if the target has been met and red if the target has not been met.
+A sales report tracks achieved and target turnover. The task is to color-code the turnover: green if the target is met, red if not.
 
 ::: {#prp-formatting-conditional-2-task}
 [File]{.smallcaps}: `Turnover-Q1.xlsx`
 
 1.  Open the file.
 
-2.  Select all cells with the turnover data.
+2.  Select all the turnover data.
 
-3.  Choose [Home \> Conditional Formatting (Group Styles) \> Manage Rules...]{.uicontrol}.
+3.  Choose [Home \> Conditional Formatting (Styles group) \> Manage Rules...]{.uicontrol}.
 
 ![Rules Manager for conditional formatting.](images/formatting/format-conditional-rules-manage.png){#fig-format-conditional-rules-manage}
 
-4.  Click on [New Rule...]{.uicontrol}. The dialog box New Formatting Rule appears.
+4.  Click [New Rule...]{.uicontrol}. The New Formatting Rule dialog box appears.
 
-5.  Select [Format only cells that contain]{.uicontrol}, then specify Cell Value less than `=B2` and choose a red fill color as [Format]{.uicontrol}.
+5.  Select [Format only cells that contain]{.uicontrol}, set Cell Value to less than `=B2` and choose a red fill color as the format.
 
 ![Dialog box New Formatting Rule.](images/formatting/format-conditional-rules-new.png){#fig-format-conditional-rules-new}
 
-6.  Click [OK]{.uicontrol}. The dialog box ***Conditional Formatting Rules Manager*** appears again.
+6.  Click [OK]{.uicontrol}. The Conditional Formatting Rules Manager reappears.
 
-7.  Click on [New Rule]{.uicontrol} and create a new rule on the same way with the following settings:
+7.  Click [New Rule]{.uicontrol} and create another rule:
 
 ![The second rule. The specified fill color is green.](images/formatting/format-conditional-greater.png){#fig-format-conditional-greater}
 
-8.  Click [OK]{.uicontrol}. In the manager screen now there are two rules:
+8.  Click [OK]{.uicontrol}. The manager now shows both rules:
 
 ![The two rules for the conditional format.](images/formatting/format-conditional-rules-2.png){#fig-format-conditional-rules-2}
 
-9.  Click [OK]{.uicontrol}. The desired format will be applied now.
+9.  Click [OK]{.uicontrol}.
 
-Test the conditional format by changing some values and make sure that the format will change.
+The formatting is applied.
 
+Test the formatting by changing values to ensure the colors update.
 :::
 
-### Format for top/bottom 10% {#sec-formatting-conditional-bottom10pct-task}
+### Formatting Top/Bottom 10% {#sec-formatting-conditional-bottom10pct-task}
 
-It is possible to create a condition that depends on all values in a set. For example, you can create a conditional format for the top/bottom three in a set of values, or the worst or best 10% values.
+You can create conditions based on a range of values, such as the top/bottom 10% or top/bottom 3 values.
 
-In a spreadsheet are all kinds of data from cars. In one of the columns, you can find fuel consumption. The task is to give a green background color to the 10% cars with the lowest fuel consumption.
+For a car dataset, the task is to highlight the 10% of cars with the lowest fuel consumption in green.
 
 ::: {#prp-formatting-conditional-bottom10pct-task}
 [File]{.smallcaps}: `Car.xlsx`
 
 1.  Open the file.
 
-2.  Select all consumption values in column F.
+2.  Select the fuel consumption values (column F).
 
-3.  Choose [tab Home \> Conditional Formatting (group Styles) \> Top/Bottom Rules \> Bottom 10%...]{.uicontrol} and enter the desired values in the dialog box.
+3.  Choose [tab Home \> Conditional Formatting (Styles group) \> Top/Bottom Rules \> Bottom 10%...]{.uicontrol} and set the values in the dialog box.
 
 ![Dialog box conditional format bottom 10%. Also a percentage other than 10 can be set.](images/formatting/format-conditional-bottom-10pct.png){#fig-format-conditional-bottom-10pct}
 
 4.  Click [OK]{.uicontrol}.
-
 :::
 
-### Removing conditional formats {#sec-formatting-conditional-delete}
+### Removing Conditional Formatting {#sec-formatting-conditional-delete}
 
-A conditional format can be removed as follows:
+To remove conditional formatting:
 
-1.  Select the cell(s) with the conditional format.
+1.  Select the cell(s).
 
-2.  Choose [tab Home \> Conditional Formatting (group Styles) \> Clear Rules \> Clear Rules from Selected Cells]{.uicontrol}.
+2.  Choose [tab Home \> Conditional Formatting (Styles group) \> Clear Rules \> Clear Rules from Selected Cells]{.uicontrol}.
 
-### Finding conditional formats {#sec-formatting-conditional-search}
+### Finding Conditional Formatting {#sec-formatting-conditional-search}
 
-Sometimes it is difficult to see if there are cells in a worksheet with conditional formatting. Excel provides support to find them. This is done as follows:
+To find cells with conditional formatting:
 
-Choose [tab Home \> Find & Select (group Editing) \> Conditional Formatting]{.uicontrol}.
+Choose [tab Home \> Find & Select (Editing group) \> Conditional Formatting]{.uicontrol}.
 
-All cells with a conditional format are now selected. If there are no cells with a conditional format, Excel displays the following message: No cells were found.
+Excel selects all cells with conditional formatting or displays "No cells were found."

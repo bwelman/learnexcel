@@ -6,162 +6,181 @@
 ::: callout
 **OBJECTIVES**
 
--   Goal Seeking Method.
--   Application field for Goal Seeking.
--   Tips using Goal Seek. 
+-   Understand the Goal Seek method.
+-   Identify applications for Goal Seek.
+-   Learn tips for using Goal Seek effectively.
 :::
 
-A formula is made up of one or more variables. Usually you want to know what the result of the formula is for certain values of the variables. Sometimes the reverse also occurs. For a certain outcome you want to know which values the variables should have.
+A formula consists of one or more variables. Typically, you want to know the result of the formula for specific variable values. However, sometimes the reverse is true: you have a desired outcome and need to find the variable values that achieve it.
 
-When the outcome of a formula only depends on one variable, you can use the method **Goal Seek**. This method changes the value of the variable until the formula has the desired result. 
+When a formula's outcome depends on only one variable, you can use the **Goal Seek** method. This method iteratively changes the variable's value until the formula produces the desired result.
 
-::: {.callout-note}
-When the outcome of a formula depends on several variables, you should use Excels **Solver**.
+::: callout-tip
+If a formula's outcome depends on multiple variables, you should use Excel's **Solver** add-in.
 :::
 
-**Dialog box Goal Seek**
+**Goal Seek Dialog Box**
 
-Goal Seeking can be accessed via [tab Data > What-If Analysis (group Forecast) > Goal Seek]{.uicontrol}. 
+Goal Seek can be accessed via [Data tab\> What-If Analysis (Forecast group) \> Goal Seek]{.uicontrol}.
 
-![Dialog box Goal Seek.](images/goalseek/goalseek.png){#fig-goalseek}
+![Goal Seek Dialog Box.](images/goalseek/goalseek.png){#fig-goalseek}
 
-In the dialog box you need to specify three values:
+In the dialog box, you need to specify three values:
 
 Set cell
-: The address of the cell that contains the formula for which you want a certain result.
+
+:   The cell address containing the formula for which you want a specific result.
 
 To value
-: The desired outcome of the formula, in other words the goal.
+
+:   The desired outcome of the formula; in other words, your goal.
 
 By changing cell
-: The address of the cell whose value must be changed to achieve the target. This is the cell for the variable. 
 
-## Break-even coffee stand {#sec-goalseek-stadiumcoffee}
+:   The cell address whose value Excel should change to achieve the target. This cell contains the variable.
 
-Suppose you want to run a coffee stand in a soccer stadium. The monthly costs for rent, staff and miscellaneous are known. You also know the costs and sales price for a cup of coffee. A calculation model has been made for the calculation of the monthly result, see @fig-stadiumcoffee-model, depending on the number of cups of coffee sold. 
+## Break-Even Analysis for a Coffee Stand {#sec-goalseek-stadiumcoffee}
 
-![Calculation model for coffee stand stadium.](images/goalseek/stadiumcoffee-model.png){#fig-stadiumcoffee-model}
+Suppose you want to operate a coffee stand in a soccer stadium. You know the monthly costs for rent, staff, and miscellaneous expenses, as well as the cost and selling price of a cup of coffee. A calculation model has been created to determine the monthly profit or loss, as shown in @fig-stadiumcoffee-model, based on the number of cups of coffee sold.
 
-Information need
-: How many cups of coffee do you need to sell per month to break even?
+![Calculation model for a Coffee Stand.](images/goalseek/stadiumcoffee-model.png){#fig-stadiumcoffee-model}
 
-In this simple example, you can easily calculate the answer by hand. However, Goal Seeking is very suitable for such issues.
+Information needed
 
-::: {#prp-goalseek-stadiumcoffee}
+:   How many cups of coffee do you need to sell per month to break even?
+
+In this simple example, you could easily calculate the answer manually. However, Goal Seek is well-suited for such problems.
+
+:::: {#prp-goalseek-stadiumcoffee}
 [File]{.smallcaps}: `Stadium_Coffee.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Choose [tab Data > What-If Analysis (group Forecast) > Goal Seek]{.uicontrol}.
+2.  Choose [Data tab\> What-If Analysis (Forecast group) \> Goal Seek]{.uicontrol}.
 
-3. Specify the values for Goal Seek.
+3.  Specify the values for Goal Seek.
 
 ![Values for Goalseek.](images/goalseek/stadiumcoffee-goalseek.png){#fig-stadiumcoffee-goalseek}
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Explanation")`
-+ [Set cell]{.uicontrol}: The cell with the month result, B18.
-+ [To value]{.uicontrol}: Zero for break-even.
-+ [By changing cell]{.uicontrol}: The cell with the number of cups of coffee to be sold, B16.
+
+-   [Set cell]{.uicontrol}: The cell with the monthly result, B18.
+
+-   [To value]{.uicontrol}: Zero, for break-even.
+
+-   [By changing cell]{.uicontrol}: The cell with the number of cups of coffee to be sold, B16.
+
 `r unhide()`
 :::
 
-4. Click [OK]{.uicontrol}.
+4.  Click [OK]{.uicontrol}.
 
-Excel starts calculating and finds the value 562.5. Because you don't sell half cups of coffee you will need to round the answer to 563.
-:::
+Excel will start calculating and find the value 562.5. Since you cannot sell half cups of coffee, you will need to round the answer up to 563.
+::::
 
-## Tips Goal Seek {#sec-goalseek-tips}
+## Tips for Using Goal Seek {#sec-goalseek-tips}
 
-It is possible that the result function is structured in such a way that the desired answer does not exist. It is also possible that the answer exists, but that Excel cannot find it. In that case, a dialog box will appear indicating this. 
+It's possible that the formula is structured such that the desired answer doesn't exist. It's also possible that an answer exists, but Excel cannot find it. In such cases, a dialog box will appear indicating this.
 
-If the solution exists, but Excel can not find it, then check the following possible solutions:
+If a solution exists but Excel cannot find it, check the following:
 
-1. Check in the model that the result cell depends on the changing cell. The result cell must always contain a formula or a function.
-2. Check that the cell to be modified contains only a value and no formula or function.
-3. Choose different initial values for the cell to be modified.
-4. Increase the maximum number of iterations (default is 100) via [File > Options > Formulas]{.uicontrol}, see @fig-workbook-calculation-options.
+1.  Verify in your model that the result cell (Set cell) actually depends on the changing cell. The result cell must always contain a formula or function.
+
+2.  Ensure that the cell to be changed (By changing cell) contains only a value, not a formula or function.
+
+3.  Try different initial values in the cell to be changed.
+
+4.  Increase the maximum number of iterations (default is 100) via [File \> Options \> Formulas]{.uicontrol}, as shown in @fig-workbook-calculation-options.
 
 ![Calculation options for Goal Seek.](images/goalseek/workbook-calculation-options.png){#fig-workbook-calculation-options}
 
 ## Exercises {#sec-goalseek-exercises}
 
-::: {exr-goal001}
-**Freelancer (goal001)**
+:::: {#exr-goal001}
+**Freelancer Earnings (goal001)**
 
-Suppose you want to work as a freelancer and you have the intention to do this only if you can earn at least $5000,- per month. You get a commission of 7.8% for each project.
+Suppose you want to work as a freelancer but only if you can earn at least \$5,000 per month. You receive a commission of 7.8% for each project.
 
-1.  Create a model in a worksheet in which you can enter the total sales and the percentage of commission. Calculate the commission.
-2.  Determine through Goal Seek the total sales that must be made to get a commission of $5000.
+1.  Create a model in a worksheet where you can enter total sales and the commission percentage. Calculate the commission amount.
+
+2.  Use Goal Seek to determine the total sales required to achieve a commission of \$5,000.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-Total sales $ 64,102.56
+
+Total sales \$ 64,102.56
+
 `r unhide()`
 :::
+::::
 
+::::: {#exr-goal002}
+**Loan Payment Calculation (goal002)**
+
+Using the `PMT` function, you can calculate the periodic payment for a loan based on constant payments and a constant interest rate. The following illustration is an example of such a calculation. Payments are made at the beginning of each period, and the loan is fully paid off after the last term.
+
+![Model for calculating loan payments using the `PMT` function.](images/goalseek/goal002-model.png)
+
+1.  Recreate this model in a worksheet.
+2.  Use Goal Seek to determine how much you can borrow if your maximum monthly payment is \$750.
+
+::: callout-note
+Because payment is a cash outflow, the outcome is seen as a negative number.
+
+Since a payment is a cash outflow, the result of the `PMT` function is typically a negative number.
 :::
 
-::: {exr-goal002}
-**Loan payment (goal002)**
+::: {.content-visible when-format="html:js"}
+`r hide("Answer")`
 
-Using the PMT function you can calculate the periodic payment of a loan based on constant payments and a constant interest rate. The following illustration is an example of such a calculation. The payment is done at the beginning of each term and after the last term, the loan is fully paid off.
+Loan amount \$ 7280.
 
-![](images/goalseek/goal002-model.png)
+`r unhide()`
+:::
+:::::
+
+:::: {#exr-goal003}
+**Break-Even Point Analysis (goal003)**
+
+An entrepreneur faces costs and revenues that depend on the production quantity, Q. The relationships are as follows:
+
+Total Costs (TC): $Q^2 + 8Q + 15$
+
+Total Revenues(TR): $-5Q^2 + 80Q$
+
+The following chart plots TC and TR as a function of Q.
+
+![Chart showing Total Costs (TC) and Total Revenues (TR) as a function of production quantity (Q).](images/goalseek/goal003-chart.png)
+
+1.  Recreate this chart.
+2.  Determine the break-even point(s). This is the quantity Q where costs equal revenues (TC = TR). The chart shows two such points. Use Goal Seek to find both solutions, providing answers to four decimal places.
+
+::: {.content-visible when-format="html:js"}
+`r hide("Answer")`
+
+Solution 1: Q=0.2120 and TC=TR=16.74
+
+Solution 2: Q=11.7879 and TC=TR=248.26
+
+`r unhide()`
+:::
+::::
+
+:::: {#exr-goal004}
+**Savings Account Growth (goal004)**
+
+On January 1, 2010, an amount of \$1,000 is deposited into a savings account. The account earns 2.7% annual interest, which is added to the principal. The following table shows the growth of the savings account balance over the first ten years.
+
+![Model showing the growth of a savings account balance over ten years.](images/goalseek/goal004-model.png)
 
 1.  Create this model in a worksheet.
-2.  Determine with Goal Seek how much you can borrow if you can pay up to $750,-per month.
-
-::: {.callout-note}
-Because payment is a cash outflow, the outcome is seen as a negative number.
-:::
+2.  Use Goal Seek to determine the initial deposit required to have \$2,500 in the savings account after 10 years.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-Borrowed amount $ 7280.
+Initialdeposit \$ 1915.29.
+
 `r unhide()`
 :::
-
-:::
-
-::: {exr-goal003}
-**Break-even point (goal003)**
-
-An entrepreneur has to deal with costs and revenues that depend on the production quantity Q. The relationship between the total cost (TC), the total revenues (TR) and the production quantity Q is as follows:
-
-$\mathrm{TC = Q^2 + 8Q + 15}$ and $\mathrm{TR = -5Q^2 + 80Q}$
-
-In the following chart, TC and TR are plotted as a function of Q.
-
-![](images/goalseek/goal003-chart.png)
-
-1.  Draw this chart.
-2.  Determine the break-even point. This is the amount of Q for which the costs and the revenues are equal. The chart shows that there are two of these points. Determine both solutions using Goal Seek and give the answers in 4 decimal places.
-
-::: {.content-visible when-format="html:js"}
-`r hide("Answer")`
-Solution 1: Q=0,2120 and TC=TR=16,74
-
-Solution 2: Q=11,7879 and TC=TR=248,26
-`r unhide()`
-:::
-
-:::
-
-::: {exr-goal004}
-**Savings amount (goal004)**
-
-On 1 January 2010, an amount of $ 1000 is deposited into a savings account. The interest is 2.7% annually and this is added to the savings account. In the following table, you see the growth of the amount on the savings account for the first ten years.
-
-![](images/goalseek/goal004-model.png)
-
-1.  Create the model in a worksheet.
-2.  Determine with Goal Seek how much the deposit should be at the beginning to get $ 2500 on the savings account after 10 years.
-
-::: {.content-visible when-format="html:js"}
-`r hide("Answer")`
-Deposit $ 1915,29.
-`r unhide()`
-:::
-
-:::
+::::

@@ -7,185 +7,210 @@
 **OBJECTIVES**
 
 -   Create formulas.
--   Setting up a calculation model.
--   Copy formulas and absolute and relative cell addresses.
--   Formulas that evaluate to TRUE or FALSE.
--   Use of cell names.
+-   Set up a calculation model.
+-   Copy formulas and understand absolute and relative cell addresses.
+-   Create formulas that evaluate to TRUE or FALSE.
+-   Naming cells and use the names.
 :::
 
-One of the most important aspects of working with Excel is to perform calculations. You need formulas in these calculations. To work effectively and efficiently with formulas, you need to think in advance carefully about what to put where in the worksheet. This can save you a lot of time and trouble.
+One of the most important aspects of working with Excel is performing calculations, which requires using formulas. To work effectively and efficiently with formulas, it's crucial to plan the worksheet layout carefully. This can save significant time and effort.
 
-Calculations are performed using formulas. Formulas contain numbers or references to cells with numbers. Between the numbers, there are the symbols for the calculations to be carried out, such as `+`, `-`, `*`,`/`, etc.
+Calculations are performed using formulas. Formulas contain numbers or references to cells containing numbers. Operators, such as `+`, `-`, `*`, `/`, and `^`, indicate the type of calculation.
 
-::: callout-warning
-A formula should always begin with the `=` character. It is possible to start a formula with a `+`, but in that case, Excel translates this in `=` after entering the data.
+::: callout-important
+A formula must always begin with the `=` character. While you can start a formula with a `+`, Excel will automatically convert it to `=` after you enter the data.
 :::
 
-To enter a formula you start typing `=` and then you enter the calculation as you would do it on a calculator. Instead of numbers, you also can type cell addresses or cell names where the numbers are. Also, instead of typing in the cell addresses, you can designate it with the mouse.
+To enter a formula, start by typing `=`, then enter the calculation as you would on a calculator. Instead of numbers, you can use cell addresses or cell names that refer to cells containing numbers. You can also select cell addresses with the mouse instead of typing them.
 
-In @tbl-calculation-operators you can find the symbols (operators) for performing calculations.
+@tbl-calculation-operators shows the symbols (operators) used in calculations.
 
-| symbol | meaning                             | example     | result |
-|--------|-------------------------------------|-------------|--------|
-| `+`    | addition                            | `=4+5`      | 9      |
-| `-`    | subtraction                         | `=29-6`     | 23     |
-| `*`    | multiplication                      | `=7*8`      | 56     |
-| `/`    | division                            | `=6/2`      | 3      |
-| `^`    | exponentiation                      | `=2^3`      | 8      |
-| `()`   | parentheses for operator precedence | `=30-(4+6)` | 20     |
+| Symbol | Meaning                             | Example     | Result |
+|:-------|:------------------------------------|:------------|-------:|
+| `+`    | Addition                            | `=4+5`      |      9 |
+| `-`    | Subtraction                         | `=29-6`     |     23 |
+| `*`    | Multiplication                      | `=7*8`      |     56 |
+| `/`    | Division                            | `=6/2`      |      3 |
+| `^`    | Exponentiation                      | `=2^3`      |      8 |
+| `()`   | Parentheses for operator precedence | `=30-(4+6)` |     20 |
 
-:  Operators. {#tbl-calculation-operators}
+: Operators. {#tbl-calculation-operators}
 
 ::: {#prp-}
 Practice with these examples in a worksheet.
 :::
 
-## Your first formulas {#sec-calculation-example-sellings}
+## Your First Formulas {#sec-calculation-example-sellings}
 
-This is an exercise for a very simple calculation, see @fig-example-sellings. Three cells contain numbers:
+This exercise demonstrates a simple calculation, as shown in @fig-example-sellings. The worksheet contains three input values:
 
--   C1, the purchase amount.
--   B2, the profit rate.
--   B5, the VAT rate.
+-   C1: Purchase amount
+-   B2: Profit margin
+-   B5: VAT rate
 
-Four cells (C2, C3, C5, and C6) contain formulas. The idea is that if you change one or more of the values in C1, B2 or B5 all the depending values are automatically adjusted.
+Cells C2, C3, C5, and C6 contain formulas that automatically update when you change the values in C1, B2, or B5.
 
 ![Example calculation purchase, profit and selling.](images/calculations/example-sellings.png){#fig-example-sellings}
 
 ::: {#prp-calculation-example-sellings}
-**Calculate sellings**
+**Calculate Sellings**
 
-1.  Start with a new worksheet in a new workbook.
+1.  Create a new worksheet in a new workbook.
 
-2.  Type the texts you see in column A. Some texts don't fit within the column width. That is not important at the moment. If desired, you can make the column wider.
+2.  Enter the text labels shown in column A. Don't worry if some text extends beyond the column width for now. You can adjust the column width later if desired.
 
-3.  In cell B2 enter the value `25%`, in cell B5 the value `21%` and in cell C1 the value `4000`.
+3.  Enter the following values:
 
-4.  Enter in cell C2 the formula `=B2*C1`. After pressing the [Enter]{.uicontrol} key, the result of the formula, 1000, is displayedin cell C2. This is the calculated profit.
+    -   B2: `25%`
+    -   B5: `21%`
+    -   C1: `4000`
 
-5.  Enter in cell C3} the formula `=C1+C2`. Upon completion of the input in cell C3 the result, 5000, is displayed.
+4.  In cell C2, enter the formula `=B2*C1`. After pressing Enter, the result (1000) appears in C2 (the calculated profit).
 
-6.  Enter in cell C5 the formula `=B5*C3`. After completion in cell C5 the result, 1050, is displayed.
+5.  In cell C3, enter the formula `=C1+C2`. The result (5000) appears in C3.
 
-7.  Enter in cell C6 the formula `=C3+C5`. After completion in cell C6 the result, 6050, is displayed..
+6.  In cell C5, enter the formula `=B5*C3`. The result (1050) appears in C5.
 
-8.  Experiment with other values for purchase, profit rate, and VAT rate.
+7.  In cell C6, enter the formula `=C3+C5`. The result (6050) appears in C6.
 
-Note that by changing the values, all formulas will be automatically recalculated.
+8.  Experiment by entering different values for the purchase amount, profit margin, and VAT rate.
 
+Observe how all the calculated values update automatically.
 :::
 
-## More with formulas {#sec-calculation-example-wages}
+## More with Formulas {#sec-calculation-example-wages}
 
-In @fig-example-wages, you see a worksheet where formulas are used to calculate the wages by multiplying the hours with an hourly rate. The total is obtained by addition.
+The worksheet in @fig-example-wages calculates wages by multiplying hours worked by an hourly rate. The total wages are calculated by adding individual wages.
 
 ![Example calculation hours, hour rate and totals.](images/calculations/example-wages.png){#fig-example-wages}
 
 ::: {#prp-calculation-example-wages}
-[File]{.smallcaps}: `Wages.xlsx`
-**Calculate working hours**
+[File]{.smallcaps}: `Wages.xlsx` **Calculate Working Hours**
 
 1.  Open the file.
 
-2.  Enter in the column amount the correct formulas:
+2.  Enter the correct formulas in the "Amount" column:
 
-    -   in cell [D2]{.uicontrol} the formula `=B2*C2`
-    -   in cell [D3]{.uicontrol} the formula `=B3*C3`
-    -   in cell [D4]{.uicontrol} the formula `=B4*C4`
-    -   in cell [D5]{.uicontrol} the formula `=D2+D3+D4`
-
+    -   [D2]{.uicontrol}: `=B2*C2`
+    -   [D3]{.uicontrol}: `=B3*C3`
+    -   [D4]{.uicontrol}: `=B4*C4`
+    -   [D5]{.uicontrol}: `=D2+D3+D4`
 :::
 
-## Calculation model {#sec-calculation-model}
+## Calculation Models {#sec-calculation-model}
 
-Using Excel, you can make all kinds of calculations. For a larger and more complex calculation, careful thinking about how setting up the calculation in a worksheet is needed.
+Excel can perform a wide variety of calculations. Designing effective calculation models, especially for larger and more complex tasks, requires careful planning.
 
-In a calculation model, you always have to deal with three types of cells.
+A calculation model typically involves three types of cells:
 
 Input
 
-:   In these cells, the user continuously enters different values. In fact, these are the cells for the variables.
+:   Cells where users enter variable values.
 
 Calculations
 
-:   In these cells, all kinds of calculations with the values from the input cells are carried out.
+:   Cells containing formulas that perform calculations using the input values.
 
 Output
 
-:   In these cells, the formatted results are displayed.
+:   Cells that display the formatted results of the calculations.
 
-The data flow in the model is from the input through the calculation to the output. When setting up a model you should think in the opposite direction. After all, the desired result is the point. From the desired results the necessary calculations are derived. And these calculations determine what input is necessary.
+The data flow in a model progresses from input to calculations and then to output. However, it's often best to plan the model in reverse: start with the desired output, then determine the necessary calculations, and finally identify the required input.
 
-There are some guidelines for entering a model in Excel:
+Here are some guidelines for designing calculation models in Excel:
 
-1.  Make a separation between input, calculation, and output. For smaller models, this can be in separate places in the worksheet. For example, input at the top of the worksheet. For large models, it is better to use separate sheets.
+1.  **Separate Input, Calculations, and Output:**
+    -   For smaller models, you can use different sections within a single worksheet (e.g., input at the top).
+
+    -   For larger models, use separate worksheets for each type of cell.
 
 ![Design of a calculation model.At the left 1 worksheet, at the right 3 worksheets.](images/calculations/calculation-model.svg){#fig-calculation-model}
 
-2.  Ensure that a worksheet can be read like a book, from top to bottom and from left to right.
+2.  **Organize Worksheets Logically:**
 
-3.  Find out what numbers can change, for example, the price of an item. Put these numbers in individual cells. These numbers are variables.
+    -   Design worksheets to be read from top to bottom and left to right, like a book.
 
-4.  Use as little numbers as possible in the formula itself, but use references to cells where the numbers are. Do the same for numbers that hardly change over time, such as the VAT rate.
+3.  **Identify Variables:**
 
-5.  Always make the purpose of the cell content visible by putting an explanatory text in a neighboring cell (before, above, ...).
+    -   Place changeable values (e.g., item prices) in individual cells. These values are the model's variables.
 
-6.  Put headers above columns with numbers and before rows with numbers.
+4.  **Use Cell References in Formulas:**
 
-7.  If possible, make one kind of formula per row or per column. The advantage of this is that the formulas can be copied easily across rows or columns.
+    -   Minimize the use of direct numbers in formulas. Instead, refer to cells containing those numbers. This also applies to values that change infrequently, such as a VAT rate.
 
-8.  Divide a complicated formula into multiple pieces so that intermediate results (e.g. subtotals ) can be checked. This prevents errors in formulas.
+5.  **Label Cells Clearly:**
 
-9.  When using multiple worksheets for the model give these sheets obvious names.
+    -   Provide explanatory text in adjacent cells (to the left or above) to describe the purpose of cell content.
 
-10. Take care of some documentation, especially for larger models, and put this in separate worksheets.
+6.  **Use Headers:**
 
-## Copying formulas {#sec-calculation-formula-copy}
+    -   Include headers above columns and to the left of rows containing numbers.
 
-It is very useful to be able to copy formulas to other cells, especially when formulas are very similar to each other. In the following figure, you see an example where the formulas in A3, B3, C3, and D3 show great similarities. This makes it possible to enter the formula only in cell A3 and then copy it to B3:D3.
+7.  **Standardize Formulas:**
 
-::: callout-note
-A [(cell)range]{.term} is a group of cells that you can refer to in a formula. This range is usually rectangular, starting with the top left cell, then a colon, then the bottom right cell. Examples: `B2:E7`, `B3:E3`, `D2:D6`.
-:::
+    -   If possible, use similar formulas within a row or column to facilitate copying.
+
+8.  **Break Down Complex Formulas:**
+
+    -   Divide complicated formulas into smaller parts to calculate and check intermediate results (e.g., subtotals). This helps prevent errors.
+
+9.  **Name Worksheets Appropriately:**
+
+    -   Use descriptive names for worksheets in models with multiple sheets.
+
+10. **Document Your Model:**
+
+    -   Include documentation, especially for larger models, in separate worksheets.
+
+## Copying Formulas {#sec-calculation-formula-copy}
+
+Copying formulas to other cells is very useful, especially when the formulas are similar. In \@fig-formula-copy, the formulas in A3, B3, C3, and D3 are nearly identical. You can enter the formula once in A3 and then copy it to B3:D3.
+
+A [(cell)range]{.term} is a group of cells that you can refer to in a formula. Ranges are typically rectangular and defined by the cell in the upper-left corner, a colon, and the cell in the lower-right corner (e.g., B2:E7, B3:E3, D2:D6).
 
 ![Example with copyable formulas.](images/calculations/formula-copy.png){#fig-formula-copy}
 
-Because a formula often contains cell references it is important to consider what to do with these cell references during the copy action. There are two possibilities:
+Since formulas often contain cell references, it's important to understand how these references behave when you copy a formula. There are two types of cell references:
 
--   The cell references adjust to a new situation. The cell addresses in the formula are relative.
--   The cell references don't change and remain the same. The cell addresses in the formula are absolute.
+-   **Relative:** Cell references adjust to their new location.
 
-An address is made absolute by putting dollar signs in the address. You can place a dollar sign for the column letter and/or for the row number. The part that contains the dollar sign is absolute and will not be changed during copying. There are four possibilities for a cell address, see @tbl-cell-addresses for the possibilities.
+<!-- -->
+
+-   **Absolute:** Cell references remain fixed.
+
+Use dollar signs (`$`) to make a cell reference absolute. You can make the column letter, the row number, or both absolute. @tbl-cell-addresses shows the different possibilities.
 
 | Type                                     | Example |
-|------------------------------------------|---------|
+|:-----------------------------------------|:--------|
 | Relative address                         | `B1`    |
 | Absolute column and absolute row address | `$B$1`  |
 | Absolute column and relative row address | `$B1`   |
-| Relative row and absolute column address | `B$1`   |
+| Relative column and absolute row address | `B$1`   |
 
-:  Examples of cell addresses. {#tbl-cell-addresses}
+: Examples of cell addresses. {#tbl-cell-addresses}
 
 ::: callout-note
-When copying a formula with cell addresses, the absolute part is not modified and the relative part will be modified.
+When you copy a formula, the absolute parts of cell references remain unchanged, while the relative parts are adjusted.
 :::
 
-You can change the type of a cell reference in one of the following ways:
+You can change the type of cell reference in these ways:
 
--   Type the dollar signs at the desired place.
--   If the cursor is in a cell address, press repeatedly on key [F4]{.uicontrol}, until the desired result is achieved. During repetitive pressing on [F4]{.uicontrol} all four possibilities will be displayed.
+-   Type the dollar signs directly in the cell address.
 
-### Copy rules {#sec-copyrules}
+-   Place the cursor within the cell address and press the F4 key repeatedly to cycle through the four reference types.
 
-If you copy formulas with cell references Excel applies the following rules:
+### Copy Rules {#sec-copyrules}
 
--   By copying to the left or to the right direction the column letter will be lowered or raised.
--   By copying in the direction upwards or downwards the row number will be decreased or increased.
--   The parts in the address with a dollar sign in front, are not affected.
+When you copy formulas with cell references, Excel applies these rules:
 
+-   When copying to the left or right, the column letter changes.
+
+-   When copying up or down, the row number changes.
+
+-   Parts of the address with a dollar sign (`$`) remain unchanged.
 
 | Formula      | Copy action                         | Result       |
-|--------------|-------------------------------------|--------------|
+|:-------------|:------------------------------------|:-------------|
 | `=A1+B2`     | 1 cell to the right                 | `=B1+C2`     |
 |              | 1 cell down                         | `=A2+B3`     |
 |              | 1 cell to the right and 1 cell down | `=B2+C3`     |
@@ -195,14 +220,13 @@ If you copy formulas with cell references Excel applies the following rules:
 | `=$A1+$B2`   | 1 cell to the right                 | `=$A1+$B2`   |
 |              | 1 cell down                         | `=$A2+$B3`   |
 |              | 1 cell to the right and 1 cell down | `=$A2+$B3`   |
-| `=$A$1+$B$2` | each copy action                    | `=$A$1+$B$2` |
+| `=$A$1+$B$2` | Any copy action                     | `=$A$1+$B$2` |
 
-:  Examples of copy actions. {#tbl-copy-actions}
-
+: Examples of copy actions. {#tbl-copy-actions}
 
 ### Premium Table {#sec-calculation-example-insurance}
 
-In @fig-example-insurance, you see a list of insurance premiums for cars. The list starts at a value of \$ 10.000 and a premium of \$ 675. The next values grow with increments of \$ 1000 and the premium with increments of \$ 45. Make this list using formulas for value and premium in the rows 6 until 20.
+The worksheet in @fig-example-insurance shows a list of car insurance premiums. The list starts with a value of \$10,000 and a premium of \$675. Subsequent values increase in increments of \$1,000, and the premium increases by \$45. Use formulas to create this list for rows 6 through 20.
 
 ![Premium table.](images/calculations/example-insurance.png){#fig-example-insurance}
 
@@ -211,37 +235,36 @@ In @fig-example-insurance, you see a list of insurance premiums for cars. The li
 
 1.  Open the file.
 
-2.  Format the values as currencies with the button on the ribbon (Home \> button Accounting Number Format (group Number)\]{.uicontrol}. Adjust also the column widths so that all contents fit.
+2.  Format the values as currency using [Home \> button Accounting Number Format (group Number)]{.uicontrol}. Adjust the column widths to display all content.
 
-3.  Enter in cell A6 the formula `=A5+$B$1`.
+3.  In cell A6, enter the formula `=A5+$B$1`.
 
-4.  Enter in cell B6 the formula `=B5+$D$1`.
+4.  In cell B6, enter the formula `=B5+$D$1`.
 
-5.  Select the area A6:B6 and drag the fill handle until B20.
-
+5.  Select the range A6:B6 and drag the fill handle to row 20.
 :::
 
-## True/False formulas {#sec-calculation-boolean}
+## True/False Formulas {#sec-calculation-boolean}
 
-There are formulas that do not perform calculations, but compare two things, perform a kind of test. Such formulas are also called *boolean expressions* and have only two outcomes: `TRUE` or `FALSE`.
+Some formulas don't perform calculations but instead compare values or test conditions. These formulas, also called *Boolean expressions*, return either `TRUE` or `FALSE`.
 
-In @tbl-boolean-operators you can find the operators that you can use in boolean expressions.
+@tbl-boolean-operators lists the operators used in Boolean expressions.
 
 | Operator | Meaning                  |
-|----------|--------------------------|
-| `=`      | equal                    |
-| `<>`     | not equal to             |
-| `<`      | less than                |
-| `<=`     | less than or equal to    |
-| `>`      | greater than             |
-| `>=`     | greater than or equal to |
+|:---------|:-------------------------|
+| `=`      | Equal to                 |
+| `<>`     | Not equal to             |
+| `<`      | Less than                |
+| `<=`     | Less than or equal to    |
+| `>`      | Greater than             |
+| `>=`     | Greater than or equal to |
 
-:  Operators for comparing two items. {#tbl-boolean-operators}
+: Operators for comparing two items. {#tbl-boolean-operators}
 
-In @tbl-boolean-examples are some examples of such formulas. To understand its functioning well, you could enter these in a cell. The parentheses you see in the formulas are not strictly necessary, but provide more clarity on the intent of the formula. Therefore it is recommended to always use parentheses.
+@tbl-boolean-examples provides examples of Boolean formulas. To understand how they work, you can enter them into cells in a worksheet. The parentheses in the formulas are not strictly required but improve readability, so it's recommended to use them.
 
 | Formula       | Result  |
-|---------------|---------|
+|:--------------|:--------|
 | `=(1=1)`      | `TRUE`  |
 | `=(1=2)`      | `FALSE` |
 | `=(1<>1)`     | `FALSE` |
@@ -254,141 +277,129 @@ In @tbl-boolean-examples are some examples of such formulas. To understand its f
 | `=("a"="b")`  | `FALSE` |
 | `=("a"<>"b")` | `TRUE`  |
 
-:  Examples of TRUE/FALSE formulas. {#tbl-boolean-examples}
+: Examples of TRUE/FALSE formulas. {#tbl-boolean-examples}
 
-::: callout-warning
-In operations, text should always be placed between double-quotes.
+::: callout-important
+Always enclose text in double quotes in Boolean operations.
 :::
 
-Just putting such formulas in cells does not make much sense. However, they can appear in calculations. In that case Excel uses the following numerical values:
+Using Boolean formulas directly in cells isn't very practical. However, they are powerful within calculations. Excel treats `TRUE` as 1 and `FALSE` as 0, allowing you to perform calculations based on conditions.
 
--   `TRUE` = 1
--   `FALSE` = 0
-
-Because of these numerical values you can calculate with it and create conditions in a calculation. The result depends of the outcome of the condition. In the following example, the postage for orders depends on the ordered quantity.
+In the following example, the shipping cost for an order depends on the order amount.
 
 ::: {#exm-calc-postage}
-**Pay shipping costs? yes or no**
+**Calculate Shipping Costs**
 
-At an internet shop, an order is delivered without postage for orders from \$25. In the next figure, you can see that the postage is calculated with a true/false formula. At the beginning of the formula is `(B5<$B$2)`. This part has two possible outcomes, TRUE (=1) or FALSE (=0). And this result is again multiplied by \$3,50. There are only two possible outcomes:
-
--   `1 * 3.50 = 3.50`
--   `0 * 3.50 = 0`
+An online shop offers free shipping for orders of \$25 or more. The following figure shows how a Boolean formula calculates the shipping cost. The formula `(B5<$B$2)` returns `TRUE` (1) if the order total (B5) is less than \$25 (B2) and `FALSE` (0) otherwise. This result is then multiplied by \$3.50, resulting in either \$3.50 or \$0.
 
 ![Example with a true/false formula.](images/calculations/example-boolean.png){#fig-example-boolean}
 
-Create this example and check the correct working by entering different values in the cells B1, B2, and B5.
+Create this example and verify its functionality by entering different values in cells B1, B2, and B5.
 :::
 
 ## Cell Names {#sec-calculation-names-cells}
 
-The use of meaningful names for cells and the rules for naming.
+This section describes how to use meaningful names for cells and the rules for naming them.
 
-Working with cell addresses in formulas can be confusing, formulas are hard to read and it is difficult to see what the intention of the formula is. Fortunately, you can give meaningful names to cells and areas. A formula for example can then be `=Sales-Purchases`.
+Using cell addresses in formulas can make them confusing and difficult to read, obscuring the formula's purpose. Fortunately, you can assign descriptive names to cells and ranges, allowing for more intuitive formulas like `=Sales-Purchases`.
 
-Rules for naming:
+**Naming Rules:**
 
--   Names should begin with a letter or with the underscore symbol (-), digits are allowed after that. It is not allowed to start a name with a digit.
+-   Names must begin with a letter or an underscore (`_`). Subsequent characters can be letters, numbers, or underscores. Names cannot start with a number.
 
--   Names cannot contain spaces. To simulate a space you can use the underscore symbol, for example, [Sales_2010]{.varname}.
+-   Names cannot contain spaces. Use underscores to simulate spaces (e.g., `Sales_2010`).
 
--   Most symbols (comma, colon, exclamation point, etc.) can not be used.
+-   Most symbols (commas, colons, exclamation points, etc.) are not allowed.
 
-### Creating names {#sec-calculation-names-create}
+### Creating Names {#sec-calculation-names-create}
 
-In this task, you will learn a few ways to assign names to cells and use them in formulas.
-
-There are several ways to assign a name to a cell. The method used in practice usually depends on the preferences of the user and their entering speed. In this task, there are two ways proposed to assign a name to a cell and three methods to use the name in a formula. The same methods can be used to assign a name to an area of cells.
+You can assign names to cells in several ways. The preferred method often depends on user preference and typing speed. This task presents two methods for assigning names and three methods for using names in formulas. You can use the same methods to name cell ranges.
 
 ::: {#prp-calculation-names-create}
+1.  Create a new worksheet.
 
-1.  Start with a new worksheet.
+2.  Enter `100` in cell A1 and `275` in cell A2.
 
-2.  Enter in A1 the number `100` and in A2 the number `275`.
-
-3.  Select A1 and choose [Formulas \> Define Name (group Defined Names)]{.uicontrol}.
+3.  Select A1 and choose [Formulas \> Define Name (Defined Names group)]{.uicontrol}.
 
 ![Dialog box New Name.](images/calculations/name-new.png){#fig-name-new}
 
-In the [Name]{.uicontrol} text box you can enter the name. Sometimes Excel suggests a name. In the [Comment]{.uicontrol} box, you can optionally give an explanation, which can be useful later (audits) for checking and creating documentation for the model.
+In the **Name** text box, you can enter the desired name. Excel may suggest a name. The optional **Comment** box allows you to provide a description for future reference (e.g., for audits or documentation).
 
-4.  Enter the name `Purchases` and click on [OK]{.uicontrol}. The name box now displays this name instead of the address.
+4.  Enter `Purchases` as the name and click [OK]{.uicontrol}. The name box now displays "Purchases" instead of the cell address.
 
 ![Cell A1, now with the name Purchases in the name box instead of the address.](images/calculations/name-box.png){#fig-name-box}
 
-An alternative and quick way to assign a name is by selecting a cell and then directly enter the name in the name box. This is done for cell A2 in the next step.
+An alternative and faster way to name a cell is to enter the name directly in the name box. The next step demonstrates this for cell A2.
 
-5.  Select cell A2. Click in the [Name box]{.uicontrol} and change `A2` in `Sales` and press [Enter]{.uicontrol}.
+5.  Select cell A2. Click in the [Name box]{.uicontrol}, replace `A2` with `Sales`, and press [Enter]{.uicontrol}.
 
-6.  Select cell A3 and enter the formula for calculating the profit in one of the following ways:
+6.  Select cell A3 and enter the formula to calculate profit using one of these methods:
 
-    -   Type `= Sales-Purchases` and press the [Enter]{.uicontrol} key.
-    -   Type `=` then select A2, type `-`, then select A1 and press the [Enter]{.uicontrol} key.
-    -   Type `=` then choose [Formulas \> Use in formula (group Defined Names) \> Sales]{.uicontrol}, type `-` and then choose [Formulas \> Use in formula (group Defined Names) \> Purchases]{.uicontrol} and press the [Enter]{.uicontrol} key.
+    -   Type `= Sales-Purchases` and press [Enter]{.uicontrol}.
 
-In cell A3 the answer 175 appears. Selecting this cell shows you `=Sales-Purchases` in the formula bar. By using names you get a well readable formula.
+    -   Type `=`, select A2, type `-`, select cell A1 and press [Enter]{.uicontrol}.
 
+    -   Type `=`, choose [Formulas \> Use in formula (group Defined Names) \> Sales]{.uicontrol}, type `-`, choose [Formulas \> Use in Formula (Defined Names group) \> Purchases]{.uicontrol} and press [Enter]{.uicontrol}.
+
+Cell A3 will display `175`. Selecting cell A3 will show `=Sales-Purchases` in the formula bar, demonstrating the improved readability of formulas with names.
 :::
 
-### Using names in existing formulas {#sec-calculation-names-using}
+### Using Names in Existing Formulas {#sec-calculation-names-using}
 
-When you assign a name to a cell or cell range, Excel automatically uses them in new formulas, but not in already existing formulas. In the next example, cell B5 contains the formula `=B2+B3+B4`. When you assign names to the cells B2, B3, and B4, the formula remains unchanged.
+When you assign a name to a cell or cell range, Excel automatically uses those names in new formulas, but not in existing ones. For example, if cell B5 contains the formula `=B2+B3+B4`, and you then assign names to cells B2, B3, and B4, the formula in B5 remains unchanged.
 
 ![Formula with addresses instead of names.](images/calculations/example-expenses.png){#fig-example-expenses}
 
-However, you can quite easily use new names in existing formulas. In the file of this example, the cells in the formula already have names. Through the following steps, the addresses in the formula will be replaced by their names.
+However, you can easily replace the cell addresses in existing formulas with the newly assigned names. In the example file, the cells used in the formula already have names. The following steps demonstrate how to replace the addresses in the formula with those names.
 
-::: {#prp-calculation-names-using}
+:::: {#prp-calculation-names-using}
 [File]{.smallcaps}: `Office-Expenses.xlsx`
 
 1.  Open the file.
 
 2.  Select cell B5.
 
-3.  Choose [Formulas]{.uicontrol} and click on the [arrow from the button Define Name (group Defined Names)]{.uicontrol} and choose [Apply Names]{.uicontrol}.
+3.  Choose [Formulas]{.uicontrol}, click the arrow on the [Define Name (Defined Names group)]{.uicontrol} button and select [Apply Names]{.uicontrol}.
 
 ![Dialog box apply names.](images/calculations/name-apply.png){#fig-name-apply}
 
-4.  Select all names and click [OK]{.uicontrol}. The formula in cell B5 now is `=Inventory+Advertising+Officecosts`.
+4.  Select all names and click [OK]{.uicontrol}. The formula in cell B5 will change to `=Inventory+Advertising+Officecosts`.
 
 ::: callout-note
 To select multiple names, hold down the [Ctrl]{.uicontrol} key.
 :::
-
-:::
+::::
 
 ### Managing Names {#sec-calculation-names-manager}
 
-Excel has capabilities for managing names. You can get a list of all names in the workbook, and you can change and remove names. Especially for the larger workbooks containing many names, this is an indispensable means for the management of names.
+Excel provides tools for managing names, including viewing a list of all names in the workbook, and changing or deleting names. These tools are essential for managing names, especially in larger workbooks with many named cells and ranges.
 
 ::: {#prp-calculation-names-manager}
 [File]{.smallcaps}: `Expenses.xlsx`
 
 1.  Open the file.
 
-2.  Choose [Formulas \> Name Manager (group Defined Names)]{.uicontrol}.
+2.  Choose [Formulas \> Name Manager (Defined Names group)]{.uicontrol}.
 
-![Name manager.](images/calculations/name-manager.png){#fig-name-manager}
+![Name Manager.](images/calculations/name-manager.png){#fig-name-manager}
 :::
 
 ::: callout-note
-Through this dialog box you can perform various operations with the names.
+The Name Manager dialog box allows you to perform several operations:
 
--   **Deleting name**: Select the name and choose [Delete]{.uicontrol}.
+-   **Deleting aname**: Select the name and click [Delete]{.uicontrol}.
 
--   **Changing name**: Select the name and choose [Edit]{.uicontrol}.
+-   **Edit a name**: Select the name and click [Edit]{.uicontrol}.
 
--   **Comment creating/editing**: Select the name and choose [Edit]{.uicontrol}.
+-   **Add or edit a comment**: Select the name and click [Edit]{.uicontrol}.
 
--   **Create a new name**: Select the name and choose [New]{.uicontrol}.
-
+-   **Create a new name**: Click [New]{.uicontrol}.
 :::
 
 ### Documenting Names {#sec-calculation-names-list}
 
-How to create a list of all existing names and corresponding addresses.
-
-Documenting a spreadsheet also includes a list of all names in use and the corresponding cells. Excel can make such a list for you and put it on a worksheet, but the way to do that is not so obvious. It is recommended to create such a list of names in a new worksheet.
+It's helpful to create a list of all defined names and their corresponding cell addresses for documentation purposes. Excel can generate this list on a worksheet, although the procedure is not immediately obvious. It's recommended to create the list on a new worksheet.
 
 ::: {#prp-calculation-names-list}
 [File]{.smallcaps}: `Expenses.xlsx`
@@ -397,33 +408,33 @@ Documenting a spreadsheet also includes a list of all names in use and the corre
 
 2.  Create a new sheet and select cell A1.
 
-3.  Choose [Formulas \> Use in formula (group Defined Names) \> Paste Names \> Paste List]{.uicontrol}.
+3.  Choose [Formulas \> Use in formula (Defined Names group) \> Paste Names \> Paste List]{.uicontrol}.
 
-![List with cell names and addresses.](images/calculations/name-list.png){#fig-name-list}
-
+![List of cell names and addresses.](images/calculations/name-list.png){#fig-name-list}
 :::
 
-## Case: Price calculation articles {#sec-calculation-example-prices}
+## Case Study: Price Calculation for Items {#sec-calculation-example-prices}
 
-Creating a model, using formulas and copying formulas.
+This case study demonstrates creating a calculation model using formulas and copying formulas.
 
-A shop at the international airport sells articles both tax-free and with 21% VAT. The currency for tax-free prices is the U.S. dollar, but customers can also pay in euros. For the VAT and the prices with VAT only the euro will be used. In @fig-example-prices, you can see a part of the price table. Article numbers and dollar prices are somewhat artificial to practice several Excel skills. The intention is to create this table as convenient as possible. Only some indications are given, no detailed steps.
+An airport shop sells items both tax-free and with 21% VAT. Tax-free prices are in U.S. dollars, but customers can pay in euros. Prices with VAT are always in euros. @fig-example-prices shows a portion of the price table. The item numbers and dollar prices are simplified for practice purposes. The goal is to create this table efficiently. Only general guidance is provided, not detailed steps.
 
 ![Price table](images/calculations/example-prices.png){#fig-example-prices}
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
-1. The dollar exchange rate and the VAT percentage are input variables for the calculation and should be placed at the top of the worksheet, separated from the price table. An explanatory text is in the cells before.
 
-2.  A pattern is in the article numbers. You only need to type in the first two numbers, select these numbers and then drag down.
+1.  The dollar exchange rate and the VAT percentage are input variables and should be placed at the top of the worksheet, separate from the price table. Include explanatory labels in the adjacent cells.
 
-3.  The dollar prices have also a pattern (increments of 2.50). Enter only the first two prices, select them and drag down. The prices themselves must be formatted as currency with 2 decimals and the \$ as currency symbol.
+2.  The item numbers follow a pattern. Enter the first two numbers, select them, and drag down to generate the rest.
 
-4.  The price in euro can be calculated from the dollar price by multiplying this price with the dollar exchange rate. You only need to enter the correct formula in the first cell (C6) then you can copy it down. Use an absolute address for the dollar exchange rate, this address should not be updated during the copy action.
+3.  The dollar prices also follow a pattern (increments of 2.50). Enter the first two prices, select them, and drag down. Format the prices as currency with two decimal places and the dollar sign (\$) symbol.
 
-5.  To calculate the amount of VAT the euro price should be multiplied by the VAT rate. And for the price incl. VAT the amount of VAT must be added to the exclusive price. Again, you just have to enter the correct formulas in the first cells (D6 and E6) and then copy it down. Use an absolute address for the VAT rate.
+4.  Calculate the price in euros by multiplying the dollar price by the dollar exchange rate. Enter the formula in the first cell (C6) and copy it down. Use an absolute reference for the dollar exchange rate so it doesn't change when you copy the formula.
 
-6.  Finally, all euro amounts should be formatted as currencies.
+5.  Calculate the VAT amount by multiplying the euro price by the VAT rate. Calculate the price including VAT by adding the VAT amount to the euro price. Enter the formulas in the first cells (D6 and E6) and copy them down. Use an absolute reference for the VAT rate.
+
+6.  Format all euro amounts as currency.
+
 `r unhide()`
 :::
-

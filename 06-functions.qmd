@@ -7,11 +7,11 @@
 **OBJECTIVES**
 
 -   Types of functions and the syntax of a function.
--   Entering a function manually, and with the Wizard.
+-   Entering a function manually and with the Wizard.
 -   Nesting of functions.
 :::
 
-Excel has more than 300 built-in functions to perform a variety of operations. Features of the functions are divided into several categories, such as
+Excel has more than 300 built-in functions to perform various operations. These functions are organized into categories, such as:
 
 -   Database
 -   Date & Time
@@ -24,137 +24,143 @@ Excel has more than 300 built-in functions to perform a variety of operations. F
 -   Math & Trig
 -   Lookup & Reference
 
-A category can be useful when you are looking for a particular function. For example, if you are looking for a function to calculate the repayment of a loan, then this function can be found in the Financial category. Also, there are other categories: All, Most recently used and User defined.
+Categories can be helpful when searching for a specific function. For example, to find a function that calculates loan repayments, you can look in the Financial category. Other categories include: All, Most Recently Used, and User Defined.
 
-With most of the features you need to specify what values or contents of cells the function should use in the calculation. These entries are called **arguments**.
+Most functions require you to specify the values or cell contents they should use in the calculation. These are called **arguments**.
 
-All functions in Excel have the same construction (syntax), see @fig-function-syntax.
+All Excel functions follow the same structure (syntax), as shown in @fig-function-syntax.
 
 ![The structure (syntax) of a function.](images/functions/function-syntax.png){#fig-function-syntax}
 
--   They start with the equal sign `=`.
--   Then the function's name.
--   Then round brackets (parentheses) enclosing the arguments. The arguments are separated by the so-called argument separator the comma (`,`).
--   The arguments may include numbers, texts, operations, or also other functions.
+-   They begin with an equal sign `=`.
 
-::: callout-warning
-1.  The separator for the arguments depends on a Windows setting. Default is the comma for English versions and a semicolon for the Dutch versions. You can change this through the control panel of Windows.
+<!-- -->
 
-2.  The function's name and the separation of arguments depends on the used language version in Microsoft Office.
+-   Followed by the function's name.
+
+<!-- -->
+
+-   Then, parentheses enclose the arguments, separated by commas.
+
+<!-- -->
+
+-   Arguments can be numbers, text, operators, or even other functions.
+
+::: callout-note
+1.  The argument separator (comma or semicolon) depends on your Windows regional settings. English versions typically use a comma, while other language versions (e.g., Dutch) may use a semicolon. You can change this in the Windows Control Panel.
+
+2.  Function names and argument separators vary depending on the language version of Microsoft Office.
 :::
 
-Some commonly used functions are discussed through tasks in this chapter.
+This chapter discusses some commonly used functions through practical examples.
 
 ## Entering Functions {#sec-function-enter}
 
-You can enter a function via a Wizard, but you can also enter it manually. Which method is best to use mainly depends on how experienced you are and whether you already know the name of the position and its structure. Both methods are explained below. The Wizard is used for the tasks in this chapter, but you can of course also use the manual method.
+You can enter functions using the Function Wizard or manually. The best method depends on your experience level and whether you already know the function's name and syntax. Both methods are explained below. The Function Wizard is used in the examples, but you can also enter functions manually.
 
 ### Function Wizard {#function-wizard}
 
-Beginners and less experienced users should use the [Function Wizard]{.uicontrol}. You can call this Wizard in two ways
+The [Function Wizard]{.uicontrol} is helpful for beginners and less experienced users. You can open it in two ways:
 
--   By clicking on the button $f_x$ [Insert function]{.uicontrol} at the beginning of the formula bar.
--   Through [Formulas \> Insert Function (group Function Library)]{.uicontrol}
+-   Click the $f_x$ [Insert function]{.uicontrol} button at the beginning of the formula bar.
+-   Go to [Formulas \> Insert Function (Function Library group)]{.uicontrol}
 
-In both cases the dialog box Insert Function appears:
+The Insert Function dialog box will appear:
 
 ![Dialog box insert function.](images/functions/function-insert.png){#fig-function-insert}
 
-To quickly find the right function, it is useful to first select a category of functions by clicking the selection arrow in the category box. The categories appear in the drop-down window. If you have no idea in which category the function belongs, then choose [All]{.uicontrol}.
+To quickly find the right function, first select a function category from the drop-down list. If you're unsure which category to choose, select [All]{.uicontrol}.
 
-Select the desired function, for example `COUNTIF` and click on [OK]{.uicontrol}. After this, the ***Function Arguments*** dialog box for the selected function appears.
+Select the desired function, such as `COUNTIF`, and click [OK]{.uicontrol}. The ***Function Arguments*** dialog box for the selected function will appear.
 
 ![Function arguments for function COUNTIF.](images/functions/function-countif.png){#fig-function-countif1}
 
-You can specify the arguments in the dialog box. Which argument(s) you should use depends on the selected function. You can type in the arguments, but when it comes to cell addresses you can also select these cells in the worksheet with the mouse.
+In this dialog box, you can specify the function's arguments. The required arguments depend on the selected function. You can type the arguments directly, or for cell addresses, you can select the cells in the worksheet using the mouse.
 
 ::: callout-note
-By clicking the link [Help on this function]{.uicontrol} you get detailed help for the function.
+For detailed help on the function, click the [Help on this function]{.uicontrol} link.
 :::
 
-### Autocomplete functions {#sec-function-manual}
+### Autocomplete Functions {#sec-function-manual}
 
-When you are familiar with a particular function, knowing the correct spelling and the types of arguments, you can choose to just type the function and its arguments into the input bar. Often this method is the most efficient.
+If you are familiar with a particular function, its correct spelling, and the types of arguments it requires, you can type the function and its arguments directly into the formula bar. This is often the most efficient method.
 
-A very useful tool for this is **Autocomplete functions**. When you type a `=` character and the first letter of a function in a cell or in the input bar, Excel displays a drop-down list of all valid entries that start with that letter. Icons show the type of entry, such as a function or cell/table reference. And for each function you get a screen tip with a short description of the function.
+Excel's **Autocomplete Functions** feature is very useful for manual entry. When you type an `=` sign and the first few letters of a function in a cell or the formula bar, Excel displays a drop-down list of all valid entries that begin with those letters. Icons indicate the entry type, such as a function or cell/table reference. A screen tip also provides a brief description of each function.
 
-You can continue typing the function to narrow the list or use the arrow keys to select the function from the list. After selecting the desired function, press [Tab]{.uicontrol} to insert the function and the opening parenthesis into the cell.
+Continue typing the function name to narrow the list, or use the arrow keys to select the function from the list. After selecting the desired function, press [Tab]{.uicontrol} to insert the function name and an opening parenthesis into the cell.
 
-After you press [Tab]{.uicontrol} to insert the function and the opening parenthesis, Excel displays another screen tip with the arguments for the function. The argument in bold is the argument you are currently entering. Arguments in parentheses are optional.
+Once you insert the function and the opening parenthesis, Excel displays another screen tip showing the function's arguments. The argument in bold is the one you are currently entering. Arguments in parentheses are optional.
 
 ::: {#exm-autocomplete}
 **Autocomplete**
 
-In @fig-function-autocomplete you can see an example. In the first image, one letter, the `c`, has been entered. The list box shows all functions that start with `c`.
+@fig-function-autocomplete illustrates an example. In the first image, the letter c has been entered. The list box displays all functions that start with `c`.
 
-In the second image another two letters 'ou' has been typed. The list now consists of all items that start with `cou`. With the selected function 'COUNTIF' a screen tip is shown.
+In the second image, `ou` has been added. The list now shows all entries that start with `cou`. A screen tip displays information for the selected function, `COUNTIF`.
 
-After pressing [Tab]{.uicontrol} you get the third image. This function has two arguments.
+Pressing [Tab]{.uicontrol} results in the third image. This function requires two arguments.
 
 ![Example autocomplete function.](images/functions/function-autocomplete.png){#fig-function-autocomplete}
 :::
 
 ## Autosum {#sec-function-autosum}
 
-Entering a function via the Wizard often requires several mouse clicks. Because addition is the most used operation, Excel has a separate button, called [Autosum]{.uicontrol}, on the ribbon in the [Editing group (Home tab)]{.uicontrol} so that you can enter this function faster.
+Since addition is a frequently used operation, Excel provides the [Autosum]{.uicontrol} button on the ribbon in the [Editing group (Home tab)]{.uicontrol} for quick entry. Using the Function Wizard for addition often requires multiple mouse clicks, so Autosum can save time.
 
 ![](images/functions/button-autosum.png)
 
-Through the arrowhead at the end you can also get a selection list for the functions [Average]{.uicontrol}, [Count Numbers]{.uicontrol}, [Max]{.uiconrol} and [Min]{.uicontrol}, so these functions are also quickly accessible.
+The arrow next to the Autosum button provides a drop-down list with quick access to the [Average]{.uicontrol}, [Count Numbers]{.uicontrol}, [Max]{.uicontrol}, and [Min]{.uicontrol} functions.
 
 ::: {#prp-function-autosum}
-
 1.  Start with a new worksheet.
 
-2.  Enter in the cells A1:A6 in succession the following numbers: 120, 121, 122, 123, 124, and 125.
+2.  Enter the following numbers in cells A1:A6: 120, 121, 122, 123, 124, and 125.
 
-3.  Select cell A7 and then click on [button Autosum]{.uicontrol}.
+3.  Select cell A7, and then click the [Autosum]{.uicontrol} button.
 
 ![Selection borders around cells to sum.](images/functions/example-autosum.png){#fig-example-autosum}
 
-Excel places a selection border around the cells that you probably want to sum. If this is not the area you want to sum, then select with the mouse the correct area.
+Excel places a selection border around the cells that it assumes you want to sum. If this is not the correct range, use the mouse to select the desired area.
 
-4.  Confirm the selection by one of the following actions:
+4.  Confirm the selection by doing one of the following:
 
-    -   Click again on the [Autosum]{.uicontrol} button.
-    -   Click on button ![](images/functions/enter-function.svg) [Enter]{.uicontrol} in front of of the formula bar.
+    -   Click the [Autosum]{.uicontrol} button again.
+    -   Click the [Enter]{.uicontrol} button, ![](images/functions/enter-function.svg), in the formula bar.
     -   Press the [Enter]{.uicontrol} key on the keyboard.
 
-In cell A7 the answer `735` is displayed. The formula in cell A7 is `=SUM(A1:A6)`. This formula is shorter and clearer, therefore better than a formula like `=A1+A2+A3+A4+A5+A6`.
-
+Cell A7 will display the result `735`. The formula in cell A7 is `=SUM(A1:A6)`, which is shorter and clearer than `=A1+A2+A3+A4+A5+A6`.
 :::
 
 ## Mathematical Functions {#sec-function-math}
 
-The mathematical functions category is quite extensive. Besides the well-known SUM function for adding numbers, this category contains functions for various computing activities, such as exponentiation, root calculations, PI, logarithms, etc. Furthermore, you will find a lot of trigonometric functions. So all kinds of functions for a specific use.
+The mathematical functions category is quite extensive. In addition to the common SUM function for adding numbers, this category includes functions for various calculations, such as exponentiation, square roots, PI, logarithms, and trigonometry.
 
-More common functions are those for rounding numbers. Excel has thirteen functions for rounding and that is why it can be quite confusing to determine which function to use in a given situation. For example, there is a function `ROUND` for rounding a number up or down to a specified number of decimal places. There are also functions for rounding to the nearest multiples of a given number or rounding to an integer value.
+Functions for rounding numbers are common. Excel provides thirteen rounding functions, which can make it challenging to choose the appropriate function. For example, the `ROUND` function rounds a number up or down to a specified number of decimal places. Other functions round to the nearest multiple of a given number or to the nearest integer.
 
 ::: {#prp-function-math}
 [File]{.smallcaps}: `Rounding.xlsx`
 
-@fig-example-rounding shows the results of a number of rounding functions. Column C indicates which formulas have been used for column B.
+@fig-example-rounding shows the results of several rounding functions. Column C displays the formulas used in column B.
 
 ![Examples of rounding functions.](images/functions/example-rounding.png){#fig-example-rounding}
 
 1.  Open the file.
 
 2.  Enter the appropriate formulas in cells B3:B9 using the Function Wizard.
-
 :::
 
 ## Statistical Functions {#sec-function-statistical}
 
-The statistical category contains a variety of functions for statistical analysis like average, count, minimum, and maximum.
+The statistical category contains functions for statistical analysis, such as average, count, minimum, and maximum.
 
-::: {#prp-function-statistical}
+::::: {#prp-function-statistical}
 [File]{.smallcaps}: `Statistics.xlsx`
 
 ![File Statistics.xlsx to practice statistical functions.](images/functions/example-statistical.png){#fig-example-statistical}
 
 1.  Open the file.
 
-2.  In cells B9 to B12, perform the calculations using the functions from the table below. The functions are in the category [Statistical]{.uicontrol}.
+2.  In cells B9 to B12, perform the calculations using the functions from the table below. These functions are in the [Statistical]{.uicontrol} category.
 
     -   B9: `AVERAGE`
     -   B10: `COUNT`
@@ -162,44 +168,51 @@ The statistical category contains a variety of functions for statistical analysi
     -   B12: `MAX`
 
 ::: callout-note
-The argument is always the area B1:B8. You can of course type this in the function arguments dialog box, but it is more convenient to place the cursor in the box for the first argument and then select the area B1:B8 in the worksheet with the mouse.
+The argument is always the range B1:B8. Although you can type this range in the Function Arguments dialog box, it's more convenient to place the cursor in the box for the first argument and then select the range B1:B8 in the worksheet with the mouse.
 :::
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Result")` ![](images/functions/example-statistical-result.png) `r unhide()`
-:::
+`r hide("Result")`
 
+![](images/functions/example-statistical-result.png)
+
+`r unhide()`
 :::
+:::::
 
 ## Date and Time Functions {#sec-function-datetime}
 
-In the Date and Time category, you will find multiple functions to perform calculations with date and time. Because Excel sees date and time internally as numbers you can just calculate with date and time. American date format: Month/Day/Year
+The Date and Time category provides functions for working with dates and times. Because Excel stores dates and times as numbers internally, you can perform calculations with them. The American date format is Month/Day/Year.
 
-::: {#prp-function-datetime}
+:::: {#prp-function-datetime}
 [File]{.smallcaps}: `Date.xlsx`
 
 ![Calculation with dates and times..](images/functions/example-datetime.png){#fig-example-datetime}
 
 1.  Open the file.
 
-First of all, the values for year, month and day are determined from the start and end dates.
+First, extract the year, month, and day values from the start and end dates.
 
-2.  Use the `YEAR`, `MONTH` and `DAY` functions to determine the values in cells C2, D2, and E2. The argument is always cell B2.
+2.  Use the `YEAR`, `MONTH` and `DAY` functions to determine the values in cells C2, D2, and E2. The argument for these functions is cell B2.
 
-3.  Select C2:E2 and drag the fill handle 1 row down.
+3.  Select C2:E2 and drag the fill handle one row down.
 
-4.  Select cell B4 and enter the formula `=B3-B2`. The result will be 27.
+4.  Select cell B4 and enter the formula `=B3-B2`. The result is 27.
 
-With the function `NETWORKDAYS` you can determine the number of full working days between a start date and an end date. Weekends and dates defined as holidays do not count as working days. This function contains an optional argument to specify holidays.
+The `NETWORKDAYS` function calculates the number of workdays between a start date and an end date. It excludes weekends and dates specified as holidays. You can use an optional argument to specify holidays.
 
-5.  Select cell B5 and calculate the number of working days. You only need to enter the cell addresses for start date and end date, you can leave the box for holidays empty.
+5.  Select cell B5, and calculate the number of workdays. Enter the cell addresses for the start and end dates; leave the holidays box empty.
 
-6.  The same way calculate the hours, minutes, and seconds from the start date and end date. Use the functions `HOUR`, `MINUTE`, and `SECOND`.
+6.  Similarly, calculate the hours, minutes, and seconds from the start and end dates using the `HOUR`, `MINUTE`, and `SECOND` functions.
 
-7.  Calculate in B10 the time difference with a formula.
+7.  Calculate the time difference in B10 using a formula.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Hint")` You have to subtract the start time from the end time. `r unhide()`
+`r hide("Hint")`
+
+Subtract the start time from the end time.
+
+`r unhide()`
 
 `r hide("Result")`
 
@@ -207,77 +220,72 @@ With the function `NETWORKDAYS` you can determine the number of full working day
 
 `r unhide()`
 :::
-
-:::
+::::
 
 ## Logical Function IF {#sec-function-logical}
 
-Logical functions do something with the results `TRUE` or `FALSE`. The best known and most widely used logical function is the `IF()` function. Simply said, the operation of this function does the following:
+Logical functions work with the results `TRUE` or `FALSE`. The most common logical function is the `IF()` function. In simple terms, this function works as follows:
 
-`=IF(condition, what to do if true, what to do if false)`
+`=IF(condition, value_ if_true, value_if_false)`
 
-The condition is a logical test with possible results `TRUE` or `FALSE`.
+The condition is a logical test that evaluates to either `TRUE` or `FALSE`.
 
 ::: callout-note
-If you need more than one condition, then you can use a new `IF()` function inside the first `IF()` function. Such structures become quickly complicated and difficult to read. Better make use of the logical functions `AND()`, `OR()`, and `NOT()`.
+For more than one condition, you can nest `IF()` functions. However, nested `IF()` functions can become complex and difficult to read. Consider using the logical functions `AND()`, `OR()`, and `NOT()` instead.
 :::
 
 ::: {#prp-function-logical}
-
-In @fig-example-logical-result you see some marks, with next to it the statement pass or fail. This result should be automatically determined from the value of the grade. A result is unsatisfactory if the number is less than 5.5.
+@fig-example-logical-result shows marks with their corresponding pass/fail status. The status is determined automatically based on the mark. A mark less than 5.5 is considered failing.
 
 ![Marks with their results.](images/functions/example-logical-result.png){#fig-example-logical-result}
 
-1.  Start with a new worksheet and enter the numbers as shown in @fig-example-logical-result.
+1.  Start a new worksheet and enter the numbers shown in @fig-example-logical-result.
 
-2.  Select cell B2 and choose via [Insert Function]{.uicontrol} the function `IF`.
+2.  Select cell B2 and use the [Insert Function]{.uicontrol} to insert the `IF` function.
 
-3.  Complete the dialog box as shown in @fig-example-logical-if. You can enter the quotation marks around the texts, but you don't have to, Excel will place them automatically.
+3.  Complete the dialog box as shown in @fig-example-logical-if. You can type the quotation marks around the text, but it is not required as Excel will add them automatically.
 
 ![Dialog box function IF.](images/functions/example-logical-if.png){#fig-example-logical-if}
 
 4.  Click [OK]{.uicontrol}.
 
 5.  Select cell B2 and drag the fill handle to B6.
-
 :::
 
 ## Text Functions {#sec-function-text}
 
-A task splitting a text into different parts by using four text functions.
+This section demonstrates splitting text into different parts using four text functions.
 
-Excel has several functions for performing operations on texts. For example, you can determine the length of a text and retrieve certain pieces of text from a larger text.
+Excel includes functions for manipulating text. For example, you can determine the length of a text string or extract specific parts of a string.
 
-In @fig-example-text-result, you see some full names in column A. The idea is to extract the first and last names out of the full names and put these in separate columns. In the example, the first and last names are separated by a space. This makes it possible to split the text at this point. To extract the different parts you need to know the location of the space. The text before the space is the first name and the text after the space is the last name. To determine the right part, you also need to know the total length of the text.
+@fig-example-text-result shows full names in column A. The goal is to extract the first and last names into separate columns. In this example, the first and last names are separated by a space, which can be used as a delimiter. To extract the names, you need to find the position of the space and know the total length of the text. The text before the space is the first name, and the text after the space is the last name.
 
-The result of the operations can be seen in @fig-example-text-result in columns B to E. Because 4 different functions are used, the practice is set up in four parts.
+The results are shown in columns B to E in @fig-example-text-result. This exercise is divided into four parts, each using a different function.
 
 ![Full names and the extracted fiirst and last names.](images/functions/example-text-result.png){#fig-example-text-result}
 
 ### LEN {#sec-function-length}
 
-Determination of the length of a text with function `LEN`.
+The `LEN` function determines the length of a text string.
 
 ::: {#prp-function-text}
 [File]{.smallcaps}: `Names.xlsx`
 
 1.  Open the file.
 
-2.  Select cell B2 and insert function `LEN` with argument A2.
+2.  Select cell B2 and insert the `LEN` function with cell A2 as argument.
 
 3.  Drag the fill handle in B2 down to B5.
 
-You now have the length of the full names in column B..
-
+Column B now displays the length of the full names.
 :::
 
 ### SEARCH {#sec-function-search}
 
-The starting position of a character (string), in this case a space, in a text can be determined with the function `SEARCH`.
+The `SEARCH` function finds the starting position of a specific character (or string) within a text. In this case, it finds the position of the space.
 
 ::: {#prp-function-search}
-
-1.  Select cell [C2]{.uicontrol} and press the button [Insert Function]{.uicontrol} on the formula bar.
+1.  Select cell [C2]{.uicontrol} and click the [Insert Function]{.uicontrol} button on the formula bar.
 
 ![Arguments for function SEARCH. Enter a space in the Find-text box. Excel surrounds this automatically with double quotes.](images/functions/example-text-search.png){#fig-example-text-search}
 
@@ -285,20 +293,18 @@ The starting position of a character (string), in this case a space, in a text c
 
 3.  Drag the fill handle in C2 down to C5.
 
-In column C you now have the position of the first space in the text.
-
+Column C now displays the position of the first space in each name.
 :::
 
 ### LEFT {#sec-function-left}
 
-The left part with a certain length of a text can be determined with the function `LEFT`. In this example, the first name is the left part.
+The `LEFT` function extracts a specified number of characters from the beginning of a text string. In this example, it extracts the first name.
 
-::: {#prp-function-left}
-
-1.  Select cell D2, insert the function `LEFT` and specify the arguments as shown in @fig-example-text-left.
+:::: {#prp-function-left}
+1.  Select cell D2, insert the `LEFT` function, and enter the arguments as shown in @fig-example-text-left.
 
 ::: callout-note
-In the Num-chars box, you need to specify the length of the text to extract. This is one less than the position of the space and that position can be found in cell C2.
+In the Num-chars box, specify the length of the text to extract. This is one less than the position of the space, which is found in cell C2.
 :::
 
 ![Arguments for function LEFT.](images/functions/example-text-left.png){#fig-example-text-left}
@@ -307,16 +313,15 @@ In the Num-chars box, you need to specify the length of the text to extract. Thi
 
 3.  Drag the fill handle in D2 down to D5.
 
-The first names are now in column D.
-:::
+Column D now displays the first names.
+::::
 
 ### RIGHT {#sec-function-right}
 
-The right part with a certain length can be determined with the function `RIGHT`. In this example, the last name is the right part.
+The `RIGHT` function extracts a specified number of characters from the end of a text string. In this example, it extracts the last name.
 
 ::: {#prp-function-right}
-
-1.  Select cell E2, insert the function `RIGHT` and specify the arguments as shown in @fig-example-text-right.
+1.  Select cell E2, insert the `RIGHT` function, and enter the arguments as shown in @fig-example-text-right.
 
 ![Arguments for function RIGHT.](images/functions/example-text-right.png){#fig-example-text-right}
 
@@ -324,73 +329,70 @@ The right part with a certain length can be determined with the function `RIGHT`
 
 3.  Drag the fill handle in E2 down to E5.
 
-The last names are now in column E.
-
+Column E now displays the last names.
 :::
 
 ## Nested Functions {#sec-function-nesting}
 
-A function as an argument inside another function is a nested function. Inside the parenthesis of a function, there is another function. An example:
+A nested function is a function within another function, where one function acts as an argument for the other. For example:
 
 `=ROUNDDOWN(SUM(A1:A5),0)`
 
-This nested function will be used in the following task.
+The following exercise uses a nested function.
 
-::: {#prp-function-nesting}
-
-1.  Start with a new worksheet and enter the data you can see in @fig-example-nesting.
+:::: {#prp-function-nesting}
+1.  Start a new worksheet, and enter the data shown in @fig-example-nesting.
 
 ![Data to use with nested function.](images/functions/example-nesting.png){#fig-example-nesting}
 
-2.  Select cell A6 and insert function `ROUNDDOWN` (category [Math & Trig]{.uicontrol}).
+2.  Select cell A6, and insert the `ROUNDDOWN` function (from the [Math & Trig]{.uicontrol} category).
 
-In the dialog box for this function's arguments, the cursor is in the [Number]{.uicontrol} box. It is handy to first specify the number of decimal places and after that the range of numbers.
+In the function's arguments dialog box, the cursor will be in the [Number]{.uicontrol} field. It's often helpful to specify the number of decimal places first, and then define the range of numbers.
 
-3.  Put the cursor in the `Num_digits]{.uicontrol} box and enter [0`, and put the cursor back in [Number]{.uicontrol} box.
+3.  Place the cursor in the [Num_digits]{.uicontrol} field, enter `0`, Then, move the cursor back to the [Number]{.uicontrol} field.
 
 ![Dialoogvenster.](images/functions/example-nesting-decimals.png){#fig-example-nesting-decimals}
 
-4.  Click now in the worksheet on the arrow in the name box.
+4.  Click the arrow in the name box on the worksheet.
 
-A drop-down list with the names of the most recently used functions appears and at the bottom of the list [More functions]{.uicontrol}.
+A drop-down list appears, showing the names of the most recently used functions. At the bottom of this list, you'll see [More Functions]{.uicontrol}.
 
-5.  Click on [More functions]{.uicontrol}. The well known Insert Function dialog box appears.
+5.  Click on [More Functions]{.uicontrol}. The familiar Insert Function dialog box will appear.
 
-6.  Select in the [Math & Trig]{.uicontrol} category the function `SUM` and click [OK]{.uicontrol}.
+6.  In the [Math & Trig]{.uicontrol} category, select the `SUM` function and click [OK]{.uicontrol}.
 
-The Function Arguments dialog box appears. Argument [Number1]{.varname} has already the value A1:A5.
+The Function Arguments dialog box appears. The [Number1]{.varname} argument already contains the value A1:A5.
 
 7.  Click [OK]{.uicontrol}.
 
-The answer now appears in cell A6 and the used formula is displayed in the formula bar.
+The result appears in cell A6, and the formula used is displayed in the formula bar.
 
 ![Result nested function.](images/functions/example-nesting-result.png){#fig-example-nesting-result}
 
 ::: callout-note
-1.  If you had not entered the number of decimals after step 3, you would have received a warning during nesting that too few arguments were entered. You would have had to correct this manually in the formula.
+1.  If you hadn't entered the number of decimals after step 3, you would have received a warning during nesting indicating that too few arguments were entered. You would have had to correct this manually in the formula.
 
-2.  A faster way of working is to manually type the formula in the formula bar. While you are typing, you will receive help with entering. Handling this way, you must know the names of the functions to be used.
+2.  A faster way to work is to type the formula directly into the formula bar. As you type, you'll receive assistance with entering the formula. However, this method requires you to know the names of the functions you want to use.
 :::
-
-:::
+::::
 
 ## COUNTIF {#sec-function-countif}
 
-The `COUNTIF` function is very useful when creating frequency tables. In @fig-example-countif, you see a list of camping sites with their category. In column E should come the number of campsites in each category.
+The `COUNTIF` function is very useful for creating frequency tables. @fig-example-countif shows a list of camping sites and their categories. Column E will contain the number of campsites in each category.
 
 ![Campsites by category.](images/functions/example-countif.png){#fig-example-countif}
 
-::: {#prp-function-countif}
+::::: {#prp-function-countif}
 [File]{.smallcaps}: `Campsites.xlsx`
 
 1.  Open the file.
 
-2.  Select cell E2, insert the function `COUNTIF` and specify the arguments as shown in @fig-function-countif2.
+2.  Select cell E2, insert the `COUNTIF` function, and specify the arguments as shown in @fig-function-countif2.
 
 ![Arguments for the function COUNTIF.](images/functions/function-countif.png){#fig-function-countif2}
 
 ::: callout-note
-By specifying the entire column B as range, new rows with data can be added to the bottom without the need to change the formulas.
+Specifying the entire column B as the range allows you to add new rows of data to the bottom without needing to change the formulas.
 :::
 
 3.  Click [OK]{.uicontrol}.
@@ -398,116 +400,120 @@ By specifying the entire column B as range, new rows with data can be added to t
 4.  Select cell E2 and drag the fill handle down to E5.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Result")` ![](images/functions/example-countif-result.png) `r unhide()`
-:::
+`r hide("Result")`
 
+![](images/functions/example-countif-result.png)
+
+`r unhide()`
 :::
+:::::
 
 ## SUMIF {#sec-function-sumif}
 
-The `SUMIF` function can be used to add numbers under certain conditions. The spreadsheet has a list of the yields of different coffee types per month and per region. You need to determine the total yields per region.
+The `SUMIF` function allows you to add numbers based on specific conditions. The spreadsheet contains a list of yields for different coffee types, organized by month and region. You'll use it to determine the total yields per region.
 
-::: {#prp-function-sumif}
+::::: {#prp-function-sumif}
 [File]{.smallcaps}: `Coffee.xlsx`
 
 1.  Open the file.
 
-2.  Select cell H2, insert the function `SUMIF` and specify the arguments as shown in @fig-example-sumif-arguments.
+2.  Select cell H2, insert the `SUMIF` function, and enter the arguments as shown in @fig-example-sumif-arguments.
 
 ![Arguments for function SUMIF.](images/functions/example-sumif-arguments.png){#fig-example-sumif-arguments}
 
-3.  Click [OK]{.uicontrol}. The total yield for region North 743140 now appears in cell H2.
+3.  Click [OK]{.uicontrol}. The total yield for North region, 743140, now appears in cell H2.
 
 4.  Select cell H2 and drag down the fill handle to H5.
 
-5.  Format the numbers in H2:H5 as currencies.
+5.  Format the numbers in H2:H5 as currency.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Resultaat")` ![](images/functions/example-sumif-result.png) `r unhide()`
+`r hide("Resultaat")`
+
+![](images/functions/example-sumif-result.png)
+
+`r unhide()`
 :::
 
 ::: callout-note
-An addition in this example is easier to create with pivots.
+In this case, a pivot table would be an easier way to create this summary.
 :::
-
-:::
+:::::
 
 ## Calculating Annuities {#sec-function-annuity}
 
-There are several ways to determine the repayment of a loan. The following example calculates the size of the monthly repayment of a loan of \$ 250,000 with a 6% fixed annual interest rate over a period of 15 years according to the annuity. For this, the Excel function `PMT` will be used. This function calculates the payment for a loan based on constant periodic payments and a constant interest rate.
+There are several ways to calculate loan repayments. This example calculates the monthly repayment amount for a \$250,000 loan with a 6% fixed annual interest rate over 15 years, using an annuity. We'll use the Excel function `PMT`, which calculates the payment for a loan based on constant periodic payments and a constant interest rate.
 
 ![Data to use for loan repayment.](images/functions/example-annuity.png){#fig-example-annuity}
 
-::: {#prp-function-annuity}
+::::: {#prp-function-annuity}
 [File]{.smallcaps}: `Repayment.xlsx`
 
 1.  Open the file and format the cells as shown in @fig-example-annuity.
 
-2.  Select cell B4, insert the function `PMT` (category [Financial]{.uicontrol}) and specify the arguments as shown in @fig-example-annuity-arguments.
+2.  Select cell B4, insert the `PMT` function (from the [Financial]{.uicontrol} category) and enter the arguments as shown in @fig-example-annuity-arguments.
 
 ![Arguments for function PMT.](images/functions/example-annuity-arguments.png){#fig-example-annuity-arguments}
 
 ::: callout-note
-Because the period in this example is in months and not in years, the annual rate must be divided by 12 and the number of years must be multiplied by 12.
+Because the period in this example is in months rather than years, the annual interest rate must be divided by 12, and the number of years must be multiplied by 12.
 :::
 
 3.  Click [OK]{.uicontrol}.
 
-::: callout-warning
-The answer -2109.64 appears. Because the result is an amount to be paid, so a debt, Excel displays this as a negative number. That is, in a red font and with a minus sign.
+::: callout-note
+The result -2109.64 appears. Because this is an amount to be paid (a debt), Excel displays it as a negative number, shown in red font and with a minus sign.
 :::
 
-4.  Change this in a positive number by putting a minus sign after the `=` sign. So the formula becomes `=-PMT(B2/12,B3*12,B1)`
-
-:::
+4.  To change this to a positive number, insert a minus sign after the `=` sign in the formula. The formula will then be `=-PMT(B2/12,B3*12,B1)`.
+:::::
 
 ## Calculating Number of Periods {#sec-function-nper}
 
-When taking a personal loan of € 4000 you agreed to pay a monthly amount of € 125. Calculate the number of months you have to repay at a 6% fixed annual interest rate. For this calculation, the Excel function `NPER` will be used. This function calculates the number of periods for an investment based on periodic, constant payments and a constant interest rate.
+Suppose you take out a personal loan of €4,000 and agree to pay a monthly amount of €125. Calculate the number of months it will take to repay the loan at a 6% fixed annual interest rate. For this calculation, we'll use the Excel function `NPER`. This function calculates the number of periods for an investment based on periodic, constant payments and a constant interest rate.
 
-::: callout-warning
+::: callout-important
 Payments are entered as negative numbers.
 :::
 
-![Calculation number of periods.](images/functions/example-nper.png){#fig-example-nper}
+![Calculation of the number of periods.](images/functions/example-nper.png){#fig-example-nper}
 
-::: {#prp-function-nper}
+:::: {#prp-function-nper}
 [File]{.smallcaps}: `Payment_Periods.xlsx`
 
 1.  Open the file.
 
-2.  Select cell B4, insert the function `NPER`(category [Financial]{.uicontrol}) and specify the arguments as shown in @fig-example-nper-arguments.
+2.  Select cell B4, insert the `NPER` function (from the [Financial]{.uicontrol} category) and enter the arguments as shown in @fig-example-nper-arguments.
 
-![Arguments for function NPER.](images/functions/example-nper-arguments.png){#fig-example-nper-arguments}
+![Arguments for `NPER` function.](images/functions/example-nper-arguments.png){#fig-example-nper-arguments}
 
 ::: callout-note
-Because the period is in months and not in years, the annual rate has been divided by 12.
+Because the period is in months and not years, the annual interest rate has been divided by 12.
 :::
 
-3.  Click [OK]{.uicontrol}. The answer 34,95778166 appears, so almost 35 months.
-
-:::
+3.  Click [OK]{.uicontrol}. The result 34,95778166 appears, indicating almost 35 months.
+::::
 
 ## Vertical Lookup {#sec-function-vlookup}
 
-The `VLOOKUP` function looks up for a supplied value in the first column of a list (table) and returns the corresponding value from another column.
+The `VLOOKUP` function searches for a specified value in the first column of a list (table) and returns the corresponding value from another column.
 
 Syntax: `VLOOKUP(lookup-value, table-array, col-index-num, [range-lookup])`
 
 The last argument is optional and can be set to FALSE or TRUE.
 
--   FALSE: Search for an exact match with the supplied lookup-value.
--   TRUE: Give the closest match below the supplied value if an exact match can not be found.
+-   FALSE: Searches for an exact match with the specified lookup value.
+-   TRUE: Returns the closest match *below* the lookup value if an exact match is not found.
 
 ::: callout-note
-Most of the time it is best to search for an exact match, otherwise incorrect results are possible. If an approximation is allowed then the left column of the table-array must be in ascending order.
+In most cases, it's best to search for an exact match; otherwise, you might get incorrect results. If you allow an approximation, the leftmost column of the table array *must* be in ascending order.
 :::
 
-In @fig-example-vlookup is an overview of hard drives, with the article number in the first column. With the `VLOOKUP` function, you can find the capacity, type, and price of an article if you specify the article number.
+@fig-example-vlookup shows an overview of hard drives, with the article number in the first column. Using the `VLOOKUP` function, you can find the capacity, type, and price of an item by entering its article number.
 
-![Overview hard drives.](images/functions/example-vlookup.png){#fig-example-vlookup}
+![Overview of hard drives.](images/functions/example-vlookup.png){#fig-example-vlookup}
 
-Cell D2 is the input cell for the article number to be searched. The cells D4:D7 are for the lookup formulas.
+Cell D2 is the input cell for the article number you want to search for. Cells D4:D7 will contain the lookup formulas.
 
 ::: {#prp-function-vlookup}
 [File]{.smallcaps}: `Harddisks.xlsx`
@@ -516,42 +522,41 @@ Cell D2 is the input cell for the article number to be searched. The cells D4:D7
 
 2.  Select cell D4 and enter the formula: `=VLOOKUP($D$2,$B$11:$E$22,1,FALSE)`.
 
-As result, the error `#N/A` appears in the cell. This is because there is no search value in cell D2.
+The error `#N/A` appears in the cell because there is no search value in cell D2 yet.
 
-3.  Enter in cell D2 the value `208`. In cell D4 now appears 208, the article number.
+3.  Enter the value `208` in cell D2. Now, 208 (the article number) appears in cell D4.
 
-4.  Now enter the correct lookup formulas in the other three cells.
+4.  Enter the correct lookup formulas in the other three cells:
 
-    -   in D5 the formula: `=VLOOKUP($D$2,$B$11:$E$22,2,FALSE)`.
+    -   D5: `=VLOOKUP($D$2,$B$11:$E$22,2,FALSE)`.
 
-    -   in D6 the formula: `=VLOOKUP($D$2,$B$11:$E$22,3,FALSE)`.
+    -   D6: `=VLOOKUP($D$2,$B$11:$E$22,3,FALSE)`.
 
-    -   in D7 the formula: `=VLOOKUP($D$2,$B$11:$E$22,4,FALSE)`.
+    -   D7: `=VLOOKUP($D$2,$B$11:$E$22,4,FALSE)`.
 
-![Results VLOOKUP.](images/functions/example-vlookup-result.png){#fig-example-vlookup-result}
-
+![Results of VLOOKUP.](images/functions/example-vlookup-result.png){#fig-example-vlookup-result}
 :::
 
 ## Horizontal Lookup {#sec-function-hlookup}
 
-The `HLOOKUP` function looks up for a supplied value in the first row of a list (table) and returns the corresponding value from another row.
+The `HLOOKUP` function searches for a specified value in the first *row* of a list (table) and returns the corresponding value from another row.
 
 Syntax: `VLOOKUP(lookup-value, table-array, row-index-num, [range-lookup])`
 
-The last argument is optional and can be set to FALSE or TRUE.
+The last argument is optional and can be set to FALSE or TRUE:
 
--   FALSE: Search for an exact match with the supplied lookup-value.
--   TRUE: Give the closest match below the supplied value if an exact match can not be found.
+-   FALSE: Searches for an exact match with the specified lookup value.
+-   TRUE: Returns the closest match *to the left* of the lookup value if an exact match is not found.
 
 ::: callout-note
-It is mostly the best to specify to search for an exact match, otherwise incorrect results are possible. And if an approximation is allowed then the first row of the table-array must be in ascending order.
+It's generally best to search for an exact match; otherwise, you might get incorrect results. If you allow an approximation, the top row of the table array *must* be in ascending order.
 :::
 
-In @fig-example-hlookup is an overview of shoe sizes for some people with the name in the first row. When you specify the name you can find the corresponding age, length, and shoe size with the HLOOKUP function.
+@fig-example-hlookup shows an overview of shoe sizes for several people, with their names in the first row. You can use the `HLOOKUP` function to find the corresponding age, height, and shoe size when you enter a name.
 
-![Overview shoe sizes.](images/functions/example-hlookup.png){#fig-example-hlookup}
+![Overview of shoe sizes.](images/functions/example-hlookup.png){#fig-example-hlookup}
 
-Cell C2 is the input cell for the name to be searched. The cells C4:C6 are for the lookup formulas.
+Cell C2 is the input cell for the name to be searched. Cells C4:C6 will contain the lookup formulas.
 
 ::: {#prp-function-hlookup}
 [File]{.uicontrol}: `Shoe_Sizes.xlsx`
@@ -560,208 +565,218 @@ Cell C2 is the input cell for the name to be searched. The cells C4:C6 are for t
 
 2.  Select cell C4 and enter the formula `=HLOOKUP($C$2,$C$8:$E$11,2,FALSE)`.
 
-As result, the error #N/A appears in the cell. This is because there is no search value in cell C2.
+The error `#N/A` appears in the cell because there is no search value in cell C2 yet.
 
-3.  Enter in cell C2 the value `Pietersen`. In cell C4 now appears 42, the age.
+3.  Enter the value `Pietersen` in cell C2. Now, 42 (the age) appears in cell C4.
 
-4.  Now enter the correct lookup formulas in the other two cells.
+4.  Enter the correct lookup formulas in the other two cells:
 
-    -   in C5 the formula: `=HLOOKUP($C$2,$C$8:$E$11;3,FALSE)`.
+    -   C5: `=HLOOKUP($C$2,$C$8:$E$11;3,FALSE)`.
 
-    -   in C6 the formula: `=HLOOKUP($C$2,$C$8:$E$11;4,FALSE)`.
+    -   C6: `=HLOOKUP($C$2,$C$8:$E$11;4,FALSE)`.
 
-![Results HLOOKUP.](images/functions/example-hlookup-result.png){#fig-example-hlookup-result}
-
+![Results of HLOOKUP.](images/functions/example-hlookup-result.png){#fig-example-hlookup-result}
 :::
 
 ## Exercises {#sec-functions-exercises}
 
 ::: {#exr-form001}
-**Results computer company (form001)**
+**Computer Company Results (form001)**
 
-The following table reflects the results of a computer company for the year 2010. The company's target is to achieve a gross profit per product of more than $ 5000,- and a realized margin of more than 15%. Only if both targets are realized, the operating result can be characterized as good, in all other cases as bad.
+[File]{.smallcaps}: `Form001.xlsx`
+
+The following table shows the results of a computer company for 2010. The company's goal is to achieve a gross profit per product of more than \$5,000 and a realized margin of more than 15%. The operating result is considered "good" only if both targets are met; otherwise, it's considered "bad."
 
 ![](images/functions/form001-data.png)
 
-Create this model in a worksheet. Formulas should be used for the determination of the gross profit, the margin, and the result. If the gross profit and margin targets will be changed then the result should be adjusted.
-
-[File]{.smallcaps}: `Form001.xlsx`
+Create this model in a worksheet. Use formulas to calculate the gross profit, the margin, and the result. The result should update automatically if the gross profit and margin targets are changed.
 :::
 
 ::: {#exr-form002}
-**Lookup article details (form002)**
+**Lookup Article Details (form002)**
 
-A computer store has the following article information in a table: article number, name, and price. To quickly search data from a specific article, the article number can be entered in a cell. The corresponding name and price are automatically looked up in the table.
+[File]{.smallcaps}: `Form002.xlsx`
+
+A computer store has the following article information in a table: article number, name, and price. To quickly find data for a specific article, the article number can be entered in a cell. The corresponding name and price are then automatically looked up in the table.
 
 ![](images/functions/form002-data.png)
 
-Enter the data in a worksheet and use formulas (VLOOKUP) to get the search results.
-
-[File]{.smallcaps}: `Form002.xlsx`
+Enter the data in a worksheet and use formulas (`VLOOKUP`) to retrieve the search results.
 :::
 
-::: {#exr-form003}
-**Calculating with dates (form003)**
+:::: {#exr-form003}
+**Calculating with Dates (form003)**
 
-In the following table, you can enter your date of birth and the pension age (67 years). The date when you get your pension, the current date, and the number of days until your pension date should be calculated with formulas.
+[File]{.smallcaps}: `Form003.xlsx`
+
+In the following table, you can enter your date of birth and the retirement age (67 years). The date you reach retirement, the current date, and the number of days until your retirement date should be calculated using formulas.
 
 ![](images/functions/form003-data.png)
 
 Create this model in a worksheet and use formulas to calculate the output results.
 
-[File]{.smallcaps}: `Form003.xlsx`
-
 ::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
+
 1.  Used functions: `DATE`, `YEAR`, `MONTH`, `DAY`, `TODAY`.
 
-2.  A date layout like Wed 01/3/1967 can be get through the number format of the cell. Choose [tab Home > Category Custom (group Number)]{.uicontrol}, or right-click on the cell and choose [Format cells]{.uicontrol}. In the box [Type]{.uicontrol}, you can enter the desired format. The format used in the example is ddd dd/m/yyyy. Try also other formats like dddd dd/mmm/yy to figure out how the formatting works.
+2.  You can format a date like "Wed 01/3/1967" using the cell's number format. Go to [Home tab \> Category Custom (Number group)]{.uicontrol}, or right-click the cell and select [Format Cells]{.uicontrol}. In the [Type]{.uicontrol} box, enter the desired format. The format used in the example is "ddd dd/m/yyyy". Try other formats like "dddd dd/mmm/yy" to understand how the formatting works.
 
-3.  A date in Excel is in reality just a number, with which you can make calculations. In order to determine the time difference between two dates, you can subtract these two dates.
+3.  In Excel, a date is actually just a number, which you can use in calculations. To find the time difference between two dates, subtract them.
+
 `r unhide()`
 :::
-
-:::
+::::
 
 ::: {#exr-form004}
-**Determining commission (form004)**
+**Determining Commission (form004)**
 
-A company with three salesmen has the objective that each salesman sells for at least $ 150,000 per year. If that amount is reached their commission will be 6.25% of that sales amount. If not, then their commission will be only 5.5%. In the following figure, you see a model to calculate the commission for each salesman.
+[File]{.smallcaps}: `Form004.xlsx`
+
+A company with three salespeople has a target of \$150,000 in sales per year for each person. If a salesperson reaches that amount, their commission is 6.25% of their sales. If not, their commission is only 5.5%. The following figure shows a model for calculating the commission for each salesperson.
 
 ![](images/functions/form004-data.png)
 
 Create this model in a worksheet and use formulas for the calculation of the commissions.
-
-[File]{.smallcaps}: `Form004.xlsx`
 :::
 
-::: {#exr-form005}
-**Birth dates (form005)**
-
-A mother-child center in a hospital would like to have a daily overview of babies who are born too early, too late, and on time. For too early and too late they also want to see how many days too early or too late. And for babies who still have to be born, they want to see they are overdue.
-
-![](images/functions/form005-data.png)
-
-Create this model in a worksheet. Also, make a similar layout.
+:::: {#exr-form005}
+**Birth Dates (form005)**
 
 [File]{.smallcaps}: `Form005.xlsx`
 
+A mother-child center at a hospital wants a daily overview of babies born too early, on time, and too late. For babies born too early or too late, they also want to know how many days early or late. For babies who are yet to be born, they want to know how many days overdue they are.
+
+![](images/functions/form005-data.png)
+
+Create this model in a worksheet. Also, create a similar layout.
+
 ::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
-1.  In the last four columns, the answer depends on one or more conditions, so you need to use the function IF.
-2.  In the case of two conditions, you can embed a second IF function within the first IF function. An alternative is to use the AND function within the IF function.
-3.  Birth date is too early when this date is before the expected date.
-4.  A date in Excel is in reality just a number, with which you can perform calculations. So you can determine whether a date is smaller, larger, or the same as another date.
-5.  If no date is known, then the appropriate field is empty. You can check in Excel if a field is empty.
+
+1.  The last four columns depend on one or more conditions, so you'll need to use the `IF` function.
+
+2.  For two conditions, you can nest a second `IF` function within the first `IF` function. Alternatively, you can use the `AND` function within the `IF` function.
+
+3.  A birth date is considered "too early" if it's before the expected date.
+
+4.  In Excel, a date is simply a number, so you can compare dates using operators like \<, \>,
+
 `r unhide()`
 :::
-
-:::
+::::
 
 ::: {#exr-form006}
-**VAT return (form006)**
+**VAT Return (form006)**
 
-A company buys goods from suppliers and pays sales tax (VAT) to these suppliers. Then the company sells these goods to customers who have to pay VAT to the company. Every quarter, the company must submit a tax declaration. The difference between VAT received (through sales) and VAT paid (through purchases) must be paid to the tax authority. If this difference is negative, then there is a refund to the company. A small entrepreneur can get a reduction for the VAT through the so called Regulation Small Entrepreneurs (RSE). This regulation is worked out in the following table.
+[File]{.smallcaps}: `Form006.xlsx`
+
+A company buys goods from suppliers and pays sales tax (VAT) to those suppliers. The company then sells the goods to customers, who pay VAT to the company. Every quarter, the company must submit a tax declaration. The difference between the VAT received (from sales) and the VAT paid (to suppliers) must be paid to the tax authority. If this difference is negative, the company receives a refund. Small businesses may be eligible for a reduction in VAT through the Small Businesses Regulation (SBR). This regulation is outlined in the following table.
 
 ![](images/functions/form006-rules.png)
 
-1.  Create a model with cells for data entry of the total sales and prepaid VAT and with cells for the constants (the thresholds and VAT percentage). Calculate in other cells the VAT initially to be paid, the reduction and the final amount to be paid or to received. Use only one VAT rate of 21%. The final amount should automatically be labeled as a payment or a receipt. All amounts must be formatted in whole euros.
-2.  Test the model thoroughly with all possibilities.
+1.  Create a model with cells for entering the total sales and prepaid VAT, and cells for the constants (the thresholds and VAT percentage). Calculate the initial VAT to be paid, the reduction, and the final amount to be paid or received in other cells. Use a single VAT rate of 21%. The final amount should automatically be labeled as a payment or a receipt. All amounts must be formatted as whole euros.
 
-[File]{.smallcaps}: `Form006.xlsx`
+2.  Thoroughly test the model with all possible scenarios.
+
 :::
 
 ::: {#exr-form007}
-**Ticket price (form007)**
+**Ticket Price (form007)**
 
-The following table shows the prices of a ticket for a sports game. There are two categories: children and adults. There is also a cell for entering the age (in whole years). After entering the age the ticket price is automatically calculated.
+[File]{.smallcaps}: `Form007.xlsx`
+
+The following table shows the ticket prices for a sports game. There are two categories: children and adults. There's also a cell for entering the age (in whole years). After entering the age, the ticket price is automatically calculated.
 
 ![](images/functions/form007-model.png)
 
-Create this model in a worksheet. Use an IF function for the price calculation. Test the solution with different ages.
-
-[File]{.smallcaps}: `Form007.xlsx`
+Create this model in a worksheet. Use an `IF` function for the price calculation. Test the solution with different ages.
 :::
 
 ::: {#exr-form008}
-**Property tax (form008)**
+**Property Tax (form008)**
 
-The property tax has two parts, an owner part, and a user part. If the owner occupies the property himself, then he must pay both parts. The rate for both parts depends on the assessment of the value according to the WOZ act. The property tax for 2010 in a certain community amounts for the owner 0.1064% and for the user 0.1224% of the WOZ value.
+[File]{.smallcaps}: `Form008.xlsx`
+
+The property tax has two parts: an owner's portion and a user's portion. If the owner occupies the property themselves, they must pay both portions. The rate for both portions depends on the assessed value according to the WOZ Act. The property tax for 2010 in a certain community is 0.1064% of the WOZ value for the owner and 0.1224% for the user.
 
 ![](images/functions/form008-model.png)
 
-Create this model in a worksheet. The calculated values for owner and user depends on the answer “yes” or “no” on both questions.
-
-[File]{.smallcaps}: `Form008.xlsx`
+Create this model in a worksheet. The calculated values for the owner and user depend on the answers "yes" or "no" to both questions.
 :::
 
-::: {#exr-form009}
-**Savings deposit (form009)**
-
-An amount of $ 20,000 will be put for a year in a savings deposit at an interest rate of 2.75%. Create a calculation model in which both the interest and the total amount after one year is calculated.
+:::: {#exr-form009}
+**Savings Deposit (form009)**
 
 [File]{.smallcaps}: `Form009.xlsx`
 
+An amount of \$20,000 will be placed in a savings deposit for one year at an interest rate of 2.75%. Create a calculation model that calculates both the interest and the total amount after one year.
+
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-Interest = $ 550.00 and Amount = $ 20,550.00
+
+Interest = \$ 550.00 and Amount = \$ 20,550.00
+
 `r unhide()`
 :::
-
-:::
+::::
 
 ::: {#exr-form010}
-**Joule's law (form010)**
-
-The amount of heat generated by an electric current flowing through a conductor can be calculated with Joule's law: $Q = 0.24*i^2*R*t$
-
-+ `Q`: The amount of heat (cal)
-+ `i`: Current (ampere)
-+ `R`: Resistance (ohm)
-+ `t`: Time (sec)
-
-Create a model in a worksheet in which current, the resistance, and the time can be entered and the amount of heat is calculated from the entered data.
+**Joule's Law (form010)**
 
 [File]{.smallcaps}: `Form010.xlsx`
+
+The amount of heat generated by an electric current flowing through a conductor can be calculated using Joule's law: $Q = 0.24 * i^2 * R * t$
+
+Where:
+
+-   `Q`: The amount of heat (cal)
+-   `i`: Current (ampere)
+-   `R`: Resistance (ohm)
+-   `t`: Time (sec)
+
+Create a model in a worksheet where the current, resistance, and time can be entered, and the amount of heat is calculated from the entered data.
 :::
 
-::: {#exr-form011}
-**Investment bond (form011)**
+:::: {#exr-form011}
+**Investment Bond (form011)**
 
-A government bond with a maturity of 5 years annually pays a 3.5% interest rate. Suppose you want to have $300,000 over 5 years, how much do you need to invest in this bond? Use Excels function for present value (PV) to calculate the answer.
+A government bond with a maturity of 5 years pays an annual interest rate of 3.5%. Suppose you want to have \$300,000 after 5 years; how much do you need to invest in this bond? Use Excel's present value function (`PV`) to calculate the answer.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-$ 252,592
+
+\$ 252,592
+
 `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-form012}
-**Multiplication table (form012)**
+:::: {#exr-form012}
+**Multiplication Table (form012)**
 
 First, create the following table:
 
 ![](images/functions/form012-table.png)
 
-Then enter in cell B2 a formula that you can copy down and to the right to the rest of the table so that the value inside each cell in the table is the multiplication of number before the row and the number above the column.
+Then, enter a formula in cell B2 that you can copy down and to the right to fill the rest of the table, so that the value in each cell is the product of the number to the left of the row and the number above the column.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
-You will need a combination of absolute and relative addressing in your formula.
+
+You'll need a combination of absolute and relative addressing in your formula.
+
 `r unhide()`
 :::
-
-:::
+::::
 
 ::: {#exr-form013}
-**Price olive oil (form013)**
+**Price of Olive Oil (form013)**
 
-Olive oil can be purchased in cans of 5 liters. The price depends upon the number of cans:
+Olive oil can be purchased in 5-liter cans. The price depends on the number of cans:
 
--   $45 per can for the first 20 cans
--   $40 for any can more than 20
+-   \$45 per can for the first 20 cans
+-   \$40 for any can beyond 20
 
-Create a spreadsheet model where you can enter the total amount of cans and the total price should be calculated. Use cells for the price per can and the 20 cans limit. Give also names to all cells.
+Create a spreadsheet model where you can enter the total number of cans, and the total price is calculated. Use separate cells for the price per can and the 20-can limit. Name all the cells appropriately.
 :::

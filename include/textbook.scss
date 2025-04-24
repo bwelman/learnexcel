@@ -82,6 +82,13 @@ nav-link active {
   border-radius: 5px;
 }
 
+.exercise {
+  padding: 0.5em;
+  margin: 10px 0 10px 0;      /* top right bottom left */
+  border: 1px solid $tbGray;
+  border-radius: 5px;
+}
+
 /* MS Office specific */
 
 .uicontrol {

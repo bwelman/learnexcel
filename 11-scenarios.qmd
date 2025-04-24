@@ -6,144 +6,147 @@
 ::: callout
 **OBJECTIVES**
 
-+ What is a scenario.
-+ Create a scenario. 
+-   What is a scenario.
+-   Create a scenario.
 :::
 
-A scenario is a [what-if]{.term} model. It allows you to explore and calculate different future situations (scenarios) without changing values in the worksheet.
+A scenario is a [what-if]{.term} model. It allows you to explore and calculate different potential future situations (scenarios) without directly changing the values in your worksheet.
 
-In a scenario, you give some variable cells (known as **changing cells**) different values and calculate the effect of the changes on certain **result cells**. The result cells contain formulas with references to the changing cells.
+In a scenario, you assign different values to specific variable cells (known as **changing cells**) and then calculate the resulting effect of those changes on your designated **result cells**. The result cells contain formulas that reference the changing cells.
 
-For example, you might want to compare best-case and worst-case scenarios for the annual profit of a coffee shop, based on different costs. The result cell is the cell with the calculated profit. The changing cells are the cells with the costs.
+For example, you might want to compare best-case and worst-case scenarios for a coffee shop's annual profit, based on varying costs. In this case, the result cell would be the cell where the profit is calculated, and the changing cells would be the cells containing the cost values.
 
-Identifying the changing cells and result cells is key for creating scenarios.
+Identifying the changing cells and the result cells is crucial when creating scenarios.
 
-With Excel's scenario manager, you can create different sets of input data that calculate the corresponding results. You can save such a scenario under an appropriate name (such as Most Positive, Most Negative, ...). You can easily compare the different results in a produced summary report. This report shows both the input values for the changing cells and the values of the result cells.
+Using Excel's Scenario Manager, you can create different sets of input data to calculate the corresponding outcomes. You can save each set as a named scenario (e.g., "Most Optimistic," "Most Pessimistic," etc.). Then, you can easily compare the different outcomes using a generated summary report. This report displays both the input values for the changing cells and the resulting values of the result cells.
 
-::: {.callout-note}
+::: callout-note
 It is recommended to always save the current situation in a scenario, for example under the name [Current]{.varname}.
 :::
 
-## Coffee bar {#sec-scenarios-coffeebar}
+## Coffee Bar {#sec-scenarios-coffeebar}
 
-In @fig-coffeebar-model, you see a calculation model of a coffee bar. The gray cells are the variable cells.
+@fig-coffeebar-model shows a calculation model for a coffee bar. The gray cells represent the variable cells.
 
-![Calculation model for coffee bar.](images/scenarios/coffeebar-model.png){#fig-coffeebar-model}
+![Calculation model for a coffee bar.](images/scenarios/coffeebar-model.png){#fig-coffeebar-model}
 
-In addition to the current situation, the owner of the coffee bar "The Brown Bear" wants to explore two other scenarios to see the effect on the profit.
+In addition to analyzing the current situation, the owner of "The Brown Bear" coffee bar wants to explore two other scenarios to understand their potential impact on profit:
 
-Higher prices, less salary and advertising
-: A scenario with 10% higher prices and less investment in salaries ($ 30,000 less) and advertising ($ 5,000 less) 
+Higher prices, less salary and advertising:
 
-Higher prices, lower costs and more advertising
-: A scenario with 5% higher prices, 5% lower order costs and more advertising (€2000 more)
+:   This scenario involves a 10% increase in prices, a \$30,000 reduction in salary expenses, and a \$5,000 reduction in advertising expenses.
 
-::: {#prp-scenarios-coffeebar}
+Higher prices, less order costs and more advertising
+
+:   This scenario features a 5% increase in prices, a 5% decrease in order costs, and a \$2,000 increase in advertising expenses.
+
+::::: {#prp-scenarios-coffeebar}
 [File]{.smallcaps}: `BrownBean.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-Study the model. Identify the changing cells and the result cell. Study the used formulas and see that all cells have names.
+Examine the model carefully. Identify the cells that will change and the cell that shows the final result. Review the formulas used and note that all cells have defined names.
 
-::: {.callout-note}
-If you give meaningful names to the cells then these names will be used in the summary report instead of the addresses. Then it will be easy to read the report.
+::: callout-note
+Using meaningful names for your cells, rather than just cell addresses, will make the summary report easier to interpret.
 :::
 
-2. Choose [tab Data > What-If Analysis (group Forecast) > Scenario Manager]{.uicontrol}.
+2.  Go to [tab Data \> What-If Analysis (Forecast group) \> Scenario Manager]{.uicontrol}.
 
-![Dialog box Scenario Manager.](images/scenarios/scenario-manager.png){#fig-scenario-manager}
+![Scenario Manager dialog box.](images/scenarios/scenario-manager.png){#fig-scenario-manager}
 
-3. Click [Add]{.uicontrol}.
+3.  Click [Add]{.uicontrol}.
 
-4. Fill in the dialog box as shown in @fig-coffeebar-scen-current. When specifying the [Changing cells]{.uicontrol}, use the [CTRL]{.uicontrol} key to select multiple areas. 
+4.  Complete the [Add Scenario]{.uicontrol} dialog box as shown in @fig-coffeebar-scen-current. When selecting the [Changing cells]{.uicontrol}, use the [CTRL]{.uicontrol} key to select multiple ranges.
 
 ![Dialog box to record the current situation in a scenario.](images/scenarios/coffeebar-scen-current.png){#fig-coffeebar-scen-current}
 
-5. Click [OK]{.uicontrol}. The window ***Scenario Values*** appears with the values for the changing cells already entered.
+5.  Click [OK]{.uicontrol}. The ***Scenario Values*** window will appear, pre-filled with the current values of the changing cells.
 
-![Dialog box with the values of the changing cells for scenario Current.](images/scenarios/coffeebar-scen-current-values.png){#fig-coffeebar-scen-current-values}
+![Dialog box showing current values for the "Current" scenario.](images/scenarios/coffeebar-scen-current-values.png){#fig-coffeebar-scen-current-values}
 
-6. Click on [Add]{.uicontrol} for entering a new scenario.
+6.  Click [Add]{.uicontrol} to enter a new scenario.
 
-7. Give the scenario the name [Higher prices, less salary and advertising]{.varname}. Give it a brief description and click [OK]{.uicontrol}.
+7.  Name the scenario "Higher prices, less salary and advertising". Add a brief description if you'd like, and then click [OK]{.uicontrol}.
 
-The Scenario Values dialog box appears, still showing the current values of the changing cells.
+The Scenario Values dialog box will reappear, still displaying the current values of the changing cells.
 
-8. Now type the new values in the cells that change for this scenario. Instead of calculating these values yourself, you can enter a formula. Excel automatically calculates the new value.
+8.  Now, enter the new values for the cells that will change in this scenario. Instead of manually calculating these values, you can enter formulas, and Excel will automatically calculate the result.
 
-   + Yield_per_Order: `=1.1*2.5`
-   + Salaries: `=300000-30000`
-   + Advertisement: `=20000-5000`
+    -   Yield_per_Order: `=1.1*2.5`
+    -   Salaries: `=300000-30000`
+    -   Advertisement: `=20000-5000`
 
-9. Click [OK]{.uicontrol}.
+9.  Click [OK]{.uicontrol}.
 
-::: {.callout-warning}
-When you have used formulas, a warning screen appears that the entered formulas will be replaced by the results of the formulas.
+::: callout-warning
+If you've used formulas, a warning message will appear, indicating that the entered formulas will be replaced by their calculated results.
 
-Confirm with [OK]{.uicontrol}
+Confirm by clicking [OK]{.uicontrol}
 :::
 
-10. The same way, create another scenario with the name [Higher prices, less order costs and more advertising]{.varname} and adjust the values for this scenario.
+10. In the same way, create another scenario named "Higher prices, less order costs and more advertising" and adjust the cell values accordingly.
 
-After the last scenario has been added, you will return to the ***Scenario Manager*** dialog which now contains three scenarios (@fig-coffeebar-scenarios). 
+After you've added the last scenario, you'll be taken back to the ***Scenario Manager*** dialog box, which will now list all three scenarios (@fig-coffeebar-scenarios).
 
-![Dialog box with the three scenarios.](images/scenarios/coffeebar-scenarios.png){#fig-coffeebar-scenarios}
+![Dialog box displaying the three scenarios.](images/scenarios/coffeebar-scenarios.png){#fig-coffeebar-scenarios}
 
-11. Now select each scenario one after the other and then click on [Show]{.uicontrol}.
+11. Select each scenario one at a time, and then click [Show]{.uicontrol}.
 
-In the worksheet, the values in the changing cells and the cells that depend on them are adjusted for the selected scenario. 
+In the worksheet, the values in the changing cells, and the cells that are dependent on them, will be updated to reflect the selected scenario.
 
-12. Click on [Summary]{.uicontrol} to create a report.
+12. Click [Summary]{.uicontrol} to generate a report.
 
-A dialog box will appear (@fig-coffeebar-scen-reporttype) in which you can choose the type of summary. Also the result cell (the cell with the profit) has already been filled in by Excel.
+A dialog box will appear (@fig-coffeebar-scen-reporttype), allowing you to choose the type of summary you want. The result cell (containing the profit calculation) will already be filled in by Excel.
 
-![Dialog box scenario summary.](images/scenarios/coffeebar-scen-reporttype.png){#fig-coffeebar-scen-reporttype}
+![DialogScenario Summary dialog box.](images/scenarios/coffeebar-scen-reporttype.png){#fig-coffeebar-scen-reporttype}
 
 13. Click [OK]{.uicontrol}.
 
-A summary report will now appear in a new worksheet. Note that the left column contains the assigned cell names and not the addresses, making the report easier to read.
+A summary report will be created in a new worksheet. Notice that the left column displays the assigned cell names, rather than cell addresses, making the report easier to understand.
 
 ![Summary report.](images/scenarios/coffeebar-scen-summary.png){#fig-coffeebar-scen-summary}
-
-:::
+:::::
 
 ## Exercises {#sec-scenarios-exercises}
 
 ::: {#exr-scen001}
-**Profit margin - Sales price (scen001)**
+**Profit Margin - Sales Price (scen001)**
 
-Create the following table as accurate as possible. Use formulas for the determination of the margin, VAT, and the selling prices.
+[File]{.smallcaps}: `Scen001.xlsx`
+
+Create the following table as accurately as possible. Use formulas to calculate the margin, VAT, and selling prices.
 
 ![](images/scenarios/scen001-data.png)
 
-Use the Scenario Manager to determine the selling prices (incl. VAT) for successively the profit margin rates of 15%, 20%, 25%, and 30%. The output should look like the following:
+Use the Scenario Manager to determine the selling prices (including VAT) for profit margin rates of 15%, 20%, 25%, and 30%. The output should resemble the following:
 
 ![](images/scenarios/scen001-report.png)
-
-[File]{.smallcaps}: `Scen001.xlsx`
 :::
 
 ::: {#exr-scen002}
-**Budget sports club (scen002)**
+**Budget - Sports Club (scen002)**
 
-In the following figure, you see a simplified budget of a sports club. The rent is exactly known. For the other posts, a reasonable indication of the lower and upper limits can be given.
+[File]{.smallcaps}: `Scen002.xlsx`
 
--   The subscription revenues are between $1800 and $2400.
--   The canteen revenues are between $600 and $800.
--   The costs of materials are between $500 and $800.
--   The miscellaneous costs are between $400 and $700.
+The figure below shows a simplified budget for a sports club. The rent is a fixed amount. For the other items, reasonable estimates of the lower and upper limits are provided:
+
+-   Subscription revenues range from \$1,800 to \$2,400.
+-   Canteen revenues range from \$600 to \$800.
+-   Material costs range from \$500 to \$800.
+-   Miscellaneous costs range from \$400 to \$700.
 
 ![](images/scenarios/scen002-data.png)
 
 Enter the model in a worksheet. Create with the Scenario Manager the most positive and most negative scenario. The output should look like the following:
 
 ![](images/scenarios/scen002-report.png)
-
-[File]{.smallcaps}: `Scen002.xlsx`
 :::
 
-::: {#exr-scen003}
+:::: {#exr-scen003}
 **Scenarios business profit (scen003)**
+
+[File]{.smallcaps}: `Scen003.xlsx`
 
 A company makes three products (A, B en C). To manufacture each product a different number of working hours and materials is needed. In the following figure, you see the rates for labor and material costs as well as the quantities needed to make these products. Also, the costs and revenues are calculated for the current production quantities.
 
@@ -153,33 +156,34 @@ Enter the model in a worksheet. Provide the right formulas in the cells in which
 
 Management wants a prediction of the operating profit, but there is still some uncertainty about the amount of labor and material costs. For the prediction are therefore three scenarios available: the favorable case, the bad case, and the current (most likely) case. The different rates are listed in the following table.
 
-|scenario|wages|material costs|
-|--------|-----|--------------|
-|favorable|$ 60|$ 114|
-|bad|$ 76|$ 124|
-|current|$ 68|$ 118|
+| scenario  | wages | material costs |
+|-----------|-------|----------------|
+| favorable | \$ 60 | \$ 114         |
+| bad       | \$ 76 | \$ 124         |
+| current   | \$ 68 | \$ 118         |
 
 Create a summary report for these three scenarios using the Scenario Manager.
 
-[File]{.smallcaps}: `Scen003.xlsx`
-
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
+
 ![](images/scenarios/scen003-report.png)
+
 `r unhide()`
 :::
+::::
 
-:::
+:::: {#exr-scen004}
+**Automation Company Earnings(scen004)**
 
-::: {#exr-scen004}
-**Gainings automation company (scen004)**
+[File]{.smallcaps}: `Scen004.xlsx`
 
-The revenues and expenditures of an automation company for 2010 are listed in the following figure. The executive board would like to make a profit forecast for the years 2011 and 2012. The revenues and expenditures for these two years are influenced by the following factors.
+The revenues and expenditures of an automation company for 2010 are shown in the figure below. The executive board wants to create a profit forecast for 2011 and 2012. The revenues and expenditures for these two years are influenced by the following factors:
 
--   An increase of all revenues with a growth factor which is currently 10%.
--   An increase of all expenditures except interest by an inflation factor which is currently 3%.
--   The interest rate which is currently 8%.
--   The tax percentage which is currently 35%.
+-   All revenues increase by a growth factor, currently 10%.
+-   All expenditures, except interest, increase by an inflation factor, currently 3%.
+-   The interest rate is currently 8%.
+-   The tax percentage is currently 35%.
 
 ![](images/scenarios/scen004-data.png)
 
@@ -189,14 +193,13 @@ Management wants a prediction of the profit forecast, but there is still some un
 
 ![](images/scenarios/scen004-scenarios.png)
 
-Create a summary report for these three scenarios using the Scenario Manager.
-
-[File]{.smallcaps}: `Scen004.xlsx`
+Create this model in a worksheet. The revenues and expenditures for 2010 are fixed, and the values for 2011 and 2012 should be calculated using formulas.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
+
 ![](images/scenarios/scen004-report.png)
+
 `r unhide()`
 :::
-
-:::
+::::

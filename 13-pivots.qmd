@@ -6,685 +6,649 @@
 ::: callout
 **OBJECTIVES**
 
-+ Features of a pivot table.
-+ Creating pivot tables.
-+ Source data from a pivot table.
-+ Grouping of date/time data.
-+ Filtering a pivot table with report filters, slicers and timelines.
-+ Creating pivot charts. 
+-   Understand the features of a PivotTable.
+-   Learn how to create PivotTables.
+-   Identify source data from a PivotTable.
+-   Group date/time data.
+-   Filter a PivotTable using report filters, slicers, and timelines.
+-   Create PivotCharts.
 :::
 
-A PivotTable is a data summarization tool. It's an interactive dynamic table in which you can quickly and easily summarize, combine, and compare large amounts of data. It is necessary that the data is properly organized in a worksheet.
+A PivotTable is a powerful data summarization tool. It's an interactive, dynamic table that allows you to quickly and easily summarize, combine, and compare large amounts of data. For a PivotTable to function correctly, the data must be well-organized in a worksheet.
 
-A pivot table is especially suitable when variables need to be plotted against other variables, allowing you to get answers to questions such as:
+PivotTables are particularly useful when you need to analyze variables in relation to other variables, helping you answer questions such as:
 
-+ Which product makes the highest profit contribution?
-+ Which salesman makes the highest turnover?
-+ Which department incurs the most costs?
-+ ...
+-   Which product contributes the most to profit?
+-   Which salesperson generates the highest revenue?
+-   Which department incurs the most costs?
+-   ...
 
 ::: {#exm-supermarket}
-**Sales by category**
+**Sales by Category**
 
-In the pivot table in @fig-supermarket-productcategory-town you can easily compare the turnover in the three product categories. 
+The PivotTable in @fig-supermarket-productcategory-town allows for an easy comparison of revenue across three product categories.
 
-![Example of a pivot table in which product category is plotted against location.](images/pivots/supermarket-productcategory-town.png){#fig-supermarket-productcategory-town}
+![Example of a PivotTable showing product categories plotted against locations.](images/pivots/supermarket-productcategory-town.png){#fig-supermarket-productcategory-town}
 
-A pivot table plots at least two types of data against each other. One data type goes in the column field, here [productcategory]{.varname}, the other in the row field, here [town]{.varname}. In addition, a data type whose results you want to see must be placed in the value field, here [Sales]{.varname}.
+A PivotTable plots at least two types of data against each other. One data type is placed in the column field (here, [productcategory]{.varname}), and the other in the row field (here, [town]{.varname}). Additionally, a data type for which you want to see results must be placed in the value field (here, [Sales]{.varname}).
 
-Because these results are summarized, it is also necessary to indicate which calculation should be used, here `Sum`, the default choice. 
-
+Since these results are summarized, you also need to specify the calculation method; in this case, `Sum` is the default choice.
 :::
 
-A PivotTable has four areas in which you can place fields:
+A PivotTable has four areas where you can place fields:
 
-|Area   |Description                                                                                                   |
-|-------|--------------------------------------------------------------------------------------------------------------|
-|Values |The fields with numeric information you want to summarize, usually for the calculation of totals and averages.|
-|Rows   |These fields are used to create separate groups and put the information for each group in a separate row.|
-|Columns|These fields are also used to create separate groups. Mostly used if you want to subdivide the data into the rows. These groups are displayed in separate columns. Take fields with not too many groups, otherwise, the table will come too wide.|
-|Filters|These fields can be used for filtering the data.|
+| Area | Description |
+|:---|:---|
+| Values | Fields with numeric information you want to summarize, typically for calculating totals and averages. |
+| Rows | Fields used to create distinct groups, with information for each group displayed in a separate row. |
+| Columns | Fields also used to create distinct groups, often for subdividing data within rows. These groups are displayed in separate columns. Choose fields with a manageable number of groups to prevent the table from becoming too wide. |
+| Filters | Fields used to filter the data. |
 
-:  Areas in a pivottable. {#tbl-pivotareas}
+: Areas in a PivotTable. {#tbl-pivotareas tbl-colwidths="25,75"}
 
 ## Creating PivotTables {#sec-pivots-creating}
 
-The file for this task contains the monthly sales in 2016 of three supermarkets for different products, see @fig-supermarket-sales-data. These products are divided into three product groups: pvf (potatoes, vegetables, fruit), meat and dairy. This data is analyzed using a pivot table. 
+The file for this task contains the monthly sales in 2016 for three supermarkets across different products, as shown in @fig-supermarket-sales-data. These products are categorized into three groups: PVF (potatoes, vegetables, fruit), meat, and dairy. This data will be analyzed using a PivotTable.
 
-![Table with sales data.](images/pivots/supermarket-sales-data.png){#fig-supermarket-sales-data}
+![Table displaying sales data.](images/pivots/supermarket-sales-data.png){#fig-supermarket-sales-data}
 
-**Information need**: What are the total sales per town per productcategory?.
+**Information needed**: What are the total sales per town per product category?.
 
-::: {#prp-pivots-creating}
+:::::: {#prp-pivots-creating}
 [File]{.smallcaps}: `Supermarket.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Select any cell in the table. Choose [tab Insert > PivotTable (group Tables) > From Table/Range]{.uicontrol}.
+2.  Select any cell within the table. Choose [tab Insert \> PivotTable (Tables group) \> From Table/Range]{.uicontrol}.
 
-The dialog box Create PivotTable appears. The range of the table has already filled in.
+The Create PivotTable dialog box will appear, with the table range already populated.
 
-![Selecting data range for the pivottable.](images/pivots/supermarket-pivot-create.png){#fig-supermarket-pivot-create}
+![Selecting the data range for the PivotTable.](images/pivots/supermarket-pivot-create.png){#fig-supermarket-pivot-create}
 
-3. In this task, the PivotTable should appear in the existing worksheet. [Select Existing Worksheet]{.uicontrol} and click on an empty cell in the worksheet, e.g. cell G3.
+3.  For this task, the PivotTable should appear in the existing worksheet. Select [Existing Worksheet]{.uicontrol} and click on an empty cell in the worksheet, for example, cell G3.
 
-![Specifying place for the pivottable.](images/pivots/pivottable-location.png){#fig-pivottable-location}
+![Specifying the PivotTable location.](images/pivots/pivottable-location.png){#fig-pivottable-location}
 
-4. Click [OK]{.uicontrol}.
+4.  Click [OK]{.uicontrol}.
 
-An empty PivotTable is created on the worksheet and a task pane appears on the right side with the PivotTable fields in which you can add fields to the report.
+An empty PivotTable will be created on the worksheet, and a task pane will appear on the right side with the PivotTable Fields, where you can add fields to the report.
 
-::: {#fig-supermarket-pivot layout-ncol=2}
+::: {#fig-supermarket-pivot layout-ncol="2"}
+![Empty PivotTable on the worksheet.](images/pivots/pivottable-empty.png){#fig-pivottable-empty}
 
-![Empty pivot table on the worksheet](images/pivots/pivottable-empty.png){#fig-pivottable-empty}
+![PivotTable Fields task pane.](images/pivots/supermarket-pivotfields.png){#fig-pivottable-fields}
 
-![Task pane PivotTable Fields.](images/pivots/supermarket-pivotfields.png){#fig-pivottable-fields}
-
-Creation of a Pivot Table.
-
+Creating a PivotTable.
 :::
-
 
 ::: callout-note
-The task panel with the field list will be shown when a cell in the PivotTable is the active cell. As soon as you click on a cell outside the PivotTable, the task panel disappears. The panel appears again when you click on any cell within the PivotTable.
+The task pane with the field list is shown when a cell in the PivotTable is active. If you click on a cell outside the PivotTable, the task pane disappears. It reappears when you click on any cell within the PivotTable.
 :::
 
-5. Drag in the task panel field [town]{.varname} to the area [Rows]{.uicontrol}, field [productcategory]{.varname} to the area [Columns]{.uicontrol}, and field [sales]{.varname} to the area [Values]{.uicontrol}. At the last action, the calculation method `Sum` of the Sales is applied automatically.
+5.  In the task pane, drag the [town]{.varname} field to the [Rows]{.uicontrol} area, the [productcategory]{.varname} field to the [Columns]{.uicontrol} area, and the [sales]{.varname} field to the [Values]{.uicontrol} area. When the [sales]{.varname} field is added to Values, the `Sum` calculation method is applied automatically.
 
-![Used fields for the PivotTable.](images/pivots/supermarket-productcategory-town-fields.png){#fig-supermarket-productcategory-town-fields}
+![Fields selected for the PivotTable.](images/pivots/supermarket-productcategory-town-fields.png){#fig-supermarket-productcategory-town-fields}
+
+::: callout-tip
+You can remove a field from the PivotTable by dragging it out of its area.
+:::
+
+The PivotTable in the worksheet will be populated with the data.
+
+![PivotTable report showing sales per month per product.](images/pivots/supermarket-productcategory-town.png){#fig-supermarket-pivotreport}
+::::::
+
+:::: {#prp-pivots-accountingnumbers}
+**Formatting Values as Accounting Numbers**
+
+1.  Select any numeric value in the PivotTable. Choose [tab PivotTable Analyze \> Field Settings (Active Field group]{.uicontrol}.
+
+![Value Field Settings dialog box.](images/pivots/supermarket-pivot-fieldsettings.png){#fig-supermarket-pivot-fieldsettings}
 
 ::: callout-note
-You can delete a field from the PivotTable by dragging it out of the area.
+The ***Value Field Settings*** dialog box is crucial when creating PivotTable reports. Here, you can configure various options, such as:
+
+-   The name to be displayed, using the [Custom Name]{.uicontrol} box.
+-   The calculation method (default is `Sum`). Other options include: `Count`, `Average`, `Min`, `Max`, `Product`, `Stdev`, `Stdevp`, `Var`, `Varp`.
+-   How you want to display the values, for example, as percentages of the row or column total.
 :::
 
-The PivotTable in the worksheet is filled with the data.
+2.  Click the [Number Format]{.uicontrol} button. The Format Cells dialog box will be displayed.
 
-![PivotTable report: Sales per month per product.](images/pivots/supermarket-productcategory-town.png){#fig-supermarket-pivotreport}
+3.  Choose the category [Accounting \> Decimal places: 0 \> Symbol: \$]{.uicontrol}.
 
-:::
+![Formatting the Sum of Sales field.](images/pivots/cellformat-accounting.png){#fig-cellformat-accounting}
 
-::: {#prp-pivots-accountingnumbers}
-**Formatting values as accounting numbers**
+4.  Click [OK \> OK]{.uicontrol}.
 
-1. Select any numeric value in the PivotTable. Choose [tab PivotTable Analyze > Field Settings (group Active Field]{.uicontrol}.
-
-![Dialog box value Field Settings.](images/pivots/supermarket-pivot-fieldsettings.png){#fig-supermarket-pivot-fieldsettings}
-
-::: callout-note
-The dialog box ***Value Field Settings*** is very important when creating pivot table reports. You can arrange various things here, such as:
-
-+ the name to be displayed via the box [Custom Name]{.uicontrol}.
-+ the calculation method, default `Sum`. Other options are: `Count`, `Average`, `Min`, `Max`, `Product`, `Stdev`, `Stdevp`, `Var`, `Varp`.
-+ how you want to display the values, for example as percentages of the row or column total. 
-:::
-
-2. Click on the button [Number Format]{.uicontrol}. The dialog box Format Cells is displayed.
-
-3. Choose category [Accounting > Decimal places: 0 > Symbol: $]{.uicontrol}.
-
-![Formatting of field sum of sales.](images/pivots/cellformat-accounting.png){#fig-cellformat-accounting}
-
-4. Click [OK > OK]{.uicontrol}.
-
-The value fields in the PivotTable appear in the specified format.
-
-:::
+The value fields in the PivotTable will now appear in the specified format.
+::::
 
 ::: {#prp-pivots-columnlabels}
-**Changing column labels and row labels by a field name**
+**Changing Column Labels and Row Labels to Field Names**
 
-Select any cell in the PivotTable. Choose [tab Design > Report Layout (group Layout) > Show in Outline Form]{.uicontrol}.
+Select any cell in the PivotTable. Choose [tab Design \> Report Layout (Layout group) \> Show in Outline Form]{.uicontrol}.
 
-![Formatted PivotTable: sales per town per productcategory.](images/pivots/supermarket-productcategory-town-formatted.png){#fig-supermarket-productcategory-town-formatted}
+![Formatted PivotTable: Sales per town per product category.](images/pivots/supermarket-productcategory-town-formatted.png){#fig-supermarket-productcategory-town-formatted}
 :::
 
 ::: {#prp-pivots-productcategory}
-**Analyzing products within each productcategory**
+**Analyzing Products Within Each Product Category**
 
-1. Drag field [productcategory]{.varname} frow Columns to Rows and field [town]{.varname} from Rows to Columns. Next drag field [product]{.varname} to Rows and below field [productcategory]{.varname}.
+1.  Drag the [productcategory]{.varname} field from Columns to Rows and the [town]{.varname} field from Rows to Columns. Then, drag the [product]{.varname} field to Rows, placing it below the [productcategory]{.varname} field.
 
-![Used fields.](images/pivots/supermarket-cat-products-town-fields.png){#fig-supermarket-cat-products-town-fields}
+![Fields used in the PivotTable.](images/pivots/supermarket-cat-products-town-fields.png){#fig-supermarket-cat-products-town-fields}
 
 ![PivotTable report with two row fields.](images/pivots/supermarket-cat-products-town.png){#fig-supermarket-cat-products-town}
 
-Instead of total sales you can also calculate other values, for example, the average monthly sales.
+Instead of total sales, you can also calculate other values, such as the average monthly sales.
 
-2. Select any numeric value in the PivotTable and change through the [Field Settings]{.uicontrol}, see @fig-supermarket-pivot-fieldsettings, the calculation type in `Average`.
-
+2.  Select any numeric value in the PivotTable and, using [Field Settings]{.uicontrol} (see @fig-supermarket-pivot-fieldsettings), change the calculation type to `Average`.
 :::
 
-::: {#prp-pivots-top3}
+:::: {#prp-pivots-top3}
 **Top 3 products**
 
-Now try to answer the following question using pivot tables:
+Now try to answer the following question using PivotTables:
 
 Which three products generate the most sales?
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
-Use [product]{.varname} as row variabele. There is no column variable in this case. In the pivot table report, sort revenue from highest to lowest.
+
+Use [product]{.varname} as the row variabele. There is no column variable in this case. In the PivotTable report, sort revenue from highest to lowest.
 
 ![](images/pivots/supermarket-products.png)
+
 `r unhide()`
 :::
-
-:::
+::::
 
 ## Finding Data Sources {#sec-pivots-datasources}
 
-A PivotTable contains summarized data. In this task, you learn how to find the source of these data.
+A PivotTable contains summarized data. In this task, you will learn how to find the source of this data.
 
-In a worksheet are some data of employees like sales, expenses, and provision per month and per region. A PivotTable with the sales per region per employee has been created in another worksheet.
+A worksheet contains employee data such as sales, expenses, and commission per month and per region. A PivotTable showing sales per region per employee has been created in another worksheet.
 
 ![Sales per region per employee.](images/pivots/sales-pivot.png){#fig-sales-pivot}
 
-If you want the individual values a result is provided, Excel can show you this quickly and easily. By double-clicking on a result, Excel creates a new worksheet containing a table with the source data.
+If you want to see the individual values that make up a result, Excel can show you this quickly and easily. By double-clicking on a result, Excel creates a new worksheet containing a table with the source data.
 
 ::: {#prp-pivots-datasources}
 [File]{.smallcaps}: `Sales.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Select the worksheet PivotTable and double-click on the results of [Jansen]{.uicontrol} in the region [East]{.uicontrol}.
+2.  Select the PivotTable worksheet and double-click on the results for [Jansen]{.uicontrol} in the [East]{.uicontrol} region.
 
-A new worksheet with a list of all information about Jansen in the region East is created.
+A new worksheet with a list of all information about Jansen in the East region will be created.
 
-![Data for Jansen in the region east.](images/pivots/sales-pivot-datasource.png){#fig-sales-pivot-datasource}
-
+![Data for Jansen in the East region.](images/pivots/sales-pivot-datasource.png){#fig-sales-pivot-datasource}
 :::
 
-## Grouping data {#sec-pivots-grouping-data}
+## Grouping Data {#sec-pivots-grouping-data}
 
-You can make a cluttered list of data more suitable for analysis by grouping the data. This is especially the case when the data contains dates. Dates can often be grouped into years, quarters or months. In a pivot table you can view the data per year, per quarter or per month.
+You can make a cluttered list of data more suitable for analysis by grouping it. This is especially true when the data contains dates. Dates can often be grouped into years, quarters, or months. In a PivotTable, you can view data by year, quarter, or month.
 
 ::: {#exm-grouping-data}
-**Revenue per salesperson**
+**Revenue per Salesperson**
 
-@fig-invoices-ungrouped-grouped shows part of a pivot table showing revenue per salesperson. In the left image the revenue is in date order (ungrouped). In the right image the revenue is grouped by quarter and by month.
+@fig-invoices-ungrouped-grouped shows part of a PivotTable displaying revenue per salesperson. In the left image, the revenue is in date order (ungrouped). In the right image, the revenue is grouped by quarter and by month.
 
-![Revenue per salesperson. Ungrouped in the left figure, grouped in the right figure.](images/pivots/invoices-ungrouped-grouped.png){#fig-invoices-ungrouped-grouped}
-
+![Revenue per salesperson: Ungrouped (left) and grouped by quarter/month (right).](images/pivots/invoices-ungrouped-grouped.png){#fig-invoices-ungrouped-grouped}
 :::
 
-As of version 2016 Excel has the function **time grouping**. Automatically discovers and groups time-related fields. When adding such a field to a pivot table, new relevant fields are automatically created, such as [Years]{.varname}, [Quarters]{.varname} and [Months]{.varname}.
+Starting with version 2016, Excel includes a **time grouping** feature that automatically discovers and groups time-related fields. AutomaticallyWhen you add such a field to a PivotTable, new relevant fields like [Years]{.varname}, [Quarters]{.varname} and [Months]{.varname} are automatically created..
 
 Which date/time fields are added depends on the level of detail of the date/time field in the data table. For example, if the date data is in days and spans more than a year, additional fields are created for months, quarters, and years.
 
-Once the fields have been added you can start analyzing the data over the different time periods with zoom-in options. This way you can sometimes find extra insights.
+Once these fields have been added, you can begin analyzing the data across different time periods using zoom-in options, which can sometimes reveal additional insights.
 
 ::: {#exm-grouping-data2}
-**quarterly comparison by year**
+**Quarterly Comparison by Year**
 
-For example, to get a quarterly comparison over several years you can place the field [Years]{.varname} in the box [Columns]{.uicontrol} and the field [Quarters]{.varname} in the box [Rows]{.uicontrol }.
+For example, to get a quarterly comparison over several years, you can place the [Years]{.varname} field in the [Columns]{.uicontrol} box and the [Quarters]{.varname} field in the [Rows]{.uicontrol} box.
 
-The [+]{.uicontrol} button in the pivot table indicates a collapsed level. When you click on this, all elements in the pivot table are expanded to the next level, here [Months]{.varname}. The [+]{.uicontrol} button then changes into a [-]{.uicontrol} button that allows you to collapse the group again. This is also known as **zoom in** or [drill-down]{.term}.
+The [+]{.uicontrol} button in the PivotTable indicates a collapsed level. Clicking this button expands all elements in the PivotTable to the next level (here, [Months]{.varname}). The [+]{.uicontrol} button then changes to a [-]{.uicontrol} button, allowing you to collapse the group again. This is also known as zooming in or [drill-down]{.term}.
 
 ![Sales per quarter per year.](images/pivots/invoices-quarters-years.png){#fig-invoices-quarters-years}
-
 :::
 
 Custom grouping
-: You can adjust the grouping by right-clicking on a date/time field in the pivot table and then choosing [Group]{.uicontrol}. In the Grouping dialog box that appears, you can add or remove other time levels.
+
+:   You can adjust the grouping by right-clicking on a date/time field in the PivotTable and then choosing [Group]{.uicontrol}. In the Grouping dialog box that appears, you can add or remove other time levels.
 
 Ungroup
-: You can cancel a group by right-clicking on a grouped field in the pivot table and then choosing [Ungroup]{.uicontrol}.
+
+:   You can cancel a group by right-clicking on a grouped field in the PivotTable and then choosing [Ungroup]{.uicontrol}.
 
 ## Grouping Example {#sec-pivots-grouping-example}
 
-An example of grouping data based on a date field.
+This is an example of grouping data based on a date field.
 
-::: {#prp-pivots-grouping-example}
+:::: {#prp-pivots-grouping-example}
 [File]{.smallcaps}: `Invoices.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-The file contains a data table named [SalesData]{.varname} and columns [Region]{.varname}, [Salesman]{.varname}, [InvoiceNr]{.varname}, [InvoiceDate]{.varname}, [ProductCategory]{.varname}, and [InvoiceAmount]{.varname}.
+The file contains a data table named [SalesData]{.varname} with columns [Region]{.varname}, [Salesman]{.varname}, [InvoiceNr]{.varname}, [InvoiceDate]{.varname}, [ProductCategory]{.varname}, and [InvoiceAmount]{.varname}.
 
-First, a PivotTable with the sales per salesman per product category is created.
+First, a PivotTable with sales per salesman per product category will be created.
 
-2. Select any cell in the table. Choose [tab Insert > PivotTable (group Tables)]{.uicontrol}.
+2.  Select any cell in the table. Choose [tab Insert \> PivotTable (Tables group)]{.uicontrol}.
 
-![Specify data range and location of the PivotTable.](images/pivots/invoices-pivot-create.png){#fig-invoices-pivot-create}
+![Specifying the data range and location for the PivotTable.](images/pivots/invoices-pivot-create.png){#fig-invoices-pivot-create}
 
 ::: callout-note
-+ Since the data area here is a table called [Sales Dates]{.varname}, this name is automatically filled in and not the cell addresses.
+-   Since the data area here is a table named [SalesData]{.varname}, this name is automatically filled in instead of cell addresses.
 
-+ To have the pivot table appear on a new worksheet, accept the default option [New Worksheet]{.uicontrol}.
+-   To have the PivotTable appear on a new worksheet, accept the default option [New Worksheet]{.uicontrol}.
 :::
 
-3. Click [OK]{.uicontrol}.
+3.  Click [OK]{.uicontrol}.
 
-4. Create a pivot table according to the design in @fig-invoices-pivot-design and give the amounts a currency format. The result can be seen in @fig-invoices-sales-salesman. 
+4.  Create a PivotTable according to the design in @fig-invoices-pivot-design and format the amounts as currency. The result can be seen in @fig-invoices-sales-salesman.
 
-![Design PivotTable.](images/pivots/invoices-pivot-design.png){#fig-invoices-pivot-design}
+![PivotTable design layout.](images/pivots/invoices-pivot-design.png){#fig-invoices-pivot-design}
 
-![Sales per salesman per productcategory. Note that there are big differences by seller.](images/pivots/invoices-sales-salesman.png){#fig-invoices-sales-salesman}
+![Sales per salesperson per product category. Note the significant differences by seller.](images/pivots/invoices-sales-salesman.png){#fig-invoices-sales-salesman}
 
-5. Drag field [InvoiceDate]{.varname} to the area [Rows]{.uicontrol} and below field [Salesman]{.varname}. Excel's automatic time grouping feature creates two calculated fields, [Years]{.varname} and [Quarters]{.varname} in the [Rows]{.uicontrol} area.
+5.  Drag the [InvoiceDate]{.varname} field to the [Rows]{.uicontrol} area, placing it below the [Salesman]{.varname} field. Excel's automatic time grouping feature will create two calculated fields, [Years]{.varname} and [Quarters]{.varname}, in the [Rows]{.uicontrol} area.
 
-![Adding Invoice Date automatically creates the Quarters and Years fields.](images/pivots/invoices-pivot-datefields.png){#fig-invoices-pivot-datefields}
+![Adding Invoice Date automatically generates the Quarters and Years fields.](images/pivots/invoices-pivot-datefields.png){#fig-invoices-pivot-datefields}
 
-In the PivotTable,  @fig-invoices-sales-grouped, the sales are now grouped per year. This also shows that Brown started as a seller in 2011 and not in 2010, which could be a possible explanation for the lower amounts.
+In the PivotTable (@fig-invoices-sales-grouped), sales are now grouped by year. This also shows that Brown started as a seller in 2011, not 2010, which could explain the lower amounts.
 
-![Sales per seller per productcategory, grouped by year.](images/pivots/invoices-sales-grouped.png){#fig-invoices-sales-grouped}
+![Sales per seller per product category, grouped by year.](images/pivots/invoices-sales-grouped.png){#fig-invoices-sales-grouped}
 
-6. Click on the [+]{.uicontrol} (plus) button on any seller for the year 2010. This will expand the year to quarters for all sellers.
+6.  Click the [+]{.uicontrol} (plus) button next to any seller for the year 2010. This will expand the year to quarters for all sellers.
 
-7. Click the [+]{.uicontrol} (plus) button for Qrt1 at any seller. As a result, the quarter is unfolded to the months for all sellers.
+7.  Click the [+]{.uicontrol} (plus) button for Q1 next to any seller. As a result, the quarter will unfold to months for all sellers.
 
-![Expanded levels for Year 2010 and Quarter 1.](images/pivots/invoices-pivot-drilldown.png){#fig-invoices-pivot-drilldown}
+![Expanded levels for the year 2010 and Quarter 1.](images/pivots/invoices-pivot-drilldown.png){#fig-invoices-pivot-drilldown}
 
-8. Experiment with unfolding and folding levels again.
+8.  Experiment with unfolding and folding levels again.
 
-9. Drag field [Product Category]{.varname} out of the [Columns]{.uicontrol} box, field [Quarters]{.varname} from [Rows]{.uicontrol} to  [Columns]{.uicontrol} and the fields  [Years]{.varname} and [Invoice Date]{.varname} out of the [Rows]{.uicontrol}. The design will now look like @fig-invoices-pivot-quarters. The result can be seen in @fig-invoices-sales-salesman-quarter. 
+9.  Drag the [ProductCategory]{.varname} field out of the [Columns]{.uicontrol} box. Drag the [Quarters]{.varname} field from [Rows]{.uicontrol} to [Columns]{.uicontrol}, and drag the [Years]{.varname} and [InvoiceDate]{.varname} fields out of [Rows]{.uicontrol}. The design will now look like @fig-invoices-pivot-quarters. The result can be seen in @fig-invoices-sales-salesman-quarter.
 
-![Design PivotTable for sales per salesman per quarter.](images/pivots/invoices-pivot-quarters.png){#fig-invoices-pivot-quarters}
+![PivotTable design for sales per salesperson per quarter.](images/pivots/invoices-pivot-quarters.png){#fig-invoices-pivot-quarters}
 
-![Sales per salesman per quarter.](images/pivots/invoices-sales-salesman-quarter.png){#fig-invoices-sales-salesman-quarter}
+![Sales per salesperson per quarter.](images/pivots/invoices-sales-salesman-quarter.png){#fig-invoices-sales-salesman-quarter}
 
-To easily compare values you can also choose for displaying percentages (of row total, column total ,or grand total).
+To easily compare values, you can also choose to display percentages (of row total, column total, or grand total).
 
-10. Select a numeric value in the PivotTable and choose [tab PivotTable Analyze > Field Settings (group Active Field)]{.uicontrol}. In the dialog box select tab [Show values As]{.uicontrol} and select [% of Row Total]{.uicontrol}.
+10. Select a numeric value in the PivotTable and choose [tab PivotTable Analyze \> Field Settings (Active Field group)]{.uicontrol}. In the dialog box, select the [Show Values As]{.uicontrol} tab and choose [% of Row Total]{.uicontrol}.
 
-![Setting values as percentages of row total.](images/pivots/invoices-fieldsettings-pct-rowtotal.png){#fig-invoices-fieldsettings-pct-rowtotal}
+![Setting values to display as percentages of the row total.](images/pivots/invoices-fieldsettings-pct-rowtotal.png){#fig-invoices-fieldsettings-pct-rowtotal}
 
 11. Click [OK]{.uicontrol}.
 
-![Percentage sales per salesman per quarter.](images/pivots/invoices-sales-salesman-quarter-pct.png){#fig-invoices-sales-salesman-quarter-pct}
+![Percentage of sales per salesperson per quarter.](images/pivots/invoices-sales-salesman-quarter-pct.png){#fig-invoices-sales-salesman-quarter-pct}
 
-12, Then display the values as [% of Column Total]{.uicontrol}. 
-
-:::
+12, Then display the values as [% of Column Total]{.uicontrol}.
+::::
 
 **Questions**
 
-Use the PivotTable possibilities to answer the following questions. There are multiple ways to find the answers.
+Use the PivotTable capabilities to answer the following questions. There are multiple ways to find the answers.
 
-1. Which seller sold the most in December 2010?
+1.  Which seller sold the most in December 2010?
 
 ::: {.content-visible when-format="html:js"}
 Seller `r mcq(c("Anderson","Brown", "Gonzalez", "Hernandez", "Johnson", "King", "Lewis", "Miller", answer="Phillips", "Smith", "Williams"))`
 :::
 
-2. In which month of which year were software sales the highest?
+2.  In which month of which year were software sales the highest?
 
 ::: {.content-visible when-format="html:js"}
 Year `r mcq(c(2010, answer=2011))` Month `r mcq(c(answer="jan", "feb", "mat", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"))`
 :::
 
-3. View hardware and software sales percentages by region. What is the percentage for software in the South region?
+3.  View hardware and software sales percentages by region. What is the percentage for software in the South region?
 
 ::: {.content-visible when-format="html:js"}
-Rounded to whole number: `r fitb(answer = c(46, 47), num=TRUE)`
+Rounded to a whole number: `r fitb(answer = c(46, 47), num=TRUE)`
 :::
 
-4. What quarter of what year were Anderson's sales lowest?
+4.  In what quarter of what year were Anderson's sales lowest?
 
 ::: {.content-visible when-format="html:js"}
 Year `r mcq(c(2010, answer=2011))` Quarter `r mcq(c(1, 2, answer=3, 4))`
 :::
 
-5. Check out Brown's sales in Q2 2011. Do you notice something special?
+5.  Check out Brown's sales in Q2 2011. Do you notice anything special?
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Answer")`
-Only turnover in the month of June. Nothing in April and May.
-`r unhide()`
+`r hide("Answer")` Only revenue in the month of June. Nothing in April and May. `r unhide()`
 :::
 
 ## Filtering {#sec-pivots-filters}
 
-To filter the data in a pivot table, you can place a field (or more fields) in the [Filters]{.uicontrol} box in the task window. But when you filter on multiple items, you can't easily see what you're filtering on.
+To filter data in a PivotTable, you can place one or more fields in the [Filters]{.uicontrol} box in the task pane. However, when filtering on multiple items, it can be difficult to see what you are filtering on.
 
-A more user-friendly way is using **slicers**. These contain a number of buttons that allow you to quickly filter the data in a pivot table. And just for filtering time data you can also use **timelines**, which are identical to slicers. 
+A more user-friendly way is to use slicers. These contain several buttons that allow you to quickly filter data in a PivotTable. For filtering time data specifically, you can also use **timelines**, which are similar to slicers.
 
-You see the use of slicers and timelines a lot in so-called dashboards because you can link them to multiple pivot tables and pivot charts.
+Slicers and timelines are often used in **dashboards** because they can be linked to multiple PivotTables and PivotCharts.
 
-Three subtasks discuss creating report filters, slicers, and timelines. The file [Supermarket.xlsx` is used for this, the same file as in @sec-pivots-creating, which contains the monthly sales data in 2016 of a number of products, which are classified in three product groups: pvf (potatoes, vegetables, and fruits), meat and dairy. 
+Three subtasks discuss creating report filters, slicers, and timelines. The file `Supermarket.xlsx` is used for this, the same file as in @sec-pivots-creating, which contains the monthly sales data in 2016 for several products, classified into three product groups: PVF (potatoes, vegetables, and fruits), meat, and dairy.
 
 ### Report filters {#sec-pivots-reportfilters}
 
-::: {#prp-pivots-reportfilters}
+:::: {#prp-pivots-reportfilters}
 [File]{.smallcaps}: `Supermarket.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Insert a pivot table for the data on a new worksheet.
+2.  Insert a PivotTable for the data on a new worksheet.
 
-3. Place the [productcategory]{.varname} field in [Columns]{.uicontrol}, the [sales]{.varname} field in [Values]{.uicontrol} and the [date]{.varname} field in [Rows]{.uicontrol}. 
+3.  Place the [productcategory]{.varname} field in [Columns]{.uicontrol}, the [sales]{.varname} field in [Values]{.uicontrol}, and the [date]{.varname} field in [Rows]{.uicontrol}.
 
 ::: callout-note
-Excel's automatic time grouping adds the calculated field Months to the [Rows]{.uicontrol}. No other fields like quarters and years are added because all dates are only the last day of the month in one year. 
+Excel's automatic time grouping adds the calculated field [Months]{.varname} to [Rows]{.uicontrol}. No other fields like quarters and years are added because all dates are only the last day of the month within a single year.
 :::
 
-4. Drag the [date]{.varname} field from [Rows]{.uicontrol} so that it only shows the [Months]{.varname} field. 
+4.  Drag the [date]{.varname} field from [Rows]{.uicontrol} so that only the [Months]{.varname} field is shown.
 
-5. Place the [town]{.varname} field in the [Filters]{.uicontrol} box. This will create a report filter in the pivot table. 
+5.  Place the [town]{.varname} field in the [Filters]{.uicontrol} box. This will create a report filter in the PivotTable.
 
-![PivotTable report with a filter for town. By default, all values are shown.](images/pivots/supermarket-reportfilter-all.png){#fig-supermarket-reportfilter-all}
+![PivotTable report with a filter for town (default showing all values).](images/pivots/supermarket-reportfilter-all.png){#fig-supermarket-reportfilter-all}
 
-6. Click the drop-down arrow and select `Amsterdam`.
+6.  Click the drop-down arrow and select "Amsterdam".
 
+![PivotTable report with data filtered for Amsterdam (filter symbol indicates active filter).](images/pivots/supermarket-reportfilter-amsterdam.png){#fig-supermarket-reportfilter-amsterdam}
 
-![PivotTable report with the data filtered by the city of Amsterdam. You can see that the data has been filtered by the filter symbol.](images/pivots/supermarket-reportfilter-amsterdam.png){#fig-supermarket-reportfilter-amsterdam}
+7.  Click the drop-down arrow, check the [Select Multiple Items]{.uicontrol} box, and then select "Amsterdam" and "Rotterdam".
 
-7. Click the drop-down arrow, check the box [Select Multiple items]{.uicontrol} and then select `Amsterdam` and `Rotterdam`.
+The data for both towns will be displayed. Unfortunately, the filter only indicates that multiple items are selected, but not which specific items. For this scenario, slicers are a better alternative.
 
-The data for both towns is displayed. Unfortunately, the filter only indicates that multiple items are selected, but not which items. For this scenario, slicers are a better alternative.
+![PivotTable report with data filtered for multiple towns (specific towns visible via selection arrow).](images/pivots/supermarket-reportfilter-multiple.png){#fig-supermarket-reportfilter-multiple}
 
-![PivotTable report with the data filtered on multiple towns. You can only see which ones they are by clicking on the selection arrow .](images/pivots/supermarket-reportfilter-multiple.png){#fig-supermarket-reportfilter-multiple}
+8.  Click the drop-down arrow and re-select the [(All)]{.uicontrol} option.
 
-8. Click the drop-down arrow and re-select the [(All)]{.uicontrol} option.
-
-9. Remove the [town]{.varname} field from the [Filters]{.uicontrol} box.
-
-:::
+9.  Remove the [town]{.varname} field from the [Filters]{.uicontrol} box.
+::::
 
 ### Slicers {#sec-pivots-slicers}
 
 ::: {#prp-pivots-slicers}
 Continue with the file from @prp-pivots-reportfilters.
 
-1. Right-click on field [town]{.varname} in the PivotTable field list and select [Add as Slicer]{.uicontrol}.
+1.  Right-click on the [town]{.varname} field in the PivotTable field list and select [Add as Slicer]{.uicontrol}.
 
-And a slicer is created in the worksheet.
+A slicer will be created in the worksheet.
 
-![Slicer for field town.](images/pivots/supermarket-slicer-town.png){#fig-supermarket-slicer-town}
+![Slicer for the 'town' field.](images/pivots/supermarket-slicer-town.png){#fig-supermarket-slicer-town}
 
-2. Experiment with the slicer by selecting an item. You can select multiple items with the use of the [Ctrl]{.uicontrol} key or the ![Button select multiple items](images/pivots/slicer-button-multiple-items.png) button.
+2.  Experiment with the slicer by selecting an item. You can select multiple items by holding down the [Ctrl]{.uicontrol} key or by using the ![Button for selecting multiple items.](images/pivots/slicer-button-multiple-items.png) button.
 
-Another way to create slicers is through the menu. This way you can add multiple slicers at once.
+Another way to create slicers is through the menu. This method allows you to add multiple slicers at once.
 
-3. Click anywhere in the PivotTable report and choose [tab PivotTable Analyze > Insert Slicer (group Filter)]{.uicontrol}.
+3.  Click anywhere in the PivotTable report and choose [tab PivotTable Analyze \> Insert Slicer (Filter group)]{.uicontrol}.
 
-![Insert slicers dialog box.](images/pivots/slicer-insert-dialogbox.png){#fig-slicer-insert-dialogbox}
+![Insert Slicers dialog box.](images/pivots/slicer-insert-dialogbox.png){#fig-slicer-insert-dialogbox}
 
-4. Select [Months]{.varname} and click [OK]{.uicontrol}.
+4.  Select [Months]{.varname} and click [OK]{.uicontrol}.
 
-With tab [Slicer]{.uicontrol} on the ribbon, you can format a slicer such as change their look, settings, colors, ...
+With the [Slicer]{.uicontrol} tab on the ribbon, you can format a slicer, such as changing its appearance, settings, colors, etc.
 
-5. Experiment with filtering the data with the two slicers.
+5.  Experiment with filtering the data using the two slicers.
 
-6. Delete all slicers by first selecting a slicer and then pressing the [Delete]{.uicontrol} key. 
-
+6.  Delete all slicers by first selecting a slicer and then pressing the [Delete]{.uicontrol} key.
 :::
 
-### Time lines {#sec-pivots-timelines}
+### Timelines {#sec-pivots-timelines}
 
-Timelines are like slicers. They also allow you to filter data but they are specific for use with date/time fields. The dates appear in a horizontal line from oldest to newest as you move from left to right on the timeline. 
+Timelines are similar to slicers. They also allow you to filter data, but they are specifically designed for use with date/time fields. The dates appear in a horizontal line from oldest to newest as you move from left to right on the timeline.
 
-::: {#prp-pivots-timelines}
+:::: {#prp-pivots-timelines}
 Continue with the file from @prp-pivots-slicers.
 
-1. Click anywhere in the PivotTable report and choose [tab PivotTable Analyze > Insert Timeline (group Filter)]{.uicontrol}.
+1.  Click anywhere in the PivotTable report and choose [tab PivotTable Analyze \> Insert Timeline (Filter group)]{.uicontrol}.
 
-The ***Insert Timeline*** dialog box only shows the [date]{.varname} field because it is the only date/time field.
+The Insert Timeline dialog box only shows the [date]{.varname} field because it is the only date/time field.
 
-2. Select [date]{.varname} and click [OK]{.uicontrol}.
+2.  Select [date]{.varname} and click [OK]{.uicontrol}.
 
 ::: callout-note
+![Timeline for the 'date' field.](images/pivots/supermarket-timeline-months.png){#fig-supermarket-timeline-months}
 
-![Timeline for field date.](images/pivots/supermarket-timeline-months.png){#fig-supermarket-timeline-months}
-
-+ A scroll bar for the visible period.
-+ Handles to select the period to filter on.
-+ Choice of the time period to be displayed (Years, Quarters, Months, Days).
-+ When you select a timeline you get handles on the edges with which you can make the area bigger/smaller.
+-   A scroll bar for the visible period.
+-   Handles to select the period to filter on.
+-   Choice of the time period to be displayed (Years, Quarters, Months, Days).
+-   When you select a timeline, handles appear on the edges, allowing you to resize the area.
 :::
 
-3. Select some months to see the results.
+3.  Select some months to see the results.
 
-4. Click on the period selector in the upper right corner and select [Quarters]{.uicontrol}.
+4.  Click on the period selector in the upper right corner and select [Quarters]{.uicontrol}.
 
-![Timeline with quarters.](images/pivots/supermarket-timeline-quarters.png){#fig-supermarket-timeline-quarters}
+![Timeline displaying quarters.](images/pivots/supermarket-timeline-quarters.png){#fig-supermarket-timeline-quarters}
 
-5. Select some quarters to see the results.
+5.  Select some quarters to see the results.
 
-6. Delete the timeline by selecting it and then pressing the [Delete]{.uicontrol} key.
-
-:::
+6.  Delete the timeline by selecting it and then pressing the [Delete]{.uicontrol} key.
+::::
 
 ## Pivot Charts {#sec-pivots-charts}
 
-A PivotChart shows data series, categories, and chart axes the same way a standard chart does. But it also gives you interactive filtering so you can quickly analyze a subset of your data. And you can use slicers for filtering data.
+A PivotChart displays data series, categories, and chart axes in the same way a standard chart does. However, it also provides interactive filtering, allowing you to quickly analyze a subset of your data. You can also use slicers for filtering data in a PivotChart.
 
 ::: {#prp-pivots-charts}
 [File]{.smallcaps}: `Sales.xlsx`
 
-1. Open the file.
+1.  Open the file.
 
-2. Select worksheet [PivotTable]{.varname} and then select any cell in the PivotTable on this worksheet.
+2.  Select the [PivotTable]{.varname} worksheet and then select any cell in the PivotTable on this worksheet.
 
-3. Choose [tab Insert > PivotChart (group Charts) > Clustered Column > OK]{.uicontrol}.
+3.  Choose [tab Insert \> PivotChart (Charts group) \> Clustered Column \> OK]{.uicontrol}.
 
-![Column chart, linked to a pivot table.](images/pivots/sales-chart-clustered-column.png){#fig-sales-chart-clustered-column}
+![Column chart, linked to a PivotTable.](images/pivots/sales-chart-clustered-column.png){#fig-sales-chart-clustered-column}
 
-The PivotChart has filters for [Region]{.varname} and [Salesman]{.varname}. When you use a filter in the chart, then also the data in the PivotTable will be filtered.
+The PivotChart has filters for [Region]{.varname} and [Salesman]{.varname}. When you use a filter in the chart, the data in the PivotTable will also be filtered.
 
-4. Experiment with filtering on a salesman and observe the results. End with displaying the data for all salesman.
+4.  Experiment with filtering by a salesman and observe the results. End by displaying the data for all salesmen.
 
-5. Add a slicer for [Month]{.varname} and experiment with it.
-
+5.  Add a slicer for [Month]{.varname} and experiment with it.
 :::
 
 ## PivotTables Options {#sec-pivots-options}
 
-There are various setting options for pivot tables. To do this, choose any cell in a PivotTable and then [PivotTable Analyze tab > Options (PivotTable group)]{.uicontrol}. You have several setting options via tabs (see below).
+There are various setting options for PivotTables. To access them, select any cell in a PivotTable and then choose [tab PivotTable Analyze \> Options (PivotTable group)]{.uicontrol}. You will find several setting options organized into tabs (see below).
 
-![Layout & Format options.](images/pivots/pivottable-options-layout-format.png){#fig-pivottable-options-layout-format}
+![Layout & Format options for PivotTables.](images/pivots/pivottable-options-layout-format.png){#fig-pivottable-options-layout-format}
 
-![Totals & Filters options.](images/pivots/pivottable-options-totals-filter.png){#fig-pivottable-options-totals-filter}
+![Totals & Filters options for PivotTables.](images/pivots/pivottable-options-totals-filter.png){#fig-pivottable-options-totals-filter}
 
-![Display options.](images/pivots/pivottable-options-display.png){#fig-pivottable-options-display}
+![Display options for PivotTables.](images/pivots/pivottable-options-display.png){#fig-pivottable-options-display}
 
-![Printing options.](images/pivots/pivottable-options-printing.png){#fig-pivottable-options-printing}
+![Printing options for PivotTables.](images/pivots/pivottable-options-printing.png){#fig-pivottable-options-printing}
 
-![Data options.](images/pivots/pivottable-options-data.png){#fig-pivottable-options-data}
+![Data options for PivotTables.](images/pivots/pivottable-options-data.png){#fig-pivottable-options-data}
 
-![Alt Text options.](images/pivots/pivottable-options-alttext.png){#fig-pivottable-options-alttext}
-
+![Alt Text options for PivotTables.](images/pivots/pivottable-options-alttext.png){#fig-pivottable-options-alttext}
 
 ## Exercises {#sec-pivots-exercises}
 
 ::: {#exr-pivo001}
-**Salary averages (pivo001)**
-
-Create a pivot table to calculate the average salary per department and division. The table should look as follows.
-
-![](images/pivots/pivo001-report.png)
+**Salary Averages (pivo001)**
 
 [File]{.smallcaps}: `Personnel.xlsx`
+
+Create a PivotTable to calculate the average salary per department and division. The table should look as follows:
+
+![](images/pivots/pivo001-report.png)
 :::
 
 ::: {#exr-pivo002}
-**Salary totals (pivo002)**
-
-Create a pivot table to calculate the total salary per function and per division. Furthermore, it should be possible to filter per department. The table should look as follows.
-
-![](images/pivots/pivo002-report.png)
+**Salary Totals (pivo002)**
 
 [File]{.smallcaps}: `Personnel.xlsx`
+
+Create a PivotTable to calculate the total salary per function and per division. Furthermore, it should be possible to filter by department. The table should look as follows:
+
+![](images/pivots/pivo002-report.png)
 :::
 
-::: {#exr-pivo003}
-**Turnover, travel expenses and commission (pivo003)**
-
-For each salesman the following information is stored in the worksheet: Month, Region, Saleman, Sales, Expenses, and Commission.
-
-Create one pivot table with which you get an overview of the total sales, expenses, and commission per month and per salesman with a possibility to filter per region. All values should have a currency format with no decimals.
+:::: {#exr-pivo003}
+**Revenue, Travel Expenses, and Commission (pivo003)**
 
 [File]{.smallcaps}: `Pivo003.xlsx`
 
+For each salesman, the following information is stored in the worksheet: Month, Region, Salesman, Sales, Expenses, and Commission.
+
+Create one PivotTable to get an overview of the total sales, expenses, and commission per month and per salesman, with the ability to filter by region. All values should have a currency format with no decimals.
+
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
+
 ![](images/pivots/pivo003-report.png)
+
 `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-pivo004}
-**Average rating (pivo004)**
-
-In the following table, you see the marks for information technology (it) of some students from two different classes.
-
-![](images/pivots/pivo004-data.png)
-
-Determine using a pivot table the average mark by class and by gender.
+:::: {#exr-pivo004}
+**Average Rating (pivo004)**
 
 [File]{.smallcaps}: `Pivo004.xlsx`
 
+The following table shows the Information Technology (IT) marks for some students from two different classes.
+
+![](images/pivots/pivo004-data.png)
+
+Using a PivotTable, determine the average mark by class and by gender.
+
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
+
 ![](images/pivots/pivo004-report.png)
+
 `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-pivo005}
-**Frequency distribution figures (pivo005)**
-
-In the following table, you see the marks of some students.
-
-![](images/pivots/pivo005-data.png)
-
-Create a frequency distribution of the grades using a pivot table.
+:::: {#exr-pivo005}
+**Frequency Distribution Figures(pivo005)**
 
 [File]{.smallcaps}: `Pivo005.xlsx`
 
+The following table shows the marks of some students.
+
+![](images/pivots/pivo005-data.png)
+
+Create a frequency distribution of the grades using a PivotTable.
+
 ::: {.content-visible when-format="html:js"}
-`r hide("Answer")`
-![](images/pivots/pivo005-report.png)
-`r unhide()`
+`r hide("Answer")` ![](images/pivots/pivo005-report.png) `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-pivo006}
-**Clothing sales by region (pivo006)**
-
-In the following table, you see the menswear and ladieswear sales in the four regions in the years 2009 and 2010.
-
-![](images/pivots/pivo006-data.png)
-
-Enter and format the data in a worksheet. Determine using a pivot table the total annual sales per region and per type.
+:::: {#exr-pivo006}
+**Clothing Sales by Region (pivo006)**
 
 [File]{.smallcaps}: `Pivo006.xlsx`
 
+The following table shows menswear and ladieswear sales in four regions for the years 2009 and 2010.
+
+![](images/pivots/pivo006-data.png)
+
+Enter and format the data in a worksheet. Using a PivotTable, determine the total annual sales per region and per type.
+
 ::: {.content-visible when-format="html:js"}
-`r hide("Answer")`
-![](images/pivots/pivo006-report.png)
-`r unhide()`
+`r hide("Answer")` ![](images/pivots/pivo006-report.png) `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-pivo007}
-**Shop opening hours (pivo007)**
-
-By order of the shopkeepers' association, a survey was conducted on the evening opening hours of shops. The results of the interviewees can be seen in the following table
-
-![](images/pivots/pivo007-data.png)
-
-Enter the data in a worksheet. Determine using a pivot table the number of supporters and opponents by age and by sex.
+:::: {#exr-pivo007}
+**Shop Opening Hours (pivo007)**
 
 [File]{.smallcaps}: `Pivo007.xlsx`
 
+By order of the shopkeepers' association, a survey was conducted on the evening opening hours of shops. The results from the interviewees can be seen in the following table:
+
+![](images/pivots/pivo007-data.png)
+
+Enter the data in a worksheet. Using a PivotTable, determine the number of supporters and opponents by age and by sex.
+
 ::: {.content-visible when-format="html:js"}
-`r hide("Answer")`
-![](images/pivots/pivo007-report.png)
-`r unhide()`
+`r hide("Answer")` ![](images/pivots/pivo007-report.png) `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-pivo008}
-**Own home and average home value (pivo008)**
-
-In the following table, you see for some people how many years of study they have, whether or not they have their own house and if applicable the value of the house.
-
-![](images/pivots/pivo008-data.png)
-
-Enter the data in a worksheet. Determine using a pivot table the number of people with their own house and the average value of the house as a function of the number of years of study.
+:::: {#exr-pivo008}
+**Own Home and Average Home Value (pivo008)**
 
 [File]{.smallcaps}: `Pivo008.xlsx`
 
+The following table shows, for some people, how many years of study they have, whether or not they own their own home, and, if applicable, the value of the house.
+
+![](images/pivots/pivo008-data.png)
+
+Enter the data in a worksheet. Using a PivotTable, determine the number of people who own their own house and the average value of the house as a function of the number of years of study.
+
 ::: {.content-visible when-format="html:js"}
-`r hide("Answer")`
-![](images/pivots/pivo008-report.png)
-`r unhide()`
+`r hide("Answer")` ![](images/pivots/pivo008-report.png) `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-pivo009}
-**Transport research (pivo009)**
-
-Market research has been performed among the visitors of the city center. The following table shows the data of the respondents who were questioned about the means of transport to the center to go shopping. In the table you see if they went by car or by bus, how far they live from the center (in km.) and the travel time (in min.)
-
-![](images/pivots/pivo009-data.png)
-
-Enter the data in a worksheet. Determine using a pivot table the average travel time by car for residents living more than 15 km from the city center.
+:::: {#exr-pivo009}
+**Transport Research (pivo009)**
 
 [File]{.smallcaps}: `Pivo009.xlsx`
 
+Market research was performed among visitors to the city center. The following table shows data from respondents who were questioned about their means of transport to the center for shopping. The table indicates whether they went by car or by bus, how far they live from the center (in km), and their travel time (in min).
+
+![](images/pivots/pivo009-data.png)
+
+Enter the data in a worksheet. Using a PivotTable, determine the average travel time by car for residents living more than 15 km from the city center.
+
 ::: {.content-visible when-format="html:js"}
-`r hide("Hint")`
-Create an extra column to determine if the distance to the center is more than 15 km.
-`r unhide()`
+`r hide("Hint")` Create an extra column to determine if the distance to the center is more than 15 km. `r unhide()`
 
-`r hide("Answer")`
-28.5 min.
-`r unhide()`
+`r hide("Answer")` 28.5 min. `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-pivo010}
-**Coffee yield per region (pivo010)**
-
-A worksheet contains the yields of some types of coffee per month and per area. The management would like to determine the total yield of the products for each region. Create a pivot table for the monthly yields per coffee type. The region should be selected through a report filter.
+:::: {#exr-pivo010}
+**Coffee Yield per Region (pivo010)**
 
 [File]{.smallcaps}: `Coffee.xlsx`
 
+A worksheet contains the yields of some types of coffee per month and per area. Management would like to determine the total yield of the products for each region. Create a PivotTable for the monthly yields per coffee type. The region should be selectable through a report filter.
+
 ::: {.content-visible when-format="html:js"}
-`r hide("Answer")`
-![](images/pivots/pivo010-report.png)
-`r unhide()`
+`r hide("Answer")` ![](images/pivots/pivo010-report.png) `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-pivo011}
-**Fuel consumption cars (pivo011)**
-
-Determine using a pivot table the minimum and maximum fuel consumption per car brand and fuel type.
+:::: {#exr-pivo011}
+**Fuel Consumption Cars (pivo011)**
 
 [File]{.smallcaps}: `Car.xlsx`
 
+Using a PivotTable, determine the minimum and maximum fuel consumption per car brand and fuel type.
+
 ::: {.content-visible when-format="html:js"}
-`r hide("Answer")`
-![](images/pivots/pivo011-report.png)
-`r unhide()`
+`r hide("Answer")` ![](images/pivots/pivo011-report.png) `r unhide()`
 :::
+::::
 
-**Hobby club (pivo012)**
+:::: {#exr-pivo012}
+**Hobby Club (pivo012)**
 
-In a worksheet, you can find in the last two columns the number of visited club meetings in 2009 and 2010. Create using pivot tables in the next reports:
-
-1.  The number of members of the club by domicile and by gender.
-2.  The percentage of members by hobby and by gender.
-3.  An overview of the presence in 2010 by gender, with the number of visited club meetings divided into three groups as shown in the following figure:
-
-![](images/pivots/pivo012-meetings-count.png)
-:::
-
-::: {#exr-pivo012}
 [File]{.smallcaps}: `Pivo012.xls`
 
+In a worksheet, the last two columns show the number of visited club meetings in 2009 and 2010. Create the following reports using PivotTables:
+
+1.  The number of club members by domicile and by gender.
+2.  The percentage of members by hobby and by gender.
+3.  An overview of attendance in 2010 by gender, with the number of visited club meetings divided into three groups as shown in the following figure:
+
+![](images/pivots/pivo012-meetings-count.png)
+
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
+
 1.  The number of members by domicile and by gender
 
 ![](images/pivots/pivo012-members-count.png)
@@ -693,10 +657,10 @@ In a worksheet, you can find in the last two columns the number of visited club 
 
 ![](images/pivots/pivo012-members-percent.png)
 
-3.  Presence in 2010 by gender
+3.  Attendance in 2010 by gender
 
 ![](images/pivots/pivo012-meetings-count.png)
+
 `r unhide()`
 :::
-
-:::
+::::

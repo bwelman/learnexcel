@@ -6,483 +6,504 @@
 ::: callout
 **OBJECTIVES**
 
--   Activate Solver add-in.
--   Application field for Solver.
--   Setting up a calculation model.
--   Adding constraints.
--   Tips using Solver.
+-   Learn how to activate the Solver add-in.
+-   Understand the applications of Solver.
+-   Learn how to set up a calculation model for Solver.
+-   Understand how to add constraints in Solver.
+-   Discover tips for using Solver effectively.
 :::
 
-Solver is a utility (add-in) within Excel to perform optimization calculations. In such a calculation you want to find an optimal value for a formula in a certain cell, usually a minimum or a maximum and sometimes a very specific value.
+Solver is an Excel add-in used for optimization calculations. In such calculations, you aim to find an optimal value (usually a minimum or maximum, but sometimes a specific value) for a formula in a particular cell.
 
-objective cell, target cell
+Objective Cell (Target Cell)
 
-:   This is the cell with a formula for which you want to find the optimal outcome.
+:   This is the cell containing the formula for which you want to find an optimal outcome.
 
-variable cells, changing cells, decision variables
+Variable Cells (Changing Cells, Decision Variables)
 
-:   These are the cells that determine the outcome of the formula. Changing the values also changes the outcome of the formula.
+:   These are the cells whose values determine the outcome of the formula in the objective cell. Changing these values alters the formula's result.
 
-constraints, restrictions, preconditions
+Constraints (Restrictions, Preconditions)
 
-:   These are restrictions that apply to the variable cells, they often cannot take all possible values and are bound by limits.
+:   These are limitations or conditions that apply to the variable cells. Variable cells often cannot take on any possible value and are bound by these limits.
 
 ::: callout-note
-Solver has more capabilities than Goal Seek to perform "What-If" analyzes and is much more versatile. Solver adjusts the values of the changing cells within the bounds of the boundary conditions to arrive at the optimal solution of the target cell.
+Solver offers more extensive "What-If" analysis capabilities than Goal Seek and is much more versatile. Solver adjusts the values in the changing cells, within the defined constraints, to find the optimal solution for the objective cell.
 :::
 
 ## Enabling Solver {#sec-solver-activation}
 
-The Solver is an add-in and isn't activated by default through the menu of Excel. If the Solver is not present on the ribbon, then it has to be activated first. This is a one time action.
+Solver is an add-in and is not activated by default in Excel's menu. If Solver is not present on the Data tab of the ribbon, it must be activated first. This is a one-time action.
 
 ::: callout-warning
-First, make sure that Solver is available on the ribbon. If so, you can skip this task. Select [Data tab]{.uicontrol}, check whether the [Analyze group]{.uicontrol} exists and if so whether the [Solver]{.uicontrol} is present.
+First, check if Solver is available on the ribbon. If it is, you can skip this task. Select the [Data tab]{.uicontrol} and check if the Analyze[Analyze group]{.uicontrol} exists and if [Solver]{.uicontrol} is present within it.
 
-![Group Analayze with Sover on the ribbon.](images/solver/excel-ribbon-analyze.png){#fig-excel-ribbon-analyze}
+![The Analyze group with Solver on the Data tab of the ribbon.](images/solver/excel-ribbon-analyze.png){#fig-excel-ribbon-analyze}
 :::
 
 ::: {#prp-solver-activation}
+1.  Choose [File \> Options \> Add-Ins]{.uicontrol}. A list of Microsoft Office Add-ins will be displayed.
 
-1.  Choose [File \> Options \> Add-Ins]{.uicontrol}. A list with Microsoft Office Add-ins is displayed.
+2.  In the [Manage]{.uicontrol} box at the bottom, select [Excel Add-ins]{.uicontrol}.
 
-2.  Select [Excel Add-ins]{.uicontrol} in the box [Manage]{.uicontrol}.
+![Selecting 'Excel Add-ins' to manage.](images/solver/excel-options-addins-manage.png){#fig-excel-options-addins-manage}
 
-![Select managing Excel Add-ins.](images/solver/excel-options-addins-manage.png){#fig-excel-options-addins-manage}
-
-3.  Click on [Go...]{.uicontrol}. A list of available Add-ins is displayed.
+3.  Click on [Go...]{.uicontrol}. A list of available Add-ins will be displayed.
 
 4.  Select the checkbox for [Solver Add-in]{.uicontrol} and click on [OK]{.uicontrol}.
 
-![Available and activated Excel add-ins.](images/solver/excel-addins.png){#fig-excel-addins}
+![List of available Excel add-ins with Solver Add-in selected.](images/solver/excel-addins.png){#fig-excel-addins}
 
-5.  Repeat the check in the first step.
-
+5.  Repeat the check above to ensure Solver is now visible.
 :::
 
-## Defining an optimization model {#sec-solver-model}
+## Defining an Optimization Model {#sec-solver-model}
 
-To be able to perform an optimization calculation, you must first set up a suitable calculation model. That is usually much more difficult than using the Solver itself. Making such a model is explained on the basis of the WeatherLeather case.
+To perform an optimization calculation, you must first set up a suitable calculation model. This is often more challenging than using Solver itself. The process of creating such a model will be explained using the WeatherLeather case study.
 
-### Case description {#sec-solver-case-description}
+### Case Description {#sec-solver-case-description}
 
-WeatherLeather, a manufacturer of expensive leather jackets, has two designs created for the new season, a long jacket and a short jacket. The manufacturing of a short jack requires 1 hour on the cutting department and 3 hours on the sewing department. A long jacket requires 2 hours and 4 hours respectively. The availability of labor hours in the cutting department and the sewing department is limited. The available capacity on the cutting department is 32 hours per week and on the sewing department 84 hours a week. The market demand for long leather jackets is limited. No more than 12 long leather jackets can be sold per week. For the short jackets, all jackets made can be sold. There is no production to stock. The profit for a short jacket is \$90 and for a long jacket \$144.
+WeatherLeather, a manufacturer of high-end leather jackets, has designed two styles for the new season: a long jacket and a short jacket. Manufacturing a short jacket requires 1 hour in the cutting department and 3 hours in the sewing department. A long jacket requires 2 hours and 4 hours, respectively. Labor hour availability is limited: the cutting department has 32 hours per week, and the sewing department has 84 hours per week. Market demand for long leather jackets is also limited; no more than 12 long leather jackets can be sold per week. For short jackets, all manufactured jackets can be sold. Production is not to stock. The profit for a short jacket is \$90, and for a long jacket, it is \$144.
 
-How many jackets must be made of each type per week to get the highest possible profit?
+The question is: How many jackets of each type should be made per week to achieve the highest possible profit?
 
-### Understanding problem {#sec-solver-case-problem}
+### Understanding the Problem {#sec-solver-case-problem}
 
-This step seems so obvious that maybe it seems hardly worth mentioning. It is important to pay attention a little bit more before starting with the formulation of the object cell, variable cells, and restrictions. If you do not fully understand the problem, you risk incorrect formulations of the model. The problem in this example is fairly simple:
+This step might seem obvious, but it's crucial to fully understand the problem before formulating the objective cell, variable cells, and constraints. Misunderstanding the problem can lead to an incorrect model. In this example, the problem is relatively straightforward:
 
-How many short and long jackets do you need to produce weekly to get maximum profits, while no more than 32 hours cutting time and 84 hours sewing time is available?
+How many short and long jackets should be produced weekly to maximize profit, given that no more than 32 hours of cutting time and 84 hours of sewing time are available, and the market for long jackets is limited to 12 per week?
 
-### Decision variables {#sec-solver-case-variables}
+### Decision Variables {#sec-solver-case-variables}
 
-Determine the decision variables. These are variables you have determine a value that gives the optimal result. In the Excel model, these are the variable cells. In this example, there are two decision variables which are conveniently referred with a letter:
+Identify the decision variables. These are the variables for which you need to determine values that yield the optimal result. In the Excel model, these correspond to the variable cells. In this example, there are two decision variables, conveniently denoted by letters:
 
--   $\mathrm{S}$ = number of short jackets per week
--   $\mathrm{L}$ = number of long jackets per week
+-   $S$ = number of short jackets per week
+-   $L$ = number of long jackets per week
 
-### Objective function {#sec-solver-case-objective}
+### Objective Function {#sec-solver-case-objective}
 
-You must establish a formula with the optimal value as an outcome. The decision variables are included in this formula. In this example, the objective function is the profit per week and this depends on the number of produced short jackets ($\mathrm{S}$) and long jackets ($\mathrm{L}$):
+You must establish a formula that represents the value you want to optimize. The decision variables are included in this formula. In this example, the objective function is the weekly profit, which depends on the number of short jackets ($S$) and long jackets ($L$) produced:
 
-$\mathrm{Profit = 90 \times S + 144 \times L}$ (This should be maximized.)
+$Profit = 90 \times S + 144 \times L$ (This function should be maximized.)
 
 ::: callout-note
-In more complex models, it is sometimes difficult to formulate the problem so that one goal function is obtained. It may happen that the decision variables are not directly in the objective function. In such case, the objective function contains variables whose values depend on the decision variables.
+In more complex models, it can sometimes be challenging to formulate the problem with a single objective function. It may also happen that the decision variables are not directly in the objective function. In such cases, the objective function contains variables whose values depend on the decision variables.
 :::
 
 ### Constraints {#sec-solver-case-modelconstraints}
 
-Usually, there are restrictions for the values of the decision variables. These restrictions should be identified and formulated.
+Usually, there are restrictions on the values that the decision variables can take. These restrictions must be identified and formulated.
 
-In this example, three restrictions that come straight from the case are the limited capabilities for the cutting and sewing department and the market demand for the long jackets.
+In this example, three constraints come directly from the case description: the limited capacities of the cutting and sewing departments, and the market demand for long jackets.
 
-Besides, there are often general restrictions that have to do with the data type of the decision variables. In this example, the two decision variables, the number of produced jackets, must always have to be positive integers.
+Additionally, there are often general constraints related to the nature of the decision variables. In this example, the two decision variables (the number of jackets produced) must be non-negative integers.
 
-This leads to the formulation of the following restrictions:
+This leads to the following constraints:
 
--   Restriction cutting time per week: $\mathrm{1 \times S + 2 \times L \le 32}$
--   Restriction sewing time per week: $\mathrm{3 \times S + 4 \times L \le 84}$
--   Restriction market demand long jackets: $\mathrm{L \le 12}$
--   Restrictions positive values: $\mathrm{S \ge 0}$ and $\mathrm{L \ge 0}$
--   Restrictions integer values: $\mathrm{S = integer}$ and $\mathrm{L = integer}$
+-   Cutting time constraint per week: $1 \times S + 2 \times L \le 32$
+-   Sewing time constraint per week: $3 \times S + 4 \times L \le 84$
+-   Market demand constraint for long jackets: $L \le 12$
+-   Non-negativity constraints: $S \ge 0$ and $L \ge 0$
+-   Integer constraints: $S = integer$ and $L = integer$
 
 ### Model in Excel {#sec-solver-case-model}
 
-Time to build the model in Excel and solve the problem with the Solver tool. One possible solution you can see in @fig-weatherleather-model.
+Now it's time to build the model in Excel and solve the problem using Solver. One possible layout is shown in @fig-weatherleather-model.
 
-![Example of a calculation model WeatherLeather.](images/solver/weatherleather-model.png){#fig-weatherleather-model}
+![Example of a calculation model for the WeatherLeather case.](images/solver/weatherleather-model.png){#fig-weatherleather-model}
 
-There is not one good way to build this model in Excel. There are just some guidelines. These guidelines are discussed based on @fig-weatherleather-model. You can, of course, build the model yourself using the guidelines and the figure, but it is also made available in the file `WeatherLeather.xlsx`.
+There isn't one single correct way to build this model in Excel, but some guidelines can help. These guidelines are discussed based on @fig-weatherleather-model. You can build the model yourself using these guidelines and the figure, or use the provided file `WeatherLeather.xlsx`.
 
-### Guidelines for a Solver model in Excel {#sec-solver-case-guidelines}
+### Guidelines for a Solver Model in Excel {#sec-solver-case-guidelines}
 
-1.  Organize the data in a logical and orderly manner and put sufficient explanatory text near the cells that contain numbers and formulas. A model is often used in reports later and then it has to be clear what everything is presenting and what it is all about. Highlight the cells with the decision variables (B4 and C4) and the object function (D5) so they are easily recognized. Put the restrictions in a separate part.
+1.  Organize the data logically and clearly. Add sufficient explanatory text near cells containing numbers and formulas. Models are often used in reports later, so it must be clear what everything represents. Highlight the cells for decision variables (e.g., B4 and C4) and the objective function (e.g., D5) so they are easily recognizable. Place constraints in a separate section.
 
-2.  Put each decision variable in a separate cell and give them a starting value. In the example, the numbers of produced short and long jackets are respectively in cell B4 and cell C4. As starting value 1 is used in both cases. So you can at least verify the correctness of the formulas.
+2.  Put each decision variable in a separate cell and assign it an initial value. In the example, the number of short and long jackets produced are in cells B4 and C4, respectively. An initial value of 1 is used for both, allowing for easy verification of formulas.
 
-3.  Create a formula for the object cell. In D5 the formula is `=B5*B4+C5*C4`.
+3.  Create a formula for the objective cell. In D5, the formula is `=B5*B4+C5*C4`.
 
-4.  Create a formula in a separate cell for each restriction. Put in the cell next to it the limit of the restriction.
+4.  Create a formula in a separate cell for the left-hand side of each constraint. In an adjacent cell, place the limit (right-hand side) of the constraint.
 
-| cell | formula        | explanation                    |
-|------|----------------|--------------------------------|
-| D8   | `=B8*B4+C8*C4` | total cutting time calculation |
-| D9   | `=B9*B4+C9*C4` | total sewing time calculation  |
-| D10  | `=C4`          | number of long jackets         |
+| Cell | Formula        | Explanation                     |
+|------|----------------|---------------------------------|
+| D8   | `=B8*B4+C8*C4` | Total cutting time calculation  |
+| D9   | `=B9*B4+C9*C4` | Total sewing time calculation   |
+| D10  | `=C4`          | Number of long jackets produced |
 
-: Formulas in the model. {#tbl-solver-model}
+: Formulas in the WeatherLeather Excel model. {#tbl-solver-model}
 
 ### Solver Constraints {#sec-solver-case-solverconstraints}
 
-The dialog box in Solver with which you add boundary conditions looks like in @fig-solver-constraint-add-general.
+The dialog box in Solver used to add constraints is shown in @fig-solver-constraint-add-general.
 
-![Dialog box for adding constraints.](images/solver/solver-constraint-add.png){#fig-solver-constraint-add-general}
+![Dialog box for adding constraints in Solver.](images/solver/solver-constraint-add.png){#fig-solver-constraint-add-general}
 
-Every constraint in the Solver consists of three parts: a cell reference, a relationship, and a constraint.
+Every constraint in Solver consists of three parts: a cell reference, a relationship operator, and a constraint value.
 
 Cell Reference
 
-:   The cell address or name of the cell range whose values you want to constrain. You can use a single cell or a cell range, but not multiple ranges.
+:   he cell address or name of the cell range whose values you want to constrain. You can use a single cell or a contiguous cell range, but not multiple disconnected ranges in a single constraint entry.
 
 Relationship
 
 :   Possible operators: `<=`, `=`, `>=`, `int`, `bin`, or `dif`.
 
-:   -   `int` is displayed as `integer` later in the model. The values in the cell references must then be integers, within a certain tight tolerance (defined with the Precise of boundary condition in the Solver options).
+:   -   `int`: The values in the cell reference(s) must be integers (within a certain tolerance defined by the "Constraint Precision" in Solver options).
 
-:   -   `bin` will be displayed as `binary` later in the model. The values in the cell references must be either 0 or 1. You can therefore also use this option for "yes/no" decisions.
+:   -   `bin`: The values in the cell reference(s) must be binary (either 0 or 1). This can be used for "yes/no" decisions.
 
-:   -   `dif` will be displayed later in the model as `AllDifferent`. The values in all cell references must be different.
+:   -   `dif`: The values in the specified cell references must all be different from each other.
 
 Constraint
 
-:   A number, a cell reference, a name or a formula that needs to match.
+:   A number, a cell reference (or name), or a formula that the cell reference must adhere to based on the relationship.
 
-## Implementation model {#sec-solver-case-implementation}
+## Implementing the Model {#sec-solver-case-implementation}
 
-In the case WeatherLeather, the profit must be maximized.
+In the WeatherLeather case, the profit must be maximized.
 
-::: {#prp-solver-case-implementation}
+::::: {#prp-solver-case-implementation}
 [File]{.smallcaps}: `WeatherLeather.xlsx`
 
 1.  Open the file.
 
-2.  Select the object cell D5.
+2.  Select the objective cell, D5.
 
-3.  Choose [tab Data \> Solver (group Analyze)]{.uicontrol}.
+3.  Choose [tab Data \> Solver (Analyze group)]{.uicontrol}. The Solver Parameters dialog box will appear.
 
-![Parameters Solver.](images/solver/weatherleather-solver-parameters1.png){#fig-weatherleather-solver-parameters1}
+![Initial Solver Parameters dialog box for WeatherLeather.](images/solver/weatherleather-solver-parameters1.png){#fig-weatherleather-solver-parameters1}
 
-4.  Check the following:
+4.  Verify the following:
 
     -   [Set Objective]{.uicontrol}: `$D$5`
     -   [To]{.uicontrol}: `Max`
 
-5.  Click in the box [By Changing Variable Cells]{.uicontrol} and select in the worksheet the cell range B4:C4. Excel converts this to `$B$4:$C$4`.
+5.  Click in the [By Changing Variable Cells]{.uicontrol} box and select the cell range B4:C4 in the worksheet. Excel will convert this to `$B$4:$C$4`.
 
-6.  In the restrictions section, click [Add]{.uicontrol}. The ***Add constraint*** dialog box appears (see @fig-solver-constraint-add-general)
+6.  In the [Subject to the Constraints]{.uicontrol} section, click [Add]{.uicontrol}. The Add constraint dialog box will appear (see @fig-solver-constraint-add-general)
 
-7.  Add restriction `D8 <= E8` and click on [OK]{.uicontrol}.
+7.  Add the constraint `D8 <= E8` (Cell Reference: D8, Relationship: \<=, Constraint: E8) and click [OK]{.uicontrol}.
 
-The dialog box Solver Parameters appears again and Excel has the first restriction converted to `$D$8 <= $E$8`.
+The Solver Parameters dialog box will reappear, showing the first constraint as `$D$8 <= $E$8`.
 
-8.  Click [Add]{.uicontrol}.
+8.  Click [Add]{.uicontrol} again.
 
-9.  Add restriction `D9 <= E9` and now click on [Add]{.uicontrol}.
+9.  Add the constraint `D9 <= E9` and this time click [Add]{.uicontrol} (instead of [OK]{.uicontrol}).
 
-Now the empty dialog box Add Constraint is displayed. You don't see now that Excel has added the second restriction.
-
-::: callout-note
-By clicking on [Add]{.uicontrol} instead of [OK]{.uicontrol} you can add the restrictions easily without having to return to the Solver Parameters again.
-:::
-
-10. Add restriction `D10 <= E10` and click on [Add]{.uicontrol}.
-
-11. Add restriction `B4:C4 >= 0` and click on [Add]{.uicontrol}.
-
-12. Addt restriction `B4:C4 int`.
-
-13. All restrictions have been added. Click [OK]{.uicontrol}.
-
-![Solver parameters oplosser specified.](images/solver/weatherleather-solver-parameters2.png){#fig-weatherleather-solver-parameters2}
-
-14. Click on [Solve]{.uicontrol}. After a short time, the results pane of the Solver appears.
-
-![Solver results.](images/solver/solver-results-solution-dialogbox.png){#fig-solver-results-solution-dialogbox}
-
-15. Select [Keep Solver Solution]{.uicontrol} (default). Select [Answer (section Reports)]{.uicontrol} and then click [OK]{.uicontrol}.
-
-The solution found by the Solver is now displayed in the worksheet.
-
-![Worksheet with a solution.](images/solver/weatherleather-solution.png){#fig-weatherleather-solution}
-
-And there has also been created a new worksheet with the name [Answer Report ...]{.uicontrol}.
-
-![Answer report for WeatherLeather.](images/solver/weatherleather-solver-report.png){#fig-weatherleather-solver-report}
+The empty Add Constraint dialog box will remain displayed. You won't see the second constraint added to the main Solver Parameters dialog box yet, but it has been registered.
 
 ::: callout-note
--   The names that are used in the report are not always accurate or clear. This is because Excel takes these names out of the text cells in the surrounding area. To ensure there are good names in the report, you first have to supply meaningful names to the relevant cells in the worksheet. This is highly recommended.
-
--   At the section Constraints in the Answer Report you can see in the column Status which restrictions are Binding. If so, this indicates that the limit of the constraint is reached and there is no slack. In this example, you can see that all capacity for the cutting time and sewing time is used. For the long jackets, the limit for the market is not reached, there could be 6 more pieces sold.
+By clicking [Add]{.uicontrol} instead of [OK]{.uicontrol} after entering a constraint, you can add multiple constraints more efficiently without repeatedly returning to the Solver Parameters dialog box.
 :::
 
-The problem of WeatherLeather is now solved. A maximum profit of \$ 2664 per week can be achieved by producing 20 short jackets and 6 long jackets.
+10. Add the constraint `D10 <= E10` and click [Add]{.uicontrol}.
 
+11. Add the constraint `B4:C4 >= 0` and click [Add]{.uicontrol}.
+
+12. Addt the constraint `B4:C4 = integer` (select `int` from the dropdown).
+
+13. All constraints have now been added. Click [OK]{.uicontrol} in the Add Constraint dialog box.
+
+The Solver Parameters dialog box will now show all specified constraints.
+
+![Solver Parameters dialog box with all constraints specified for WeatherLeather.](images/solver/weatherleather-solver-parameters2.png){#fig-weatherleather-solver-parameters2}
+
+14. Click [Solve]{.uicontrol}. After a short time, the Solver Results dialog box will appear.
+
+![Solver Results dialog box showing a solution was found.](images/solver/solver-results-solution-dialogbox.png){#fig-solver-results-solution-dialogbox}
+
+15. Select [Keep Solver Solution]{.uicontrol} (this is usually the default). In the [Reports]{.uicontrol} section, select [Answer]{.uicontrol} and then click [OK]{.uicontrol}.
+
+The solution found by Solver will now be displayed in your worksheet.
+
+![Worksheet showing the optimal solution found by Solver for WeatherLeather.](images/solver/weatherleather-solution.png){#fig-weatherleather-solution}
+
+A new worksheet named [Answer Report ...]{.uicontrol} will also be created.
+
+![nswer Report generated by Solver for the WeatherLeather problem.](images/solver/weatherleather-solver-report.png){#fig-weatherleather-solver-report}
+
+::: callout-note
+-   The names used in the Answer Report are not always perfectly descriptive. Excel attempts to derive these names from text in adjacent cells in your model. To ensure clear names in the report, it's highly recommended to define meaningful names for the relevant cells in your worksheet (using the Name Box or Name Manager) before running Solver.
+
+-   In the Constraints section of the Answer Report, the Status column indicates which constraints are Binding. A binding constraint means its limit has been reached, and there is no slack. In this example, you can see that all available cutting time and sewing time are used. For the long jackets, the market demand limit is not reached; there is a slack of 6 (meaning 6 more could potentially be sold if other constraints allowed).
 :::
 
-## No solution found. What now? {#sec-solver-problems}
+The WeatherLeather problem is now solved. A maximum profit of \$2,664 per week can be achieved by producing 20 short jackets and 6 long jackets.
+:::::
 
-Regularly the Solver reports that no solution could be found:
+## No Solution Found. What Now? {#sec-solver-problems}
 
-![Message that the solver has not found a viable solution.](images/solver/solver-results-nosolution-dialogbox.png){#fig-solver-results-nosolution-dialogbox}
+Frequently, Solver reports that no feasible solution could be found:
 
-There are two possibilities now:
+![Solver message indicating no feasible solution was found.](images/solver/solver-results-nosolution-dialogbox.png){#fig-solver-results-nosolution-dialogbox}
 
-1.  There is no solution to the formulated problem.
-2.  There is a solution to the formulated problem, but it is not found by the Solver.
+There are two main possibilities:
 
-In most cases, you don't know with certainty which situation is present. There are a few guidelines to investigate whether the solution can be found by the Solver.
+1.  No solution actually exists for the problem as formulated.
+2.  A solution does exist, but Solver was unable to find it.
 
-### Changing start values variable cells {#sec-solver-startvalues}
+In most cases, it's not immediately certain which situation applies. Here are a few guidelines to investigate if Solver can find a solution:
 
-Whether it is possible for the Solver to find a solution or not depends on the starting values of the variable cells, among other things. Experimenting with different starting values can sometimes help to find a solution.
+### Changing Initial Values of Variable Cells {#sec-solver-startvalues}
 
-### Changing Solver options {#sec-solver-options}
+Solver's ability to find a solution can depend on the initial values of the variable cells. Experimenting with different starting values can sometimes help Solver find a solution, especially for non-linear problems.
 
-Finding a solution also depends on how the Solver works. The search for a solution follows a so-called iterative process. An iteration is the repeated recalculation of a worksheet until a specific condition is met. The Solver has several settings for this iteration process. Clicking the button [Options]{.uicontrol} in the dialog box Solver Parameters displays a window for changing several options of the Solver.
+### Changing Solver Options {#sec-solver-options}
 
-![Options solver.](images/solver/solver-options.png){#fig-solver-options}
+Finding a solution also depends on how Solver operates. The search for a solution is an iterative process (repeated recalculations until a specific condition is met). Solver has several settings for this iteration process. Clicking the [Options]{.uicontrol} button in the Solver Parameters dialog box opens a window for changing these settings.
 
-The dialog box offers extensive possibilities for the solution process. Specifications for certain problems can be saved as a model and reloaded. A few of these settings are listed below and discussed shortly.
+![Solver Options dialog box.](images/solver/solver-options.png){#fig-solver-options}
 
-| Option                 | Explanation                                                                                                                                                                                           |
-|-----------------------|------------------------------------------------|
-| Max Time               | The maximum seconds the solver may spend at the iteration process.                                                                                                                                    |
-| Iterations             | The maximum number of iterations (recalculations).                                                                                                                                                    |
-| Precision              | The degree of precision for a constraint to be considered satisfied. The smaller the number, the higher the precision.                                                                                |
-| Tolerance              | The maximal error percentage allowed by integer solutions. The value is only relevant when a restriction with an integer is present. The smaller the error rate, the longer the search process takes. |
-| Assume Linear Model    | Only use it when all relationships in the calculation model are linear. The choice may then speed up the search process. Using with non-linear models can ensure that no solution is found.           |
-| Show Iteration Results | To see the values of each trial solution. Not normally use.                                                                                                                                           |
-| Constraint Precision   | The degree of precision for a constraint. The smaller the number, the higher the precision.                                                                                                           |
-| Max Time               | The maximum seconds the solver may spend at the iteration process.                                                                                                                                    |
-| Iterations             | The maximum number of iterations (recalculations).                                                                                                                                                    |
+This dialog box offers extensive control over the solution process. Specifications for certain problem types can be saved as a model and reloaded. Some key settings are:
 
-: Explanation of the solver options. {#tbl-solver-options tbl-colwidths="[25,75]"}
+| Option | Explanation |
+|----|----|
+| Max Time | The maximum time Solver is allowed to spend on the solution process. |
+| Iterations | The maximum number of iterations (recalculations) Solver will perform. |
+| Constraint Precision | The degree of precision required for a constraint to be considered satisfied. A smaller number means higher precision. (Note: The original table had 'Precision' and 'Constraint Precision' - this is a common point of confusion. 'Constraint Precision' is the key one for how closely constraints must be met). |
+| Integer Optimality (%) | The maximum percentage difference from the true optimal integer solution that is acceptable. A value of 0 means Solver must find the exact optimal. A small percentage (e.g., 1%) can speed up complex integer problems. (Original table had 'Tolerance' which is related but 'Integer Optimality' is the standard term here). |
+| Assume Linear Model | Check this if all relationships in your model are linear. This can speed up the solution process. Using it with non-linear models may prevent Solver from finding a solution or lead to an incorrect one. Show Iteration Results Select this to pause Solver after each iteration and see the trial solution. Not typically used unless debugging a difficult problem. |
+
+: Explanation of selected Solver options. {#tbl-solver-options tbl-colwidths="\[25,75\]"}
 
 Additional information:\
-[Support site Frontline Systems, the developer of the Solver and the best source for information.](http://www.solver.com)
+[Visit the support site of Frontline Systems, the developers of Solver, for the most comprehensive information.](http://www.solver.com)
 
 ## Exercises {#sec-solver-exercises}
 
-::: {#exr-solv001}
-**Bonbon box (solv001)**
+:::: {#exr-solv001}
+**Bonbon Box Assortment (solv001)**
 
-A well-known bonbon manufacturer wants to offer an assortment box with 2 types of chocolates (cherry bonbons and hazelnut chocolates) and maximum profits. Further is known:
+A renowned bonbon manufacturer wants to offer an assortment box with two types of chocolates (cherry bonbons and hazelnut chocolates) to maximize profit. The following information is known:
 
--   A cherry bonbon takes 16 cm2 space and a hazelnut bonbon 8 cm2. The bonbons are separated by paper. At least 320 cm2 of the box should be covered with bonbons.
--   A cherry bonbon weighs 2 gram and a hazelnut bonbon weighs 1 gram. Market research has shown that the ideal weight of the contents of the box is between 40 grams and 60 grams.
--   Also, market research revealed that the box must contain at least 35 bonbons with at least 10 cherry bonbons.
--   The profit on a cherry bonbon is $0.28 and $0.20 on a hazelnut bonbon.
+-   A cherry bonbon takes up 16 cm^2^ of space, and a hazelnut bonbon takes up 8 cm^2^. The bonbons are separated by paper. At least 320 cm^2^ of the box must be covered with bonbons.
+-   A cherry bonbon weighs 2 grams, and a hazelnut bonbon weighs 1 gram. Market research indicates the ideal weight of the box's contents is between 40 grams and 60 grams (inclusive).
+-   Market research also revealed that the box must contain at least 35 bonbons in total, with at least 10 of them being cherry bonbons.
+-   The profit on a cherry bonbon is \$0.28, and on a hazelnut bonbon is \$0.20 .
 
 1.  What are the decision variables?
 2.  What is the objective function?
-3.  What restrictions are there?
-4.  Build the model in Excel using the guidelines indicated in this textbook. You see an example in the following figure. Formulas need to be placed in the empty cells. Both decision variables have got a starting value of 10. With these numbers, you can easily check if the formulas are ok and give the correct results.
+3.  What are the constraints?
+4.  Build the model in Excel using the guidelines from this chapter. An example layout is shown below. Formulas need to be placed in the empty cells for calculated values (like total space, total weight, total bonbons, total profit). Both decision variables (number of each bonbon type) have an initial value of 10. These starting values allow you to easily check if your formulas are correct.
 
-![](images/solver/solv001-model.png)
+![Example model layout for the bonbon box problem.](images/solver/solv001-model.png){#fig-solv001-model-example}
 
-5.  Enter the model in the Solver and then determine the optimal number of each bonbon type for the box.
+5.  Enter the model into Solver and determine the optimal number of each bonbon type for the box.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-1.  Two decision variables: number of cherry bonbons per box (= C) and number of hazelnut bonbons per box (= H).
-2.  Objective function is the maximum profit on a box (= P): `P = 0,28*C + 0,20*H`
-3.  Restrictions:
-    -   Number of cherry bonbons per box: `C >= 10`
-    -   Total number of bonbons per box `C + H >= 35`
-    -   Weight box: `2*C + 1*H >= 40`
-    -   Weight box: `2*C + 1*H <= 60`
-    -   Area bonbons: `16*C + 8*H >= 320`
-    -   Number of bonbons is an integer: `C = integer , H = integer`
-    -   Number of bonbons is a positive number: `C >= 0 , H >= 0`
 
-Optimal content box: number of cherry chocolates = 10, number of hazelnut chocolates = 40. The profit per box is $10.80 and all constraints are met.
+1.  Decision variables:
+    -   C = number of cherry bonbons per box
+    -   H = number of hazelnut bonbons per box
+2.  Objective function (Maximize Profit P): `P = 0,28*C + 0,20*H`
+3.  Constraints:
+    -   Cherry bonbons per box quantity: `C \>= 10`
+    -   Total bonbons per boxquantity: `C + H >= 35`
+    -   Minimum box weight:: `2*C + 1*H >= 40`
+    -   Maximum box weight: `2*C + 1*H <= 60`
+    -   Minimum bonbon area: `16*C + 8*H >= 320`
+    -   Integer constraint: `C, H` must be integers
+    -   Non-negativity (implied by other constraints but good practice): `C >= 0 , H >= 0`
+
+Optimal content: 10 cherry chocolates, 40 hazelnut chocolates. Profit per box: \$10.80. All constraints are met.
+
 `r unhide()`
 :::
+::::
 
-:::
+:::: {#exr-solv002}
+**Supermarket Branch Expansion (solv002)**
 
-::: {#exr-solv002}
-**Number of supermarkets (solv002)**
+A supermarket chain plans to open new branches with a maximum investment of \$14 million. The chain is considering four types of shops: A, B, C, and D. The following figure shows the setup costs for each store type and their expected sales in the next financial year.
 
-A supermarket chain wants to open some new branches for a maximum investment of 14 million dollars. The chain has 4 types of shops: A, B, C, and D. In the following figure, you can see the costs for setting up the four store types and the (expected) sales in the next financial year.
+![Data for supermarket branch expansion (costs and expected sales).](images/solver/solv002-data.png){#fig-solv002-data}
 
-![](images/solver/solv002-data.png)
-
-All new build branches can be ready for the next financial year. The possible locations are comparable in terms of population. The executive board wants the greatest possible sales of the new branches in the next financial year. How many branches of each type should be built to achieve this?.
+All newly built branches can be operational for the next financial year. Potential locations are comparable in terms of population. The executive board wants to maximize the total expected sales from the new branches in the next financial year. How many branches of each type should be built?
 
 1.  What are the decision variables?
 2.  What is the objective function?
-3.  What restrictions are there?
-4.  Build the model in Excel using the guidelines indicated in this textbook. You see an example in the following figure. Formulas need to be placed in the empty cells. Both decision variables have got a starting value of 2.
+3.  What are the constraints?
+4.  Build the model in Excel. An example layout is provided below. Formulas are needed for calculated values (total investment, total sales). Initial values for the number of each store type are set to 2 for formula checking.
 
-![](images/solver/solv002-model.png)
+![Example model layout for the supermarket expansion problem.](images/solver/solv002-model.png){#fig-solv002-model-example}
 
-5.  Enter the model in the Solver and then determine the optimal number of branches of each type and the expected total sales..
+5.  Enter the model into Solver to determine the optimal number of branches of each type and the expected total sales.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-1.  Four decision variables: Number branches type A (= A), type B (= B), type C (= C) and type D (= D).
-2.  Objective function is the total sales (= S): `S = 24*A + 20*B + 11*C + 5*D`
-3.  Restrictions:
+
+1.  Decision variables:
+    -   A = Number of Type A branches
+    -   B = Number of Type B branches
+    -   C = Number of Type C branches
+    -   D = Number of Type D branches.
+2.  Objective function (Maximize total sales S): `S = 24*A + 20*B + 11*C + 5*D`
+3.  Constraints:
     -   Maximum investment: `4*A + 3*B + 2*C + 1*D <= 14`
-    -   Each number of branches is an integer: `A = integer , B = integer , C = integer , D = integer`
-    -   Each number of branches is a positive number: `A >= 0 , B >= 0 , C >= 0 , D >= 0`
+    -   Integer constraint: `A, B, C, D` must be integers
+    -   Non-negativity: `A >= 0 , B >= 0 , C >= 0 , D >= 0`
 
-Optimal number of branches type A = 0, type B = 4, type C = 1, type D = 0. The total sales is 91 million dollar.
+Optimal number of branches: Type A = 0, Type B = 4, Type C = 1, Type D = 0. Total expected sales: \$91.
+
 `r unhide()`
 :::
+::::
 
-:::
+:::: {#exr-solv003}
+**Running Shoe Production (solv003)**
 
-::: {#exr-solv003}
-**Running shoes (solv003)**
+A company in Hong Kong manufactures American running shoes. The company produces three models: Runner, Lady T, and Super A, and wants to maximize profit.
 
-A company in Hong Kong manufactures American running shoes. The company produces three models: Runner, Lady T, and Super A. The company wants to make as much profit as possible.
+-   Manufacturing 1 pair: Runner requires 0.31 hours, Lady T requires 0.20 hours, and Super A requires 0.25 hours. The maximum number of production hours is 150 per week.
+-   Capital investment per pair: Runner \$16, Lady T \$12, and Super A \$10. A total of \$8,000 per week is available for capital investment.
+-   Due to limited machine capacity, weekly production is limited to: 300 pairs of Runner, 400 pairs of Lady T, and 400 pairs of Super A.
+-   Profit per pair: Runner \$6, Lady T \$5, and Super A \$4.
 
--   Manufacturing 1 pair of Lady's needs 0.31 hour, Runner T needs 0.20 hour and Super A costs 0.25 hour. The maximum number of production hours is 150 hours per week.
--   The capital investment per pair for Runner, Lady T, and Super A is respectively $16, $12, and $10. There is $8000 per week available.
--   Because of limited machine capacity the production per week is limited to 300 pair Runner, 400 pair Lady T, and 400 pair Super A.
--   The profit for Runner is $6 per pair, for Lady T $5 per pair and $4 per pair for Super A.
-
-Calculate the optimal production numbers and the maximum profit per week with the Solver.
+Calculate the optimal production numbers and the maximum profit per week using Solver.
 
 1.  What are the decision variables?
 2.  What is the objective function?
-3.  What restrictions are there?
-4.  Build the model in Excel using the guidelines indicated in this textbook. You see an example in the following figure. Formulas need to be placed in the empty cells. Both decision variables have got a starting value of 100.
+3.  What are the constraints?
+4.  Build the model in Excel. An example layout is below. Initial values for production quantities are set to 100.
 
-![](images/solver/solv003-model.png)
+![Example model layout for the running shoe production problem.](images/solver/solv003-model.png){#fig-solv003-model-example}
 
-5.  Enter the model in the Solver and then determine the optimal number of each model and the maximum weekly profit.
-
-::: {.content-visible when-format="html:js"}
-`r hide("Answer")`
-1.  Three decision variables: Number model Runner per week (= R), number model Lady T per week (= T), and number model Super A per week (= A).
-2.  Objective function is the maximum profit per week (= P): `P = 6*R + 5*T + 4*A`
-3.  Restrictions:
-    -   Number model Runner per week: `R <= 300`
-    -   Number model Lady T per week: `T <= 400`
-    -   Number model Super A per week: `A <= 400`
-    -   Maximum production time per week: `0,31*R 0,20*T + 0,25*A <= 150`
-    -   Maximum investment per week: `16*R + 12*T +10*A <= 8000`
-    -   Number of each model is an integer: `R = integer , T = integer , A = integer`
-    -   Number of each model is a positive number: `R >= 0 , T >= 0 en A >= 0`
-
-Optimal number Runner = 111, Lady T = 400 and Super A = 142. The profit per week is $3234.
-`r unhide()`
-:::
-
-:::
-
-::: {#exr-solv004}
-**Production of aluminum ladders (solv004)**
-
-A manufacturer of aluminum ladders makes three types of ladders. The order in the production is sewing the material first, then assembling and finally the finishing. The production times and profit per ladder are listed in the following figure:
-
-![](images/solver/solv004-data.png)
-
-The total available production capacity is 80 for sewing, 100 for assembling, and 120 for finishing.
-
-Use the Solver to determine how many ladders of each type should be produced for a maximum profit.
+5.  Enter the model into Solver to determine the optimal number of each model and the maximum weekly profit.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-Number type 1 = 0, type 2 = 4 and type 3 = 10. Profit = $1080.
+
+1.  Decision variables:
+    -   R = number of Runner model pairs per week
+    -   T = number of Lady T model pairs per week
+    -   A = number of Super A model pairs per week
+2.  Objective function (Maximize Profit P): `P = 6*R + 5*T + 4*A`
+3.  Constraints:
+    -   Runner production limit: `R <= 300`
+    -   Lady T production limit: `T <= 400`
+    -   Super A production limit: `A <= 400`
+    -   Maximum production time: `0,31*R 0,20*T + 0,25*A <= 150`
+    -   Maximum investment: `16*R + 12*T +10*A <= 8000`
+    -   Integer constraint: `R, T, A` must be integers
+    -   Non-negativity: `R, T, A >= 0`
+
+Optimal production: Runner = 111, Lady T = 400, Super A = 142. Maximum profit per week: \$3234.
+
 `r unhide()`
 :::
+::::
 
-:::
+:::: {#exr-solv004}
+**Aluminum Ladder Production (solv004)**
 
-::: {#exr-solv005}
-**Production of dog food (solv005)**
+A manufacturer produces three types of aluminum ladders. The production process involves sewing the material, then assembling, and finally finishing. Production times and profit per ladder are listed below:
 
-There are two types of dog food for sale: ordinary and special. A bag of ordinary food contains 3 units minerals, 2 units protein, and 3 units fat. This bag costs $8. A bag special food contains 8 units minerals, 2 units protein, and 1 unit fat. The price of this bag is $14. Over some time a dog should at least consumed 72 units minerals, 36 units protein, and 36 units fat.
+![Production times (hours/ladder) and profit (\$/ladder) for three ladder types.](images/solver/solv004-data.png){#fig-solv004-data}
 
-Determine the quantity of both bags to be bought with minimum costs.
+The total available production capacity per period is: 80 hours for sewing, 100 hours for assembling, and 120 hours for finishing.
+
+Use Solver to determine how many ladders of each type should be produced to maximize profit.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-Number bags ordinary = 14, special= 4. Costs = $168.
+
+Number of Type 1 = 0, Type 2 = 4, Type 3 = 10. Profit = \$1,080.
+
 `r unhide()`
 :::
+::::
 
-:::
+:::: {#exr-solv005}
+**Dog Food Mix (solv005)**
 
-::: {#exr-solv006}
-**Vitamins for cattle feeding (solv006)**
+Two types of dog food are available: ordinary and special.
 
-A farmer uses three types of cattle feed, type 1, type 2, and type 3. The nutritional composition and the cost per kg of each type are displayed in the following figure.
+-   A bag of ordinary food contains 3 units of minerals, 2 units of protein, and 3 units of fat. It costs \$8.
+-   A bag of special food contains 8 units of minerals, 2 units of protein, and 1 unit of fat. It costs \$14.
+-   Over a certain period, a dog must consume at least 72 units of minerals, 36 units of protein, and 36 units of fat.
 
-![](images/solver/solv006-data.png)
-
-A magazine has published the minimum day requirements (MDR) in milligrams per animal for the vitamins A, B, and C. These are 120 mg A, 180 mg B, and 100 mg C. Furthermore, an animal can not eat more than 7½ kg of type 1 and 5 kg of type 2 and 2½ kg of type 3.
-
-How many kilos of each type should the farmer provide every day to get the costs as low as possible and still meet the minimum daily requirements?
+Determine the quantity of each bag type to be bought to meet these nutritional requirements at minimum cost.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-Per day: type 1 = 7.500 kg, type 2 = 1.397 kg and type 3 = 1.426 kg. Costs = $68.37.
+
+Number of ordinary bags = 14, special bags = 4. Minimum Cost = \$168.
+
 `r unhide()`
 :::
+::::
 
-:::
+:::: {#exr-solv006}
+**Vitamins for Cattle Feeding (solv006)**
 
-::: {#exr-solv007}
-**Vitamin pills (solv007)**
+A farmer uses three types of cattle feed: Type 1, Type 2, and Type 3. The nutritional composition (vitamins A, B, C in mg/kg) and cost per kg of each type are shown below:
 
-A nutritionist recommends a patient the following minimum day requirements for vitamin B and C: 400 units vitamin B and 800 units vitamin C. The local pharmacy can provide two different vitamin brands: Y and Z. A vitamin pill of brand Y contains 75 units vitamin B and 100 units vitamin C and costs $0.10. A vitamin pill of brand Z contains 50 units vitamin B and 200 units vitamin C and costs $0.08. How much vitamin pills of each branch must be consumed every day at the lowest possible cost?
+![Nutritional composition and cost for three types of cattle feed.](images/solver/solv006-data.png){#fig-solv006-data}
+
+A magazine has published the minimum daily requirements (MDR) per animal for vitamins A, B, and C as 120 mg, 180 mg, and 100 mg, respectively. Furthermore, an animal cannot eat more than 7.5 kg of Type 1, 5 kg of Type 2, and 2.5 kg of Type 3 per day.
+
+How many kilograms of each feed type should the farmer provide daily to meet the MDR at the lowest possible cost, while respecting the maximum consumption limits?
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-Per day: branch Y = 4 pills and branch Z = 2 pills. Costs = $0.56.
+
+Per day: Type 1 = 7.500 kg, Type 2 = 1.397 kg, Type 3 = 1.426 kg. Minimum Costs = \$68.37.
+
 `r unhide()`
 :::
+::::
 
+:::: {#exr-solv007}
+**Vitamin Pill Consumption (solv007)**
+
+A nutritionist recommends a patient consume a minimum daily requirement of 400 units of vitamin B and 800 units of vitamin C. The local pharmacy provides two vitamin brands: Y and Z.
+
+-   A vitamin pill of brand Y contains 75 units of vitamin B and 100 units of vitamin C and costs \$0.10.
+-   A vitamin pill of brand Z contains 50 units of vitamin B and 200 units of vitamin C and costs \$0.08.
+
+How many vitamin pills of each brand must be consumed daily to meet the requirements at the lowest possible cost?
+
+::: {.content-visible when-format="html:js"}
+`r hide("Answer")`
+
+Per day: Brand Y = 4 pills, Brand Z = 2 pills. Minimum Costs = \$0.56.
+
+`r unhide()`
 :::
+::::
 
-::: {#exr-solv008}
-**Minimizing transport costs (solv008)**
-
-A company has stores in 6 cities (Amersfoort, Eindhoven, Enschede, Lelystad, Tiel, Zwolle). Supplying the stores is done from 3 distribution centers (DC) in Coevorden, Venlo, and Woerden. The stores make every week a sales forecast for the next week and submit the required number of products to the head office. The head office makes a transport planning to the shops based on the available stocks in the DC's and the required number of products.
-
-![](images/solver/solv008-model.png)
-
-Explanation:
-
--   The upper table shows the transport costs per product unit from the DC to the store. So the cost of transport of 1 product from DC Coevorden to the store in Amersfoort is $100.
--   In the column “Number Needed” is the number of products the store needs. So Amersfoort must receive 225 products.
--   The area “Number transported from” should display the number of products that will be transported from the DC to the store. The Solver should determine these numbers..
--   The row “Initial stock” contains the number of products that are in stock in the DC.
-
-Create the cheapest transport planning using Solver.
+:::: {#exr-solv008}
+**Minimizing Transport Costs (solv008)**
 
 [File]{.smallcaps}: `Solv008.xlsx`
 
+A company has stores in 6 cities (Amersfoort, Eindhoven, Enschede, Lelystad, Tiel, Zwolle). Stores are supplied from 3 distribution centers (DCs) in Coevorden, Venlo, and Woerden. Each week, stores forecast sales for the next week and submit the required number of products to the head office. The head office creates a transport plan based on available stock in the DCs and the required product numbers.
+
+![Model structure for transport cost minimization. The top table shows transport costs per unit. "Number Needed" is store demand. "Number transported from" will be determined by Solver. "Initial stock" is DC availability.](images/solver/solv008-model.png){#fig-solv008-model-structure}
+
+Explanation:
+
+-   The upper table shows the transport costs per product unit from a DC to a store. For example, transporting 1 product from DC Coevorden to the store in Amersfoort costs \$100.
+-   The "Number Needed" column indicates the number of products each store requires. Amersfoort needs 225 products.
+-   The "Number transported from" area (the main grid in the lower section) should display the number of products transported from each DC to each store. Solver should determine these numbers.
+-   The "Initial stock" row contains the number of products available at each DC.
+
+Create the cheapest transport plan using Solver.
+
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-![](images/solver/solv008-result.png)
+
+![Optimal transport plan minimizing costs.](images/solver/solv008-result.png)
+
 `r unhide()`
 :::
+::::
 
-:::
+:::: {#exr-solv009}
+**Solving a System of Linear Equations (solv009)**
 
-::: {#exr-solv009}
-**Solving system of linear equations (solv009)**
-
-Solve the following system of equations using the Solver.
+Solve the following system of equations using Solver:
 
 \begin{align*}
   6,1x_1 + 4,5x_2 + 5,7x_4 + 7,5x_5 &= 5,7\\
@@ -494,45 +515,50 @@ Solve the following system of equations using the Solver.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
-![](images/solver/solv009-result.png)
+
+![Solution to the system of linear equations.](images/solver/solv009-result.png)
+
 `r unhide()`
 :::
+::::
 
-:::
+:::: {#exr-solv010}
+**Savings Bank Investment Strategy (solv010)**
 
-::: {#exr-solv010}
-**Savings bank (solv010)**
+A savings bank has 3 million euros to invest. The investment portfolios include personal loans, mortgages (first and second), and car leasing. The bank association's articles stipulate certain conditions for fund allocation:
 
-A savings bank has 3 million euros for investing. The investment portfolios are personal loans, mortgages (first and second mortgages), and car leasing. In the articles of the bank association you can find some conditions regarding the spending of the funds:
+-   At least 30% of the total loaned amount must be invested in mortgages.
+-   At least 50% of the amount designated for mortgages must be invested in first mortgages.
+-   No more than 25% of the total loaned amount can be allocated to personal loans and car leasing combined.
+-   No more than 15% of the total loaned amount can be invested in personal loans.
 
--   At least 30 percent of the total loaned amount must be invested in mortgages.
--   At least 50% of the amount intended for mortgages must be invested in first mortgages.
--   Up to 25% of the total loaned amount is allowed to be spent on personal loans and car leasing together.
--   Up to 15% of the total loaned amount is allowed to be invested in personal loans.
+The annual yield for each loan type is listed below:
 
-The annual yield of each type of loan is listed in the following table.
+| Loan Type       | Yield |
+|-----------------|-------|
+| Personal loan   | 18%   |
+| First mortgage  | 12%   |
+| Second mortgage | 14%   |
+| Car leasing     | 16%   |
 
-|Loan type|Yield|
-|---------|-----|
-|Personal loan|18%|
-|First mortgage|12%|
-|Second mortgage|14%|
-|Car leasing|16%|
+: Annual yields for different loan types.
 
-Determine, using the Solver, how much money (in multiples of € 1000,-) in each of the four types of loans should be invested so that the yield is as high as possible.
+Determine, using Solver, how much money (in multiples of €1,000) should be invested in each of the four loan types to maximize the total annual yield.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")`
 
-|Loan type|Amount|
-|---------|------|
-|Personal loan|450 K€|
-|First mortgage|1125 K€|
-|Second mortgage|1125 K€|
-|Car leasing|300 K€|
+| Loan type       | Amount  |
+|-----------------|---------|
+| Personal loan   | 450 K€  |
+| First mortgage  | 1125 K€ |
+| Second mortgage | 1125 K€ |
+| Car leasing     | 300 K€  |
 
-Total yield of 422 K€. Rounding on euro cents can cause small differences.
+: Optimal investment amounts per loan type.
+
+Total yield of 422 K€. Minor differences may occur due to rounding.
+
 `r unhide()`
 :::
-
-:::
+::::

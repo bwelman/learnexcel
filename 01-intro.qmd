@@ -6,70 +6,70 @@
 -   What spreadsheets are.
 -   Starting and closing Excel.
 -   The layout of the Excel program window.
--   Creating a new workbook and saving it.
--   Excel's file formats.
+-   Creating and saving a new workbook.
+-   File formats of Excel.
 :::
 
-Excel is a program from the Microsoft Office package and it allows you to make calculations in calculation sheets (spreadsheets). This chapter is an introduction to spreadsheets in general and in Excel specific.
+Excel is part of the Microsoft Office suite. It allows you to perform calculations in spreadsheets. This chapter provides an introduction to spreadsheets in general, with a specific focus on Excel.
 
 ## What is Excel? {#sec-intro-over}
 
-A spreadsheet is a computer program with which you can put data (text, numbers, ...) in sheets consisting of rows and columns. Besides capturing data, you can also perform a variety of operations on the data. Microsoft Excel is such a program.
+A spreadsheet is a computer program that lets you enter data (text, numbers, etc.) into sheets made up of rows and columns. Besides entering data, you can also perform various operations on it. Microsoft Excel is one such program.
 
-The term spreadsheet is also used to refer to the file created by the program. And in Excel, an individual file is also referred to as a **workbook**. The standard file format in Excel is `.xlsx`. However, Excel can save a workbook in other file formats and can also read other file formats.
+The term "spreadsheet" is also used to refer to a file created with such a program. In Excel, this file is called a **workbook**. The standard file format is `.xlsx`, but Excel supports many other formats for both reading and saving files.
 
-A workbook can have one or more worksheets. A **worksheet** is divided into rows and columns. The intersection of a row and a column is a **cell**. Individual cells are usually identified by a column letter and a row number. For example, B3 specifies the cell in column B and row 3.
+A workbook can contain one or more **worksheets**. A worksheet is divided into rows and columns, and their intersections are called **cells**. Cells are identified by a column letter and a row number — for example, B3 refers to the cell in column B, row 3.
 
-In these cells, you can enter text, numbers, and formulas. With the formulas, you can perform calculations with numbers or operations on texts. In the formulas, references to other cells may occur, which gives you the possibility to set up large and complex calculation models. With each change, everything will be automatically recalculated.
+You can enter text, numbers, and formulas in cells. Formulas allow you to perform calculations or manipulate text. They can reference other cells, making it possible to build large and complex calculation models. Any change will automatically update all dependent values.
 
-This makes spreadsheets very useful for running the so-called [What-if analysis]{.term}. Here you change some values in the model and then look at what impact this has on the results in the model. You can then quickly calculate a number of different scenarios. In addition, it is not difficult to make nice graphs using Excel.
+Spreadsheets are very useful for performing [What-if analysis]{.term}, where you modify input values to see how they affect results. Excel also makes it easy to create clear and attractive charts.
 
 ## Starting and Closing Excel {#sec-intro-excel-start}
 
-The possibilities to start Excel depends on the way the system is installed. This course assumes a default installation of Microsoft Office 365 EN on a system with Windows 10. On almost all computers Excel can be started through the start button of Windows and this method is described here. The most convenient start is through a shortcut on the desktop or a button on the taskbar.
+How you start Excel depends on your system setup. This course assumes a default installation of Microsoft Office 365 on Windows 10. On most systems, Excel can be launched from the Start menu. The easiest way is to use a shortcut on the desktop or taskbar.
 
 ::: {#prp-intro-start-excel}
 1.  Choose [Start \> Excel]{.uicontrol}.
 
-The starting screen from Excel appears. In the left part, you can see the recently opened files and in the right part an overview of the available templates.
+The Excel start screen appears. On the left, you’ll see recently opened files; on the right, an overview of available templates.
 
-2.  Click on the template [Blank workbook]{.uicontrol}. A new workbook is displayed with the name [Book1]{.varname} and an empty worksheet with the name [Sheet1]{.varname}.
+2.  Click on the [Blank workbook]{.uicontrol} template. A new workbook opens named [Book1]{.varname} with a blank worksheet named [Sheet1]{.varname}.
 
 ::: callout-note
-**Disabling start screen**
+**Disabling the Start Screen**
 
-Normally the start screen appears at startup. This screen displays the most recent documents and the available templates. This can be useful in some cases, but it is also possible to start Excel with an empty sheet.
+By default, Excel shows the start screen at launch. This includes recent documents and templates. If preferred, you can start Excel with a blank workbook:
 
-First start Excel an then choose [File \> Options \> tab General]{.uicontrol} and deselect the option [Show the Start screen when this application starts]{.uicontrol}.
+Go to [File \> Options \> General tab]{.uicontrol} and uncheck the option [Show the Start screen when this application starts]{.uicontrol}.
 
-The first time you start Excel again, you get immediately a new workbook with an empty sheet.
+Next time you launch Excel, it will open directly to a new workbook.
 :::
 
-There are two methods to stop working with Excel and closing the program window:
+To exit Excel:
 
--   Through the close button of the program window. This is a button with an [X]{.uicontrol} in the upper right corner of the window.
--   Through the menu [File \> Close]{.uicontrol}.
+-   Click the [X]{.uicontrol} button in the top right corner of the window.
+-   Or choose [File \> Close]{.uicontrol} from the menu.
 
 3.  Close Excel.
 
 ::: callout-note
-When something is changed in de workbook, you always get a dialog window asking whether the changes should or should not be saved.
+If changes were made to the workbook, Excel will prompt you to save them before closing.
 :::
 :::
 
-## The Excel window {#sec-intro-excel-window}
+## The Excel Window {#sec-intro-excel-window}
 
-The Excel program window has three parts: application control, worksheet, and status bar. You can see all three parts from top to bottom in the figure below.
+The Excel interface includes three main areas: the application controls, the worksheet, and the status bar. These are shown top to bottom in the image below.
 
-![Program window of Excel.](images/common/excel-window.png){#fig-excel-window}
+![Excel interface.](images/common/excel-window.png){#fig-excel-window}
 
 1 - File
 
-:   This button is in the upper-left corner of the program window. If you click this button, a drop-down list will appear with some basic commands like creating, opening, saving, and printing of files. Through this button, you also have access to the important command [Options]{.uicontrol}, with which you can set your preferences. This is also called the **Backstage** view.
+:   Opens a menu with basic commands such as New, Open, Save, Print, and Options. This view is known as the **Backstage**.
 
 2 - Quick Access Toolbar
 
-:   The Quick Access Toolbar is a customizable toolbar for shortcuts to frequently used features and commands. It is also where you can add the shortcuts to Excel features that are not available on the ribbon. The default installation has three shortcuts:
+:   A customizable toolbar with shortcuts for commonly used commands. Default buttons include:
 
 -   ![](images/common/button-save.png) [Save]{.uicontrol}
 -   ![](images/common/button-undo.png) [Undo]{.uicontrol}
@@ -78,67 +78,67 @@ The Excel program window has three parts: application control, worksheet, and st
 
 3 - Ribbon
 
-:   The ribbon is a panel, a wide toolbar at the upper side of the program window. The commands on the ribbon are organized in logical groups and collected together under tabs like [Home]{.uicontrol}, [Insert]{.uicontrol}, [Page Layout]{.uicontrol}, ... Each tab has a specific task that it performs.
+:   A wide toolbar at the top. Commands are grouped under tabs like [Home]{.uicontrol}, [Insert]{.uicontrol}, [Page Layout]{.uicontrol}, ....
 
-Some tabs, e.g. contextual tabs, are only displayed when they are needed. An example is the tab Chart Tools, that only appears when a chart is selected. Furthermore, the commands you will need often are on the left and the most specialized commands are on the right.
+Some tabs, such as contextual tabs (e.g., **Chart Tools**), only appear when relevant. Commonly used commands are on the left, specialized ones on the right.
 
 ::: callout-note
-There is no way to delete the ribbon, but you can minimize it through the keyboard shortcut [CTRL + F1]{.uicontrol}. Then you see only the tabs. Pressing this shortcut again restores the ribbon.
+You can’t remove the ribbon, but you can minimize it using [CTRL + F1]{.uicontrol}. Press it again to restore.
 :::
 
 4 - Tabs
 
-:   At the upper side of the ribbon are tabs. On each tab, there are groups of commands. Some tabs are only displayed when they are needed.
+:   Located above the ribbon. Each tab contains groups of commands. Some tabs appear only when needed.
 
 5 - Groups
 
-:   On each tab, there are groups of related commands. A group contains all the necessary commands for a particular task. Not all the commands of a group are mostly visible. When you want to see more options for the group you should click on the arrow ![](images/common/button-dialogwindow.png) in the bottom right corner of the group.
+:   Each tab has groups of related commands. To see more options, click the small arrow ![](images/common/button-dialogwindow.png) in the bottom right of the group.
 
-6 - Worksheet Name
+6 - Workbook Name
 
-:   Name of the workbook (the file)
+:   Displays the name of the file.
 
-7 - Command button
+7 - Command Button
 
-:   When you click on a command button then usually the change takes effect immediately. It is also possible that a choice list or a dialog box appears first.
+:   Click to execute a command. It may apply changes immediately or open a menu or dialog box.
 
-8 - Active cell
+8 - Active Cell
 
-:   The selected cell for the active worksheet is the active cell. The active cell is highlighted with a black border. In @fig-excel-window, `A1` is the active cell.
+:   The selected cell is outlined in black. In @fig-excel-window, the active cell is `A1`.
 
 9 - Name Box
 
-:   The name box is located left to the formula bar above the worksheet area. It displays the cell address (cell reference) of the active cell. It will also show the name assigned to a cell or range of cells. The name box can also be used to assign names to cells or ranges of cells.
+:   Located next to the formula bar. It shows the reference of the active cell or its assigned name. You can also assign names here.
 
-10 Formula Bar
+10 - Formula Bar
 
-:   The formula bar is located above the worksheet area. It displays the data or the formula stored in the active cell. The formula bar can be used to enter or edit the data or formula in the active cell.
+:   Displays the data or formula in the active cell. You can edit content here as well.
 
 11 - Worksheet
 
-:   A workbook in Excel can contain multiple worksheets. When creating a new workbook, by default Excel creates an empty worksheet with the names [Sheet1]{.varname}. A worksheet can be activated by clicking on the the tab of the worksheet at the bottom of the window (number 11 in @fig-excel-window). A new worksheet can be created by clicking on `+` (number 12 in the figure).
+:   A workbook can contain multiple worksheets. A new workbook starts with [Sheet1]{.varname}. Click the worksheet tab to switch sheets or click `+` to add one.
 
-## Creating New Workbook {#sec-intro-document-new}
+## Creating a New Workbook {#sec-intro-document-new}
 
-Any time you can create a new workbook. This can be a blank workbook, but also a new workbook based on a particular template.
+You can create a new workbook at any time. It can be blank or based on a template.
 
 ::: {#prp-intro-document-new}
-1.  Click on [File \> New]{.uicontrol}. In the right part a list with available templates is displayed.
+1.  Click [File \> New]{.uicontrol}. Templates will appear on the right.
 
-2.  Click on [Blank workbook]{.uicontrol}. A new workbook with one worksheet is created.
+2.  Click [Blank workbook]{.uicontrol}. A new workbook with one worksheet is created.
 :::
 
-## Open workbook {#sec-intro-document-open}
+## Opening a Workbook {#sec-intro-document-open}
 
-Commonly used methods to open an existing workbook are:
+Ways to open an existing workbook:
 
--   Double-clicking with Windows Explorer on an Excel file. This opens the file directly in Excel.
--   Choose [Open]{.uicontrol} in the Excel start screen. You get the dialog window ***Open***.
--   Choose [File \> Open]{.uicontrol} in Excel. You also get the dialog window ***Open***.
+-   Double-click the Excel file in File Explorer.
+-   Select [Open]{.uicontrol} from the start screen.
+-   Choose [File \> Open]{.uicontrol} from within Excel.
 
 ![Dialog window Open to search for a file on a specific location.](images/common/workbook-open.png){#fig-workbook-open}
 
-With the choice [This PC]{.uicontrol} or [Browse]{.uicontrol} you can browse to the file. You also have the possibility to open files with other formats. To do this, click on the arrow in the bottom right corner at the file type list:
+Click [This PC]{.uicontrol} or [Browse]{.uicontrol} to locate the file. To open other formats, use the dropdown arrow next to the file type list:
 
 ![Choosing file format, the default choice is the file format of Excel.](images/common/fileformat-choice.png){#fig-fileformat-choice}
 
@@ -150,72 +150,48 @@ With the choice [This PC]{.uicontrol} or [Browse]{.uicontrol} you can browse to 
 2.  Open the file.
 :::
 
-## Saving Workbook {#sec-intro-document-save}
+## Saving a Workbook {#sec-intro-document-save}
 
-The most frequently used methods to save a workbook are through
+The most common ways to save a workbook:
 
--   [File \> Save]{.uicontrol}.
--   [Quick Access Toolbar \> button Save]{.uicontrol}.
+-   [File \> Save]{.uicontrol}
+-   [Quick Access Toolbar \> Save button]{.uicontrol}
 
-When you re-save an existing workbook, the previous version of the workbook is overwritten. When you save a workbook for the first time, then Excel shows the dialog box [Save as]{.uicontrol}.
+When you save an existing workbook, the previous version is overwritten. For new files, the **Save As** dialog appears.
 
 ::: {#prp-document-save}
-1.  Save the workbook using one of the methods mentioned above.
+1.  Save the workbook using one of the methods above.
 
-There are now two possible situations, depending on whether the workbook has been saved before and therefore already exists.
+If this is the first time saving the file, Excel will prompt you with the **Save As** dialog.
 
--   In the case of an existing workbook, the previous version of the workbook is overwritten.
--   In the case of a new workbook the dialog box ***Save as*** appears. Then you must perform an additional step.
+2.  Select a location.
 
-2.  Select the desired storage location
-
-3.  Enter your file name in the box [File name]{.uicontrol} and click [Save]{.uicontrol}.
+3.  Enter a file name in the [File name]{.uicontrol} field and click [Save]{.uicontrol}.
 :::
 
-## Workbook Saving as {#sec-intro-document-saveas}
+## Save As {#sec-intro-document-saveas}
 
-Sometimes, it may be desirable to have multiple versions of a file. In that case, you can save the file under another name through [Save as]{.uicontrol}. Also, it may be necessary to save the file in an older Excel format which is also possible through [Save as]{.uicontrol}.
+To create multiple versions of a workbook or use a different format, choose [Save As]{.uicontrol}.
 
-In addition to the name of the file, you can also specify the file format to save:
+You can specify both the name and file format:
 
 ![Choosing file format, the default choice is the file format of Excel.](images/common/saveas-format-choice.png){#fig-saveas-format-choice}
 
-The possible file formats are shown in @fig-saveas-formats.
+Available file formats are listed in @fig-saveas-formats:
 
-![Mogelijke bestandsformaten.](images/common/saveas-formats.png){#fig-saveas-formats}
+![Possible file formats.](images/common/saveas-formats.png){#fig-saveas-formats}
 
-## File formats of Excel {#sec-intro-excel-fileformats}
+## Excel File Formats {#sec-intro-excel-fileformats}
 
-An overview of the new and old file formats of Excel.
+**Formats for Excel 2007–2016**
 
-**File formats for Excel 2007, Excel 2010, Excel 2013 and Excel 2016**
+-   **XLSX**: Default format (no macros).
+-   **XLSM**: Macro-enabled format.
+-   **XLSB**: Binary format for large workbooks.
+-   **XLTX**: Template format (no macros).
+-   **XLTM**: Macro-enabled template format.
 
-XLSX
+**Older formats**
 
-:   This is the default format for workbooks without macros, created with Excel 2007, Excel 2010, Excel 2013, and Excel 2016. In this formats, macros are not allowed.
-
-XLSM
-
-:   This is the file format for workbooks with macros.
-
-XLSB
-
-:   This is a special binary file format for very large workbooks with tons of data.
-
-XLTX
-
-:   This is the file format for an Excel template file without macros.
-
-XLTM
-
-:   This is the file format for an Excel template file with macros. Template files can be used to generate new workbooks containing the same layout and content as the template.
-
-**Old file formats**
-
-XLS
-
-:   This is the file format for workbooks created with Excel 2003 and older programs. When you open this file format in a newer Excel version, it will be opened in the Compatibility mode. In this mode, you can make changes, but if you want to save the file, Excel checks whether the changes are supported in the old file format and displays a list of components that are not supported.
-
-XLT
-
-:   The file format for templates created with Excel 2003 and before.
+-   **XLS**: Format used in Excel 2003 and earlier. Opens in Compatibility Mode.
+-   **XLT**: Template format from Excel 2003 and earlier.

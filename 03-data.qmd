@@ -1,219 +1,216 @@
-# Data entry and editing {#sec-data}
+# Data Entry and Editing {#sec-data}
 
 ::: callout
 **OBJECTIVES**
 
-+ Entering data.
-+ Language dependent number separators.
-+ The difference between content and formatting of a cell.
-+ Inserting rows and columns.
-+ Copying data to other places
-+ Entering data conntaining a pattern. 
+-   Entering data.
+-   Language dependent number separators.
+-   The difference between content and formatting of a cell.
+-   Inserting rows and columns.
+-   Copying data to other places
+-   Entering data conntaining a pattern.
 :::
 
-Entering data (text, numbers, formulas) is one of the main activities in Excel. In short it comes down to:
+Entering data (text, numbers, formulas) is one of the main activities in Excel. In short, it involves:
 
-1. Select cell.
-2. Start typing.
-3. End with [Enter key]{.uicontrol}.
+1.  Select a cell.
+2.  Start typing.
+3.  Press the [Enter key]{.uicontrol}.
 
-::: {.callout-warning}
-Beware, if the cell already contains content, this content will be overwritten
+::: callout-warning
+Be aware that if the cell already contains content, this content will be overwritten.
 :::
 
-After using the [Enter key]{.uicontrol} the cell pointer moves automatically one cell downwards.
+After you press the [Enter]{.uicontrol} key, the cell cursor automatically moves down one cell.
 
 ## Language-dependent number formats {#sec-data-decimal-separator}
 
-Separators for decimals and thousands depend on the Windows language, but can also be changed in Excel itself. By default, Excel uses the number formats as defined in Windows with the following characters. 
+Separators for decimals and thousands depend on the Windows language settings but can be changed in Excel. By default, Excel uses the number formats defined in Windows, with these characters:
 
 English
-: Decimal separator **point**: `12.34`
-: Thousands separator **comma**: `12,345`
+
+:   Decimal separator **period** (`12.34`)
+
+:   Thousands separator **comma** (`12,345`)
 
 Dutch
-: Decimal separator **comma**: `12,34`
-: Thousands separator **point**: `12.345`
 
-When you want to change these settings permanently, it must be done through the regional settings in the control panel of Windows.
+:   Decimal separator **comma** (`12,34`)
 
-::: {.callout-note}
-Fortunately, you can temporarily change these settings in Excel. To do this, follow these steps.
+:   Thousands separator **period** (`12.345`)
 
-1. Click [File > Options > Advanced]{.uicontrol}
-2. Under “Editing options” clear the checkbox [Use system separators]{.uicontrol}.
-3.  ype new separators in the [Decimal separator]{.uicontrol} and [Thousands separator]{.uicontrol} boxes.
+To change these settings permanently, you must do so through the regional settings in the Windows Control Panel.
 
-When you want to use the system separators again, select the [Use system separators]{.uicontrol} checkbox.
+::: callout-note
+You can temporarily change these settings in Excel. To do this:
+
+1.  Click [File \> Options \> Advanced]{.uicontrol}
+2.  In the “Editing options” section , uncheck [Use system separators]{.uicontrol}.
+3.  Enter the new separator in the [Decimal separator]{.uicontrol} and [Thousands separator]{.uicontrol} boxes.
+
+To revert to the system separators, check the [Use system separators]{.uicontrol} box again.
 :::
 
-## Data entry {#sec-data-entry}
+## Data entry examples {#sec-data-entry}
 
 A simple exercise in data entry.
 
 ::: {#prp-data-entry}
+1.  Select cell A1.
 
-1. Select cell A1.
+2.  Type `home` and press [Enter]{.uicontrol}.
 
-2. Type `home` and press [Enter]{.uicontrol}.
+The word "home" is left-aligned in the cell and the active cell moves down to A2.
 
-The word home is left-aligned in the cell and the cell pointer has moved one cell down so now cell A2 is the active cell.
+3.  Type `Sales 1e quarter` and press [Enter]{.uicontrol}.
 
-3. Type `Sales 1e quarter` and press [Enter]{.uicontrol}.
+The text is left-aligned and appears to extend beyond the cell boundaries. However, the text is fully contained in cell A2; it only *appears* to overlap cell B2 because B2 is empty. The active cell is now A3.
 
-The text is left-aligned in the cell, does not fit within the cell boundaries, and therefore seems partly to be in B2, which is not true. It only looks like that because cell B2 is empty. The active cell is now A3.
-
-4. Type `89` and press [Enter]{.uicontrol}.
+4.  Type `89` and press [Enter]{.uicontrol}.
 
 The number is right-aligned in cell A3. The active cell is now A4.
 
-5. Type `12.34` and press [Enter]{.uicontrol}.
+5.  Type `12.34` and press [Enter]{.uicontrol}.
 
-The number is right-aligned in the cell A4. The active cell is now A5.
+The number is right-aligned in cell A4. The active cell is now A5.
 
-6. Type `5,6` and press [Enter]{.uicontrol}.
+6.  Type `5,6` and press [Enter]{.uicontrol}.
 
-The content of the cell is left aligned. This is because of the comma between 5 and 6. Excel interprets the entry as text and therefore is left-aligned. The active cell is A6.
+The content of cell A5 is left-aligned. The comma causes Excel to interpret the entry as text, which is why it's left-aligned. The active cell is A6.
 
-7. Type `1/2/2011` and press [Enter]{.uicontrol}.
+7.  Type `1/2/2011` and press [Enter]{.uicontrol}.
 
-The date is right-aligned in the cell. That's because Excel interprets dates as numbers, treats them as numbers, but gives them a special date format. The active cell is now A7 .
+The date is right-aligned. Excel interprets dates as numbers and applies a special date format. The active cell is now A7.
 
-8. Type `=2+3` and press [Enter]{.uicontrol}.
+8.  Type `=2+3` and press [Enter]{.uicontrol}.
 
-The cell now displays the number 5. That's because Excel treats all data that starts with`=` as a formula, calculates the result of the formula, and displays the result. The content of the cell is always the formula and not the result. The active cell is now A8.
+The cell displays the number 5. Excel interprets entries starting with `=` as formulas, calculates the result, and displays it. The cell's *content* is the formula, not the result. The active cell is now A8.
 
-9. Select cell B2, type `10%` and press [Enter]{.uicontrol}.
+9.  Select cell B2, type `10%` and press [Enter]{.uicontrol}.
 
-The content in cell B2 is right-aligned. Because of the percent sign, Excel has interpreted the data as a number. The real content of this cell is therefore `0.1` and this content is displayed as a percentage. And because cell B2 is no longer empty, the text in cell A2 is not fully shown.
+The content in cell B2 is right-aligned. The percent sign tells Excel to interpret the data as a number. The actual content of this cell is `0.1`, which is formatted and displayed as a percentage. Because cell B2 is no longer empty, the full text in cell A2 is now truncated in the display.
 
 10. Select cell [A2]{.uicontrol}.
 
-In the formula bar, you can see the fully entered text is still in the cell.
+The formula bar shows the complete text entered in the cell.
 
-![The active cell is A2 and the formula bar shows the entire contents of this cell.](images/data/data-entry-example.png){#fig-data-entry-example}
+![The active cell is A2 and the formula bar shows the entire content of this cell.](images/data/data-entry-example.png){#fig-data-entry-example}
 
-It is possible to adjust the column width so that all the text in cell A2 will be displayed.
-
+You can adjust the column width to display all the text in cell A2.
 :::
 
 **Summary**
 
-+ By default, the text is left-aligned.
-+ By default, numbers are right-aligned.
-+ There is an important difference between commas and points in numbers.
-+ Formulas always start with the `=` character.
-+ An input of a date will be treated as a number and formatted as a date.
-+ An input of a number with a percent sign will be treated as a number and formatted as a percentage. The cell content is the hundredth part of the number entered.
-+ A cell has a content and a format. What is displayed is not always real content.
+-   Text is left-aligned by default.
+-   Numbers are right-aligned by default.
+-   Commas and periods have different meanings in numbers.
+-   Formulas always begin with the `=` character.
+-   Dates are treated as numbers and formatted as dates.
+-   Numbers with a percent sign are treated as numbers and formatted as percentages. The cell content is the numerical equivalent (e.g., 10% is stored as 0.1).
+-   A cell has content and a format. What you see isn't always the actual content.
 
-## Changing cell content {#sec-data-edit}
+## Editing cell content {#sec-data-edit}
 
-The data in a cell can be edited in one of the following ways:
+You can edit cell data in one of these ways:
 
--   Double click the cell. The cursor will be placed in the middle of the cell and the content can be edited directly within the cell.
--   Select the cell and press F2. The cursor will be placed at the end of the cell content and the content can be edited.
--   Select the cell and click in the formula bar on the place where you want to start editing.
+-   Double-click the cell. The cursor appears in the cell, allowing you to edit the content directly.
+-   Select the cell and press F2. The cursor moves to the end of the cell content for editing.
+-   Select the cell and click in the formula bar to position the cursor for editing.
 
-When the cell is in editing mode, the mode on the status bar (bottom left) has been changed from `Ready` to `Edit`. And furthermore, three icons on the left of the formula bar are activated:
+When a cell is in edit mode, the status bar (bottom left) changes from "Ready" to "Edit." Three icons also appear to the left of the formula bar:
 
 ![](images/common/formulabar-icons.png)
 
-The first to undo, the second to confirm the entry and the third to enter a function.
+These icons allow you to undo, confirm, or insert a function.
 
-The operation must be terminated with the [Enter]{.uicontrol} button to change the mode in `Ready`.
+You must presse [Enter]{.uicontrol} to finalize changes and return to "Ready" mode.
 
-## Undo changes {#sec-data-undo-changes}
+## Undoing changes {#sec-data-undo-changes}
 
-From almost every action you perform in Excel it is possible to undo it. This is done using the following buttons on the [Quick Access Toolbar]{.uicontrol}.
+You can undo most actions in Excel using the [Undo]{.uicontrol} and [Redo]{.uicontrol} buttons on the [Quick Access Toolbar]{.uicontrol}.
 
 ![Undo](images/common/button-undo.png) Undo
-: Reverses the last action. By clicking this button again you will undo the previously performed task. Besides this button there can be an arrowhead, clicking on it shows a list of the most recent actions. By clicking on an action in this list, all changes up to and including this action will be undone.
+
+:   Reverses the last action. Clicking it repeatedly undoes previous actions. The dropdown arrow next to the button displays a list of recent actions. Clicking an action in the list undoes all actions up to and including that one.
 
 ![Redo](images/common/button-redo.png) Redo
-: Can redo the actions you undid. Besides this button, there can be an arrowhead with a list of the most recent actions.
+
+:   Reverses the effect of the Undo action. The dropdown arrow (if available) shows a list of undone actions that can be redone.
 
 ## Inserting rows and columns {#sec-data-insert-rowcolumn}
 
-It often happens that you want to insert a row or a column somewhere in between data in a worksheet. The process is the same for rows and columns.
+You'll often need to insert rows or columns within existing data. The process is the same for both.
 
-1.  Right-click on the header of the row or column.
+1.  Right-click the row or column header.
 2.  Choose [Insert]{.uicontrol}.
 
-To insert multiple rows or columns, select the desired number of rows/columns, right-click, and choose [Insert]{.uicontrol}. Then the number will be inserted before the first row or column of the selection.
+To insert multiple rows or columns, select the desired number of rows/columns, right-click, and select [Insert]{.uicontrol}. The new rows or columns are inserted *before* the first row or column of your selection.
 
-## Copy and paste {#sec-data-copypaste}
+## Copy and Paste {#sec-data-copypaste}
 
-Copying the content of cells is a common action in Excel. You can copy one cell or a whole area. By default, both the content and the format of the cell will be copied. However, it is also possible to copy only the content or only the formatting. If the cell contains a formula with cell references then the cell references in the copied formula will be adapted to the new situation.
+Copying cell content is a common task in Excel. You can copy a single cell or an entire range. By default, Excel copies both the content and formatting of the cells. However, you can choose to copy only the content or only the formatting. When you copy a formula with cell references, the references adjust to the new location.
 
 ::: {#prp-data-copypaste}
 [File]{.smallcaps}: `Cellformat.xlsx`
 
-1. Open the file.
-
-2. Select the area A1:B13.
-
-3. Choose [Home > Copy (group Clipboard)]{.uicontrol}.
-
-4. Select the starting cell of the destination, e.g. D20.
-
-5. Choose [Home > Past (group Clipboard)]{.uicontrol}.
-
+1.  Open the file.
+2.  Select the range A1:B13.
+3.  Choose [Home \> Copy (Clipboard group)]{.uicontrol}.
+4.  Select the upper-left cell of the destination, for example, D20.
+5.  Choose [Home \> Past (Clipboard group]{.uicontrol}.
 :::
 
 ## Auto fill {#sec-data-autofill}
 
-How to enter data that has a pattern quickly in your worksheet.
+How to quickly enter data that follows a pattern.
 
-Excel has several options to quickly fill a row or column with data that follows a pattern or is based on lists. For example, Excel has built-in lists for the days of the weeks and the months of the year. But you can also make your custom lists through the options of Excel. Another possibility is to create a pattern that Excel recognizes. When filling the cells with new values Excel makes use of this pattern. Often two values for pattern recognition are sufficient.
+Excel provides several ways to quickly fill rows or columns with data that follows a pattern or is based on a list. Excel has built-in lists for days of the week and months of the year, and you can create custom lists in Excel's options. You can also enter a pattern that Excel recognizes and continues. Often, two values are enough for Excel to identify the pattern.
 
-To quickly fill in data series, you can use the fill handle. This is the black square in the lower right corner of the selection. When you move the mouse pointer over the fill handle, the shape of the pointer changes from ![](images/common/mouse-shape-select.png) in ![](images/common/mouse-shape-fill.png) and then you can drag.
+You can use the fill handle to quickly enter data series. The fill handle is the small black square in the lower-right corner of a selected cell or range. When you hover the mouse pointer over the fill handle, the pointer changes from ![](images/common/mouse-shape-select.png) to ![](images/common/mouse-shape-fill.png), and you can then drag to fill.
 
 ![Fill handle.](images/common/mouse-fill-handle.png){#fig-mouse-fillhandle}
 
-In the next exercise, a built-in list is used first and then a pattern recognition. At the end are examples with which you can experiment.
+The following exercise demonstrates using a built-in list and pattern recognition. The table that follows provides examples for further experimentation.
 
 ::: {#prp-data-autofill}
 **Built-in list**
 
-1. Start with a new worksheet.
+1.  Create a new worksheet.
 
-2. Select cell A1 and type the word January.
+2.  Select cell A1 and type "January".
 
-3. Select cell A1 again. Position the mouse over the fill handle of cell A1. Press the left mouse button and drag to cell A12 and then release the left mouse button.
+3.  Select cell A1 again. Position the mouse over the fill handle of cell A1. Press and hold the left mouse button, drag down to cell A12, and then release the mouse button.
 
 ![](images/data/months-names-long.png).
 
-The result is that the area A1: A12 contains the months of the year. You can start with every month. If you keep on dragging, the sequence will repeat itself.
+The range A1:A12 is filled with the months of the year. You can start with any month, and the sequence will repeat if you continue dragging.
 
 **Pattern recognition**
 
-4. Select cell B1 and type the number 1.
+4.  Select cell B1 and type the number 1.
 
-5. Select cell B2 and type the number 2.
+5.  Select cell B2 and type the number 2.
 
-6. Select the area B1:B2 and drag the fill handle some cells downwards. ![](images/data/numbers-autofill.png).
+6.  Select the range B1:B2 and drag the fill handle down several cells. ![](images/data/numbers-autofill.png).
 
-The result is that the area is filled with the numbers 1, 2, 3, 4, 5, ...
+The range is filled with the numbers 1, 2, 3, 4, 5, and so on.
 
-In @tbl-patternrecognition you see some examples to experiment with.
-
+@tbl-patternrecognition shows examples for you to experiment with.
 :::
 
+| Starting values | Auto fill series                     |
+|:----------------|:-------------------------------------|
+| 1, 3            | 5, 7, 9, 11, ...                     |
+| 2, 4            | 6, 8, 10, 12, ...                    |
+| 3, 6            | 9, 12, 15, 18, ...                   |
+| 2010, 2011      | 2012, 2013, 2014, ...                |
+| 09:00           | 10:00, 11:00, 12:00, 13:00, ...      |
+| Jan             | Feb, Mar, ...                        |
+| Jan, Apr        | Jul, Oct, Jan, Apr, ...              |
+| Monday          | Tuesday, Wednesday, ...              |
+| Mon             | Tue, Wed, ...                        |
+| Q 1             | Q 2, Q 3, Q 4, Q 5, ...              |
+| 1e period       | 2nd period, 3nd period, ...          |
+| article 1       | article 2, article 3, article 4, ... |
 
-|Starting values|Auto fill series|
-|---------------|----------------|
-|1, 3|5, 7, 9, 11, ...|
-|2, 4|6, 8, 10, 12, ...|
-|3, 6|9, 12, 15, 18, ...|
-|2010, 2011|2012, 2013, 2014, ...|
-|09:00|10:00, 11:00, 12:00, 13:00, ...|
-|Jan|Feb, Mar, ...|
-|Jan, Apr|Jul, Oct, Jan, Apr, ...|
-|Monday|Tuesday, Wednesday, ...|
-|Mon|Tue, Wed, ...|
-|Q 1|Q 2, Q 3, Q 4, Q 5, ...|
-|1e period|2e period, 3e period, ...|
-|article 1|article 2, article 3, article 4, ...|
-
-:  Examples of pattern recognition. {#tbl-patternrecognition}
+: Examples of pattern recognition. {#tbl-patternrecognition}

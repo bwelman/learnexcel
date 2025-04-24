@@ -1,59 +1,59 @@
 # Preface {.unnumbered}
 
-This textbook is intended as a thorough introduction to Microsoft Excel and has been developed especially for students in higher education and users of Microsoft Excel.
+This textbook is designed to be a comprehensive introduction to Microsoft Excel and is specifically developed for students in higher education and users of Microsoft Excel. It is intended for those who are new to Excel and want to learn how to use it effectively, as well as for those who have some experience with the software but want to deepen their understanding of its features and capabilities.
 
-This textbook is different from other Excel textbooks in several ways.
+This textbook differs from other Excel textbooks in several ways:
 
-+ It is free and online, making it accessible to a wide audience.
+-   It is free and online, making it accessible to a broad audience.
 
-+ Topics are developed to perform a specific task and master a specific task, no more and no less. This has resulted in concrete stepwise tasks without additional information that may cause only distraction. In the chapters, these tasks are clearly indicated by their titles beginning with [Task:]{.term}, so that it is clear that something has to be done.
+-   Topics are developed to accomplish a specific task and achieve mastery of that task, nothing more and nothing less. This approach has resulted in concise, step-by-step tasks without extraneous information that might cause distractions. In the chapters, these tasks are clearly indicated by titles beginning with "Task:", making it evident what action is required.
 
-+ The textbook contains interactive elements that students can use in self-directed learning. This requires a browser with Javascript. 
+-   The textbook includes interactive elements that students can use for self-directed learning. This requires a browser with JavaScript support.
 
-+ At the end of most chapters is a series of exercises. The title of an assignment always starts with a unique code and then a short description.
+-   Most chapters conclude with a series of exercises. The title of each exercise begins with a unique code followed by a brief description.
 
-+ The content of the tasks and exercises is mainly determined by competences and skills that higher education requires. Many of the problems have come from experiences of students in the professional practice during internships and graduation.
+-   The content of the tasks and exercises is primarily determined by the competencies and skills that higher education demands. Many of the problems are derived from students' experiences in professional practice during internships and graduation projects.
 
-## Organization textbook {.unnumbered}
+## Organization of the textbook {.unnumbered}
 
 Content of the chapters.
 
-+ @sec-intro: Introduction to spreadsheets and Excel. If you are already used to working with Excel, you can skip this chapter.
+-   @sec-intro: Introduction to spreadsheets and Excel. If you are already familiar with Excel, you can skip this chapter.
 
-+ @sec-worksheets: Use of worksheets.
+-   @sec-worksheets: Using worksheets.
 
-+ @sec-data: Input data and the difference between content and formatting.
+-   @sec-data: Entering data and the difference between content and formatting of cells.
 
-+ @sec-formatting: Format of worksheet and cells, as well as conditional formatting.
+-   @sec-formatting: Formatting worksheets and cells, including conditional formatting.
 
-+ @sec-calculations: Formulas, absolute and relative addressing, copying and naming and setting up a calculation model.
+-   @sec-calculations: Formulas, absolute and relative cell references, copying and naming ranges, and setting up calculation models.
 
-+ @sec-functions: Built-in functions.
+-   @sec-functions: Built-in functions.
 
-+ @sec-tables: Tables and operations.
+-   @sec-tables: Tables and operations.
 
-+ @sec-arrays: Array formulas and dynamic matrices.
+-   @sec-arrays: Array formulas and dynamic arrays.
 
-+ @sec-charts: Creating charts.
+-   @sec-charts: Creating charts.
 
-+ @sec-charttype: Chart types.
+-   @sec-charttype: Chart types.
 
-+ @sec-scenarios: Scenarios.
+-   @sec-scenarios: Scenarios.
 
-+ @sec-datatables: Data tables.
+-   @sec-datatables: Data tables.
 
-+ @sec-pivots: Pivot tables, pivot charts, slicers and timelines.
+-   @sec-pivots: Pivot tables, pivot charts, slicers and timelines.
 
-+ @sec-goalseek: Goal Seek
+-   @sec-goalseek: Goal Seek.
 
-+ @sec-solver: Solver.
+-   @sec-solver: Solver.
 
-+ @sec-macros: Macro's
+-   @sec-macros: Macros.
 
-+ @sec-measurements: Processing measurement results, linear relations.
+-   @sec-measurements: Processing measurement results and linear relationships.
 
 ## Software {.unnumbered}
 
-This textbook works with **Excel 365**, a product that is constantly evolving, with new features appearing with each new version. A key feature is the introduction of dynamic matrices and functions in the July 2020 release. This has made Excel 365 different from other Excel versions, including the 2016 and 2019 versions. Dynamic matrices are not compatible with all other Excel versions.
+This textbook is written for **Excel 365**, a product that is constantly evolving, with new features added in each release. A key feature is the introduction of dynamic arrays and functions in the July 2020 release. This update differentiates Excel 365 from other Excel versions, including the 2016 and 2019 versions. Dynamic arrays are not compatible with all other Excel versions.
 
-Does this mean you can't use this textbook with Excel 2016 and later? No, only the matrix chapter is not suitable, but all other chapters give no problems. This also largely applies to the older Excel versions 2010 and 2007.
+Does this mean you cannot use this textbook with Excel 2016 and later? No. Only the array chapter is unsuitable; all other chapters are compatible. This compatibility largely extends to older Excel versions like 2010 and 2007.

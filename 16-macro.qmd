@@ -6,179 +6,185 @@
 ::: callout
 **OBJECTIVES**
 
--   Explanation of macros and their use.
--   Activating Developer tab.
--   Recording a macro with the macro recorder.
--   Modify a macro.
--   Create command button.
--   Security settings.
+-   Understand what macros are and how they are used.
+-   Learn how to activate the Developer tab.
+-   Learn how to record a macro using the macro recorder.
+-   Learn how to modify a macro.
+-   Learn how to create a command button to run a macro.
+-   Understand macro security settings.
 :::
 
-You can automate a task that you have to perform regularly in Microsoft Excel with a macro. A macro consists of a series of commands and functions that are executed in succession by a single command or the press of a button.
+You can automate repetitive tasks in Microsoft Excel using macros. A macro consists of a series of commands and functions that are executed sequentially with a single command or the press of a button.
 
-A macro is therefore primarily intended to be used for frequently occurring actions or for complex actions. By using a macro, efficiency can be increased and the chance of errors can be reduced.
+Macros are primarily intended for frequently performed actions or complex operations. Using macros can increase efficiency and reduce the chance of errors.
 
-Simple macros consisting of a number of actions performed in succession can be recorded with the built-in macro recorder. Complex macros are programmed in the VBA programming language. Only simple macros are discussed here, you do not need any programming knowledge for this.
+Simple macros, consisting of a sequence of actions, can be recorded using the built-in macro recorder. More complex macros are programmed in the VBA (Visual Basic for Applications) programming language. This chapter focuses on simple macros, for which you do not need any programming knowledge.
 
 ::: callout-note
-The language in which the Excel macros are written is Visual Basic for Applications (VBA). The commands and functions of the macro are stored in a Visual Basic module. And with the Visual Basic editor, you can edit macros, copy macros from one module to another, copy macros between different workbooks, and rename modules and macros.
+The language used for Excel macros is Visual Basic for Applications (VBA). Macro commands and functions are stored in a Visual Basic module. The Visual Basic Editor allows you to edit macros, copy macros between modules or workbooks, and rename modules and macros.
 :::
 
-## Developer tab {#sec-tab-developer}
+## Developer Tab {#sec-tab-developer}
 
-o be able to record, edit and execute macros, the tab [Developers]{.uicontrol} must be made visible.
+To record, edit, and run macros, the [Developer tab]{.uicontrol} must be visible on the ribbon.
 
-A number of Excel functions, including those for Macros and VBA, are located under the [Developers]{.uicontrol} tab. This tab is not shown by default when Excel is installed and will therefore have to be made visible first. This is a one-time action.
+Several Excel functions, including those for Macros and VBA, are located on the Developer tab. This tab is not shown by default when Excel is installed and therefore needs to be made visible first. This is a one-time action.
 
-::: callout-warning
-First check whether the tab [Developers]{.uicontrol} is present on the ribbon. If so, you can skip this task.
+::: callout-note
+First, check if the [Developer tab]{.uicontrol} is already present on the ribbon. If so, you can skip this task.
 
-![Tab ontwikkelaars.](images/macro/tab-developer.png){#fig-tab-developer}
+![The Developer tab on the Excel ribbon.](images/macro/tab-developer.png){#fig-tab-developer}
 :::
 
 ::: {#prp-tab-developer}
 1.  Choose [File \> Options \> Customize Ribbon]{.uicontrol}.
 
-![Excel options to show the developer tab.](images/common/excel-options-developertab.png){#fig-excel-options-developertab}
+![Excel options showing how to enable the Developer tab.](images/common/excel-options-developertab.png){#fig-excel-options-developertab}
 
-2.  Select under Main Tabs [Developer]{.uicontrol} and click [OK]{.uicontrol}.
+2.  Under [Main Tabs]{.uicontrol} on the right, check the [Developer]{.uicontrol} box and click [OK]{.uicontrol}.
 
-The tab [Developers]{.uicontrol} should now be visible on the ribbon (see @fig-tab-developer).
+The [Developer tab]{.uicontrol} should now be visible on the ribbon (see @fig-tab-developer).
 :::
 
-## Macro security settings {#sec-macros-security}
+## Macro Security Settings {#sec-macros-security}
 
-Macros can be used for malicious purposes, such as installing a virus. This can be blocked with the security settings. However, if the settings are too high, you will not be able to run macros, and if they are too low, you will not be protected. Neither is a good option. A good compromise is the setting that gives you the option to decide whether to allow macros or not. This is also the default setting.
+Macros can potentially be used for malicious purposes, such as installing a virus. Excel's security settings can block such threats. However, if the settings are too restrictive, you won't be able to run legitimate macros; if they are too lenient, you won't be protected. A good compromise is the setting that prompts you to decide whether to allow macros, which is also the default setting.
 
-**Change settings**
+**Change Settings**
 
-If you want to view or change the security settings for macros, then you need to click on [Developer tab \> Macro Security (group Code)]{.uicontrol}.
+To view or change macro security settings, click on [Developer tab \> Macro Security (Code group)]{.uicontrol}.
 
-![Macro security button on the ribbon.](images/macro/macro-security-button.png){#fig-macro-security-button}
+![Macro Security button on the Developer tab.](images/macro/macro-security-button.png){#fig-macro-security-button}
 
-The dialog box ***Trust Center*** appears.
+The **Trust Center** dialog box will appear.
 
-![Macro settings in Trust Center.](images/macro/trust-center-macro-settings.png){#fig-trust-center-macro-settings}
+![Macro Settings within the Trust Center dialog box.](images/macro/trust-center-macro-settings.png){#fig-trust-center-macro-settings}
 
-| Setting                                       | Explanation                                                                                                                                                                                                                                                                                                     |
-|---------------|---------------------------------------------------------|
-| Disable macros without notification           | Choose this option if you don't want to allowmacros. All macros in documents are disabled, as well as the security alerts about macros. Documents that contain macros that you do trust can be saved in a trusted location. Documents in trusted locations are executed without control by the security system. |
-| Disable macros with notification              | This is the default setting and the best choice. With this setting you will receive a security alert where you can choose whether or not to run macros.                                                                                                                                                         |
-| Disable macros except digitally signed macros | The creator of a macro can digitally sign it. If you then mark this creator as a trusted authority, the macro will be executed without warnings. All unsigned macros will be disabled without notification.                                                                                                     |
-| Enable all macros                             | Choose this option if you want to run all macros. This option is not recommended because it will no longer protect you against malicious macros.                                                                                                                                                                |
+| Setting | Explanation |
+|:-----------------------|:-----------------------------------------------|
+| Disable macros without notification | Choose this option if you do not want to allow macros. All macros in documents are disabled, along with security alerts about macros. Documents containing macros that you trust can be saved in a trusted location; documents in trusted locations run without security checks. |
+| Disable macros with notification | This is the default setting and generally the best choice. With this setting, you will receive a security alert allowing you to choose whether or not to run macros on a case-by-case basis. |
+| Disable macros except digitally signed macros | A macro creator can digitally sign a macro. If you designate this creator as a trusted publisher, their signed macros will run without warnings. All unsigned macros will be disabled without notification. |
+| Enable all macros (not recommended) | Choose this option if you want to run all macros. This option is not recommended because it leaves your computer vulnerable to potentially malicious code. |
 
 : Overview of Macro Settings. {#tbl-macro-security-settings tbl-colwidths="\[25,75\]"}
 
-## Recording macros {#sec-macros-recording}
+## Recording Macros {#sec-macros-recording}
 
-Simple macros can be created by recording the operations with the built-in **macro recorder**. After starting the recorder, all actions are recorded and converted into VBA code in the background. This continues until the recorder is stopped.
+Simple macros can be created by recording your actions using the built-in **macro recorder**. After starting the recorder, all actions are recorded and converted into VBA code in the background. This continues until you stop the recorder.
 
 ::: callout-note
-In order to get a properly working macro, it is important to first perform the actions to be performed without recording and write them down in order. You can then use this script to record the actions with the macro recorder.
+To ensure a properly working macro, it's important to first perform the actions manually and write them down step-by-step. You can then use this script to record the actions accurately with the macro recorder.
 :::
 
-The button with which you can start recording macros is on the [Tab Developers]{.uicontrol} in the group [Code]{.uicontrol}, see @fig-tab-developer.
+The button to start recording macros is on Developer Tab in the group [Code]{.uicontrol}, see @fig-tab-developer.
 
-When this button is clicked to start recording a macro, a dialog box first appears in which a number of properties of the macro can be entered.
+When you click this button to start recording a macro, a dialog box appears where you can enter several properties for the macro.
 
-![Dialog box record macro.](images/macro/record-macro-dialogbox.png){#fig-record-macro-dialogbox}
+![Record Macro dialog box.](images/macro/record-macro-dialogbox.png){#fig-record-macro-dialogbox}
 
 **Macro name**
 
-Each macro must have a name. To do this, Excel fills in the default text "Macro" followed by a digit. You can change this name by typing a different name.
+Each macro must have a unique name. Excel suggests a default name like "Macro1". You can change this by typing a different name.
 
-The first character of the macro name has to be a letter. After that, you can use other characters such as letters, numbers, or underscore. Spaces are not allowed in a macro name. Always give meaningful names showing what the macro is going to do. The underscore can be used as a separator between words.
+The first character of a macro name must be a letter. Subsequent characters can be letters, numbers, or underscores. Spaces are not allowed in macro names. Always use meaningful names that indicate what the macro does. The underscore can be used as a word separator (e.g., `Format_Cell_Red`).
 
 **Shortcut key**
 
-Macros can be executed through the menu, but this can also be done using keyboard shortcuts. These are shortcuts with the [CTRL]{.uicontrol} key combined with a letter key. If you want to assign a keyboard shortcut to the macro then you can enter the letter in the box. Putting for example the letter A in the box, then the key combination [CTRL-A]{.uicontrol} is the shortcut that allows you to start the macro.
+Macros can be run from the menu or via keyboard shortcuts. These are typically [CTRL]{.uicontrol} combined with a letter key (e.g., [Ctrl+Shift+A]{.uicontrol} if you use an uppercase letter, or [Ctrl+a]{.uicontrol} if you use lowercase). If you want to assign a shortcut key, enter a letter in the box. For example, entering 'a' (lowercase) will assign [Ctrl+a]{.uicontrol}.
 
-It is not required to assign a keyboard shortcut to a macro, but this can be very useful for frequently used macros.
+Assigning a shortcut key is not required but can be very useful for frequently used macros. Be careful not to overwrite existing Excel shortcuts.
 
 **Store macro in**
 
-The locations where the macro can be stored are:
+You can choose where to store the macro:
 
--   This Workbook
--   New Workbook
--   Personal Macro Workbook
+-   [This Workbook]{.uicontrol}: The macro will only be available in the current Excel file.
+-   [New Workbook]{.uicontrol}: The macro will be stored in a new, blank workbook that is created. (This option is rarely used for general macros).
+-   [Personal Macro Workbook]{.uicontrol}: The macro is stored in a special hidden workbook (`Personal.xlsb`) that opens automatically when Excel starts. Macros in this workbook are available in any Excel file you open.
 
-It is important to think thoroughly about it. If the macro is to be used only in the active workbook, choose [This Workbook]{.uicontrol}. Should the macro be used in other workbooks, so it is always available, then the [Personal Macro Workbook]{.uicontrol} is the best choice. The option [New workbook]{.uicontrol} is actually never used.
-
-You should always specify the storage place. The default value is [This Workbook]{.uicontrol}.
+Think carefully about this. If the macro is specific to the active workbook, choose This Workbook. If you want the macro to be available globally in Excel, [Personal Macro Workbook]{.uicontrol} is the best choice. The default is [This Workbook]{.uicontrol}.
 
 **Description**
 
-It is recommended that you give a brief description of what the macro does. When you create the macro you know it, but after a while, you may forget. It is not mandatory to specify a description.
+It's recommended to provide a brief description of what the macro does. While you'll remember its purpose when you create it, a description is helpful for future reference. This is optional.
 
 ::: callout-note
-All made choices can always be changed at a later stage.
+All these choices (name, shortcut, storage location, description) can be changed later.
 :::
 
 ## Macro Cell Format {#sec-macros-cellformat}
 
-*Information need*
+*Objective*
 
-Create a macro that should format the text in the selected cell with the font Comic Sans MS, bold, italic, 16 pt, and red. The column width must be adjusted to the width of the text in the cell. The name of the macro should be [CellFormat]{.varname}.
+Create a macro named [CellFormat]{.varname} that formats the selected cell's text to Comic Sans MS font, bold, italic, 16 pt, and red. The column width should also be adjusted to fit the cell's content.
 
 ::: {#prp-macros-cellformat-record}
 **Record macro**
 
-1.  Start with an empty worksheet and enter a text in a cell.
+1.  Start with an empty worksheet and enter some text in a cell (e.g., cell A1).
 
-2.  Select the cell that contains the text.
+2.  elect the cell containing the text.
 
-3.  Choose [Developer tab \> Record Macro (group Code)]{.uicontrol}.
+3.  Go to [Developer tab \> Record Macro (Code group)]{.uicontrol}.
 
-4.  Enter in the dialog box the name and a description of the macro.
+4.  In the Record Macro dialog box, enter the following:
 
-![Properties macro CellFormat.](images/macro/record-macro-cellformat.png){#fig-record-macro-cellformat}
+    -   *Macro name*: CellFormat
+    -   *Shortcut key*: (leave empty)
+    -   *Store macro in*: This Workbook
+    -   *Description*: Formats selected cell to Comic Sans MS, 16pt, Bold, Italic, Red, and autofits column.
+
+![Properties for the CellFormat macro.](images/macro/record-macro-cellformat.png){#fig-record-macro-cellformat}
 
 5.  Click [OK]{.uicontrol}.
 
-6.  Perform the following actions on the selected cell [Right mouse click \> Format Cells \> tab Font]{.uicontrol} and make the following settings:
+6.  Perform the following actions on the selected cell:
 
-    -   Font: Comic Sans MS
-    -   Font style: Bold Italic
-    -   Size: 16
-    -   Color: Red
+    -   Right-click on the cell and choose [Format Cells....]{.uicontrol}
+    -   Go to the Font tab
+    -   Set Font: Comic Sans MS
+    -   Set Font style: Bold Italic
+    -   Set Size: 16
+    -   Set Color: Red
+    -   Click [OK]{.uicontrol}.
 
-7.  Choose tab [tab Home \> Format (group Cells) \> Autofit Column Width]{.uicontrol}.
+7.  With the cell still selected, go to [Home tab \> Format (Cells group) \> Autofit Column Width]{.uicontrol}.
 
-8.  Choose [Developer tab \> Stop Recording (group Code)]{.uicontrol}.
+8.  Go to [Developer tab \> Stop Recording (Code group)]{.uicontrol}.
 
-![Button stop recording macro.](images/macro/record-macro-stop.png){#fig-record-macro-stop}
+![Stop Recording button on the Developer tab.](images/macro/record-macro-stop.png){#fig-record-macro-stop}
 :::
 
-Now the macro can be tested for a correct operation.
+Now, test the macro to ensure it works correctly.
 
 ::: {#prp-macros-cellformat-test}
-**Testing macro**
+**Testing the Macro**
 
-1.  Enter a text in another cell and select this cell.
+1.  Enter some text in a different cell and select this cell.
 
-2.  Choose [tab Developers \> Macros (Program code group)]{.uicontrol}.
+2.  Go to [Developer tab \> Macros (Code group)]{.uicontrol}.
 
-3.  Select macro [Cell Format]{.uicontrol} and click [Run]{.uicontrol}.
+3.  In the Macro dialog box, select [CellFormat]{.varname} and click \[Run\]{.uicontrol.
 
-![Dialog box macro CellFormat.](images/macro/macro-cellformat-run.png){#fig-macro-cellformat-run}
+![Running the CellFormat macro from the Macro dialog box.](images/macro/macro-cellformat-run.png){#fig-macro-cellformat-run}
 
-4.  Verify that the cell is correctly formatted.
+4.  Verify that the cell is formatted correctly according to the macro's actions.
 
-5.  Save the workbook as [Excel Macro Workbook (\*.xslm)]{.uicontrol} with the name `Cell Format.xlsm`.
+5.  Save the workbook. Since it contains a macro, you must save it as an Excel Macro-Enabled Workbook (\*.xlsm). Name it `CellFormat.xlsm`.
 :::
 
 ::: callout-warning
-When you want to save a workbook with macros, Excel suggests to save it as an Excel workbook with the extension `*.xlsx`. However, in this format, no macros can be stored. You should change this yourself in an **Excel workbook with macros** with the extension `*.xlsm`.
+When saving a workbook containing macros, Excel might default to saving it as a standard Excel Workbook (`*.xlsx`). This format cannot store macros. You must manually change the "Save as type" to **Excel workbook with macros** with the extension `*.xlsm`.
 :::
 
 ## Editing Macros {#sec-macros-cellformat-editing}
 
-To perform this task, it is necessary that the macro [CellFormat]{.varname} in @prp-macros-cellformat-test is created.
+This task requires the [CellFormat]{.varname} macro created in the previous section (@prp-macros-cellformat-record).
 
-A macro can be changed without recording the macro again. Both the options of the macro as the program code can be viewed and modified.
+You can modify a macro without re-recording it. Both the macro's options (like shortcut key) and its underlying VBA code can be viewed and edited.
 
-*Information need*
+*Objective*
 
 Make the following changes to the [CellFormat]{.varname} macro:
 
@@ -186,103 +192,114 @@ Make the following changes to the [CellFormat]{.varname} macro:
 -   Change the font size to 18 pt.
 
 ::: {#prp-macros-cellformat-editing}
-Continue with the file from @prp-macros-cellformat-test.
+Continue with the file `CellFormat.xlsm` from @prp-macros-cellformat-test.
 
-1.  If necessary, open the file.
+1.  If necessary, open the `CellFormat.xlsm` file. (Enable content/macros if prompted).
 
-2.  Choose [Developer tab \> Macros (group Code)]{.uicontrol}.
+2.  Go to [Developer tab \> Macros (Code group)]{.uicontrol}. The Macro dialog box will appear (see @fig-macro-cellformat-run).
 
-You now get the dialog box with available macros again, see @fig-macro-cellformat-run.
+3.  Select the [CellFormat]{.varname} macro and click [Options]{.uicontrol}.
 
-3.  Select macro [CellFormat]{.varname} and then [Options]{.uicontrol}.
+![Macro Options dialog box for CellFormat.](images/macro/macro-cellformat-options.png){#fig-macro-cellformat-options}
 
-![Options macro CellFormat.](images/macro/macro-cellformat-options.png){#fig-macro-cellformat-options}
+4.  In the Shortcut key box, enter t (lowercase). And in the Description box, change "16pt" to "18pt". Then click [OK]{.uicontrol}.
 
-4.  Enter the letter `t` in the box for the shortcut key and change in the description 16pt in 18pt. Then click [OK]{.uicontrol}.
+5.  With the CellFormat macro still selected in the Macro dialog box, click [Edit]{.uicontrol}.
 
-5.  Choose now [Edit]{.uicontrol}.
+The Microsoft Visual Basic for Applications (VBA) editor will open, displaying the macro's code. In this code you will find text size 16 on two places:
 
-A new Microsoft Visual Basic window will now appear with the program code of the macro in the code screen. In this code you will find 16 for the text size on two places:
+``` vba
+Format cell in Comic Sans, 16pt, bold, italic and red
+.Size = 16
+```
 
--   `Format cell in Comic Sans, 16pt, bold, italic and red`
--   `.Size = 16`
+6.  Change `16` to `18` in both places.
 
-6.  Change it to `18` in both places.
+7.  Close the Microsoft Visual Basic for Applications window (click the X in the top-right corner of the VBA editor window).
 
-7.  Close the Microsoft Visual Basic window with the close button in the upper right corner.
+8.  Test the modified macro: Select a cell with text and press [Ctrl+t]{.uicontrol}. Verify the font size is now 18pt.
 
-8.  Test the macro on a cell with text using the keyboard shortcut [CTRL t]{.uicontrol}.
+9.  Save the workbook.
 :::
 
 ## Creating a Command Button {#sec-macros-cellformat-commandbutton}
 
 You can run a macro in one of the following ways:
 
--   Via the menu [Developers tab \> Macros \> select macro \> Run]{.uicontrol}.
--   Via a hotkey when one is assigned to the macro.
--   Via a command button for the macro.
+-   Via the menu [Developer tab \> Macros \> select macro \> Run]{.uicontrol}.
+-   Via an assigned shortcut key.
+-   Via a command button on the worksheet.
 
-This task creates a command button on the worksheet for the previously created macro [Cell Format]{.varname}.
+This task demonstrates how to create a command button on the worksheet for the [CellFormat]{.uicontrol} macro.
 
 ::: {#prp-macros-cellformat-commandbutton}
-Continue with the file from @prp-macros-cellformat-editing.
+Continue with the file `CellFormat.xlsm` from @prp-macros-cellformat-editing.
 
 1.  If necessary, open the file.
 
-2.  Choose [Developer tab \> Insert (group Controls)]{.uicontrol}.
+2.  Go to [Developer tab \> Insert (Controls group)]{.uicontrol}.
 
-3.  Click on control [Button (Form Control)]{.uicontrol}
+3.  In the Form Controls section, click on [Button (Form Control)]{.uicontrol}
 
-![Form controls, the highlighted one is Button (form control).](images/macro/form-controls.png){#fig-form-controls}
+![Form Controls dropdown, with Button (Form Control) highlighted.](images/macro/form-controls.png){#fig-form-controls}
 
-The cursor will change to a `+`. With this cursor, you can draw a rectangle in the worksheet for the button.
+The mouse cursor will change to a small crosshair (`+`).
 
-4.  Click the left mouse button and draw a rectangle with the desired dimensions for the button somewhere in the worksheet. Then release the left mouse button. The ***Assign macro*** dialog box then appears.
+4.  Click and drag on the worksheet to draw a rectangle where you want the button to appear. Release the mouse button. The ***Assign Macro*** dialog box will immediately appear.
 
-![Link macro CellFormat to the button.](images/macro/macro-cellformat-assign.png){#fig-macro-cellformat-assign}
+![Assign Macro dialog box, linking CellFormat to the button.](images/macro/macro-cellformat-assign.png){#fig-macro-cellformat-assign}
 
-5.  Select the macro [CellFormat]{.varname} and click [OK]{.uicontrol}.
+5.  Select the [CellFormat]{.varname} macro from the list and click [OK]{.uicontrol}.
 
-The drawn rectangle will turn into a button with a text like `Button 1`.
+The rectangle you drew will become a button, typically with default text like "Button 1".
 
-6.  Select the text on the button and change it to a more appropriate text, for example, `Cell format`.
+6.  Right-click on the button and choose Edit Text. Select the default text and change it to something more descriptive, for example, "Format Cell".
 
-![Command button.](images/macro/macro-cellformat-button.png){#fig-macro-cellformat-button}
+![Command button on the worksheet linked to the CellFormat macro.](images/macro/macro-cellformat-button.png){#fig-macro-cellformat-button}
 
-7.  Deselect the button by clicking anywhere in the worksheet.
+7.  Click anywhere outside the button to deselect it.
 
-8.  Test the macro via the command button on a cell with some text.
+8.  Test the button: Enter text in a cell, select the cell, and click your new Format Cell button.
+
+9.  Save the workbook.
 :::
 
 ## Tips {#sec-macros-tips}
 
-### Relative References {#sec-macros-tips-references}
+### Relative vs. Absolute References {#sec-macros-tips-references}
 
-Recorded macros will use absolute cell references by default. This means that the exact locations of cells, rows, and columns in the program code of the macro will be used. The macro works then always at the same addresses.
+By default, recorded macros use absolute cell references. This means the exact cell addresses (e.g., A1, C5) are hardcoded into the macro. The macro will always affect those specific cells, regardless of which cell is active when you run it (unless the recorded actions inherently refer to Selection).
 
-When you want to use relative references in the macro you need to click on the button Use [Relative References]{.uicontrol}.
+If you want a macro to operate relative to the currently active cell (e.g., "move one cell to the right of the active cell"), you need to enable [Use Relative References]{.uicontrol} before you start recording those specific steps. This button is located on the [Developer tab (Code group)]{.uicontrol}.
 
-![Relative references in macros.](images/macro/record-macro-relative-references.png){#fig-record-macro-relative-references}
+![Use Relative References button on the Developer tab.](images/macro/record-macro-relative-references.png){#fig-record-macro-relative-references}
 
-::: callout-warning
-This setting remains active until you undo the setting by clicking on this button again.
+::: callout-important
+The "Use Relative References" mode is a toggle. It stays active (or inactive) until you click the button again to change its state. Always check its status before recording if reference type is important.
 :::
 
-### Deleting macros {#sec-macros-tips-deleting}
+### Deleting Macros {#sec-macros-tips-deleting}
 
-Macros can be deleted by [Developer tab \> Macros (group Code) \> Select macro \> Delete]{.uicontrol}.
+To delete a macro:
+
+-   Go to [Developer tab \> Macros (Code group)]{.uicontrol}.
+-   Select the macro you want to delete from the list.
+-   Click the [Delete]{.uicontrol} button.
+-   Confirm the deletion.
 
 ## Exercises {#sec-macros-exercises}
 
-::: {#exr-macr001}
-**Background color (macr001)**
+:::: {#exr-macr001}
+**Background Color Macro (macr001)**
 
-Record a macro that gives the active cell a gray background color.
+Record a macro that applies a light gray background color to the currently active cell.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Answer")` An example of a solution.
+`r hide("Answer")`
 
-```         
+An example of a solution.
+
+``` vba
 Sub Background_Gray()
 '
 ' Lightgray background for active cell
@@ -299,17 +316,19 @@ End Sub
 
 `r unhide()`
 :::
-:::
+::::
 
-::: {#exr-macr002}
-**Percentage formatting (macr002)**
+:::: {#exr-macr002}
+**Percentage Formatting Macro (macr002)**
 
-Record a macro with the name PercentageFormat that is formatting a numeric value as a percentage with 1 decimal and also centers the content in the cell.
+Record a macro named [PercentageFormat]{.varname} that formats a numeric value in the selected cell as a percentage with one decimal place and also centers the content horizontally within the cell.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Answer")` An example of a solution.
+`r hide("Answer")`
 
-```         
+An example of a solution.
+
+``` vba
 Sub PercentageFormat()
 '
 ' Numeric value formatted as percentage with 1 dec. and horizontally centered
@@ -323,21 +342,23 @@ End Sub
 
 `r unhide()`
 :::
-:::
+::::
 
-::: {#exr-macr003}
-**Formatting cell A1 (macr003)**
+:::: {#exr-macr003}
+**Formatting Cell A1 (macr003)**
 
-Record a macro that performs the following:
+Record a macro that performs the following actions specifically on cell A1 (or related row/column):
 
--   Height of row 1 is 18
--   Width of column 1 is 3
--   Font of text in cell A1 is Tahoma 14, bold, blue color
+-   Sets the height of row 1 to 18.
+-   Sets the width of column A to 3.
+-   Formats the text in cell A1 to Tahoma font, size 14, bold, and blue color.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Answer")` An example of a solution.
+`r hide("Answer")`
 
-```         
+An example of a solution.
+
+``` vba
 Sub FormatA1()
 '
 ' exercise macr003
@@ -358,21 +379,21 @@ End Sub
 
 `r unhide()`
 :::
-:::
+::::
 
-::: {#exr-macr004}
-**Printing gridlines (macr004)**
+::::: {#exr-macr004}
+**Printing Gridlines Macro (macr004)**
 
-Create a macro that ensures that the grid lines will be printed at printing.
+Create a macro that ensures gridlines will be printed for the active sheet.
 
 ::: callout-note
-You can find this property at the [tab Page Layout \> Page Setup \> tab Sheet]{.uicontrol}.
+This setting can be found under[Page Layout tab \> Page Setup group (dialog launcher) \> Sheet tab]{.uicontrol}.
 :::
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")` An example of a solution.
 
-```         
+``` vba
 Sub Print_Gridlines()
 '
 ' exercise macr004
@@ -385,4 +406,4 @@ End Sub
 
 `r unhide()`
 :::
-:::
+:::::

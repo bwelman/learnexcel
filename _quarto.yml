@@ -11,7 +11,8 @@ book:
   site-url: https://learnexcel.netlify.app/
   repo-url: https://github.com/bwelman/learnexcel
   repo-actions: [issue]
-  description: "A task-oriented textbook."
+  description: "A task-oriented textbook with exercises."
+  favicon: images/favicon-excel.png
   chapters:
     - index.qmd
     - preface.qmd
