@@ -124,7 +124,7 @@ Create a macro named [CellFormat]{.varname} that formats the selected cell's tex
 
 1.  Start with an empty worksheet and enter some text in a cell (e.g., cell A1).
 
-2.  elect the cell containing the text.
+2.  Select the cell containing the text.
 
 3.  Go to [Developer tab \> Record Macro (Code group)]{.uicontrol}.
 
@@ -165,7 +165,7 @@ Now, test the macro to ensure it works correctly.
 
 2.  Go to [Developer tab \> Macros (Code group)]{.uicontrol}.
 
-3.  In the Macro dialog box, select [CellFormat]{.varname} and click \[Run\]{.uicontrol.
+3.  In the Macro dialog box, select [CellFormat]{.varname} and click [Run]{.uicontrol}.
 
 ![Running the CellFormat macro from the Macro dialog box.](images/macro/macro-cellformat-run.png){#fig-macro-cellformat-run}
 
