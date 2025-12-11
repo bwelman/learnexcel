@@ -111,7 +111,7 @@ It's recommended to give worksheets descriptive names instead of the default nam
 Often, you'll want to apply a command to multiple cells at once. For example, you might want to center the text in several cells or change their font. Therefore, it's important to become proficient at selecting multiple cells. @tbl-mouse-selections shows the most common selections.
 
 | Desired selection | Method |
-|:----------------------|:------------------------------------------------|
+|:----------------------|:-----------------------------------------------|
 | single cell | Click the cell. |
 | range of cells | Click the first cell in the range, and then drag it to the last cell. |
 | single column | Click the column letter. |
@@ -292,7 +292,7 @@ Then, choose [Page Layout \> Breaks (Page Setup group) \> Remove Page Break]{.ui
 ## Shortcuts cell movement {#sec-ws-cell-movements}
 
 | Shortcut | Active cell becomes |
-|:---------------------|:-------------------------------------------------|
+|:----------------------|:------------------------------------------------|
 | Arrow Up | One cell up |
 | Arrow Right | One cell right |
 | Arrow Down | One cell down |

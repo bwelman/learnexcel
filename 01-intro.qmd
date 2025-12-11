@@ -10,9 +10,9 @@
 -   File formats of Excel.
 :::
 
-Excel is part of the Microsoft Office suite. It allows you to perform calculations in spreadsheets. This chapter provides an introduction to spreadsheets in general, with a specific focus on Excel.
-
 ## What is Excel? {#sec-intro-over}
+
+Excel is part of the Microsoft Office suite. It allows you to perform calculations in spreadsheets. This chapter provides an introduction to spreadsheets in general, with a specific focus on Excel.
 
 A spreadsheet is a computer program that lets you enter data (text, numbers, etc.) into sheets made up of rows and columns. Besides entering data, you can also perform various operations on it. Microsoft Excel is one such program.
 
@@ -28,7 +28,7 @@ Spreadsheets are very useful for performing [What-if analysis]{.term}, where you
 
 How you start Excel depends on your system setup. This course assumes a default installation of Microsoft Office 365 on Windows 10. On most systems, Excel can be launched from the Start menu. The easiest way is to use a shortcut on the desktop or taskbar.
 
-::: {#prp-intro-start-excel}
+::::: {#prp-intro-start-excel}
 1.  Choose [Start \> Excel]{.uicontrol}.
 
 The Excel start screen appears. On the left, you’ll see recently opened files; on the right, an overview of available templates.
@@ -55,7 +55,7 @@ To exit Excel:
 ::: callout-note
 If changes were made to the workbook, Excel will prompt you to save them before closing.
 :::
-:::
+:::::
 
 ## The Excel Window {#sec-intro-excel-window}
 

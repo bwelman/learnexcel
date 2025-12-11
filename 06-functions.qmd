@@ -125,7 +125,7 @@ Excel places a selection border around the cells that it assumes you want to sum
 4.  Confirm the selection by doing one of the following:
 
     -   Click the [Autosum]{.uicontrol} button again.
-    -   Click the [Enter]{.uicontrol} button, ![](images/functions/enter-function.svg), in the formula bar.
+    -   Click the [Enter]{.uicontrol} button, ![](images/functions/enter-function.png), in the formula bar.
     -   Press the [Enter]{.uicontrol} key on the keyboard.
 
 Cell A7 will display the result `735`. The formula in cell A7 is `=SUM(A1:A6)`, which is shorter and clearer than `=A1+A2+A3+A4+A5+A6`.

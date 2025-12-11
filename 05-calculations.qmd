@@ -36,7 +36,7 @@ To enter a formula, start by typing `=`, then enter the calculation as you would
 
 : Operators. {#tbl-calculation-operators}
 
-::: {#prp-}
+::: {#prp-calculation-operators}
 Practice with these examples in a worksheet.
 :::
 
@@ -124,7 +124,7 @@ Here are some guidelines for designing calculation models in Excel:
 
     -   For larger models, use separate worksheets for each type of cell.
 
-![Design of a calculation model.At the left 1 worksheet, at the right 3 worksheets.](images/calculations/calculation-model.svg){#fig-calculation-model}
+![Design of a calculation model.At the left 1 worksheet, at the right 3 worksheets.](images/calculations/calculation-model.png){#fig-calculation-model}
 
 2.  **Organize Worksheets Logically:**
 

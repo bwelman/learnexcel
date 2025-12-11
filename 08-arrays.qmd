@@ -439,7 +439,7 @@ A modern and versatile replacement for `VLOOKUP`, `HLOOKUP`, and `LOOKUP`. It su
 -   `lookup_value`: The value to search for.
 -   `lookup_array`: The array to search within.
 -   `return_array`: The array to return values from.
--   `if_not_found`:  The value to return if no match is found.
+-   `if_not_found`: The value to return if no match is found.
 -   `match_mode`: Specifies the type of match: 0 for exact match, -1 for exact match or next smaller item, 1 for exact match or next larger item, 2 for wildcard match (default is 0).
 -   `search_mode`: Specifies the search direction: 1 to search from the first item (default), -1 from the last item, 2 for binary search (ascending), -2 for binary search (descending).
 
@@ -450,8 +450,8 @@ Looks up the discount percentage based on the quantity in a discount table.
 
 ![Determines the discount percentage.](images/arrays/array-dyn-xlookup.png){#fig-array-dyn-xlookup}
 
-::: {.info data-latex="\""}
-ote the arguments in this formula:
+::: callout-tip
+Note the arguments in this formula:
 
 -   `lookup_value`: D2
 -   `lookup_array`: A2:A7
@@ -467,7 +467,6 @@ ote the arguments in this formula:
 Array formulas are often used with data lists, especially those with multiple columns. Using Excel tables with these formulas offers advantages: you can use table and column names in formulas, and references update automatically when rows are added or removed.
 
 To refer to a column in an Excel table, use square brackets immediately after the table name: `table_name[column_name]`.
-
 
 ::: {#prp-arrays-tables}
 [File:]{.term} `Personnel.xlsx`
@@ -547,8 +546,7 @@ The result will look like this:
 
 ## Mathematical array functions {#sec-arrays-math}
 
- [Linear algebra](https://en.wikipedia.org/wiki/Linear_algebra) involves many arithmetic operations with arrays, and Excel provides specific functions for this. Their use is beyond the scope of this textbook.
-
+[Linear algebra](https://en.wikipedia.org/wiki/Linear_algebra) involves many arithmetic operations with arrays, and Excel provides specific functions for this. Their use is beyond the scope of this textbook.
 
 MUNIT
 
@@ -598,7 +596,7 @@ Enter array formulas in cells C16:C19 to calculate the total failures per distri
 ::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 
-1. The formula `(B2:B11)=B16` creates a 10-row column array. If a cell in B2:B11 equals B16 ("North"), the array value is TRUE (1); otherwise, it's FALSE (0).
+1.  The formula `(B2:B11)=B16` creates a 10-row column array. If a cell in B2:B11 equals B16 ("North"), the array value is TRUE (1); otherwise, it's FALSE (0).
 
 ![](images/arrays/matr002-tip1.png)
 

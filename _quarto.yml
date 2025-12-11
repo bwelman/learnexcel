@@ -13,6 +13,8 @@ book:
   repo-actions: [issue]
   description: "A task-oriented textbook with exercises."
   favicon: images/favicon-excel.png
+  downloads: [pdf]
+
   chapters:
     - index.qmd
     - preface.qmd
@@ -61,6 +63,20 @@ format:
     author-meta: "Ben Welman"
     description-meta: "With this task oriented textbook you learn to work with Excel."
     # keywords: ["Excel", "Power Query", "calculations", "functions", "tables", "charts", "arrays", "scenario", "pivot tables", "goalseek", "solver", "macros"]
+
+  pdf:
+    documentclass: scrbook
+    classoption: oneside
+    papersize: a4
+    geometry:
+     - top=25mm
+     - bottom=25mm
+     - left=25mm
+     - right=25mm
+    cite-method: biblatex
+    links-as-notes: true
+    author: [Ben Welman]
+    date: \today
 
 knitr:
   opts_chunk:
