@@ -308,7 +308,7 @@ A sales report tracks achieved and target turnover. The task is to color-code th
 
 1.  Open the file.
 
-2.  Select all the turnover data.
+2.  Select all the turnover data, cell C2 through cell C15.
 
 3.  Choose [Home \> Conditional Formatting (Styles group) \> Manage Rules...]{.uicontrol}.
 
