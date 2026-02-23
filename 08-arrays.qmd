@@ -3,9 +3,7 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   Introduction to arrays.
 -   Creating array formulas.
 -   Create frequency distribution of data with FREQUENCY function.
@@ -15,7 +13,7 @@
 
 An array formula is a formula that can perform multiple calculations on one or more items in an array. Array formulas used to be considered tricky because they look different from regular formulas and required a special entry method: pressing CTRL+SHIFT+ENTER instead of just ENTER. This is no longer the case in Excel 365.
 
-::: callout-important
+::: {.callout-important title="Array formulas in Excel 365"}
 In Excel 365, the behavior of array formulas has changed compared to other Excel versions. Existing formulas that produce multiple results now behave like array formulas. Several new dynamic array formulas are added to Excel 365.
 
 **Therefore, much of this chapter applies primarily to Excel 365.**
@@ -77,7 +75,7 @@ Here are some examples:
 ![2-dimensional array.](images/arrays/array-2dim.png){#fig-array-2dim}
 :::
 
-::: callout-important
+::: {.callout-important title="Editing array formulas"}
 For all the above examples, only the first cell where you entered the array formula is editable. When you select any other cell within the array's range, the content in the formula bar appears grayed out, and you cannot change its value.
 :::
 
@@ -100,7 +98,7 @@ However, these calculations can also be performed using array formulas, which is
 
 ![Sum of two columns using an array formula.](images/arrays/example-column-sum.png){#fig-example-column-sum}
 
-::: callout-note
+::: {.callout-tip title="Entering array formulas"}
 -   Selecting cell addresses with the mouse is easier than typing them.
 
 -   Since the addition results in a column of three numbers, Excel automatically spills the results into cells D3:D4. Ensure these cells are empty beforehand to avoid a `#SPILL!` error.
@@ -244,11 +242,9 @@ The first argument is the array of values. The second argument is the array of b
 
 2.  Enter the formula `=FREQUENCY(A2:A11,B2:B5)` in cell C2.
 
-::: callout-note
 The result is a frequency table. @fig-array-frequency-explanation explains how the interval boundaries are handled.
 
 ![Explanation of frequency distribution intervals.](images/arrays/array-frequency-explanation.png){#fig-array-frequency-explanation}
-:::
 ::::
 
 ## Dynamic Array Formulas {#sec-arrays-dynamic}
@@ -257,7 +253,7 @@ An array formula entered in one worksheet cell can output results into multiple 
 
 To refer to a spill range, append a hash symbol `#` to the address of the first cell in the range. For example, if the spill range is J2:N4, refer to it as `=J2#`. This ensures that the reference adapts if the spill range's size changes.
 
-::: callout-tip
+::: {.callout-tip title="Naming arrays"}
 Naming arrays used in formulas can be very helpful. You can name them the same way you name individual cells.
 :::
 
@@ -450,7 +446,7 @@ Looks up the discount percentage based on the quantity in a discount table.
 
 ![Determines the discount percentage.](images/arrays/array-dyn-xlookup.png){#fig-array-dyn-xlookup}
 
-::: callout-tip
+::: {.callout-note title="Understanding the XLOOKUP formula"}
 Note the arguments in this formula:
 
 -   `lookup_value`: D2
@@ -537,7 +533,7 @@ The result will look like this:
 3.  In cell G3, enter the formula:\
     `=XLOOKUP(G2,B1:D1,XLOOKUP(G1,A2:A10,B2:D10))`.
 
-::: callout-note
+::: {.callout-note title="Understanding the nested formula"}
 -   The inner `XLOOKUP` looks up the coffee type in the product column and returns a row of prices.
 
 -   The outer `XLOOKUP` finds the correct size and returns the corresponding price.

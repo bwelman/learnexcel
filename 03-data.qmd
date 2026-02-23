@@ -1,8 +1,6 @@
 # Data Entry and Editing {#sec-data}
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   Entering data.
 -   Language dependent number separators.
 -   The difference between content and formatting of a cell.
@@ -17,7 +15,7 @@ Entering data (text, numbers, formulas) is one of the main activities in Excel. 
 2.  Start typing.
 3.  Press the [Enter key]{.uicontrol}.
 
-::: callout-warning
+::: {.callout-caution title="Attention"}
 Be aware that if the cell already contains content, this content will be overwritten.
 :::
 
@@ -41,7 +39,7 @@ Dutch
 
 To change these settings permanently, you must do so through the regional settings in the Windows Control Panel.
 
-::: callout-note
+::: {.callout-note title="Changing regional settings"}
 You can temporarily change these settings in Excel. To do this:
 
 1.  Click [File \> Options \> Advanced]{.uicontrol}

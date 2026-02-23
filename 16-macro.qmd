@@ -3,9 +3,7 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   Understand what macros are and how they are used.
 -   Learn how to activate the Developer tab.
 -   Learn how to record a macro using the macro recorder.
@@ -20,7 +18,7 @@ Macros are primarily intended for frequently performed actions or complex operat
 
 Simple macros, consisting of a sequence of actions, can be recorded using the built-in macro recorder. More complex macros are programmed in the VBA (Visual Basic for Applications) programming language. This chapter focuses on simple macros, for which you do not need any programming knowledge.
 
-::: callout-note
+::: {.callout-note title="Macros and VBA"}
 The language used for Excel macros is Visual Basic for Applications (VBA). Macro commands and functions are stored in a Visual Basic module. The Visual Basic Editor allows you to edit macros, copy macros between modules or workbooks, and rename modules and macros.
 :::
 
@@ -30,7 +28,7 @@ To record, edit, and run macros, the [Developer tab]{.uicontrol} must be visible
 
 Several Excel functions, including those for Macros and VBA, are located on the Developer tab. This tab is not shown by default when Excel is installed and therefore needs to be made visible first. This is a one-time action.
 
-::: callout-note
+::: {.callout-important title="Check for Developer Tab"}
 First, check if the [Developer tab]{.uicontrol} is already present on the ribbon. If so, you can skip this task.
 
 ![The Developer tab on the Excel ribbon.](images/macro/tab-developer.png){#fig-tab-developer}
@@ -73,7 +71,7 @@ The **Trust Center** dialog box will appear.
 
 Simple macros can be created by recording your actions using the built-in **macro recorder**. After starting the recorder, all actions are recorded and converted into VBA code in the background. This continues until you stop the recorder.
 
-::: callout-note
+::: {.callout-tip title="Developing Macros"}
 To ensure a properly working macro, it's important to first perform the actions manually and write them down step-by-step. You can then use this script to record the actions accurately with the macro recorder.
 :::
 
@@ -109,7 +107,7 @@ Think carefully about this. If the macro is specific to the active workbook, cho
 
 It's recommended to provide a brief description of what the macro does. While you'll remember its purpose when you create it, a description is helpful for future reference. This is optional.
 
-::: callout-note
+::: {.callout-note title="Macro Properties"}
 All these choices (name, shortcut, storage location, description) can be changed later.
 :::
 
@@ -174,7 +172,7 @@ Now, test the macro to ensure it works correctly.
 5.  Save the workbook. Since it contains a macro, you must save it as an Excel Macro-Enabled Workbook (\*.xlsm). Name it `CellFormat.xlsm`.
 :::
 
-::: callout-warning
+::: {.callout-warning title="File extension for macros"}
 When saving a workbook containing macros, Excel might default to saving it as a standard Excel Workbook (`*.xlsx`). This format cannot store macros. You must manually change the "Save as type" to **Excel workbook with macros** with the extension `*.xlsm`.
 :::
 
@@ -274,7 +272,7 @@ If you want a macro to operate relative to the currently active cell (e.g., "mov
 
 ![Use Relative References button on the Developer tab.](images/macro/record-macro-relative-references.png){#fig-record-macro-relative-references}
 
-::: callout-important
+::: {.callout-important title="Relative References"}
 The "Use Relative References" mode is a toggle. It stays active (or inactive) until you click the button again to change its state. Always check its status before recording if reference type is important.
 :::
 
@@ -384,11 +382,7 @@ End Sub
 ::::: {#exr-macr004}
 **Printing Gridlines Macro (macr004)**
 
-Create a macro that ensures gridlines will be printed for the active sheet.
-
-::: callout-note
-This setting can be found under[Page Layout tab \> Page Setup group (dialog launcher) \> Sheet tab]{.uicontrol}.
-:::
+Create a macro that ensures gridlines will be printed for the active sheet. This setting can be found under[Page Layout tab \> Page Setup group (dialog launcher) \> Sheet tab]{.uicontrol}.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Answer")` An example of a solution.

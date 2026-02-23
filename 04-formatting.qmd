@@ -3,9 +3,7 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   The importance of selecting fbefore formatting.
 -   Adjusting column width and row height.
 -   Formatting numbers and text.
@@ -44,7 +42,7 @@ You can adjust column width in several ways:
 
 -   Use the Home tab: Select a cell in the column you want to adjust Then, choose [Home \> Format (group Cells) \> Column Width...]{.uicontrol}. This opens the same dialog box.
 
-::: callout-note
+::: {.callout-tip title="Adjust multiple columns at once"}
 1.  To adjust multiple columns simultaneously, select them using the [SHIFT-key]{.uicontrol} or [CTRL-key]{.uicontrol}.
 
 2.  To change the width of all columns in the worksheet, use [Home \> Format (Cells group) \> Default Width..]{.uicontrol}.
@@ -68,7 +66,7 @@ You can adjust row height in several ways:
 
 -   Use the Home tab: Select a cell in the row you want to adjust. Then, choose [Home \> Format (Cells group) \> Row Height...]{.uicontrol}. This opens the same dialog box.
 
-::: callout-note
+::: {.callout-tip title="Adjust multiple rows at once"}
 To adjust the height of multiple rows at once, select them using the [SHIFT-key]{.uicontrol} or [CTRL-key]{.uicontrol} .
 :::
 
@@ -138,7 +136,7 @@ Wrap Text
 
 :   Displays text on multiple lines within a cell, increasing row height and reducing horizontal space (cells D3:F3).
 
-::: callout-note
+::: {.callout-note title="Text wrapping not visible"}
 If all wrapped text isn't visible, the row might be set to a specific height. To allow the row to adjust automatically, choose [Home \> Format (group Cells) \> AutoFit Row Height]{.uicontrol}.
 :::
 
@@ -158,7 +156,7 @@ Excel automatically formats some numbers as you enter them:
 
 -   Typing 1/2 displays it as a date (e.g., 2-Jan).
 
-::: callout-note
+::: {.callout-note title="Dates and times are stored as numbers"}
 Excel stores dates and times as serial numbers, starting with January 1, 1900, as 1. So, 1/2 becomes a date, and the cell content is a serial number representing that date (e.g., 41276).
 :::
 
@@ -227,7 +225,7 @@ To use it:
 3.  Select the destination cell(s).
 4.  Release the mouse button.
 
-::: callout-note
+::: {.callout-tip title="Apply format to multiple cells"}
 Double-clicking the [Format painter]{.uicontrol} button allows you to apply the format to multiple cells. Press Esc or click the [Format painter]{.uicontrol} button again to cancel.
 :::
 
@@ -241,7 +239,7 @@ To remove cell formatting:
 
 ![Clear formats on the ribbon.](images/formatting/format-clear.png){#fig-format-clear}
 
-::: callout-note
+::: {.callout-note title="Clear cell"}
 1.  You can clear the format, content, or both.
 
 2.  The [DELETE]{.uicontrol} key only clears the cell's content, not its formatting.

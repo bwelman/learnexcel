@@ -3,9 +3,7 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   Understand the layout and operation of a data table with one input variable.
 -   Understand the layout and operation of a data table with two input variables.
 :::
@@ -41,7 +39,7 @@ In a row-oriented data table, the variable values are in a row, and the formula(
 
 ![General layout of a data table with one input cell.](images/datatables/datatable-layout1.png){#fig-datatable-layout1}
 
-::: callout-note
+::: {.callout-note title="Input cell and formulas"}
 1.  The **input cell** can be any cell on the worksheet. Excel uses this cell as a temporary storage location. The formulas must reference this input cell. The values for the variable are sent to this input cell, the result is calculated, and then it's placed in the table.
 
 2.  Instead of formulas, you can also use references to formulas.

@@ -47,6 +47,9 @@ language:
   nl:
     crossref-prp-title: "Taak"
 
+filters:
+  - textbook
+
 format:
   html:
     include-after-body: include/webex.js

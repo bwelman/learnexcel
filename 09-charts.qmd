@@ -3,9 +3,7 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   Parts of a chart.
 -   Creating charts.
 -   Adjustments of chart parts.
@@ -95,7 +93,7 @@ Excel offers many chart types, and choosing the most appropriate one can be chal
 
 2.  Select any cell in the data area A1:D5.
 
-::: callout-note
+::: {.callout-note title="Selecting data area"}
 If the data area is contiguous (like A1:D5 here), selecting any cell within it allows Excel to automatically recognize the entire data area. If the area is not contiguous, you must select the whole data area.
 :::
 
@@ -116,7 +114,7 @@ A frame surrounds the chart to indicate it is selected. In the upper-right corne
 -   ![](images/common/button-chart-filters.png) Chart Filters
 ::::
 
-::: callout-note
+::: {.callout-tip title="Quick Analysis"}
 An alternative, often quicker, method to insert a recommended chart is:
 
 1.  Select the data, including the headings.
@@ -139,7 +137,7 @@ After selecting the chart, you can select a chart element in the following ways:
 
 ![Current selection on the ribbon (tab Format). With the arrow you can select the desired chart part.](images/charts/chart-elements-currentselection.png){#fig-chart-elements-currentselection}
 
-::: callout-note
+::: {.callout-note title="Selected chart elements"}
 1.  The [Current Selection]{.uicontrol} always displays the selected element. In @fig-chart-elements-currentselection, the [Chart Area]{.uicontrol} is selected.
 
 2.  Selected parts are marked with sizing handles.\
@@ -209,7 +207,7 @@ A double border appears around the chart, and the mouse cursor changes to a cros
 
 3.  Press the left mouse button and drag the chart to the desired location.
 
-::: callout-tip
+::: {.callout-tip title="Snap to grid"}
 Holding down the [Alt]{.uicontrol} key while dragging snaps the chart to the worksheet's gridlines.
 :::
 
@@ -247,7 +245,7 @@ You can change a chart's size by dragging its sizing handles. These handles may 
 
 4.  Click the left mouse button and drag to the desired size.
 
-::: callout-tip
+::: {.callout-tip title="Snap to grid"}
 Holding down the [Alt]{.uicontrol} key while dragging snaps the chart to the worksheet's gridlines.
 :::
 
@@ -283,7 +281,7 @@ When you create a chart, the title appears above it by default. You can select t
 
 5.  Double-click the title text "Chart Title" and replace it with your own text for example "Sales Bakery".
 
-::: callout-note
+::: {.callout-tip title="Chart title options"}
 -   Selecting `None` removes the chart title.
 
 -   You can move the chart title by dragging it.
@@ -303,7 +301,7 @@ When you create a chart, the title appears above it by default. You can select t
 
 ![Selecting and deselecting chart elements .](images/charts/chart-elements-title.png){#fig-chart-elements-title}
 
-::: callout-note
+::: {.callout-tip title="Chart elements options"}
 -   An arrow next to a chart element indicates a drop-down menu with more options.
 
 -   Checked elements are present in the chart. Unchecking an element removes it.
@@ -454,7 +452,7 @@ The source data is selected on the worksheet, showing the sizing handles.
 
 1.  Right-click on the chart and choose [Select Data...]{.uicontrol}.
 
-::: callout-note
+::: {.callout-tip title="Alternative method"}
 An alternative is [Chart Design tab \> Select Data (Data group)]{.uicontrol}.
 :::
 

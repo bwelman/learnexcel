@@ -3,9 +3,7 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   Create formulas.
 -   Set up a calculation model.
 -   Copy formulas and understand absolute and relative cell addresses.
@@ -17,7 +15,7 @@ One of the most important aspects of working with Excel is performing calculatio
 
 Calculations are performed using formulas. Formulas contain numbers or references to cells containing numbers. Operators, such as `+`, `-`, `*`, `/`, and `^`, indicate the type of calculation.
 
-::: callout-important
+::: {.callout-important title="Formulas must start with `=`"}
 A formula must always begin with the `=` character. While you can start a formula with a `+`, Excel will automatically convert it to `=` after you enter the data.
 :::
 
@@ -166,7 +164,9 @@ Here are some guidelines for designing calculation models in Excel:
 
 Copying formulas to other cells is very useful, especially when the formulas are similar. In \@fig-formula-copy, the formulas in A3, B3, C3, and D3 are nearly identical. You can enter the formula once in A3 and then copy it to B3:D3.
 
-A [(cell)range]{.term} is a group of cells that you can refer to in a formula. Ranges are typically rectangular and defined by the cell in the upper-left corner, a colon, and the cell in the lower-right corner (e.g., B2:E7, B3:E3, D2:D6).
+::: {.callout-note title="Cell ranges"}
+A (cell)range is a group of cells that you can refer to in a formula. Ranges are typically rectangular and defined by the cell in the upper-left corner, a colon, and the cell in the lower-right corner (e.g., B2:E7, B3:E3, D2:D6).
+:::
 
 ![Example with copyable formulas.](images/calculations/formula-copy.png){#fig-formula-copy}
 
@@ -189,7 +189,7 @@ Use dollar signs (`$`) to make a cell reference absolute. You can make the colum
 
 : Examples of cell addresses. {#tbl-cell-addresses}
 
-::: callout-note
+::: {.callout-note title="Adjustments to cell addresses in copy actions"}
 When you copy a formula, the absolute parts of cell references remain unchanged, while the relative parts are adjusted.
 :::
 
@@ -279,7 +279,7 @@ Some formulas don't perform calculations but instead compare values or test cond
 
 : Examples of TRUE/FALSE formulas. {#tbl-boolean-examples}
 
-::: callout-important
+::: {.callout-important title="Use double quotes for text in Boolean formulas"}
 Always enclose text in double quotes in Boolean operations.
 :::
 
@@ -366,7 +366,7 @@ However, you can easily replace the cell addresses in existing formulas with the
 
 4.  Select all names and click [OK]{.uicontrol}. The formula in cell B5 will change to `=Inventory+Advertising+Officecosts`.
 
-::: callout-note
+::: {.callout-tip title="Select multiple names"}
 To select multiple names, hold down the [Ctrl]{.uicontrol} key.
 :::
 ::::
@@ -385,7 +385,7 @@ Excel provides tools for managing names, including viewing a list of all names i
 ![Name Manager.](images/calculations/name-manager.png){#fig-name-manager}
 :::
 
-::: callout-note
+::: {.callout-note title="Editing names"}
 The Name Manager dialog box allows you to perform several operations:
 
 -   **Deleting aname**: Select the name and click [Delete]{.uicontrol}.

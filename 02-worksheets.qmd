@@ -1,8 +1,6 @@
 # The Worksheet {#sec-worksheets}
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   Worksheet layout and usage.
 -   Activating a worksheet.
 -   Adding, deleting, moving and copying a worksheet.
@@ -30,8 +28,8 @@ A cell is selected by clicking it with the mouse. This cell becomes the **active
 
 A worksheet always has an active cell. You can activate a different cell by clicking it, or by using the arrow keys on the keyboard to move the active cell. When you start typing, data is entered into the active cell. Press the Enter key to complete data entry. By default, the active cell moves down one cell.
 
-::: callout-note
-You can change this direction in [Excel Options]{.uicontrol}: down, up, right, and left.
+::: {.callout-tip title="New selection after Enter"}
+You can change this direction in [File \> Options \> Advanced]{.uicontrol}: down, up, right, and left.
 :::
 
 The content of a cell can be:
@@ -111,7 +109,7 @@ It's recommended to give worksheets descriptive names instead of the default nam
 Often, you'll want to apply a command to multiple cells at once. For example, you might want to center the text in several cells or change their font. Therefore, it's important to become proficient at selecting multiple cells. @tbl-mouse-selections shows the most common selections.
 
 | Desired selection | Method |
-|:----------------------|:-----------------------------------------------|
+|:-----------------------|:-----------------------------------------------|
 | single cell | Click the cell. |
 | range of cells | Click the first cell in the range, and then drag it to the last cell. |
 | single column | Click the column letter. |
@@ -136,7 +134,7 @@ The Shift key allows you to select a contiguous range.
 
 The Ctrl key allows you to select non-contiguous ranges. Select the first cell, range, row, or column, hold down the Ctrl key, and then select the other cells, ranges, rows, or columns.
 
-::: callout-note
+::: {.callout-tip title="Tips for mouse selections"}
 1.  You can only make selections when the mouse pointer is a thick plus sign ![Mouse selection shape](images/common/mouse-pointer-cross.png).
 
 2.  The selected area is highlighted, except for the first cell you clicked. This cell remains the active cell and has a white background.
@@ -166,7 +164,7 @@ Cells `A1:A10` all contain the number `40299`. Therefore, these cells have the s
 
 Looking at the figure it is difficult to see what the format and what the content is. Content and formatting are two different things.
 
-::: callout-important
+::: {.callout-important title="Do not enter content and formatting at the same time"}
 Make sure that you don't type the formatting when entering data in a cell.
 
 For example, if you type `40.299 hours` in cell A9, then it is considered as text and not as a number. And because it is a text you cannot calculate with the content.
@@ -251,7 +249,7 @@ Worksheets often have titles in the first row(s) or column(s). If the worksheet 
 
 An interesting option is to print the worksheet's gridlines.
 
-::: callout-note
+::: {.callout-tip title="Accessing Page Setup options"}
 Page Setup options are also accessible via [Page Layout \> group Page Setup]{.uicontrol}.
 :::
 
@@ -292,7 +290,7 @@ Then, choose [Page Layout \> Breaks (Page Setup group) \> Remove Page Break]{.ui
 ## Shortcuts cell movement {#sec-ws-cell-movements}
 
 | Shortcut | Active cell becomes |
-|:----------------------|:------------------------------------------------|
+|:----------------------|:-----------------------------------------------|
 | Arrow Up | One cell up |
 | Arrow Right | One cell right |
 | Arrow Down | One cell down |

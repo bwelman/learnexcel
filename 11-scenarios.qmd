@@ -3,9 +3,7 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   What is a scenario.
 -   Create a scenario.
 :::
@@ -20,7 +18,7 @@ Identifying the changing cells and the result cells is crucial when creating sce
 
 Using Excel's Scenario Manager, you can create different sets of input data to calculate the corresponding outcomes. You can save each set as a named scenario (e.g., "Most Optimistic," "Most Pessimistic," etc.). Then, you can easily compare the different outcomes using a generated summary report. This report displays both the input values for the changing cells and the resulting values of the result cells.
 
-::: callout-note
+::: {.callout-tip title="Save the current situation always in a scenario"}
 It is recommended to always save the current situation in a scenario, for example under the name [Current]{.varname}.
 :::
 
@@ -47,7 +45,7 @@ Higher prices, less order costs and more advertising
 
 Examine the model carefully. Identify the cells that will change and the cell that shows the final result. Review the formulas used and note that all cells have defined names.
 
-::: callout-note
+::: {.callout-tip title="Using names in a scenario"}
 Using meaningful names for your cells, rather than just cell addresses, will make the summary report easier to interpret.
 :::
 
@@ -79,7 +77,7 @@ The Scenario Values dialog box will reappear, still displaying the current value
 
 9.  Click [OK]{.uicontrol}.
 
-::: callout-warning
+::: {.callout-warning title="Warning when using formulas"}
 If you've used formulas, a warning message will appear, indicating that the entered formulas will be replaced by their calculated results.
 
 Confirm by clicking [OK]{.uicontrol}

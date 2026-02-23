@@ -3,9 +3,7 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   Characteristics of tables (lists).
 -   Form button.
 -   Merge (consolidate) data.
@@ -116,7 +114,7 @@ The data form appears, displaying the eight field names on the left. Entry boxes
 
 ![Purchase list with 3 records.](images/tables/purchase-result.png){#fig-purchase-result}
 
-::: callout-note
+::: {.callout-tip title="Navigating the Form"}
 Use the [Tab key]{.uicontrol} or the mouse to navigate between fields. Pressing the [Enter key]{.uicontrol} moves you to the next record, or creates an empty form for adding a new record if there are no more records.
 :::
 ::::
@@ -195,7 +193,7 @@ The lists to be summarized are in the "PRA" and "PRB" worksheets. The consolidat
 
 ![Result after consolidation.](images/tables/consolidate-result.png){#fig-consolidate-result}
 
-::: callout-warning
+::: {.callout-warning title="Consolidation is static"}
 Consolidation is static. If the source data changes, the consolidation results will not update automatically. You'll need to perform a new consolidation. Using pivot tables is often a better approach for summarizing data.
 :::
 ::::
@@ -215,7 +213,7 @@ The Create Table dialog box appears. If you previously selected a cell with data
 
 ![Dialogbox Create Table.](images/tables/candybox-table-create.png){#fig-candybox-table-create}
 
-::: callout-note
+::: {.callout-note title="Table headers"}
 -   If your range includes labels that you want to use as column headers, check "My table has headers." If there are no labels, uncheck this option. Excel will automatically add headers with generic names: Column1, Column2, etc.
 
 -   It's strongly recommended that you provide your own descriptive headers.
@@ -301,7 +299,7 @@ A quick way to add a new row is to select the bottom-right cell and press the [T
 
 Sorting is a common operation with lists. If you select a cell in a column and click the sort button, the entire table will be sorted. It can be sorted in ascending or descending order based on the values in that column.
 
-::: callout-warning
+::: {.callout-important title="Sorting is irreversible"}
 The only way to restore the table to its original order is by using the [Undo]{.uicontrol} button on the [Quick Access Toolbar]{.uicontrol}. Alternatively, before sorting, you can insert a temporary column with sequential numbers. Sorting by this column later will return the table to its original state.
 :::
 
@@ -368,7 +366,7 @@ When a field contains numbers, you can use specific filter actions. These filter
 
 ![Dialog box for top 10 autofilter.](images/tables/filter-top10.png){#fig-filter-top10}
 
-::: callout-note
+::: {.callout-tip title="Options"}
 You can change `10` to a different number. You can also change [Top]{.uicontrol} to [Bottom]{.uicontrol}.
 :::
 
@@ -434,7 +432,7 @@ Two slicers are inserted. If they overlap, move them so that they are next to ea
 
 ![Multiple selection applied in the Department slicer.](images/tables/personnel-slicer-multiple.png){#fig-personnel-slicer-multiple}
 
-::: callout-note
+::: {.callout-note title="Multi-Select mode"}
 The buttons act like toggles. Clicking a button repeatedly turns the filtering for that value on and off.
 :::
 
@@ -458,7 +456,7 @@ The easiest way to create a new calculated column is to start typing in the colu
 
 3.  Select cell I2 and enter the formula `=ROUND([@Salary],0)`. A new table column with the calculated values is created.
 
-::: callout-note
+::: {.callout-note title="Structured references"}
 References like `[@Salary]` are called **structured references**, which are unique to Excel tables. Structured references allow the table to use the same formula for each row.
 :::
 

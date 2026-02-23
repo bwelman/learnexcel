@@ -3,9 +3,7 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   Understand the features of a PivotTable.
 -   Learn how to create PivotTables.
 -   Identify source data from a PivotTable.
@@ -38,7 +36,7 @@ Since these results are summarized, you also need to specify the calculation met
 A PivotTable has four areas where you can place fields:
 
 | Area | Description |
-|:---|:---|
+|:-----------------------------------|:-----------------------------------|
 | Values | Fields with numeric information you want to summarize, typically for calculating totals and averages. |
 | Rows | Fields used to create distinct groups, with information for each group displayed in a separate row. |
 | Columns | Fields also used to create distinct groups, often for subdividing data within rows. These groups are displayed in separate columns. Choose fields with a manageable number of groups to prevent the table from becoming too wide. |
@@ -81,7 +79,7 @@ An empty PivotTable will be created on the worksheet, and a task pane will appea
 Creating a PivotTable.
 :::
 
-::: callout-note
+::: {.callout-note title="Visibility of the Task Pane"}
 The task pane with the field list is shown when a cell in the PivotTable is active. If you click on a cell outside the PivotTable, the task pane disappears. It reappears when you click on any cell within the PivotTable.
 :::
 
@@ -89,7 +87,7 @@ The task pane with the field list is shown when a cell in the PivotTable is acti
 
 ![Fields selected for the PivotTable.](images/pivots/supermarket-productcategory-town-fields.png){#fig-supermarket-productcategory-town-fields}
 
-::: callout-tip
+::: {.callout-tip title="Removing Fields"}
 You can remove a field from the PivotTable by dragging it out of its area.
 :::
 
@@ -105,7 +103,7 @@ The PivotTable in the worksheet will be populated with the data.
 
 ![Value Field Settings dialog box.](images/pivots/supermarket-pivot-fieldsettings.png){#fig-supermarket-pivot-fieldsettings}
 
-::: callout-note
+::: {.callout-note title="Value Field Settings"}
 The ***Value Field Settings*** dialog box is crucial when creating PivotTable reports. Here, you can configure various options, such as:
 
 -   The name to be displayed, using the [Custom Name]{.uicontrol} box.
@@ -239,7 +237,7 @@ First, a PivotTable with sales per salesman per product category will be created
 
 ![Specifying the data range and location for the PivotTable.](images/pivots/invoices-pivot-create.png){#fig-invoices-pivot-create}
 
-::: callout-note
+::: {.callout-note title="Data area and PivotTable location"}
 -   Since the data area here is a table named [SalesData]{.varname}, this name is automatically filled in instead of cell addresses.
 
 -   To have the PivotTable appear on a new worksheet, accept the default option [New Worksheet]{.uicontrol}.
@@ -343,7 +341,7 @@ Three subtasks discuss creating report filters, slicers, and timelines. The file
 
 3.  Place the [productcategory]{.varname} field in [Columns]{.uicontrol}, the [sales]{.varname} field in [Values]{.uicontrol}, and the [date]{.varname} field in [Rows]{.uicontrol}.
 
-::: callout-note
+::: {.callout-note title="Automatic Time Grouping"}
 Excel's automatic time grouping adds the calculated field [Months]{.varname} to [Rows]{.uicontrol}. No other fields like quarters and years are added because all dates are only the last day of the month within a single year.
 :::
 
@@ -409,7 +407,7 @@ The Insert Timeline dialog box only shows the [date]{.varname} field because it 
 
 2.  Select [date]{.varname} and click [OK]{.uicontrol}.
 
-::: callout-note
+::: {.callout-note title="Timeline Features"}
 ![Timeline for the 'date' field.](images/pivots/supermarket-timeline-months.png){#fig-supermarket-timeline-months}
 
 -   A scroll bar for the visible period.

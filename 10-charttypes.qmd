@@ -3,9 +3,7 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   Chart types.
 -   Line chart vs Scatter chart.
 :::
@@ -296,7 +294,7 @@ The data is to be displayed in a bubble chart, as shown in @fig-bubble-result.
 
 2.  Format the values for turnover and market share appropriately.
 
-::: callout-note
+::: {.callout-tip title="Hint formatting"}
 Proper formatting of the source data ensures proper formatting in the chart.
 :::
 
@@ -405,7 +403,7 @@ For example, consider a continuous chemical process where the temperature of the
 5.  Adjust the layout as desired.
 :::
 
-::: {.callout-tip appearance="simple"}
+::: {.callout-tip title="SPC information"}
 You can find extensive information about SPC and control charts online. A useful article is [Control Limits and Specifications: The Four Process States](https://www.spcforexcel.com/knowledge/variation/four-process-states)
 :::
 

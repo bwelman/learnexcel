@@ -3,9 +3,7 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   Understand the Goal Seek method.
 -   Identify applications for Goal Seek.
 -   Learn tips for using Goal Seek effectively.
@@ -15,7 +13,7 @@ A formula consists of one or more variables. Typically, you want to know the res
 
 When a formula's outcome depends on only one variable, you can use the **Goal Seek** method. This method iteratively changes the variable's value until the formula produces the desired result.
 
-::: callout-tip
+::: {.callout-tip title="Using Solver"}
 If a formula's outcome depends on multiple variables, you should use Excel's **Solver** add-in.
 :::
 
@@ -125,9 +123,7 @@ Using the `PMT` function, you can calculate the periodic payment for a loan base
 1.  Recreate this model in a worksheet.
 2.  Use Goal Seek to determine how much you can borrow if your maximum monthly payment is \$750.
 
-::: callout-note
-Because payment is a cash outflow, the outcome is seen as a negative number.
-
+::: {.callout-note title="Payments are negative numbers"}
 Since a payment is a cash outflow, the result of the `PMT` function is typically a negative number.
 :::
 

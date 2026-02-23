@@ -3,9 +3,7 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   Explain of linear relations.
 -   Add a linear trendline to a scatter plot.
 -   Use of the SLOPE and INTERCEPT worksheet functions.

@@ -1,8 +1,6 @@
 # Starting with Excel {#sec-intro}
 
-::: callout
-**OBJECTIVES**
-
+::: callout-intro
 -   What spreadsheets are.
 -   Starting and closing Excel.
 -   The layout of the Excel program window.
@@ -35,9 +33,7 @@ The Excel start screen appears. On the left, you’ll see recently opened files;
 
 2.  Click on the [Blank workbook]{.uicontrol} template. A new workbook opens named [Book1]{.varname} with a blank worksheet named [Sheet1]{.varname}.
 
-::: callout-note
-**Disabling the Start Screen**
-
+::: {.callout-note title="Disabling the Start Screen"}
 By default, Excel shows the start screen at launch. This includes recent documents and templates. If preferred, you can start Excel with a blank workbook:
 
 Go to [File \> Options \> General tab]{.uicontrol} and uncheck the option [Show the Start screen when this application starts]{.uicontrol}.
@@ -52,7 +48,7 @@ To exit Excel:
 
 3.  Close Excel.
 
-::: callout-note
+::: {.callout-note title="Save after changes"}
 If changes were made to the workbook, Excel will prompt you to save them before closing.
 :::
 :::::
@@ -82,7 +78,7 @@ The Excel interface includes three main areas: the application controls, the wor
 
 Some tabs, such as contextual tabs (e.g., **Chart Tools**), only appear when relevant. Commonly used commands are on the left, specialized ones on the right.
 
-::: callout-note
+::: {.callout-tip title="Hide/Unhide ribbon"}
 You can’t remove the ribbon, but you can minimize it using [CTRL + F1]{.uicontrol}. Press it again to restore.
 :::
 
